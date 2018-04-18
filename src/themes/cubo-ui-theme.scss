@@ -3,7 +3,7 @@ $my-theme-accent: mat-palette($mat-light-blue);
 $my-theme-warn: mat-palette($mat-deep-orange, A200);
 
 $cubo-ui-theme: mat-light-theme(
-    $my-theme-primary,
-    $my-theme-accent,
-    $my-theme-warn
+  $my-theme-primary,
+  $my-theme-accent,
+  $my-theme-warn
 );
