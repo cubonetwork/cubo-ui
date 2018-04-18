@@ -30,7 +30,7 @@
             ],
             "styles": [
               "src/themes/themes.scss",
-              "src/main.styl"
+              "src/style.styl"
             ],
             "scripts": []
           },
@@ -80,7 +80,7 @@
             "karmaConfig": "src/karma.conf.js",
             "styles": [
               {
-                "input": "style.scss"
+                "input": "style.styl"
               }
             ],
             "scripts": [],
