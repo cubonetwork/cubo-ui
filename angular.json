@@ -29,8 +29,7 @@
               }
             ],
             "styles": [
-              "src/themes/themes.scss",
-              "src/style.styl"
+              "src/themes/themes.scss"
             ],
             "scripts": []
           },
