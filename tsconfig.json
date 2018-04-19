@@ -11,7 +11,8 @@
     "baseUrl": "src",
     "paths": {
       "@app/*": ["app/*"],
-      "@env/*": ["environments/*"]
+      "@env/*": ["environments/*"],
+      "@style/*": ["styles/*"]
     },
     "typeRoots": [
       "node_modules/@types"
