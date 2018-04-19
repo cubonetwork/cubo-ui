@@ -3,10 +3,6 @@
 @import 'cubo-ui-theme';
 @import 'variables';
 
-body {
-  background: $gray-darker;
-}
-
 .cubo-ui {
   @include angular-material-theme($cubo-ui-theme);
 }

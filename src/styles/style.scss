@@ -1,0 +1,36 @@
+// ==================================================
+// Scaffolding
+// ==================================================
+
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+
+  &:hover,
+  &:focus {
+    outline: transparent;
+  }
+}
+
+html {
+  -moz-osx-font-smoothing: auto;
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  @include mat-typography-level-to-styles($typography, body-1);
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  background-color: $white;
+  color: $brand-text;
+}
