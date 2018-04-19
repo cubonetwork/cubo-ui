@@ -5,9 +5,8 @@
 // 2. Spaces
 // 3. Media Queries
 // 4. Typography
-// 5. Media Queries
-// 6. zIndex
-// 7. Easing
+// 5. zIndex
+// 6. Easing
 // ==================================================
 
 @import '~@angular/material/theming';
@@ -85,13 +84,16 @@ $header-height : 6.5rem;
 // 3. Media Queries
 // --------------------------------------------------
 
-$screen-xxs  : 380px;  // xExtra small screen / phone
-$screen-xs   : 440px;  // Extra small screen / phone
-$screen-sm   : 768px;  // Small screen / tablet
-$screen-md   : 992px;  // Medium screen / desktop
-$screen-lg   : 1200px; // Large screen / wide desktop
-$screen-xlg  : 1400px; // Extra Large screen / wide desktop
-$screen-xxlg : 1600px; // Extra Large screen / wide desktop
+$screen-xs   : 380px;  // xExtra small screen / phone
+$screen-sm   : 600px;  // Extra small screen / phone
+$screen-md   : 960px;  // Small screen / tablet
+$screen-lg   : 1280px;  // Medium screen / desktop
+$screen-xlg  : 1920px; // Extra Large screen / wide desktop
+
+$rupture: map-merge($rupture, (
+  scale: 0 $screen-xs $screen-sm $screen-md $screen-lg,
+  scale-names: '0' 'xs' 'sm' 'md' 'lg' 'xlg'
+));
 
 // --------------------------------------------------
 // 4. Typography
@@ -121,16 +123,7 @@ $typography-secondary: mat-typography-config(
 );
 
 // --------------------------------------------------
-// 5. Media Queries
-// --------------------------------------------------
-
-$rupture: map-merge($rupture, (
-  scale: 0 $screen-xxs $screen-sm $screen-md $screen-lg $screen-xlg,
-  scale-names: '0' 'xs' 'sm' 'md' 'lg' 'xlg' 'hd'
-));
-
-// --------------------------------------------------
-// 6. zIndex
+// 5. zIndex
 // --------------------------------------------------
 
 $zindex-bg           : -1;
@@ -138,7 +131,7 @@ $zindex-default      : 1;
 $zindex-header       : 10;
 
 // --------------------------------------------------
-// 7. Easing
+// 6. Easing
 // --------------------------------------------------
 
 $ease-in-cubic    : cubic-bezier(.55, .055, .675, .19);
