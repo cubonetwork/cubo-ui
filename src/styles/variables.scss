@@ -1,0 +1,148 @@
+// ==================================================
+// Variables
+//
+// 1. Colors
+// 2. Spaces
+// 3. Media Queries
+// 4. Typography
+// 5. Media Queries
+// 6. zIndex
+// 7. Easing
+// ==================================================
+
+@import '~@angular/material/theming';
+@import '~rupture-sass/rupture';
+
+// --------------------------------------------------
+// 1. Colors
+// --------------------------------------------------
+
+//
+// Grays
+// --------------------------------------------------
+
+$gray-darker  : #282828;
+$gray-dark    : #333;
+$gray         : #666;
+$gray-medium  : #aaa;
+$gray-light   : #c8c8c8;
+$gray-lighter : #dedede;
+$gray-white   : #fafafa;
+
+//
+// Pallets
+// --------------------------------------------------
+
+$white          : #fff;
+$orange         : #e66a1f;
+$orange-light   : #e96800;
+$yellow         : #ffba00;
+$blue           : #1192b2;
+$blue-dark      : #0f4d8e;
+$blue-light     : #1192b2;
+$blue-clean     : #e9eef4;
+$red            : #F15A5E;
+$green          : #99C03C;
+
+//
+// Brands
+// --------------------------------------------------
+
+$brand-bg        : $white;
+$brand-text      : $gray-darker;
+$brand-primary   : $blue-light;
+$brand-secondary : $green;
+$brand-alternate : $orange;
+
+$brand-success   : #009c0f;
+$brand-info      : $blue-light;
+$brand-warning   : $yellow;
+$brand-danger    : #dd413a;
+
+// Patterns
+// --------------------------------------------------
+
+$pattern-border : $gray-lighter;
+
+// --------------------------------------------------
+// 2. Spaces
+// --------------------------------------------------
+
+$space-xxs    : .4rem;
+$space-xs     : .8rem;
+$space-sm     : 1.6rem;
+$space        : 2.4rem;
+$space-md     : 3.2rem;
+$space-lg     : 4.8rem;
+$space-xlg    : 6.4rem;
+$space-xxlg   : 9.6rem;
+$space-gutter : $space-md;
+$space-indent : $space-xxs;
+
+$header-height : 6.5rem;
+
+// --------------------------------------------------
+// 3. Media Queries
+// --------------------------------------------------
+
+$screen-xxs  : 380px;  // xExtra small screen / phone
+$screen-xs   : 440px;  // Extra small screen / phone
+$screen-sm   : 768px;  // Small screen / tablet
+$screen-md   : 992px;  // Medium screen / desktop
+$screen-lg   : 1200px; // Large screen / wide desktop
+$screen-xlg  : 1400px; // Extra Large screen / wide desktop
+$screen-xxlg : 1600px; // Extra Large screen / wide desktop
+
+// --------------------------------------------------
+// 4. Typography
+// --------------------------------------------------
+
+$font-size             : 1.4rem;
+$font-family-primary   : '"Open Sans", "Helvetica Neue", sans-serif';
+$font-family-secondary : 'Roboto, sans-serif';
+$typography: mat-typography-config(
+  $font-family:   $font-family-primary,
+  $display-4:     mat-typography-level(11.2rem, 11.2rem, 300),
+  $display-3:     mat-typography-level(5.6rem, 5.6rem, 400),
+  $display-2:     mat-typography-level(4.5rem, 4.8rem, 400),
+  $display-1:     mat-typography-level(3.4rem, 4.0rem, 400),
+  $headline:      mat-typography-level(2.4rem, 3.2rem, 400),
+  $title:         mat-typography-level(2.0rem, 3.2rem, 500),
+  $subheading-2:  mat-typography-level(1.6rem, 2.8rem, 400),
+  $subheading-1:  mat-typography-level(1.5rem, 2.4rem, 400),
+  $body-2:        mat-typography-level(1.4rem, 2.4rem, 500),
+  $body-1:        mat-typography-level(1.4rem, 2.0rem, 400),
+  $caption:       mat-typography-level(1.2rem, 2.0rem, 400),
+  $button:        mat-typography-level(1.4rem, 1.4rem, 500),
+  $input:         mat-typography-level(1.6rem, 1.125, 400)
+);
+$typography-secondary: mat-typography-config(
+  $font-family: $font-family-primary
+);
+
+// --------------------------------------------------
+// 5. Media Queries
+// --------------------------------------------------
+
+$rupture: map-merge($rupture, (
+  scale: 0 $screen-xxs $screen-sm $screen-md $screen-lg $screen-xlg,
+  scale-names: '0' 'xs' 'sm' 'md' 'lg' 'xlg' 'hd'
+));
+
+// --------------------------------------------------
+// 6. zIndex
+// --------------------------------------------------
+
+$zindex-bg           : -1;
+$zindex-default      : 1;
+$zindex-header       : 10;
+
+// --------------------------------------------------
+// 7. Easing
+// --------------------------------------------------
+
+$ease-in-cubic    : cubic-bezier(.55, .055, .675, .19);
+$ease-out-cubic   : cubic-bezier(.215, .61, .355, 1);
+$ease-out-back    : cubic-bezier(.175, .885, .32, 1.275);
+$ease-in-quart    : cubic-bezier(.895, .03, .685, .22);
+$ease-in-out-quad : cubic-bezier(.25, .46, .45, .94);

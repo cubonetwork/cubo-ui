@@ -1,0 +1,8 @@
+
+$my-theme-primary: mat-palette($mat-blue, 700, 300, 900);
+$my-theme-accent: mat-palette($mat-green);
+
+$cubo-ui-theme: mat-dark-theme(
+  $my-theme-primary,
+  $my-theme-accent
+);
