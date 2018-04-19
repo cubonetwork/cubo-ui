@@ -29,8 +29,13 @@
               }
             ],
             "styles": [
-              "src/themes/themes.scss"
+              "src/styles/themes.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -136,7 +141,7 @@
   },
   "schematics": {
     "@schematics/angular:component": {
-      "styleext": "styl"
+      "styleext": "scss"
     }
   }
 }
