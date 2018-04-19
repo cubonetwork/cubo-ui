@@ -29,7 +29,8 @@
               }
             ],
             "styles": [
-              "src/styles/themes.scss"
+              "src/styles/style.scss",
+              { "input": "src/styles/themes.scss", "lazy": true }
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
@@ -84,7 +85,7 @@
             "karmaConfig": "src/karma.conf.js",
             "styles": [
               {
-                "input": "style.styl"
+                "input": "src/styles/style.scss"
               }
             ],
             "scripts": [],
