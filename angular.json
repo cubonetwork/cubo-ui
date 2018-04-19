@@ -30,7 +30,7 @@
             ],
             "styles": [
               "src/styles/style.scss",
-              { "input": "src/styles/themes.scss", "lazy": true }
+              "src/styles/themes.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
