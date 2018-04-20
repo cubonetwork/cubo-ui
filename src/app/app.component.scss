@@ -107,8 +107,4 @@
 
 .content {
   position: relative;
-
-  & >>> .mat-ripple-element {
-    display: none;
-  }
 }
