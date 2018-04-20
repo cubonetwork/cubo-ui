@@ -112,14 +112,15 @@ $typography: mat-typography-config(
   $title:         mat-typography-level(2.0rem, 3.2rem, 500),
   $subheading-2:  mat-typography-level(1.6rem, 2.8rem, 400),
   $subheading-1:  mat-typography-level(1.5rem, 2.4rem, 400),
-  $body-2:        mat-typography-level(1.4rem, 2.4rem, 500),
+  $body-2:        mat-typography-level(1.7rem, 2.6rem, 500),
   $body-1:        mat-typography-level(1.4rem, 2.0rem, 400),
   $caption:       mat-typography-level(1.2rem, 2.0rem, 400),
   $button:        mat-typography-level(1.4rem, 1.4rem, 500),
   $input:         mat-typography-level(1.6rem, 1.125, 400)
 );
 $typography-secondary: mat-typography-config(
-  $font-family: $font-family-primary
+  $font-family: $font-family-secondary,
+  $body-1:        mat-typography-level(1.8rem, 2.8rem, 400),
 );
 
 // --------------------------------------------------

@@ -62,9 +62,6 @@
 // -------------------------------------------------
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $screen-lg;
   padding: $space;
   width: 100%;
 
@@ -72,6 +69,7 @@
     display: grid;
     grid-column-gap: $space;
     grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
   }
 }
 
@@ -81,11 +79,6 @@
 
 .navbar {
   background: rgba($gray-white, .2);
-  box-shadow: 0 0 1px 0 rgba($gray-darker, .4);
-
-  & > * {
-    padding: 0;
-  }
 
   &--active {
     position: relative;
@@ -101,6 +94,10 @@
   }
 }
 
+.nav-list {
+  box-shadow: 0 0 1px 0 rgba($gray-darker, .4);
+  padding: 0;
+}
 // -------------------------------------------------
 // 5. Content
 // -------------------------------------------------
@@ -108,3 +105,43 @@
 .content {
   position: relative;
 }
+
+// -------------------------------------------------
+// 6. Panel
+// -------------------------------------------------
+
+.panel {
+
+  &__header {
+     @include mat-typography-level-to-styles($typography, subheading-1);
+  }
+}
+
+.code {
+  background: $gray-darker;
+  color: $white
+}
+
+// -------------------------------------------------
+// 7. Description
+// -------------------------------------------------
+
+.description {
+  @include mat-typography-level-to-styles($typography-secondary, body-1);
+  color: $gray-darker;
+  margin-top: $space;
+  margin-bottom: $space;
+}
+
+.tab-content {
+  margin-top: $space;
+}
+
+// -------------------------------------------------
+// 8. Code Render
+// -------------------------------------------------
+
+.render {
+  margin-top: $space;
+}
+
