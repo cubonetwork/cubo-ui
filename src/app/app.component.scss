@@ -145,3 +145,38 @@
   margin-top: $space;
 }
 
+// -------------------------------------------------
+// 9. API
+// -------------------------------------------------
+
+.api {
+  margin-top: $space;
+
+  &__header {
+    @include mat-typography-level-to-styles($typography-secondary, subheading-1);
+    margin-bottom: $space;
+  }
+
+  &__code {
+    background: #e0e0e0;
+    color: $gray-darker;
+    margin-bottom: $space-md;
+  }
+
+  &__subtitle {
+    @include mat-typography-level-to-styles($typography-secondary, subheading-2);
+    border-bottom: $pattern-border solid 1px;
+    padding-bottom: $space-xs;
+  }
+
+  &__component {
+    @include mat-typography-level-to-styles($typography-secondary, subheading-2);
+    margin-top: $space-md;
+  }
+
+  &__selector {
+    display: inline-block;
+    padding: $space-xxs;
+  }
+}
+

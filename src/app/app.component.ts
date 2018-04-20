@@ -78,7 +78,37 @@ import * as hljs from 'highlight.js';
 
               </mat-card-content>
             </mat-tab>
-            <mat-tab label="API">Content 2</mat-tab>
+            <mat-tab label="API">
+              <article class="api">
+                <h2 class="api__header">
+                  API reference for Cubo Avatar
+                </h2>
+                <pre class="api__code">
+                  <code [innerHtml]="import_content"></code>
+                </pre>
+                <h2 class="api__subtitle">
+                  Directives
+                </h2>
+                <h3 class="api__component">
+                  CbAvatar
+                </h3>
+                <article class="description">
+                  <p>Service to open Material Design modal dialogs.</p>
+                  <br>
+                  <p>While this component can be used alone, it also provides a number of preset styles for common card sections, including:</p>
+                </article>
+                <div class="description">
+                  <p>
+                    <span>Selector: </span>
+                    <span class="api__code api__selector">mat-card</span>
+                  </p>
+                  <p>
+                    <span>Exported as: </span>
+                    <span class="api__code api__selector">matCard</span>
+                  </p>
+                </div>
+              </article>
+            </mat-tab>
           </mat-tab-group>
         </article>
       </div>
@@ -127,4 +157,7 @@ export class AppComponent {
     export class ExpansionOverviewExample {
       panelOpenState: boolean = false;
     }`, this.languages).value;
+
+  import_content = hljs.highlightAuto(`
+    import {MatButtonModule} from '@angular/material/button';`, ['nohighlight']).value;
 }

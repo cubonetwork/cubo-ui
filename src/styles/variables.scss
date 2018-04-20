@@ -121,6 +121,8 @@ $typography: mat-typography-config(
 $typography-secondary: mat-typography-config(
   $font-family: $font-family-secondary,
   $body-1:        mat-typography-level(1.8rem, 2.8rem, 400),
+  $subheading-1:  mat-typography-level(2.8rem, 2.4rem, 400),
+  $subheading-2:  mat-typography-level(2.4rem, 2.8rem, 300),
 );
 
 // --------------------------------------------------
