@@ -17,7 +17,11 @@ import { metaFactory } from '@app/core/meta.config';
       useFactory: (metaFactory)
     })
   ],
-  exports: [ ],
+  exports: [
+    CommonModule,
+    BrowserAnimationsModule,
+    BrowserModule
+  ],
   declarations: [],
   providers: [
   ]
