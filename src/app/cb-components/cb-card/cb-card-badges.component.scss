@@ -2,7 +2,7 @@
 // Card Chips
 // -------------------------------------------------
 
-@import '../../../styles/variables.scss';
+@import 'variables';
 
 :host {
   display: flex;
@@ -12,8 +12,6 @@
   top: $space-sm;
 }
 
-  :host >>> {
-    > * {
-      margin-bottom: $space-xxs;
-    }
-  }
+:host ::ng-deep > * {
+  margin-bottom: $space-xxs;
+}
