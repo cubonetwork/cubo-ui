@@ -1,0 +1,17 @@
+// -------------------------------------------------
+// Card Chips
+// -------------------------------------------------
+
+@import 'variables';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  left: $space-sm;
+  position: absolute;
+  top: $space-sm;
+}
+
+:host ::ng-deep > * {
+  margin-bottom: $space-xxs;
+}
