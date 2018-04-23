@@ -1,0 +1,85 @@
+// -------------------------------------------------
+// Avatar
+// -------------------------------------------------
+
+@import 'variables';
+
+:host {
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  display: inline-block;
+  height: ($space-xlg * 2);
+  width: ($space-xlg * 2);
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+
+  // -------------------------------------------------
+  // Sizes
+  // -------------------------------------------------
+
+  :host(.-extra-small) {
+    height: ($space-md + $space-xs);
+    width: ($space-md + $space-xs);
+    font-size: 2rem;
+  }
+
+  :host(.-small) {
+    height: ($space-lg - $space-xs);
+    width: ($space-lg - $space-xs);
+    font-size: 2rem;
+  }
+
+  :host(.-medium) {
+    height: $space-xlg;
+    width: $space-xlg;;
+    font-size: 4rem;
+  }
+
+  :host(.-large) {
+    font-size: 8rem;
+    height: ($space-xlg * 2);
+    width: ($space-xlg * 2);
+  }
+
+  :host(.-extra-large) {
+    font-size: 8rem;
+    $media: (2/2, cover);
+  }
+
+  // -------------------------------------------------
+  // Types
+  // -------------------------------------------------
+
+  :host(.-square) {
+    border-radius: 0;
+
+    > * {
+      object-fit: contain;
+    }
+  }
+// -------------------------------------------------
+// Image
+// -------------------------------------------------
+
+.avatar {
+  background-color: $white;
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.initials {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  color: $gray;
+  font-weight: bold;
+}
+

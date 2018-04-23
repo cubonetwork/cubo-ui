@@ -1,0 +1,14 @@
+// -------------------------------------------------
+// Card Subtitle
+// -------------------------------------------------
+
+@import 'variables';
+
+:host {
+  $font: (h4, regular);
+  display: block;
+
+  &:not(:last-child):not(:empty) {
+    margin-bottom: $space-xxs;
+  }
+}

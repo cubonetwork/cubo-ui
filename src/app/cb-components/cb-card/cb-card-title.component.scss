@@ -1,0 +1,18 @@
+// -------------------------------------------------
+// Card
+// -------------------------------------------------
+
+@import 'variables';
+
+:host {
+  $font: (h3, bold);
+  display: block;
+
+  &:not(:first-child) {
+    margin-top: $space-xs;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: ($space-xxs / 2);
+  }
+}
