@@ -11,8 +11,4 @@ import {
   styleUrls: ['./components.component.scss'],
   templateUrl: './components.component.html'
 })
-export class PageComponentsComponent {
-  constructor() {
-    console.log(1);
-  }
-}
+export class PageComponentsComponent { }
