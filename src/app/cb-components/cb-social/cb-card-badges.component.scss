@@ -1,0 +1,19 @@
+// -------------------------------------------------
+// Card Chips
+// -------------------------------------------------
+
+@import '../../../styles/variables.scss';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  left: $space-sm;
+  position: absolute;
+  top: $space-sm;
+}
+
+  :host >>> {
+    > * {
+      margin-bottom: $space-xxs;
+    }
+  }

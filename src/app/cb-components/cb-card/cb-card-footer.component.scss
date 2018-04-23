@@ -13,7 +13,7 @@
   padding-top: $space-sm;
   width: 100%;
 
-  // +above('sm') {
-  //   margin-top: auto;
-  // }
+  @include above(sm) {
+    margin-top: auto;
+  }
 }
