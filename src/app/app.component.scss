@@ -132,14 +132,62 @@
 
 .description {
   @include mat-typography-level-to-styles($typography-secondary, body-1);
-  color: $gray-darker;
   margin-top: $space;
-  margin-bottom: $space;
+
+  &:not(:last-child) {
+    margin-bottom: $space;
+  }
+
+  ::ng-deep h1 {
+    @include mat-typography-level-to-styles($typography-secondary, subheading-1);
+    margin-bottom: $space;
+
+    &:not(:last-child) {
+      margin-bottom: $space;
+    }
+  }
+
+  ::ng-deep h2 {
+    @include mat-typography-level-to-styles($typography-secondary, subheading-2);
+    border-bottom: $pattern-border solid 1px;
+    padding-bottom: $space-xs;
+    margin-bottom: $space-xs;
+
+    &:not(:last-child) {
+      margin-bottom: $space-xs;
+    }
+  }
+
+  ::ng-deep h3 {
+    @include mat-typography-level-to-styles($typography-secondary, subheading-2);
+    margin-top: $space-md;
+    margin-bottom: $space-xs;
+
+    &:not(:last-child) {
+      margin-bottom: $space-xs;
+    }
+  }
+
+  ::ng-deep code {
+    background: #e0e0e0;
+    color: $gray-darker;
+    margin-bottom: $space-md;
+  }
+
+  ::ng-deep p {
+    margin-bottom: $space-md;
+
+    &:not(:last-child) {
+      margin-bottom: $space-md;
+    }
+  }
+
+  // &__selector {
+  //   display: inline-block;
+  //   padding: $space-xxs;
+  // }
 }
 
-.tab-content {
-  margin-top: $space;
-}
 
 // -------------------------------------------------
 // 8. Code Render
@@ -149,38 +197,4 @@
   margin-top: $space;
 }
 
-// -------------------------------------------------
-// 9. API
-// -------------------------------------------------
-
-.api {
-  margin-top: $space;
-
-  &__header {
-    @include mat-typography-level-to-styles($typography-secondary, subheading-1);
-    margin-bottom: $space;
-  }
-
-  &__code {
-    background: #e0e0e0;
-    color: $gray-darker;
-    margin-bottom: $space-md;
-  }
-
-  &__subtitle {
-    @include mat-typography-level-to-styles($typography-secondary, subheading-2);
-    border-bottom: $pattern-border solid 1px;
-    padding-bottom: $space-xs;
-  }
-
-  &__component {
-    @include mat-typography-level-to-styles($typography-secondary, subheading-2);
-    margin-top: $space-md;
-  }
-
-  &__selector {
-    display: inline-block;
-    padding: $space-xxs;
-  }
-}
 
