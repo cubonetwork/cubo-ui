@@ -1,8 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '@app/shared/shared.module';
+
+import {
+  PageAvatarDescriptionComponent,
+  PageAvatarCodeHtmlComponent,
+  PageAvatarCodeCssComponent,
+  PageAvatarCodeTsComponent,
+  PageAvatarRenderComponent,
+  PageAvatarApiComponent
+} from './avatar.component';
 import { PageAvatarRouting } from './avatar.routing';
-import { PageAvatarComponent } from './avatar.component';
 
 @NgModule({
   imports: [
@@ -10,6 +18,13 @@ import { PageAvatarComponent } from './avatar.component';
     PageAvatarRouting,
     SharedModule
   ],
-  declarations: [PageAvatarComponent]
+  declarations: [
+    PageAvatarDescriptionComponent,
+    PageAvatarCodeHtmlComponent,
+    PageAvatarCodeCssComponent,
+    PageAvatarCodeTsComponent,
+    PageAvatarRenderComponent,
+    PageAvatarApiComponent
+  ]
 })
 export class PageAvatarModule { }

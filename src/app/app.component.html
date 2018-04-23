@@ -19,12 +19,8 @@
         <mat-tab label="Example">
           <mat-card-content class="tab-content">
             <article class="description">
-              <p>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi,
-                id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.";
-              </p>
+              <router-outlet name='description'></router-outlet>
             </article>
-
             <mat-accordion>
               <mat-expansion-panel>
                 <mat-expansion-panel-header class="panel__header">
@@ -33,65 +29,30 @@
                 <mat-tab-group>
                   <mat-tab label="HTML">
                     <pre class="code">
-                      <code [innerHtml]="html_content"></code>
+                      <router-outlet name='code-html'></router-outlet>
                     </pre>
                   </mat-tab>
                   <mat-tab label="TS">
                     <pre class="code">
-                      <code [innerHtml]="ts_content"></code>
+                      <router-outlet name='code-ts'></router-outlet>
                     </pre>
                   </mat-tab>
                   <mat-tab label="CSS">
                     <pre class="code">
-                      <code [innerHtml]="css_content"></code>
+                      <router-outlet name='code-css'></router-outlet>
                     </pre>
                   </mat-tab>
                 </mat-tab-group>
               </mat-expansion-panel>
             </mat-accordion>
-
             <div class="render">
-              <mat-card>
-                  <mat-chip-list>
-                    <mat-chip>One fish</mat-chip>
-                    <mat-chip>Two fish</mat-chip>
-                    <mat-chip color="primary" selected="true">Primary fish</mat-chip>
-                    <mat-chip color="accent" selected="true">Accent fish</mat-chip>
-                  </mat-chip-list>
-              </mat-card>
+              <router-outlet name='render'></router-outlet>
             </div>
-
           </mat-card-content>
         </mat-tab>
         <mat-tab label="API">
           <article class="api">
-            <h2 class="api__header">
-              API reference for Cubo Avatar
-            </h2>
-            <pre class="api__code">
-              <code [innerHtml]="import_content"></code>
-            </pre>
-            <h2 class="api__subtitle">
-              Directives
-            </h2>
-            <h3 class="api__component">
-              CbAvatar
-            </h3>
-            <article class="description">
-              <p>Service to open Material Design modal dialogs.</p>
-              <br>
-              <p>While this component can be used alone, it also provides a number of preset styles for common card sections, including:</p>
-            </article>
-            <div class="description">
-              <p>
-                <span>Selector: </span>
-                <span class="api__code api__selector">mat-card</span>
-              </p>
-              <p>
-                <span>Exported as: </span>
-                <span class="api__code api__selector">matCard</span>
-              </p>
-            </div>
+            <router-outlet name='api'></router-outlet>
           </article>
         </mat-tab>
       </mat-tab-group>
