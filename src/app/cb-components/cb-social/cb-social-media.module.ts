@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
+import { CoreModule } from '@app/core/core.module';
 
 import {
   CbSocialMediaButtonComponent
@@ -14,7 +13,7 @@ import {
     CbSocialMediaButtonComponent
   ],
   imports: [
-    CommonModule
+    CoreModule
   ],
 })
 export class CbSocialMediaModule { }

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CoreModule } from '@app/core/core.module';
 
 import {
   CbAvatarComponent
@@ -13,7 +13,7 @@ import {
     CbAvatarComponent
   ],
   imports: [
-    CommonModule
+    CoreModule
   ]
 })
 export class CbAvatarModule { }
