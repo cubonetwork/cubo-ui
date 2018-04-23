@@ -5,7 +5,8 @@ export const AppRoutes: Routes = [
   {
     path: '',
     children: [
-      { path: 'avatar', loadChildren: '@app/pages/avatar/avatar.module#PageAvatarModule' },
+      { path: '', redirectTo: 'components', pathMatch: 'full' },
+      { path: 'components', loadChildren: '@app/pages/components/components.module#PageComponentsModule' }
     ]
   }
 ];

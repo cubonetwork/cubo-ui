@@ -1,0 +1,92 @@
+// ==================================================
+// App
+//
+// 1. Header
+// 2. Main
+// 3. Container
+// ==================================================
+
+@import 'variables';
+
+// -------------------------------------------------
+// 5. Content
+// -------------------------------------------------
+
+.content {
+  position: relative;
+}
+
+// -------------------------------------------------
+// 6. Panel
+// -------------------------------------------------
+
+.panel {
+
+  &__header {
+     @include mat-typography-level-to-styles($typography, subheading-1);
+  }
+}
+
+.code {
+  background: $gray-darker;
+  color: $white
+}
+
+// -------------------------------------------------
+// 7. Description
+// -------------------------------------------------
+
+.description {
+  @include mat-typography-level-to-styles($typography-secondary, body-1);
+  color: $gray-darker;
+  margin-top: $space;
+  margin-bottom: $space;
+}
+
+.tab-content {
+  margin-top: $space;
+}
+
+// -------------------------------------------------
+// 8. Code Render
+// -------------------------------------------------
+
+.render {
+  margin-top: $space;
+}
+
+// -------------------------------------------------
+// 9. API
+// -------------------------------------------------
+
+.api {
+  margin-top: $space;
+
+  &__header {
+    @include mat-typography-level-to-styles($typography-secondary, subheading-1);
+    margin-bottom: $space;
+  }
+
+  &__code {
+    background: #e0e0e0;
+    color: $gray-darker;
+    margin-bottom: $space-md;
+  }
+
+  &__subtitle {
+    @include mat-typography-level-to-styles($typography-secondary, subheading-2);
+    border-bottom: $pattern-border solid 1px;
+    padding-bottom: $space-xs;
+  }
+
+  &__component {
+    @include mat-typography-level-to-styles($typography-secondary, subheading-2);
+    margin-top: $space-md;
+  }
+
+  &__selector {
+    display: inline-block;
+    padding: $space-xxs;
+  }
+}
+
