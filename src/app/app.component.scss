@@ -172,6 +172,7 @@
     background: #e0e0e0;
     color: $gray-darker;
     margin-bottom: $space-md;
+    padding: $space-xs;
   }
 
   ::ng-deep p {
@@ -182,10 +183,38 @@
     }
   }
 
-  // &__selector {
-  //   display: inline-block;
-  //   padding: $space-xxs;
-  // }
+  ::ng-deep table {
+    table-layout: fixed;
+    width: 70%;
+    border-collapse: collapse;
+  }
+
+  ::ng-deep th, td {
+    background: #f5f5f5;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,.03);
+  }
+
+  ::ng-deep th {
+    text-align: left;
+    padding: $space-xs;
+    color: $gray;
+  }
+
+  ::ng-deep td {
+    padding: $space-xs;
+  }
+
+  ::ng-deep div {
+    margin-top: $space;
+    margin-bottom: $space;
+  }
+
+  ::ng-deep tr {
+    &:not(:last-child) {
+      border-bottom: solid 1px $gray-light;
+    }
+  }
 }
 
 
@@ -196,5 +225,10 @@
 .render {
   margin-top: $space;
 }
+
+// -------------------------------------------------
+// 9. Table
+// -------------------------------------------------
+
 
 

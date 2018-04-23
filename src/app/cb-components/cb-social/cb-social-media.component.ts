@@ -13,7 +13,7 @@ import { MatIconRegistry, MatIcon } from '@angular/material';
  * @param socialMedia Social media's name
  */
 @Component({
-  moduleId: module.id,
+  // moduleId: module.id,
   selector: 'cb-social-media',
   template: `
     <mat-icon svgIcon="{{socialMedia}}"></mat-icon>

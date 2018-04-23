@@ -58,7 +58,61 @@ export class PageAvatarRenderComponent { }
 @Component({
   selector: 'page-avatar-api',
   template: `
-    <p>Api</p>
+  <h2>
+    API reference for Cubo Avatar
+  </h2>
+  <div>
+    <code [innerHtml]="import_content"></code>
+  </div>
+  <h2>
+    Directives
+  </h2>
+  <h3>
+    CbAvatar
+  </h3>
+  <article>
+    <p>A cubo avatar component</p>
+  </article>
+  <div>
+    <p>
+      <span>Selector: </span>
+      <code>cb-avatar</code>
+    </p>
+    <p>
+      <span>Exported as: </span>
+      <code>CbAvatar</code>
+    </p>
+
+  <table>
+    <tbody>
+     <tr>
+      <th>Name</th>
+      <th>Description</th>
+     </tr>
+     <tr>
+      <td>@Input() imageUrl: string;</td>
+      <td>The link for the avatar's image.</td>
+     </tr>
+     <tr>
+      <td>@Input() imageAlt: string;</td>
+      <td>The alt description.</td>
+     </tr>
+     <tr>
+      <td>@Input() name: string;</td>
+      <td>An avatar can be created with the name initials instead of an image.</td>
+     </tr>
+     <tr>
+      <td>@Input() size: string;</td>
+      <td>Size of the avatar.</td>
+    </tr>
+    <tr>
+      <td>@Input() type: string;</td>
+      <td>Wheter the avatar is a circle or a square.</td>
+    </tr>
+    </tbody>
+  </table>
   `,
 })
-export class PageAvatarApiComponent { }
+export class PageAvatarApiComponent {
+  import_content = hljs.highlightAuto(`import {MatButtonModule} from '@angular/material/button';`, ['nohighlight']).value;
+ }
