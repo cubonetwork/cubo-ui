@@ -3,34 +3,27 @@ import {
   ViewEncapsulation,
   ChangeDetectionStrategy
 } from '@angular/core'
+import * as hljs from 'highlight.js';
+import avatar from './code/avatar.js';
 
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['./app.component.scss'],
-  template: `
-    <header class="header">
-      <a class="header__logo">
-        Cubo<span class="header__logo--color-1">U</span><span class="header__logo--color-2">I</span>
-      </a>
-    </header>
-    <main class="main">
-      <div class="container">
-        <nav class="navbar">
-          <mat-nav-list>
-            <a mat-list-item routerLink="/avatar" [routerLinkActive]="['navbar--active']" [routerLinkActiveOptions]="{exact: true}">Avatar</a>
-            <mat-divider></mat-divider>
-            <a mat-list-item>Card</a>
-            <mat-divider></mat-divider>
-            <a mat-list-item>Social</a>
-          </mat-nav-list>
-        </nav>
-        <article class="content">
-          <router-outlet></router-outlet>
-        </article>
-      </div>
-    </main>
-  `
+  styleUrls: [
+    './app.component.scss'
+  ],
+  templateUrl: './app.component.html'
 })
-export class AppComponent {}
+export class AppComponent {
+  languages = ['html', 'typescript', 'css'];
+
+  html_content = hljs.highlightAuto(avatar.html, this.languages).value;
+
+  css_content = hljs.highlightAuto(avatar.css, this.languages).value;
+
+  ts_content = hljs.highlightAuto(avatar.ts, this.languages).value;
+
+  import_content = hljs.highlightAuto(`
+    import {MatButtonModule} from '@angular/material/button';`, ['nohighlight']).value;
+}
