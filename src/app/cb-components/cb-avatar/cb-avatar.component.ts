@@ -15,7 +15,6 @@ import {
 * @param lazyload Enable or disable the lazyload
 */
 @Component({
-  // moduleId: module.id,
   selector: 'cb-avatar',
   template: `
   <img class="avatar" src="{{imageUrl}}" alt="{{imageAlt}}" *ngIf="imageUrl">

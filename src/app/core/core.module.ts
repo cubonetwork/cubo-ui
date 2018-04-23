@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { MetaModule, MetaLoader } from '@ngx-meta/core';
+import { metaFactory } from '@app/core/meta.config';
 
 @NgModule({
   imports: [
@@ -11,11 +12,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    MetaModule.forRoot({
+      provide: MetaLoader,
+      useFactory: (metaFactory)
+    })
   ],
-  exports: [
-    FlexLayoutModule,
-  ],
+  exports: [ ],
   declarations: [],
   providers: [
   ]

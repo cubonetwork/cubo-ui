@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CoreModule } from '@app/core/core.module';
 
 import {
   CbCardComponent,
@@ -25,7 +25,7 @@ import {
     CbCardSubtitleComponent,
   ],
   imports: [
-    CommonModule
+    CoreModule
   ]
 })
 export class CbCardModule { }
