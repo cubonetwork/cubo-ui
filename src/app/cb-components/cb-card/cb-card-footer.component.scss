@@ -1,0 +1,19 @@
+// -------------------------------------------------
+// Card Footer
+// -------------------------------------------------
+
+@import '../../../styles/variables.scss';
+
+:host {
+  align-items: center;
+  border-top: 1px solid $pattern-border;
+  display: flex;
+  justify-content: space-between;
+  margin-top: $space-sm;
+  padding-top: $space-sm;
+  width: 100%;
+
+  // +above('sm') {
+  //   margin-top: auto;
+  // }
+}
