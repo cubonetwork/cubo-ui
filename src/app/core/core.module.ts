@@ -3,13 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { MetaModule, MetaLoader } from '@ngx-meta/core';
+import { metaFactory } from '@app/core/meta.config';
 
 @NgModule({
   imports: [
     CommonModule,
     HttpClientModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MetaModule.forRoot({
+      provide: MetaLoader,
+      useFactory: (metaFactory)
+    })
   ],
   exports: [ ],
   declarations: [],
