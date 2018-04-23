@@ -19,8 +19,7 @@ import { metaFactory } from '@app/core/meta.config';
   ],
   exports: [ ],
   declarations: [],
-  providers: [
-  ]
+  providers: []
 })
 export class CoreModule {
   constructor (@Optional() @SkipSelf() parentModule: CoreModule) {

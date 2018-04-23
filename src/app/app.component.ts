@@ -26,7 +26,7 @@ import {
             <a mat-list-item>Social</a>
           </mat-nav-list>
         </nav>
-        <article class="content">
+        <article  class="content">
           <router-outlet></router-outlet>
         </article>
       </div>
