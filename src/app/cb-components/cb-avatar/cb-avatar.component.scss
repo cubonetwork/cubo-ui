@@ -11,56 +11,70 @@
   border-radius: 50%;
   display: inline-block;
   height: ($space-xlg * 2);
-  width: ($space-xlg * 2);
   overflow: hidden;
   vertical-align: middle;
+  width: ($space-xlg * 2);
 }
 
+// -------------------------------------------------
+// Sizes
+// -------------------------------------------------
 
-  // -------------------------------------------------
-  // Sizes
-  // -------------------------------------------------
+:host(.-extra-small) {
+  font-size: $space;
+  height: ($space-md + $space-xs);
+  width: ($space-md + $space-xs);
+}
 
-  :host(.-extra-small) {
-    height: ($space-md + $space-xs);
-    width: ($space-md + $space-xs);
-    font-size: 2rem;
+:host(.-small) {
+  height: ($space-lg - $space-xs);
+  width: ($space-lg - $space-xs);
+}
+
+:host(.-medium) {
+  font-size: $space-md;
+  height: $space-xlg;
+  width: $space-xlg;
+}
+
+:host(.-large) {
+  font-size: $space-xlg;
+  height: ($space-xlg * 2);
+  width: ($space-xlg * 2);
+}
+
+:host(.-extra-large) {
+  display: block;
+  font-size: $space-xxlg;
+  overflow: hidden;
+  padding-bottom: calc((2/2) * 100%);
+  position: relative;
+  width: 100%;
+
+  & > * {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
   }
+}
 
-  :host(.-small) {
-    height: ($space-lg - $space-xs);
-    width: ($space-lg - $space-xs);
-    font-size: 2rem;
+// -------------------------------------------------
+// Types
+// -------------------------------------------------
+
+:host(.-square) {
+  border-radius: 0;
+
+  > * {
+    object-fit: contain;
   }
+}
 
-  :host(.-medium) {
-    height: $space-xlg;
-    width: $space-xlg;;
-    font-size: 4rem;
-  }
-
-  :host(.-large) {
-    font-size: 8rem;
-    height: ($space-xlg * 2);
-    width: ($space-xlg * 2);
-  }
-
-  :host(.-extra-large) {
-    font-size: 8rem;
-    $media: (2/2, cover);
-  }
-
-  // -------------------------------------------------
-  // Types
-  // -------------------------------------------------
-
-  :host(.-square) {
-    border-radius: 0;
-
-    > * {
-      object-fit: contain;
-    }
-  }
 // -------------------------------------------------
 // Image
 // -------------------------------------------------
@@ -69,17 +83,16 @@
   background-color: $white;
   display: block;
   height: 100%;
-  width: 100%;
   object-fit: cover;
+  width: 100%;
 }
 
 .initials {
   align-items: center;
-  justify-content: center;
-  display: flex;
-  height: 100%;
-  width: 100%;
   color: $gray;
-  font-weight: bold;
+  display: flex;
+  font-weight: 600;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 }
-

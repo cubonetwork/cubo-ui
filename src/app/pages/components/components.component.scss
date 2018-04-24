@@ -22,15 +22,14 @@
 // -------------------------------------------------
 
 .panel {
-
   &__header {
-     @include mat-typography-level-to-styles($typography, subheading-1);
+    @include mat-typography-level-to-styles($typography, subheading-1);
   }
 }
 
 .code {
   background: $gray-darker;
-  color: $white
+  color: $white;
 }
 
 // -------------------------------------------------
@@ -47,7 +46,6 @@
 
   ::ng-deep h1 {
     @include mat-typography-level-to-styles($typography-secondary, subheading-1);
-    margin-bottom: $space;
 
     &:not(:last-child) {
       margin-bottom: $space;
@@ -57,7 +55,6 @@
   ::ng-deep h2 {
     @include mat-typography-level-to-styles($typography-secondary, subheading-2);
     border-bottom: $pattern-border solid 1px;
-    margin-bottom: $space-xs;
     padding-bottom: $space-xs;
 
     &:not(:last-child) {
@@ -67,8 +64,6 @@
 
   ::ng-deep h3 {
     @include mat-typography-level-to-styles($typography-secondary, subheading-2);
-    margin-top: $space-md;
-    margin-bottom: $space-xs;
 
     &:not(:last-child) {
       margin-bottom: $space-xs;
@@ -83,10 +78,8 @@
   }
 
   ::ng-deep p {
-    margin-bottom: $space-md;
-
     &:not(:last-child) {
-      margin-bottom: $space-md;
+      margin-bottom: $space-sm;
     }
   }
 
@@ -96,32 +89,22 @@
     width: 70%;
   }
 
-  ::ng-deep th, td {
+  ::ng-deep tr {
+    &:not(:last-child) {
+      border-bottom: 1px solid $pattern-border;
+    }
+  }
+
+  ::ng-deep th,
+  ::ng-deep td {
     background: #f5f5f5;
-    border: 1px solid rgba(0,0,0,.03);
-    padding: 20px;
+    padding: $space-xs;
   }
 
   ::ng-deep th {
     color: $gray;
     font-weight: 400;
-    padding: $space-xs;
     text-align: left;
-  }
-
-  ::ng-deep td {
-    padding: $space-xs;
-  }
-
-  ::ng-deep div {
-    margin-top: $space;
-    margin-bottom: $space;
-  }
-
-  ::ng-deep tr {
-    &:not(:last-child) {
-      border-bottom: solid 1px $gray-light;
-    }
   }
 }
 

@@ -7,10 +7,15 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "npm run lint:ts && npm run lint:css && ng lint",
+    "lint:ts": "tslint 'src/**/*.ts'",
+    "lint:css": "sass-lint -c src/.sasslintrc '**/*.scss' -v -q",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "prepush" : {
+    "tasks": "npm run lint",
+    "coloredOuput": true
+  },
   "dependencies": {
     "@angular/animations": "^6.0.0-rc.5",
     "@angular/cdk": "^6.0.0-rc.12",
@@ -49,6 +54,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.3.0",
     "rupture-sass": "^0.2.3",
+    "sass-lint": "^1.12.1",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"
