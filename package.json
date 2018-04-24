@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "deploy": "gh-pages-deploy",
     "test": "ng test",
     "e2e": "ng e2e",
