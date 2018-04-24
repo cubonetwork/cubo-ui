@@ -16,6 +16,10 @@ export class PageComponentsComponent {
     {
       'path': 'avatar',
       'name': 'Avatar'
+    },
+    {
+      'path': 'card',
+      'name': 'Card'
     }
   ];
 }
