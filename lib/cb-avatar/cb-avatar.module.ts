@@ -1,4 +1,4 @@
-import { SharedModule } from '@app/shared/shared.module';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import {
@@ -13,7 +13,7 @@ import {
     CbAvatarComponent
   ],
   imports: [
-    SharedModule
+    CommonModule
   ]
 })
 export class CbAvatarModule { }

@@ -6,15 +6,17 @@
 // 3. Navbar
 // 4. Content
 // 5. Code Render
+// 6. Button Mobile
 // ==================================================
 
 @import 'variables';
 
 :host {
+  display: block;
   padding: $space;
   width: 100%;
 
-  @include above(sm) {
+  @include above(md) {
     display: grid;
     grid-column-gap: $space;
     grid-template-columns: 1fr 3fr;
@@ -29,6 +31,10 @@
 .main {
   max-width: $screen-md;
   position: relative;
+
+  @include below(md) {
+    margin-top: $space;
+  }
 }
 
 // -------------------------------------------------
@@ -65,6 +71,14 @@
       width: $space-xxs;
     }
   }
+
+  @include below(sm) {
+    display: none;
+
+    &--in {
+      display: block;
+    }
+  }
 }
 
 .nav-list {
@@ -73,7 +87,7 @@
 }
 
 // -------------------------------------------------
-// 3. Content
+// 4. Content
 // -------------------------------------------------
 
 .content {
@@ -169,13 +183,30 @@
 }
 
 // -------------------------------------------------
-// 4. Code Render
+// 5. Code Render
 // -------------------------------------------------
 
 .render {
   margin-top: $space;
 }
 
+// -------------------------------------------------
+// 6. Button Mobile
+// -------------------------------------------------
 
+.button-mobile {
+  @include mat-typography-level-to-styles($typography-secondary, body-2);
+  align-items: center;
+  background: $brand-primary;
+  color: $white;
+  cursor: pointer;
+  display: flex;
+  height: $space-lg;
+  justify-content: center;
+  min-width: $space-xxlg;
+  padding-left: $space-sm;
+  padding-right: $space-sm;
+  transition: color .15s;
+}
 
 

@@ -6,12 +6,12 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./app.component.scss'],
   template: `
-    <header class="header">
+    <header class="header" role="banner">
       <a class="header__logo" routerLink="/">
         cubo<span class="header__logo--color-1">u</span><span class="header__logo--color-2">i</span>
       </a>
     </header>
-    <main class="main">
+    <main class="main" role="logo">
       <router-outlet></router-outlet>
     </main>
   `

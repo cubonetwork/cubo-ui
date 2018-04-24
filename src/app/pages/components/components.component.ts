@@ -26,4 +26,10 @@ export class PageComponentsComponent {
       'name': 'Social'
     }
   ];
+  showMenu = false;
+
+  toggleMenu(event) {
+    event.stopPropagation();
+    this.showMenu = !this.showMenu;
+  }
 }
