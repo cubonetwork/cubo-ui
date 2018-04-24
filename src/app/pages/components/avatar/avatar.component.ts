@@ -12,13 +12,28 @@ export class PageAvatarComponent {}
 @Component({
   selector: 'page-avatar-description',
   template: `
-    <p>cb-avatar is made for using avatar images in your app. This directive supports images in (png, jpg, etc.). If you do not provide an image url, it uses a default one.</p>
-    <h2>Without image</h2>
-    <p>If a image is not set, the component expects a name property. Given this property, it renders the name initials as the avatar image.</p>
-    <h2>Input</h2>
-    <p>The cb-avatar can receive an image or a name input to display as an avatar.</p>
-    <h2>Size</h2>
-    <p>The selected image size can be changed by using size property. By default, the selected size is large. This can be changed to xsmall, small, medium, or xlarge.</p>
+  <p>cb-avatar is made for using avatar images in your app. This directive supports images in (png, jpg, etc.). If you do not provide an image url, it uses a default one.</p>
+  <h2>Code</h2>
+  <h2>Without image</h2>
+  <p>If a image is not set, the component expects a name property. Given this property, it renders the name initials as the avatar image.</p>
+  <h3>Initials</h3>
+  <cb-avatar [name]="'Darth Vader'"></cb-avatar>
+  <h2>Input</h2>
+  <p>The cb-avatar can receive an image or a name input to display as an avatar.</p>
+  <h2>Size</h2>
+  <p>The selected image size can be changed by using size property. By default, the selected size is large. This can be changed to xsmall, small, medium, or xlarge.</p>
+  <h3>Extra Small</h3>
+  <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'" [size]="'xsmall'"></cb-avatar>
+  <h3>Small</h3>
+  <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'" [size]="'small'"></cb-avatar>
+  <h3>Medium</h3>
+  <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'" [size]="'medium'"></cb-avatar>
+  <h3>Large</h3>
+  <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'"></cb-avatar>
+  <h3>Extra Large</h3>
+  <div style="width: 30%">
+    <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'" [size]="'xlarge'"></cb-avatar>
+  </div>
   `,
 })
 export class PageAvatarDescriptionComponent { }
@@ -53,12 +68,6 @@ export class PageAvatarCodeTsComponent {
   ts_content = hljs.highlightAuto(avatar.ts, languages).value;
 }
 
-@Component({
-  selector: 'page-avatar-render',
-  template: `
-    <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'"></cb-avatar>
-  `,
-})
 export class PageAvatarRenderComponent { }
 
 @Component({

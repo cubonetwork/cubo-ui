@@ -5,7 +5,6 @@ import {
   PageAvatarCodeHtmlComponent,
   PageAvatarCodeCssComponent,
   PageAvatarCodeTsComponent,
-  PageAvatarRenderComponent,
   PageAvatarApiComponent,
   PageAvatarComponent
 } from './avatar.component';
@@ -38,11 +37,7 @@ export const PageAvatarRoutes: Routes = [
         component: PageAvatarCodeCssComponent,
         outlet: 'code-css'
       },
-      {
-        path: '',
-        component: PageAvatarRenderComponent,
-        outlet: 'render'
-      },
+
       {
         path: '',
         component: PageAvatarApiComponent,

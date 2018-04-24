@@ -5,15 +5,13 @@
 @import 'variables';
 
 :host {
-  background-color: $white;
+  background-color: $gray-lighter;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
   display: inline-block;
-  height: ($space-xlg * 2);
   overflow: hidden;
   vertical-align: middle;
-  width: ($space-xlg * 2);
 }
 
 // -------------------------------------------------
@@ -22,13 +20,13 @@
 
 :host(.-extra-small) {
   font-size: $space;
-  height: ($space-md + $space-xs);
-  width: ($space-md + $space-xs);
+  height: $space-md;
+  width: $space-md;
 }
 
 :host(.-small) {
-  height: ($space-lg - $space-xs);
-  width: ($space-lg - $space-xs);
+  height: $space-lg;
+  width: $space-lg;
 }
 
 :host(.-medium) {

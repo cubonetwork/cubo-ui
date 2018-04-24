@@ -1,4 +1,4 @@
-import { CbSocialMediaModule } from '../../../cb-components/cb-social/cb-social-media.module';
+import { CbSocialModule } from 'cubo-ui/cb-social/cb-social.module';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
 import { MatIconModule } from '@angular/material';
@@ -17,7 +17,7 @@ import {
 @NgModule({
   imports: [
     PageSocialRouting,
-    CbSocialMediaModule,
+    CbSocialModule,
     MatIconModule
   ],
   declarations: [

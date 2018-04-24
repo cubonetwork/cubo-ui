@@ -7,19 +7,18 @@ import {
 
 
 /**
- * Component `<cb-social-median>` to make a share action
- * @param socialMedia Social media's name
+ * Component `<cb-social>` to make a share action
  */
 @Component({
-  selector: 'cb-social-media',
+  selector: 'cb-social',
   template: `
     <ng-content></ng-content>
   `,
-  styleUrls: ['./cb-social-media.component.scss'],
+  styleUrls: ['./cb-social.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'role': 'button'
   }
 })
-export class CbSocialMediaComponent {}
+export class CbSocialComponent {}

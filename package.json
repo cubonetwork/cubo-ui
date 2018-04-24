@@ -13,7 +13,7 @@
     "lint:css": "sass-lint -c sass-lint.json 'src/**/*.scss' -v -q",
     "fix:ts": "tslint -c tslint.json 'src/**/*.ts' --fix",
     "prepush": "npm run lint",
-    "postinstall": "cd ./lib; npm link; cd ../; npm link cubo-ui"
+    "postinstall": "cd ./src/lib; npm link; cd ../../; npm link cubo-ui"
   },
   "gh-pages-deploy": {
     "staticpath": "dist",

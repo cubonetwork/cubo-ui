@@ -4,23 +4,23 @@ import { TestBed, ComponentFixture, async } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
-import { CbSocialMediaButtonComponent } from './cb-social-media.component';
+import { CbSocialButtonComponent } from './cb-social.component';
 
 
 describe('CbSocialComponent', () => {
 
-  let comp: CbSocialMediaButtonComponent;
-  let fixture: ComponentFixture<CbSocialMediaButtonComponent>;
+  let comp: CbSocialButtonComponent;
+  let fixture: ComponentFixture<CbSocialButtonComponent>;
   let element: HTMLElement;
   const imageUrl = 'https://bit.ly/2vvFXCO';
 
   beforeEach(() => {
 
     TestBed.configureTestingModule({
-      declarations: [ CbSocialMediaButtonComponent ],
+      declarations: [ CbSocialButtonComponent ],
       imports: [ MatIconModule, HttpClientModule ]
     });
-    fixture = TestBed.createComponent(CbSocialMediaButtonComponent);
+    fixture = TestBed.createComponent(CbSocialButtonComponent);
     comp = fixture.componentInstance;
   });
 
