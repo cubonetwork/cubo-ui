@@ -1,18 +1,102 @@
-import { Component, ViewEncapsulation, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import social from './social.js';
+import * as hljs from 'highlight.js';
+const languages = ['html', 'typescript', 'css'];
 
 @Component({
-  selector: 'page-',
-  templateUrl: './social.component.html',
-  styleUrls: ['./social.component.css'],
-  encapsulation: ViewEncapsulation.Emulated,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'page-social-component',
+  template: ``
 })
-export class PageSocialComponent implements OnInit {
-  constructor() {
+export class PageSocialComponent { }
 
-  }
+@Component({
+  selector: 'page-social-description',
+  template: `
+  <p>cb-social makes it easier to integrate icons from social media. It supports Linkedin, Github, Twitter and Instagram.</p>
+  <h2>Select Social Media</h2>
+  <p>The directive expects the socialMedia property to select the icon.</p>
+  <h2>Themings</h2>
+  <p>The default color for all the items is gray, it changes to the original social media color when the user hovers the icon.</p>
+  `,
+})
+export class PageSocialDescriptionComponent { }
 
-  ngOnInit() {
-
-  }
+@Component({
+  selector: 'page-social-code-html',
+  template: `
+    <code [innerHtml]="html_content"></code>
+  `,
+})
+export class PageSocialCodeHtmlComponent {
+  html_content = hljs.highlightAuto(social.html, languages).value;
 }
+
+@Component({
+  selector: 'page-social-code-css',
+  template: `
+    <code [innerHtml]="css_content"></code>
+  `,
+})
+export class PageSocialCodeCssComponent {
+  css_content = hljs.highlightAuto(social.css, languages).value;
+}
+
+@Component({
+  selector: 'page-social-code-ts',
+  template: `
+    <code [innerHtml]="ts_content"></code>
+  `,
+})
+export class PageSocialCodeTsComponent {
+  ts_content = hljs.highlightAuto(social.ts, languages).value;
+}
+
+@Component({
+  selector: 'page-social-render',
+  template: `
+    <cb-social-media [socialMedia]="'github'"></cb-social-media>
+  `,
+})
+export class PageSocialRenderComponent { }
+
+@Component({
+  selector: 'page-social-api',
+  template: `
+    <h2>
+      API reference for Social Media
+    </h2>
+    <div>
+      <code [innerHtml]="import_content"></code>
+    </div>
+    <h2>
+      Directives
+    </h2>
+    <h3>
+      CbSocialMedia
+    </h3>
+    <p>A cubo social media component</p>
+    <p>
+      <span>Selector: </span>
+      <code>cb-social-media</code>
+    </p>
+    <p>
+      <span>Exported as: </span>
+      <code>CbSocialMedia</code>
+    </p>
+    <table>
+      <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>@Input() socialMedia: string;</td>
+        <td>The selected social media. Options are: 'github', 'linkedin', 'instagram', 'twitter'</td>
+      </tr>
+      </tbody>
+    </table>
+  `
+})
+export class PageSocialApiComponent {
+  import_content = hljs.highlightAuto(`import { CbSocialMediaModule } from '@cubo/cb-social-media.module';`, ['nohighlight']).value;
+ }
