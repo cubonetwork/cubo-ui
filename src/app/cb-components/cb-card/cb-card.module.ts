@@ -1,5 +1,5 @@
+import { SharedModule } from '@app/shared/shared.module';
 import { NgModule } from '@angular/core';
-import { CoreModule } from '@app/core/core.module';
 
 import {
   CbCardComponent,
@@ -25,7 +25,7 @@ import {
     CbCardSubtitleComponent,
   ],
   imports: [
-    CoreModule
+    SharedModule
   ]
 })
 export class CbCardModule { }
