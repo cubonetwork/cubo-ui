@@ -9,13 +9,13 @@ const languages = ['html', 'typescript', 'css'];
   selector: 'page-card-component',
   template: ``
 })
-export class PageCardComponent { }
+export class PageCardComponent {}
 
 @Component({
   selector: 'page-card-description',
   template: `
     <p>cb-card is a content container for text, photos, chips in the context of a single subject.</p>
-    <h2>Basic card sections</h2>
+    <h2>Basic card</h2>
     <p>The most basic card needs only an cb-card element with some content. However, it provides a number of preset sections that you can use inside of a cb-card</p>
     <table>
       <tbody>
@@ -43,39 +43,63 @@ export class PageCardComponent { }
     </table>
     <h2>Card</h2>
     <cb-card>
-      <cb-card-title>Card with title</cb-card-title>
-      <cb-card-subtitle>Card with subtitle</cb-card-subtitle>
       <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'"></cb-avatar>
+      <cb-card-title>Eleven</cb-card-title>
+      <cb-card-subtitle>Character @ Stranger Things</cb-card-subtitle>
       <cb-card-badges>
         <mat-chip-list>
-          <mat-chip color="primary" selected="true">Primary</mat-chip>
+          <mat-chip color="primary" selected="true">Hero</mat-chip>
+          <mat-chip color="accent" selected="true">Superpower</mat-chip>
         </mat-chip-list>
       </cb-card-badges>
       <cb-card-footer>
-        <cb-social>
-          <mat-icon svgIcon="linkedin"></mat-icon>
-          <mat-icon svgIcon="github"></mat-icon>
-          <mat-icon svgIcon="twitter"></mat-icon>
-          <mat-icon svgIcon="instagram"></mat-icon>
-        </cb-social>
+        <div class="social">
+          <cb-social>
+            <mat-icon svgIcon="linkedin"></mat-icon>
+          </cb-social>
+          <cb-social>
+            <mat-icon svgIcon="github"></mat-icon>
+          </cb-social>
+          <cb-social>
+            <mat-icon svgIcon="twitter"></mat-icon>
+          </cb-social>
+          <cb-social>
+            <mat-icon svgIcon="instagram"></mat-icon>
+          </cb-social>
+        </div>
+        <div class="actions">
+          <button mat-button color="primary">Click me!</button>
+        </div>
       </cb-card-footer>
     </cb-card>
-  `,
+  `
 })
 export class PageCardDescriptionComponent {
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer ) {
-    iconRegistry.addSvgIcon('linkedin', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/linkedin.svg'));
-    iconRegistry.addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg'));
-    iconRegistry.addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/twitter.svg'));
-    iconRegistry.addSvgIcon('instagram', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/instagram.svg'));
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      'linkedin',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/linkedin.svg')
+    ),
+    iconRegistry.addSvgIcon(
+      'github',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg')
+    ),
+    iconRegistry.addSvgIcon(
+      'twitter',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/twitter.svg')
+    ),
+    iconRegistry.addSvgIcon(
+      'instagram',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/instagram.svg')
+    );
   }
- }
+}
 
 @Component({
   selector: 'page-card-code-html',
   template: `
-    <code [innerHtml]="html_content"></code>
-  `,
+    <code [innerHtml]='html_content'></code>
+  `
 })
 export class PageCardCodeHtmlComponent {
   html_content = hljs.highlightAuto(card.html, languages).value;
@@ -84,8 +108,8 @@ export class PageCardCodeHtmlComponent {
 @Component({
   selector: 'page-card-code-css',
   template: `
-    <code [innerHtml]="css_content"></code>
-  `,
+    <code [innerHtml]='css_content'></code>
+  `
 })
 export class PageCardCodeCssComponent {
   css_content = hljs.highlightAuto(card.css, languages).value;
@@ -94,8 +118,8 @@ export class PageCardCodeCssComponent {
 @Component({
   selector: 'page-card-code-ts',
   template: `
-    <code [innerHtml]="ts_content"></code>
-  `,
+    <code [innerHtml]='ts_content'></code>
+  `
 })
 export class PageCardCodeTsComponent {
   ts_content = hljs.highlightAuto(card.ts, languages).value;
@@ -107,9 +131,9 @@ export class PageCardCodeTsComponent {
     <cb-card>
       <cb-card-title>Simple card</cb-card-title>
     </cb-card>
-  `,
+  `
 })
-export class PageCardRenderComponent { }
+export class PageCardRenderComponent {}
 
 @Component({
   selector: 'page-card-api',
@@ -118,7 +142,7 @@ export class PageCardRenderComponent { }
       API reference for Cubo Card
     </h2>
     <div>
-      <code [innerHtml]="import_content"></code>
+      <code [innerHtml]='import_content'></code>
     </div>
     <h2>
       Directives
@@ -138,5 +162,8 @@ export class PageCardRenderComponent { }
   `
 })
 export class PageCardApiComponent {
-  import_content = hljs.highlightAuto(`import { CbCardModule } from '@cubo/cb-card.module';`, ['nohighlight']).value;
- }
+  import_content = hljs.highlightAuto(
+    `import { CbCardModule } from '@cubo/cb-card.module';`,
+    ['nohighlight']
+  ).value;
+}

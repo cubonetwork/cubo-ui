@@ -2,13 +2,13 @@
 // Card Subtitle
 // -------------------------------------------------
 
-@import 'variables';
+@import '~cubo-ui/styles/variables';
 
 :host {
-  $font: (h4, regular);
+  @include mat-typography-level-to-styles($typography, subheading-1);
   display: block;
 
   &:not(:last-child):not(:empty) {
-    margin-bottom: $space-xxs;
+    margin-bottom: $space;
   }
 }

@@ -5,8 +5,7 @@
 // 2. Panel
 // 3. Navbar
 // 4. Content
-// 5. Code Render
-// 6. Button Mobile
+// 5. Button Mobile
 // ==================================================
 
 @import 'variables';
@@ -43,7 +42,7 @@
 
 .panel {
   &__header {
-    @include mat-typography-level-to-styles($typography, subheading-1);
+    @include mat-typography-level-to-styles($typography, body-1);
   }
 
   &__code {
@@ -91,7 +90,7 @@
 // -------------------------------------------------
 
 .content {
-  @include mat-typography-level-to-styles($typography-secondary, body-1);
+  @include mat-typography-level-to-styles($typography, body-1);
   margin-top: $space;
 
   &:not(:last-child) {
@@ -99,7 +98,7 @@
   }
 
   ::ng-deep h1 {
-    @include mat-typography-level-to-styles($typography-secondary, subheading-1);
+    @include mat-typography-level-to-styles($typography, subheading-1);
 
     &:not(:first-child) {
       margin-top: $space-md;
@@ -111,7 +110,7 @@
   }
 
   ::ng-deep h2 {
-    @include mat-typography-level-to-styles($typography-secondary, subheading-2);
+    @include mat-typography-level-to-styles($typography, subheading-2);
     border-bottom: $pattern-border solid 1px;
     padding-bottom: $space-xxs;
 
@@ -125,7 +124,7 @@
   }
 
   ::ng-deep h3 {
-    @include mat-typography-level-to-styles($typography-secondary, subheading-2);
+    @include mat-typography-level-to-styles($typography, subheading-2);
 
     &:not(:first-child) {
       margin-top: $space;
@@ -183,19 +182,11 @@
 }
 
 // -------------------------------------------------
-// 5. Code Render
-// -------------------------------------------------
-
-.render {
-  margin-top: $space;
-}
-
-// -------------------------------------------------
-// 6. Button Mobile
+// 5. Button Mobile
 // -------------------------------------------------
 
 .button-mobile {
-  @include mat-typography-level-to-styles($typography-secondary, body-2);
+  @include mat-typography-level-to-styles($typography, body-2);
   align-items: center;
   background: $brand-primary;
   color: $white;

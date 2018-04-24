@@ -1,7 +1,16 @@
 const social = {
   html: `
     <cb-social>
+      <mat-icon svgIcon="linkedin"></mat-icon>
+    </cb-social>
+    <cb-social>
       <mat-icon svgIcon="github"></mat-icon>
+    </cb-social>
+    <cb-social>
+      <mat-icon svgIcon="twitter"></mat-icon>
+    </cb-social>
+    <cb-social>
+      <mat-icon svgIcon="instagram"></mat-icon>
     </cb-social>`,
   ts: `
     import {Component} from '@angular/core';

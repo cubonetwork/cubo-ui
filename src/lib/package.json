@@ -13,6 +13,8 @@
   ],
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.5",
-    "@angular/core": "^6.0.0-rc.5"
+    "@angular/core": "^6.0.0-rc.5",
+    "@angular/material": "^6.0.0-rc.12",
+    "rupture-sass": "^0.2.3"
   }
 }

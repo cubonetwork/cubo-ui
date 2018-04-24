@@ -2,14 +2,14 @@
 // Card Footer
 // -------------------------------------------------
 
-@import 'variables';
+@import '~cubo-ui/styles/variables';
 
 :host {
   align-items: center;
   border-top: 1px solid $pattern-border;
   display: flex;
   justify-content: space-between;
-  margin-top: $space-sm;
+  margin-top: $space;
   padding-top: $space-sm;
   width: 100%;
 

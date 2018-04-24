@@ -20,12 +20,20 @@ export class PageSocialComponent { }
   <h2>Themings</h2>
   <p>The default color for all the items is gray, it changes to the original social media color when the user hovers the icon.</p>
   <h2>Social Media Examples</h2>
-  <cb-social>
-    <mat-icon svgIcon="linkedin"></mat-icon>
-    <mat-icon svgIcon="github"></mat-icon>
-    <mat-icon svgIcon="twitter"></mat-icon>
-    <mat-icon svgIcon="instagram"></mat-icon>
-  </cb-social>
+  <div>
+    <cb-social>
+      <mat-icon svgIcon="linkedin"></mat-icon>
+    </cb-social>
+    <cb-social>
+      <mat-icon svgIcon="github"></mat-icon>
+    </cb-social>
+    <cb-social>
+      <mat-icon svgIcon="twitter"></mat-icon>
+    </cb-social>
+    <cb-social>
+      <mat-icon svgIcon="instagram"></mat-icon>
+    </cb-social>
+  </div>
   `,
 })
 export class PageSocialDescriptionComponent {

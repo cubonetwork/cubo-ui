@@ -2,9 +2,10 @@
 // Card
 // -------------------------------------------------
 
-@import 'variables';
+@import '~cubo-ui/styles/variables';
 
 :host {
+  align-items: center;
   border: $pattern-border solid 1px;
   color: $brand-text;
   cursor: pointer;

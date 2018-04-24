@@ -2,10 +2,10 @@
 // Card
 // -------------------------------------------------
 
-@import 'variables';
+@import '~cubo-ui/styles/variables';
 
 :host {
-  $font: (h3, bold);
+  @include mat-typography-level-to-styles($typography, title);
   display: block;
 
   &:not(:first-child) {

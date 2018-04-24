@@ -5,7 +5,6 @@ import {
   Input
 } from '@angular/core';
 
-
 /**
  * Component `<cb-social>` to make a share action
  */

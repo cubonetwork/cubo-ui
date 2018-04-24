@@ -104,19 +104,10 @@ $rupture: map-merge($rupture,
 $font-family-primary   : 'Roboto, sans-serif';
 $typography: mat-typography-config(
   $font-family:   $font-family-primary,
-  $display-4:     mat-typography-level(11.2rem, 11.2rem, 300),
-  $display-3:     mat-typography-level(5.6rem, 5.6rem, 400),
-  $display-2:     mat-typography-level(4.5rem, 4.8rem, 400),
-  $display-1:     mat-typography-level(3.4rem, 4rem, 400),
-  $headline:      mat-typography-level(2.4rem, 3.2rem, 400),
-  $title:         mat-typography-level(2rem, 3.2rem, 500),
-  $subheading-1:  mat-typography-level(2.8rem, 2.4rem, 400),
-  $subheading-2:  mat-typography-level(2.4rem, 2.8rem, 300),
+  $title:         mat-typography-level(2rem, 3.2rem, 600),
+  $subheading-1:  mat-typography-level(1.8rem, 2.4rem, 400),
   $body-2:        mat-typography-level(1.7rem, 2.6rem, 500),
-  $body-1:        mat-typography-level(1.8rem, 2.8rem, 400),
-  $caption:       mat-typography-level(1.2rem, 2rem, 400),
-  $button:        mat-typography-level(1.4rem, 1.4rem, 500),
-  $input:         mat-typography-level(1.6rem, 1.125, 400)
+  $body-1:        mat-typography-level(1.4rem, 2rem, 400)
 );
 
 // --------------------------------------------------

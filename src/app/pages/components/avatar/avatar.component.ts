@@ -17,7 +17,7 @@ export class PageAvatarComponent {}
   <h2>Without image</h2>
   <p>If a image is not set, the component expects a name property. Given this property, it renders the name initials as the avatar image.</p>
   <h3>Initials</h3>
-  <cb-avatar [name]="'Darth Vader'"></cb-avatar>
+  <cb-avatar [name]="'Eleven Stranger'"></cb-avatar>
   <h2>Input</h2>
   <p>The cb-avatar can receive an image or a name input to display as an avatar.</p>
   <h2>Size</h2>
@@ -31,7 +31,7 @@ export class PageAvatarComponent {}
   <h3>Large</h3>
   <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'"></cb-avatar>
   <h3>Extra Large</h3>
-  <div style="width: 30%">
+  <div style="max-width: 300px">
     <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'" [size]="'xlarge'"></cb-avatar>
   </div>
   `,

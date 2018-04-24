@@ -2,17 +2,18 @@
 // Social Media
 // ==================================================
 
-@import 'variables';
+@import '~cubo-ui/styles/variables';
 
 :host {
   display: inline-block;
   filter: grayscale(100);
   opacity: .75;
+  margin-right: $space-xs;
   text-align: center;
   transition: filter .3s, opacity .3s;
   will-change: filter;
 
-  &:hover
+  &:hover,
   &:focus {
     filter: grayscale(0);
     opacity: 1;
