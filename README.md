@@ -1,4 +1,4 @@
-<p align="center"><img src="src/assets/images/logo-cubo.png"></p>
+<p align="center"><img src="src/assets/images/logo-cubo-ui.png"></p>
 
 # Cubo UI
 
