@@ -25,6 +25,13 @@ export const PageComponentsRoutes: Routes = [
           meta: { title: 'Card' }
         }
       },
+      {
+        path: 'social',
+        loadChildren: '@app/pages/components/social/social.module#PageSocialModule',
+        data: {
+          meta: { title: 'social' }
+        }
+      },
     ]
   }
 ];

@@ -1,4 +1,4 @@
-const avatar = {
+const card = {
   html: `
     <cb-card>
       <cb-card-title>Simple card</cb-card-title>
@@ -7,18 +7,18 @@ const avatar = {
     import {Component} from '@angular/core';
 
     /**
-     * @title Basic avatar
+     * @title Basic card
      */
     @Component({
-      selector: 'avatar-overview-example',
-      templateUrl: 'avatar-overview-example.html',
-      styleUrls: ['avatar-overview-example.css']
+      selector: 'card-overview-example',
+      templateUrl: 'card-overview-example.html',
+      styleUrls: ['card-overview-example.css']
     })
-    export class AvatarOverviewExample {}
+    export class CardOverviewExample {}
   `,
   css: `
     /** No CSS for this example */
   `
 };
 
-module.exports = avatar;
+module.exports = card;

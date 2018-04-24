@@ -20,6 +20,10 @@ export class PageComponentsComponent {
     {
       'path': 'card',
       'name': 'Card'
+    },
+    {
+      'path': 'social',
+      'name': 'Social'
     }
   ];
   showMenu = false;
