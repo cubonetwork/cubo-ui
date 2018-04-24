@@ -17,6 +17,27 @@ This project uses [Angular](https://angular.io/) as framework and main dependenc
 npm install cubo-ui
 ```
 
+#### app.module.ts
+
+```ts
+...
+import { CbAvatarModule } from 'cubo-ui/cb-avatar/cb-avatar.module';
+...
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ...
+  ],
+  ...
+  imports: [
+    ...
+    CbAvatarModule
+  ],
+  ... 
+})
+```
+
 ### Using to development it
 
 ```sh
