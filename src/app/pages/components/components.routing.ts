@@ -18,6 +18,13 @@ export const PageComponentsRoutes: Routes = [
           meta: { title: 'Avatar' }
         }
       },
+      {
+        path: 'card',
+        loadChildren: '@app/pages/components/card/card.module#PageCardModule',
+        data: {
+          meta: { title: 'Card' }
+        }
+      },
     ]
   }
 ];
