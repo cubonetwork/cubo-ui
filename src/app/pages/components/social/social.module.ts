@@ -1,6 +1,7 @@
 import { CbSocialMediaModule } from '../../../cb-components/cb-social/cb-social-media.module';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
+import { MatIconModule } from '@angular/material';
 
 import { PageSocialRouting } from './social.routing';
 import {
@@ -16,7 +17,8 @@ import {
 @NgModule({
   imports: [
     PageSocialRouting,
-    CbSocialMediaModule
+    CbSocialMediaModule,
+    MatIconModule
   ],
   declarations: [
     PageSocialDescriptionComponent,

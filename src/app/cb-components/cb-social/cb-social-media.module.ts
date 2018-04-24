@@ -1,21 +1,19 @@
-import { MatIconModule } from '@angular/material';
 import { SharedModule } from '@app/shared/shared.module';
 import { NgModule } from '@angular/core';
 
 import {
-  CbSocialMediaButtonComponent
+  CbSocialMediaComponent
 } from './cb-social-media.component';
 
 @NgModule({
   exports: [
-    CbSocialMediaButtonComponent
+    CbSocialMediaComponent
   ],
   declarations: [
-    CbSocialMediaButtonComponent
+    CbSocialMediaComponent
   ],
   imports: [
-    SharedModule,
-    MatIconModule
+    SharedModule
   ],
 })
 export class CbSocialMediaModule { }

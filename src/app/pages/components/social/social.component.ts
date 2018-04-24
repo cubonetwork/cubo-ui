@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatIconRegistry, MatIcon } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
 import social from './social.js';
 import * as hljs from 'highlight.js';
 const languages = ['html', 'typescript', 'css'];
@@ -12,9 +14,9 @@ export class PageSocialComponent { }
 @Component({
   selector: 'page-social-description',
   template: `
-  <p>cb-social makes it easier to integrate icons from social media. It supports Linkedin, Github, Twitter and Instagram.</p>
+  <p>cb-social makes it easier to integrate icons from social media.</p>
   <h2>Select Social Media</h2>
-  <p>The directive expects the socialMedia property to select the icon.</p>
+  <p>It is possible to add the social media icons trough the MatIconRegistry module.</p>
   <h2>Themings</h2>
   <p>The default color for all the items is gray, it changes to the original social media color when the user hovers the icon.</p>
   `,
@@ -54,10 +56,19 @@ export class PageSocialCodeTsComponent {
 @Component({
   selector: 'page-social-render',
   template: `
-    <cb-social-media [socialMedia]="'github'"></cb-social-media>
+    <cb-social-media>
+      <mat-icon svgIcon="github"></mat-icon>
+    </cb-social-media>
   `,
 })
-export class PageSocialRenderComponent { }
+export class PageSocialRenderComponent {
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer ) {
+    iconRegistry.addSvgIcon('linkedin', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/linkedin.svg'));
+    iconRegistry.addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg'));
+    iconRegistry.addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/twitter.svg'));
+    iconRegistry.addSvgIcon('instagram', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/instagram.svg'));
+  }
+ }
 
 @Component({
   selector: 'page-social-api',
@@ -83,18 +94,6 @@ export class PageSocialRenderComponent { }
       <span>Exported as: </span>
       <code>CbSocialMedia</code>
     </p>
-    <table>
-      <tbody>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>@Input() socialMedia: string;</td>
-        <td>The selected social media. Options are: 'github', 'linkedin', 'instagram', 'twitter'</td>
-      </tr>
-      </tbody>
-    </table>
   `
 })
 export class PageSocialApiComponent {
