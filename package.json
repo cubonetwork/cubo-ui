@@ -21,9 +21,6 @@
     "prep": [
       "build"
     ],
-    "post": [
-      "rimraf src e2e"
-    ],
     "noprompt": true
   },
   "dependencies": {
