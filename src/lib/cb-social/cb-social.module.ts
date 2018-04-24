@@ -2,18 +2,18 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import {
-  CbSocialMediaComponent
-} from './cb-social-media.component';
+  CbSocialComponent
+} from './cb-social.component';
 
 @NgModule({
   exports: [
-    CbSocialMediaComponent
+    CbSocialComponent
   ],
   declarations: [
-    CbSocialMediaComponent
+    CbSocialComponent
   ],
   imports: [
     CommonModule
   ],
 })
-export class CbSocialMediaModule { }
+export class CbSocialModule { }

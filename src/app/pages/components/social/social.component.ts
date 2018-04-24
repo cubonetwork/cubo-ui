@@ -19,9 +19,23 @@ export class PageSocialComponent { }
   <p>It is possible to add the social media icons trough the MatIconRegistry module.</p>
   <h2>Themings</h2>
   <p>The default color for all the items is gray, it changes to the original social media color when the user hovers the icon.</p>
+  <h2>Social Media Examples</h2>
+  <cb-social>
+    <mat-icon svgIcon="linkedin"></mat-icon>
+    <mat-icon svgIcon="github"></mat-icon>
+    <mat-icon svgIcon="twitter"></mat-icon>
+    <mat-icon svgIcon="instagram"></mat-icon>
+  </cb-social>
   `,
 })
-export class PageSocialDescriptionComponent { }
+export class PageSocialDescriptionComponent {
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer ) {
+    iconRegistry.addSvgIcon('linkedin', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/linkedin.svg'));
+    iconRegistry.addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg'));
+    iconRegistry.addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/twitter.svg'));
+    iconRegistry.addSvgIcon('instagram', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/instagram.svg'));
+  }
+}
 
 @Component({
   selector: 'page-social-code-html',
@@ -55,26 +69,16 @@ export class PageSocialCodeTsComponent {
 
 @Component({
   selector: 'page-social-render',
-  template: `
-    <cb-social-media>
-      <mat-icon svgIcon="github"></mat-icon>
-    </cb-social-media>
-  `,
+  template: ``,
 })
 export class PageSocialRenderComponent {
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer ) {
-    iconRegistry.addSvgIcon('linkedin', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/linkedin.svg'));
-    iconRegistry.addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg'));
-    iconRegistry.addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/twitter.svg'));
-    iconRegistry.addSvgIcon('instagram', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/instagram.svg'));
-  }
  }
 
 @Component({
   selector: 'page-social-api',
   template: `
     <h2>
-      API reference for Social Media
+      API reference for Social
     </h2>
     <div>
       <code [innerHtml]="import_content"></code>
@@ -83,19 +87,19 @@ export class PageSocialRenderComponent {
       Directives
     </h2>
     <h3>
-      CbSocialMedia
+      CbSocial
     </h3>
-    <p>A cubo social media component</p>
+    <p>A cubo social  component</p>
     <p>
       <span>Selector: </span>
-      <code>cb-social-media</code>
+      <code>cb-social</code>
     </p>
     <p>
       <span>Exported as: </span>
-      <code>CbSocialMedia</code>
+      <code>CbSocial</code>
     </p>
   `
 })
 export class PageSocialApiComponent {
-  import_content = hljs.highlightAuto(`import { CbSocialMediaModule } from '@cubo/cb-social-media.module';`, ['nohighlight']).value;
+  import_content = hljs.highlightAuto(`import { CbSocialModule } from '@cubo/cb-social.module';`, ['nohighlight']).value;
  }

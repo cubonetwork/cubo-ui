@@ -1,7 +1,8 @@
-import { MatChipsModule } from '@angular/material';
+import { MatChipsModule, MatIconRegistry } from '@angular/material';
 import { Component } from '@angular/core';
 import card from './card.js';
 import * as hljs from 'highlight.js';
+import { DomSanitizer } from '@angular/platform-browser';
 const languages = ['html', 'typescript', 'css'];
 
 @Component({
@@ -44,18 +45,31 @@ export class PageCardComponent { }
     <cb-card>
       <cb-card-title>Card with title</cb-card-title>
       <cb-card-subtitle>Card with subtitle</cb-card-subtitle>
+      <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'"></cb-avatar>
       <cb-card-badges>
         <mat-chip-list>
           <mat-chip color="primary" selected="true">Primary</mat-chip>
         </mat-chip-list>
       </cb-card-badges>
       <cb-card-footer>
-        <p>Footer</p>
+        <cb-social>
+          <mat-icon svgIcon="linkedin"></mat-icon>
+          <mat-icon svgIcon="github"></mat-icon>
+          <mat-icon svgIcon="twitter"></mat-icon>
+          <mat-icon svgIcon="instagram"></mat-icon>
+        </cb-social>
       </cb-card-footer>
     </cb-card>
   `,
 })
-export class PageCardDescriptionComponent { }
+export class PageCardDescriptionComponent {
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer ) {
+    iconRegistry.addSvgIcon('linkedin', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/linkedin.svg'));
+    iconRegistry.addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg'));
+    iconRegistry.addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/twitter.svg'));
+    iconRegistry.addSvgIcon('instagram', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/instagram.svg'));
+  }
+ }
 
 @Component({
   selector: 'page-card-code-html',

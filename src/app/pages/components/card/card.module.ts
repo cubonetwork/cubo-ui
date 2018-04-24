@@ -1,5 +1,7 @@
-import { MatChipsModule } from '@angular/material';
-import { CbCardModule } from '../../../cb-components/cb-card/cb-card.module';
+import { CbSocialModule } from 'cubo-ui/cb-social/cb-social.module';
+import { CbAvatarModule } from 'cubo-ui/cb-avatar/cb-avatar.module';
+import { MatChipsModule, MatIconModule } from '@angular/material';
+import { CbCardModule } from 'cubo-ui/cb-card/cb-card.module';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
 
@@ -18,7 +20,10 @@ import {
   imports: [
     PageCardRouting,
     CbCardModule,
-    MatChipsModule
+    MatChipsModule,
+    CbAvatarModule,
+    CbSocialModule,
+    MatIconModule
   ],
   declarations: [
     PageCardDescriptionComponent,

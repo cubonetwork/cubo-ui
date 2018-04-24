@@ -1,8 +1,8 @@
 const social = {
   html: `
-    <cb-social-media>
+    <cb-social>
       <mat-icon svgIcon="github"></mat-icon>
-    </cb-social-media>`,
+    </cb-social>`,
   ts: `
     import {Component} from '@angular/core';
 
