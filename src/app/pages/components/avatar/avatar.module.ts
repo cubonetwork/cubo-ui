@@ -8,25 +8,25 @@ import {
   PageAvatarCodeHtmlComponent,
   PageAvatarCodeCssComponent,
   PageAvatarCodeTsComponent,
-  PageAvatarRenderComponent,
   PageAvatarApiComponent,
   PageAvatarComponent
 } from './avatar.component';
 import { PageAvatarRouting } from './avatar.routing';
+import { MatExpansionModule } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
     PageAvatarRouting,
     SharedModule,
-    CbAvatarModule
+    CbAvatarModule,
+    MatExpansionModule
   ],
   declarations: [
     PageAvatarDescriptionComponent,
     PageAvatarCodeHtmlComponent,
     PageAvatarCodeCssComponent,
     PageAvatarCodeTsComponent,
-    PageAvatarRenderComponent,
     PageAvatarApiComponent,
     PageAvatarComponent
   ]
