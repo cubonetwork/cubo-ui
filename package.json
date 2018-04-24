@@ -5,8 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
-    "deploy": "gh-pages-deploy",
+    "build": "ng build --prod --base-href 'https://cubonetwork.github.io/cubo-ui/'",
+    "deploy": "npm run build; ngh --dry-run",
     "test": "ng test",
     "e2e": "ng e2e",
     "lint": "npm run lint:ts && npm run lint:css",
@@ -15,13 +15,6 @@
     "fix:ts": "tslint -c tslint.json 'src/**/*.ts' --fix",
     "prepush": "npm run lint",
     "postinstall": "cd ./src/lib; npm link; cd ../../; npm link cubo-ui"
-  },
-  "gh-pages-deploy": {
-    "staticpath": "dist",
-    "prep": [
-      "build"
-    ],
-    "noprompt": true
   },
   "dependencies": {
     "@angular/animations": "^6.0.0-rc.5",
@@ -52,7 +45,6 @@
     "@types/node": "~9.6.6",
     "codelyzer": "~4.3.0",
     "cubo-schematics": "^1.0.3",
-    "gh-pages-deploy": "^0.4.2",
     "husky": "^0.14.3",
     "jasmine-core": "~3.1.0",
     "jasmine-spec-reporter": "~4.2.1",
