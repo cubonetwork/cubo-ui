@@ -1,5 +1,3 @@
-<p align="center"><img src="src/assets/images/logo-cubo-ui.png"></p>
-
 # Cubo UI
 
 > UI components to using on Angular
