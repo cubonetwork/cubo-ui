@@ -1,14 +1,31 @@
+import { CbSocialMediaModule } from '../../../cb-components/cb-social/cb-social-media.module';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from '@app/shared/shared.module';
 
 import { PageSocialRouting } from './social.routing';
-import { PageSocialComponent } from './social.component';
+import {
+  PageSocialDescriptionComponent,
+  PageSocialCodeHtmlComponent,
+  PageSocialCodeCssComponent,
+  PageSocialCodeTsComponent,
+  PageSocialRenderComponent,
+  PageSocialApiComponent,
+  PageSocialComponent
+} from './social.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    PageSocialRouting
+    PageSocialRouting,
+    CbSocialMediaModule
   ],
-  declarations: [PageSocialComponent]
+  declarations: [
+    PageSocialDescriptionComponent,
+    PageSocialCodeHtmlComponent,
+    PageSocialCodeCssComponent,
+    PageSocialCodeTsComponent,
+    PageSocialRenderComponent,
+    PageSocialApiComponent,
+    PageSocialComponent
+  ]
 })
 export class PageSocialModule { }

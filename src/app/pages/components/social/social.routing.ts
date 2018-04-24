@@ -1,11 +1,54 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageSocialComponent } from './social.component';
+import {
+  PageSocialDescriptionComponent,
+  PageSocialCodeHtmlComponent,
+  PageSocialCodeCssComponent,
+  PageSocialCodeTsComponent,
+  PageSocialRenderComponent,
+  PageSocialApiComponent,
+  PageSocialComponent
+} from './social.component';
 
 export const PageSocialRoutes: Routes = [
   {
     path: '',
-    component: PageSocialComponent,
+    children: [
+      {
+        path: '',
+        component: PageSocialComponent
+      },
+      {
+        path: '',
+        component: PageSocialDescriptionComponent,
+        outlet: 'description'
+      },
+      {
+        path: '',
+        component: PageSocialCodeHtmlComponent,
+        outlet: 'code-html'
+      },
+      {
+        path: '',
+        component: PageSocialCodeTsComponent,
+        outlet: 'code-ts'
+      },
+      {
+        path: '',
+        component: PageSocialCodeCssComponent,
+        outlet: 'code-css'
+      },
+      {
+        path: '',
+        component: PageSocialRenderComponent,
+        outlet: 'render'
+      },
+      {
+        path: '',
+        component: PageSocialApiComponent,
+        outlet: 'api'
+      }
+    ]
   }
 ];
 @NgModule({
