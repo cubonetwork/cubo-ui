@@ -17,7 +17,8 @@ import {
 @NgModule({
   imports: [
     CommonModule,
-    PageCardRouting
+    PageCardRouting,
+    CbCardModule
   ],
   declarations: [
     PageCardDescriptionComponent,

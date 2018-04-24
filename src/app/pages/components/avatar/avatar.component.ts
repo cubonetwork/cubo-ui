@@ -116,5 +116,5 @@ export class PageAvatarRenderComponent { }
   `,
 })
 export class PageAvatarApiComponent {
-  import_content = hljs.highlightAuto(`import {MatButtonModule} from '@angular/material/button';`, ['nohighlight']).value;
+  import_content = hljs.highlightAuto(`import { CbAvatarModule } from '@cubo/cb-avatar.module';`, ['nohighlight']).value;
  }

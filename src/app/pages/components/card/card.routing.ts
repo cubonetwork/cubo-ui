@@ -6,13 +6,18 @@ import {
   PageCardCodeCssComponent,
   PageCardCodeTsComponent,
   PageCardRenderComponent,
-  PageCardApiComponent
+  PageCardApiComponent,
+  PageCardComponent
 } from './card.component';
 
 export const PageCardRoutes: Routes = [
   {
     path: '',
     children: [
+      {
+        path: '',
+        component: PageCardComponent
+      },
       {
         path: '',
         component: PageCardDescriptionComponent,
