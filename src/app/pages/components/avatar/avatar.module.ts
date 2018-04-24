@@ -1,3 +1,4 @@
+import { CbAvatarModule } from '../../../cb-components/cb-avatar/cb-avatar.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '@app/shared/shared.module';
@@ -16,7 +17,8 @@ import { PageAvatarRouting } from './avatar.routing';
   imports: [
     CommonModule,
     PageAvatarRouting,
-    SharedModule
+    SharedModule,
+    CbAvatarModule
   ],
   declarations: [
     PageAvatarDescriptionComponent,

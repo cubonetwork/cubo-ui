@@ -17,14 +17,9 @@ import { metaFactory } from '@app/core/meta.config';
       useFactory: (metaFactory)
     })
   ],
-  exports: [
-    CommonModule,
-    BrowserAnimationsModule,
-    BrowserModule
-  ],
+  exports: [ ],
   declarations: [],
-  providers: [
-  ]
+  providers: []
 })
 export class CoreModule {
   constructor (@Optional() @SkipSelf() parentModule: CoreModule) {
