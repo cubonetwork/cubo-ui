@@ -1,15 +1,16 @@
 // ==================================================
 // App
 //
-// 1. Header
-// 2. Main
-// 3. Container
+// 1. Content
+// 2. Panel
+// 3. Description
+// 4. Code Render
 // ==================================================
 
 @import 'variables';
 
 // -------------------------------------------------
-// 5. Content
+// 1. Content
 // -------------------------------------------------
 
 .content {
@@ -17,7 +18,7 @@
 }
 
 // -------------------------------------------------
-// 6. Panel
+// 2. Panel
 // -------------------------------------------------
 
 .panel {
@@ -33,7 +34,7 @@
 }
 
 // -------------------------------------------------
-// 7. Description
+// 3. Description
 // -------------------------------------------------
 
 .description {
@@ -56,8 +57,8 @@
   ::ng-deep h2 {
     @include mat-typography-level-to-styles($typography-secondary, subheading-2);
     border-bottom: $pattern-border solid 1px;
-    padding-bottom: $space-xs;
     margin-bottom: $space-xs;
+    padding-bottom: $space-xs;
 
     &:not(:last-child) {
       margin-bottom: $space-xs;
@@ -90,22 +91,22 @@
   }
 
   ::ng-deep table {
+    border-collapse: collapse;
     table-layout: fixed;
     width: 70%;
-    border-collapse: collapse;
   }
 
   ::ng-deep th, td {
     background: #f5f5f5;
-    padding: 20px;
     border: 1px solid rgba(0,0,0,.03);
+    padding: 20px;
   }
 
   ::ng-deep th {
-    text-align: left;
-    padding: $space-xs;
     color: $gray;
     font-weight: 400;
+    padding: $space-xs;
+    text-align: left;
   }
 
   ::ng-deep td {
@@ -124,9 +125,8 @@
   }
 }
 
-
 // -------------------------------------------------
-// 8. Code Render
+// 4. Code Render
 // -------------------------------------------------
 
 .render {
