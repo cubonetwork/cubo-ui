@@ -7,8 +7,8 @@
 :host {
   display: inline-block;
   filter: grayscale(100);
-  opacity: .75;
   margin-right: $space-xs;
+  opacity: .75;
   text-align: center;
   transition: filter .3s, opacity .3s;
   will-change: filter;
