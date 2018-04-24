@@ -1,27 +1,60 @@
-# CuboUi
+<p align="center"><img src="src/assets/images/logo-cubo.png"></p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0-rc.5.
+# Cubo UI
 
-## Development server
+> UI components to using on Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[![license](https://img.shields.io/github/license/cubonetwork/cubo-ui.svg)](./license.md)
+[![GitHub contributors](https://img.shields.io/github/contributors/cubonetwork/cubo-ui.svg)](https://github.com/cubonetwork/cubo-ui/graphs/contributors)
 
-## Code scaffolding
+This project uses [Angular](https://angular.io/) as framework and main dependency and [Angular Material](https://material.angular.io).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting Started
 
-## Build
+### Using as a dependency
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```sh
+npm install cubo-ui
+```
 
-## Running unit tests
+### Using to development it
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+# install dependencies
+$ npm i
 
-## Running end-to-end tests
+# Run the project
+$ npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### To generate schematics
 
-## Further help
+Generate a component
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```sh
+ng generate cubo-schematics:component componentName
+```
+
+Generate a page
+
+```sh
+ng generate cubo-schematics:page pageName
+```
+
+With the commands above, you have everything to start.
+
+### Code Standards
+
+This project uses [Cubo Coding Style](https://github.com/cubonetwork/coding-style) as code reference.
+
+### Tasks
+
+- `npm start`: run all tasks and initialize watch for changes and a server
+- `npm run build`: run all production tasks create a `dist` folder to deploy
+- `npm run lint`: lint javascript and css
+- `npm run fix`: command to fix all eslint errors
+- `npm run deploy`: run all tasks to build and deploy on gh-pages
+
+## License
+
+MIT License © Cubo 2018
