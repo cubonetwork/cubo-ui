@@ -10,10 +10,11 @@
     "lint": "npm run lint:ts && npm run lint:css && ng lint",
     "lint:ts": "tslint 'src/**/*.ts'",
     "lint:css": "sass-lint -c src/.sasslintrc '**/*.scss' -v -q",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prepush": "npm run lint"
   },
   "prepush" : {
-    "tasks": "npm run lint",
+    "tasks": [ "npm run lint" ],
     "coloredOuput": true
   },
   "dependencies": {
