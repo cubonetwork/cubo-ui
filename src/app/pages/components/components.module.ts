@@ -1,3 +1,4 @@
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from '@app/shared/shared.module';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -14,7 +15,8 @@ import { PageComponentsComponent } from './components.component';
     MatChipsModule,
     MatCardModule,
     MatListModule,
-    PageComponentsRouting
+    PageComponentsRouting,
+    FlexLayoutModule
   ],
   declarations: [
     PageComponentsComponent

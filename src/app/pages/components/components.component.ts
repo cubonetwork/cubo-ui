@@ -22,4 +22,10 @@ export class PageComponentsComponent {
       'name': 'Card'
     }
   ];
+  showMenu = false;
+
+  toggleMenu(event) {
+    event.stopPropagation();
+    this.showMenu = !this.showMenu;
+  }
 }

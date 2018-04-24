@@ -52,6 +52,8 @@
 // -------------------------------------------------
 
 .main {
-  margin-top: $header-height;
+  @include above(sm) {
+    margin-top: $header-height;
+  }
 }
 
