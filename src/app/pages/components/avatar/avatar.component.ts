@@ -4,6 +4,12 @@ import * as hljs from 'highlight.js';
 const languages = ['html', 'typescript', 'css'];
 
 @Component({
+  selector: 'page-avatar',
+  template: ``
+})
+export class PageAvatarComponent {}
+
+@Component({
   selector: 'page-avatar-description',
   template: `
     <p>cb-avatar is made for using avatar images in your app. This directive supports images in (png, jpg, etc.). If you do not provide an image url, it uses a default one.</p>
