@@ -1,3 +1,4 @@
+import { MatChipsModule } from '@angular/material';
 import { CbCardModule } from '../../../cb-components/cb-card/cb-card.module';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
@@ -16,7 +17,8 @@ import {
 @NgModule({
   imports: [
     PageCardRouting,
-    CbCardModule
+    CbCardModule,
+    MatChipsModule
   ],
   declarations: [
     PageCardDescriptionComponent,

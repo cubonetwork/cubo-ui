@@ -1,3 +1,4 @@
+import { MatChipsModule } from '@angular/material';
 import { Component } from '@angular/core';
 import card from './card.js';
 import * as hljs from 'highlight.js';
@@ -39,14 +40,19 @@ export class PageCardComponent { }
       </tr>
       </tbody>
     </table>
-    <h2>Title</h2>
-    <p>Adds a title to cb-card component.</p>
-    <h2>Subtitle</h2>
-    <p>Adds a subtitle to cb-card> component.</p>
-    <h2>Badges</h2>
-    <p>It prepares the element to receive one or more mat-chips.</p>
-    <h2>Footer</h2>
-    <p>It adds styles for preset footer section.</p>
+    <h2>Card</h2>
+    <cb-card>
+      <cb-card-title>Card with title</cb-card-title>
+      <cb-card-subtitle>Card with subtitle</cb-card-subtitle>
+      <cb-card-badges>
+        <mat-chip-list>
+          <mat-chip color="primary" selected="true">Primary</mat-chip>
+        </mat-chip-list>
+      </cb-card-badges>
+      <cb-card-footer>
+        <p>Footer</p>
+      </cb-card-footer>
+    </cb-card>
   `,
 })
 export class PageCardDescriptionComponent { }
