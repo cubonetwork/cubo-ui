@@ -1,6 +1,5 @@
 import { CbCardModule } from '../../../cb-components/cb-card/cb-card.module';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { SharedModule } from '@app/shared/shared.module';
 
 import { PageCardRouting } from './card.routing';
@@ -16,7 +15,6 @@ import {
 
 @NgModule({
   imports: [
-    CommonModule,
     PageCardRouting,
     CbCardModule
   ],
