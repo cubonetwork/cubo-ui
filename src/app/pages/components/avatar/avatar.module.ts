@@ -9,7 +9,8 @@ import {
   PageAvatarCodeCssComponent,
   PageAvatarCodeTsComponent,
   PageAvatarRenderComponent,
-  PageAvatarApiComponent
+  PageAvatarApiComponent,
+  PageAvatarComponent
 } from './avatar.component';
 import { PageAvatarRouting } from './avatar.routing';
 
@@ -26,7 +27,8 @@ import { PageAvatarRouting } from './avatar.routing';
     PageAvatarCodeCssComponent,
     PageAvatarCodeTsComponent,
     PageAvatarRenderComponent,
-    PageAvatarApiComponent
+    PageAvatarApiComponent,
+    PageAvatarComponent
   ]
 })
 export class PageAvatarModule { }

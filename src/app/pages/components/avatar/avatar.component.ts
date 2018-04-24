@@ -4,6 +4,12 @@ import * as hljs from 'highlight.js';
 const languages = ['html', 'typescript', 'css'];
 
 @Component({
+  selector: 'page-avatar',
+  template: ``
+})
+export class PageAvatarComponent {}
+
+@Component({
   selector: 'page-avatar-description',
   template: `
     <p>cb-avatar is made for using avatar images in your app. This directive supports images in (png, jpg, etc.). If you do not provide an image url, it uses a default one.</p>
@@ -110,5 +116,5 @@ export class PageAvatarRenderComponent { }
   `,
 })
 export class PageAvatarApiComponent {
-  import_content = hljs.highlightAuto(`import {MatButtonModule} from '@angular/material/button';`, ['nohighlight']).value;
+  import_content = hljs.highlightAuto(`import { CbAvatarModule } from '@cubo/cb-avatar.module';`, ['nohighlight']).value;
  }

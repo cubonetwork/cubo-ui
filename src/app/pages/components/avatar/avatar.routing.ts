@@ -6,13 +6,18 @@ import {
   PageAvatarCodeCssComponent,
   PageAvatarCodeTsComponent,
   PageAvatarRenderComponent,
-  PageAvatarApiComponent
+  PageAvatarApiComponent,
+  PageAvatarComponent
 } from './avatar.component';
 
 export const PageAvatarRoutes: Routes = [
   {
     path: '',
     children: [
+      {
+        path: '',
+        component: PageAvatarComponent,
+      },
       {
         path: '',
         component: PageAvatarDescriptionComponent,
