@@ -1,11 +1,7 @@
-import {
-  Component,
-  ViewEncapsulation,
-  ChangeDetectionStrategy
-} from '@angular/core'
+import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app',
+  selector: 'app-cubo-ui',
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./app.component.scss'],

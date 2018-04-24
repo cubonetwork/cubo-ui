@@ -7,15 +7,12 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "npm run lint:ts && npm run lint:css && ng lint",
-    "lint:ts": "tslint 'src/**/*.ts'",
-    "lint:css": "sass-lint -c src/.sasslintrc '**/*.scss' -v -q",
     "e2e": "ng e2e",
+    "lint": "npm run lint:ts && npm run lint:css",
+    "lint:ts": "tslint -c tslint.json 'src/**/*.ts'",
+    "lint:css": "sass-lint -c sass-lint.json 'src/**/*.scss' -v -q",
+    "fix:ts": "tslint -c tslint.json 'src/**/*.ts' --fix",
     "prepush": "npm run lint"
-  },
-  "prepush" : {
-    "tasks": [ "npm run lint" ],
-    "coloredOuput": true
   },
   "dependencies": {
     "@angular/animations": "^6.0.0-rc.5",
@@ -46,6 +43,7 @@
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
     "cubo-schematics": "^1.0.3",
+    "husky": "^0.14.3",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",

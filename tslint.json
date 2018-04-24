@@ -1,8 +1,5 @@
 {
-  "exclude": "schematics/**/*",
-  "rulesDirectory": [
-    "node_modules/codelyzer"
-  ],
+  "extends": ["codelyzer"],
   "rules": {
     "callable-types": true,
     "class-name": true,
@@ -90,20 +87,8 @@
       "check-separator",
       "check-type"
     ],
-    "directive-selector": [
-      true,
-      "attribute",
-      ["cb", "app", "page"],
-      "<%= prefix %>",
-      "camelCase"
-    ],
-    "component-selector": [
-      true,
-      "element",
-      ["cb", "app", "page"],
-      "<%= prefix %>",
-      "kebab-case"
-    ],
+    "directive-selector": [true, "attribute", ["cb", "app", "page"], "camelCase"],
+    "component-selector": [true, "element", ["cb", "app", "page"], "kebab-case"],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": false,
@@ -113,6 +98,8 @@
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
     "directive-class-suffix": true,
+    "no-access-missing-member": false,
+    "templates-use-public": false,
     "invoke-injectable": false
   },
   "angularCompilerOptions": {

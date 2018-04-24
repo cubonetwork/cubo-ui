@@ -1,6 +1,5 @@
-import { SharedModule } from '@app/shared/shared.module'
+import { SharedModule } from '@app/shared/shared.module';
 import { NgModule } from '@angular/core';
-import { CoreModule } from '@app/core/core.module';
 import { RouterModule } from '@angular/router';
 import { MatTabsModule, MatExpansionModule, MatChipsModule, MatCardModule } from '@angular/material';
 
