@@ -3,8 +3,6 @@
 //
 // 1. Header
 // 2. Main
-// 3. Container
-// 4. Navbar
 // ==================================================
 
 @import 'variables';
@@ -57,48 +55,3 @@
   margin-top: $header-height;
 }
 
-.content {
-  max-width: $screen-md;
-}
-
-// -------------------------------------------------
-// 3. Container
-// -------------------------------------------------
-
-.container {
-  padding: $space;
-  width: 100%;
-
-  @include above(sm) {
-    display: grid;
-    grid-column-gap: $space;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto;
-  }
-}
-
-// -------------------------------------------------
-// 4. Navbar
-// -------------------------------------------------
-
-.navbar {
-  background: rgba($gray-white, .2);
-
-  &--active {
-    position: relative;
-
-    &:before {
-      background: $brand-primary;
-      bottom : 0;
-      content: '';
-      position: absolute;
-      top: 0;
-      width: $space-xxs;
-    }
-  }
-}
-
-.nav-list {
-  box-shadow: 0 0 1px 0 rgba($gray-darker, .4);
-  padding: 0;
-}

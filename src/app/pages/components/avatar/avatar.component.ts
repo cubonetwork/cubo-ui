@@ -70,19 +70,15 @@ export class PageAvatarRenderComponent { }
   <h3>
     CbAvatar
   </h3>
-  <article>
-    <p>A cubo avatar component</p>
-  </article>
-  <div>
-    <p>
-      <span>Selector: </span>
-      <code>cb-avatar</code>
-    </p>
-    <p>
-      <span>Exported as: </span>
-      <code>CbAvatar</code>
-    </p>
-
+  <p>A cubo avatar component</p>
+  <p>
+    <span>Selector: </span>
+    <code>cb-avatar</code>
+  </p>
+  <p>
+    <span>Exported as: </span>
+    <code>CbAvatar</code>
+  </p>
   <table>
     <tbody>
      <tr>

@@ -11,4 +11,11 @@ import {
   styleUrls: ['./components.component.scss'],
   templateUrl: './components.component.html'
 })
-export class PageComponentsComponent { }
+export class PageComponentsComponent {
+  menu = [
+    {
+      'path': 'avatar',
+      'name': 'Avatar'
+    }
+  ];
+}

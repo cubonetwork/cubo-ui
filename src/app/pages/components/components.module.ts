@@ -1,7 +1,7 @@
 import { SharedModule } from '@app/shared/shared.module';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MatTabsModule, MatExpansionModule, MatChipsModule, MatCardModule } from '@angular/material';
+import { MatTabsModule, MatExpansionModule, MatChipsModule, MatCardModule, MatListModule } from '@angular/material';
 
 import { PageComponentsRouting } from './components.routing';
 import { PageComponentsComponent } from './components.component';
@@ -13,6 +13,7 @@ import { PageComponentsComponent } from './components.component';
     MatExpansionModule,
     MatChipsModule,
     MatCardModule,
+    MatListModule,
     PageComponentsRouting
   ],
   declarations: [
