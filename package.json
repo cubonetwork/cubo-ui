@@ -14,6 +14,13 @@
     "fix:ts": "tslint -c tslint.json 'src/**/*.ts' --fix",
     "prepush": "npm run lint"
   },
+  "gh-pages-deploy": {
+    "staticpath": "dist",
+    "prep": [
+      "build"
+    ],
+    "noprompt": true
+  },
   "dependencies": {
     "@angular/animations": "^6.0.0-rc.5",
     "@angular/cdk": "^6.0.0-rc.12",
@@ -43,6 +50,7 @@
     "@types/node": "~9.6.6",
     "codelyzer": "~4.3.0",
     "cubo-schematics": "^1.0.3",
+    "gh-pages-deploy": "^0.5.0",
     "husky": "^0.14.3",
     "jasmine-core": "~3.1.0",
     "jasmine-spec-reporter": "~4.2.1",
