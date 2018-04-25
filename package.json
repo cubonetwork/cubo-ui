@@ -8,7 +8,6 @@
     "build": "ng build --prod --base-href 'https://cubonetwork.github.io/cubo-ui/'",
     "deploy": "npm run build && ngh --message='New release 🎉'",
     "test": "ng test",
-    "e2e": "ng e2e",
     "lint": "npm run lint:ts && npm run lint:css",
     "lint:ts": "tslint -c tslint.json 'src/**/*.ts'",
     "lint:css": "sass-lint -c sass-lint.json 'src/**/*.scss' -v -q",

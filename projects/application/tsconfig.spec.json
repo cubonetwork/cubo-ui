@@ -6,7 +6,13 @@
     "types": [
       "jasmine",
       "node"
-    ]
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@env/*": ["environments/*"],
+      "@lib": ["../lib/src/index"]
+    }
   },
   "files": [
     "test.ts",
