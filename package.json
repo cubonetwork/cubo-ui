@@ -14,7 +14,8 @@
     "lint:css": "sass-lint -c sass-lint.json 'src/**/*.scss' -v -q",
     "fix:ts": "tslint -c tslint.json 'src/**/*.ts' --fix",
     "prepush": "npm run lint && npm run test",
-    "postinstall": "cd ./src/lib; npm link; cd ../../; npm link cubo-ui"
+    "postinstall": "cd ./src/lib; npm link; cd ../../; npm link cubo-ui",
+    "analyzer": "npm run build && webpack-bundle-analyzer ./dist/stats.json"
   },
   "dependencies": {
     "@angular/animations": "^6.0.0-rc.5",
@@ -58,6 +59,7 @@
     "sass-lint": "^1.12.1",
     "ts-node": "~6.0.0",
     "tslint": "~5.9.1",
-    "typescript": "^2.7.2"
+    "typescript": "^2.7.2",
+    "webpack-bundle-analyzer": "^2.11.1"
   }
 }
