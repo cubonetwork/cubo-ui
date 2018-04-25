@@ -16,7 +16,7 @@ export class PageCardComponent {}
   template: `
     <p>cb-card is a content container for text, photos, chips in the context of a single subject.</p>
     <h2>Basic card</h2>
-    <p>The most basic card needs only an cb-card element with some content. However, it provides a number of preset sections that you can use inside of a cb-card</p>
+    <p>The most basic card needs only a cb-card element with some content. However, it provides a number of preset sections that you can use inside of a cb-card.</p>
     <table>
       <tbody>
       <tr>
