@@ -11,7 +11,7 @@ This project uses [Angular](https://angular.io/) as framework and [Angular Mater
 
 - [View lib's documentation](src/lib/README.md)
 
-### Using as developer
+### Application
 
 ```sh
 # install dependencies
@@ -21,7 +21,7 @@ $ npm i
 $ npm start
 ```
 
-### To generate schematics
+#### To generate schematics
 
 Generate a component
 
@@ -36,6 +36,19 @@ ng generate cubo-schematics:page pageName
 ```
 
 With the commands above, you have everything to start.
+
+### Lib
+
+Generate a new release
+
+```sh
+# generate a build
+npm run build:lib 
+
+# publish new release
+cd projects/lib/dist
+npm publish
+```
 
 ### Code Standards
 
