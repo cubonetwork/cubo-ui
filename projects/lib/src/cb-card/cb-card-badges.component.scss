@@ -1,0 +1,11 @@
+// -------------------------------------------------
+// Card Chips
+// -------------------------------------------------
+
+@import '../styles/variables';
+
+:host {
+  left: $space-sm;
+  position: absolute;
+  top: $space-sm;
+}

@@ -1,0 +1,29 @@
+// -------------------------------------------------
+// Card
+// -------------------------------------------------
+
+@import '../styles/variables';
+
+:host {
+  align-items: center;
+  border: $pattern-border solid 1px;
+  color: $brand-text;
+  cursor: pointer;
+  display: flex;
+  fill: $gray;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  padding: $space-sm;
+  position: relative;
+  width: 100%;
+
+  a > & {
+    transition: box-shadow .15s;
+
+    &:hover
+    &:focus {
+      box-shadow: 0 0 4px rgba($gray-darker, .5);
+    }
+  }
+}

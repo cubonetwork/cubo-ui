@@ -1,0 +1,14 @@
+// -------------------------------------------------
+// Card Subtitle
+// -------------------------------------------------
+
+@import '../styles/variables';
+
+:host {
+  @include mat-typography-level-to-styles($typography, subheading-1);
+  display: block;
+
+  &:not(:last-child):not(:empty) {
+    margin-bottom: $space;
+  }
+}

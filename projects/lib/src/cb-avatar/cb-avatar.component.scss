@@ -1,0 +1,96 @@
+// -------------------------------------------------
+// Avatar
+// -------------------------------------------------
+
+@import '../styles/variables';
+
+:host {
+  background-color: $gray-lighter;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+// -------------------------------------------------
+// Sizes
+// -------------------------------------------------
+
+:host(.-extra-small) {
+  font-size: $space;
+  height: $space-md;
+  width: $space-md;
+}
+
+:host(.-small) {
+  height: $space-lg;
+  width: $space-lg;
+}
+
+:host(.-medium) {
+  font-size: $space-md;
+  height: $space-xlg;
+  width: $space-xlg;
+}
+
+:host(.-large) {
+  font-size: $space-xlg;
+  height: ($space-xlg * 2);
+  width: ($space-xlg * 2);
+}
+
+:host(.-extra-large) {
+  display: block;
+  font-size: $space-xxlg;
+  overflow: hidden;
+  padding-bottom: calc((2/2) * 100%);
+  position: relative;
+  width: 100%;
+
+  & > * {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+// -------------------------------------------------
+// Types
+// -------------------------------------------------
+
+:host(.-square) {
+  border-radius: 0;
+
+  > * {
+    object-fit: contain;
+  }
+}
+
+// -------------------------------------------------
+// Image
+// -------------------------------------------------
+
+.avatar {
+  background-color: $white;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.initials {
+  align-items: center;
+  color: $gray;
+  display: flex;
+  font-weight: 600;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}

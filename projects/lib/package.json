@@ -1,0 +1,19 @@
+{
+  "name": "cubo-ui",
+  "version": "0.1.0",
+  "license": "MIT",
+  "homepage": "https://github.com/cubonetwork/cubo-ui/",
+  "bugs": {
+    "url": "https://github.com/cubonetwork/cubo-ui/issues"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "components"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "rupture-sass": "~0.2"
+  }
+}
