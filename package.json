@@ -14,7 +14,7 @@
     "lint:css": "sass-lint -c sass-lint.json 'src/**/*.scss' -v -q",
     "fix:ts": "tslint -c tslint.json 'src/**/*.ts' --fix",
     "prepush": "npm run lint && npm run test",
-    "postinstall": "cd ./src/lib; npm link; cd ../../; npm link cubo-ui",
+    "postinstall": "cd ./projects/application/lib; npm link; cd ../../../; npm link cubo-ui",
     "analyzer": "npm run build && webpack-bundle-analyzer ./dist/stats.json"
   },
   "dependencies": {
