@@ -1,8 +1,7 @@
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from '@app/shared/shared.module';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { MatTabsModule, MatExpansionModule, MatChipsModule, MatCardModule, MatListModule } from '@angular/material';
+import { MatTabsModule, MatExpansionModule, MatChipsModule, MatCardModule } from '@angular/material';
+import { NavbarModule } from '@app/components/navbar/navbar.module';
 
 import { PageComponentsRouting } from './page-components.routing';
 import { PageComponentsComponent } from './page-components.component';
@@ -14,9 +13,8 @@ import { PageComponentsComponent } from './page-components.component';
     MatExpansionModule,
     MatChipsModule,
     MatCardModule,
-    MatListModule,
     PageComponentsRouting,
-    FlexLayoutModule
+    NavbarModule
   ],
   declarations: [
     PageComponentsComponent

@@ -3,9 +3,7 @@
 //
 // 1. Main
 // 2. Panel
-// 3. Navbar
-// 4. Content
-// 5. Button Mobile
+// 3. Content
 // ==================================================
 
 @import 'variables';
@@ -52,41 +50,7 @@
 }
 
 // -------------------------------------------------
-// 3. Navbar
-// -------------------------------------------------
-
-.navbar {
-  background: rgba($gray-white, .2);
-
-  &--active {
-    position: relative;
-
-    &:before {
-      background: $brand-primary;
-      bottom : 0;
-      content: '';
-      position: absolute;
-      top: 0;
-      width: $space-xxs;
-    }
-  }
-
-  @include below(sm) {
-    display: none;
-
-    &--in {
-      display: block;
-    }
-  }
-}
-
-.nav-list {
-  box-shadow: 0 0 1px 0 rgba($gray-darker, .4);
-  padding: 0;
-}
-
-// -------------------------------------------------
-// 4. Content
+// 3. Content
 // -------------------------------------------------
 
 .content {
@@ -181,23 +145,5 @@
   }
 }
 
-// -------------------------------------------------
-// 5. Button Mobile
-// -------------------------------------------------
-
-.button-mobile {
-  @include mat-typography-level-to-styles($typography, body-2);
-  align-items: center;
-  background: $brand-primary;
-  color: $white;
-  cursor: pointer;
-  display: flex;
-  height: $space-lg;
-  justify-content: center;
-  min-width: $space-xxlg;
-  padding-left: $space-sm;
-  padding-right: $space-sm;
-  transition: color .15s;
-}
 
 

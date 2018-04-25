@@ -1,16 +1,4 @@
-<button class="button-mobile" (click)="toggleMenu($event)" fxShow.xs="true" fxShow.gt-sm="false">
-  <ng-container *ngIf="!showMenu">Menu</ng-container>
-  <ng-container *ngIf="showMenu">Close</ng-container>
-</button>
-
-<nav class="navbar" [ngClass.sm]="{'navbar--in': showMenu}">
-  <mat-nav-list class="nav-list">
-    <ng-container *ngFor="let item of menu">
-      <a mat-list-item routerLink="/components/{{item.path}}" [routerLinkActive]="['navbar--active']" [routerLinkActiveOptions]="{exact: true}">{{item.name}}</a>
-      <mat-divider></mat-divider>
-    </ng-container>
-  </mat-nav-list>
-</nav>
+<app-navbar [menu]="menu"></app-navbar>
 
 <article class="main">
   <mat-tab-group>
