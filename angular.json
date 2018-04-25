@@ -143,6 +143,9 @@
   "schematics": {
     "@schematics/angular:component": {
       "styleext": "scss"
+    },
+    "cubo-schematics": {
+      "styleext": "scss"
     }
   }
 }
