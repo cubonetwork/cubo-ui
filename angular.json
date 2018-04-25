@@ -42,9 +42,9 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/application/environments/environment.ts",
+                  "replace": "projects/application/src/environments/environment.ts",
                   "with":
-                    "projects/application/environments/environment.prod.ts"
+                    "projects/application/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
