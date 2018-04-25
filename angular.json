@@ -13,7 +13,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist",
-            "index": "projects/application/index.html",
+            "index": "projects/application/src/index.html",
             "main": "projects/application/main.ts",
             "polyfills": "projects/application/polyfills.ts",
             "tsConfig": "projects/application/tsconfig.app.json",
@@ -25,16 +25,16 @@
               },
               {
                 "glob": "**/*",
-                "input": "projects/application/assets",
+                "input": "projects/application/src/assets",
                 "output": "/assets"
               }
             ],
             "styles": [
-              "projects/application/styles/style.scss",
-              "projects/application/styles/themes.scss"
+              "projects/application/src/styles/style.scss",
+              "projects/application/src/styles/themes.scss"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": ["projects/application/styles"]
+              "includePaths": ["projects/application/src/styles"]
             },
             "scripts": []
           },
@@ -86,11 +86,11 @@
             "karmaConfig": "projects/application/karma.conf.js",
             "styles": [
               {
-                "input": "projects/application/styles/style.scss"
+                "input": "projects/application/src/styles/style.scss"
               }
             ],
             "stylePreprocessorOptions": {
-              "includePaths": ["projects/application/styles"]
+              "includePaths": ["projects/application/src/styles"]
             },
             "scripts": [],
             "assets": [

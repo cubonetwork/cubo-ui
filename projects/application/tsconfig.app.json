@@ -4,11 +4,11 @@
     "outDir": "../../out-tsc/app",
     "module": "es2015",
     "types": [],
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "paths": {
       "@app/*": ["app/*"],
       "@env/*": ["environments/*"],
-      "@lib": ["../lib/src/index"]
+      "@lib": ["../../lib/src/index"]
     }
   },
   "exclude": [
