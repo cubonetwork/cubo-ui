@@ -14,6 +14,13 @@ export const PageComponentsRoutes: Routes = [
     children: [
       {
         path: '',
+        loadChildren: '@app/pages/page-components/page-home/page-home.module#PageHomeModule',
+        data: {
+          meta: { title: 'Home' }
+        }
+      },
+      {
+        path: '',
         component: LibTemplateComponent,
         children: [
           {
