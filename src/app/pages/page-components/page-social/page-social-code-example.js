@@ -1,4 +1,4 @@
-const social = {
+const socialCodeExample = {
   html: `
     <cb-social>
       <mat-icon svgIcon="linkedin"></mat-icon>
@@ -37,4 +37,4 @@ const social = {
   `
 };
 
-module.exports = social;
+module.exports = socialCodeExample;

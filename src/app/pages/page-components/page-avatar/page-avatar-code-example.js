@@ -1,4 +1,4 @@
-const avatar = {
+const avatarCodeExample = {
   html: `
     <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'"></cb-avatar>`,
   ts: `
@@ -19,4 +19,4 @@ const avatar = {
   `
 };
 
-module.exports = avatar;
+module.exports = avatarCodeExample;

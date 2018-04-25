@@ -8,8 +8,8 @@ import {
   selector: 'page-components',
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['./components.component.scss'],
-  templateUrl: './components.component.html'
+  styleUrls: ['./page-components.component.scss'],
+  templateUrl: './page-components.component.html'
 })
 export class PageComponentsComponent {
   menu = [

@@ -8,7 +8,7 @@ import {
   PageCardRenderComponent,
   PageCardApiComponent,
   PageCardComponent
-} from './card.component';
+} from './page-card.component';
 
 export const PageCardRoutes: Routes = [
   {

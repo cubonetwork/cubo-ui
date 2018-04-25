@@ -10,8 +10,8 @@ import {
   PageAvatarCodeTsComponent,
   PageAvatarApiComponent,
   PageAvatarComponent
-} from './avatar.component';
-import { PageAvatarRouting } from './avatar.routing';
+} from './page-avatar.component';
+import { PageAvatarRouting } from './page-avatar.routing';
 import { MatExpansionModule } from '@angular/material';
 
 @NgModule({

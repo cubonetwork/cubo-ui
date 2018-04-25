@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
 import { MatIconModule } from '@angular/material';
 
-import { PageSocialRouting } from './social.routing';
+import { PageSocialRouting } from './page-social.routing';
 import {
   PageSocialDescriptionComponent,
   PageSocialCodeHtmlComponent,
@@ -12,7 +12,7 @@ import {
   PageSocialRenderComponent,
   PageSocialApiComponent,
   PageSocialComponent
-} from './social.component';
+} from './page-social.component';
 
 @NgModule({
   imports: [

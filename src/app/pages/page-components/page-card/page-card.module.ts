@@ -5,7 +5,7 @@ import { CbCardModule } from 'cubo-ui/cb-card/cb-card.module';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
 
-import { PageCardRouting } from './card.routing';
+import { PageCardRouting } from './page-card.routing';
 import {
   PageCardDescriptionComponent,
   PageCardCodeHtmlComponent,
@@ -14,7 +14,7 @@ import {
   PageCardRenderComponent,
   PageCardApiComponent,
   PageCardComponent
-} from './card.component';
+} from './page-card.component';
 
 @NgModule({
   imports: [

@@ -8,7 +8,7 @@ import {
   PageSocialRenderComponent,
   PageSocialApiComponent,
   PageSocialComponent
-} from './social.component';
+} from './page-social.component';
 
 export const PageSocialRoutes: Routes = [
   {

@@ -6,7 +6,7 @@ export const AppRoutes: Routes = [
     path: '',
     children: [
       { path: '', redirectTo: 'components', pathMatch: 'full' },
-      { path: 'components', loadChildren: '@app/pages/components/components.module#PageComponentsModule' }
+      { path: 'components', loadChildren: '@app/pages/page-components/page-components.module#PageComponentsModule' }
     ]
   }
 ];

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { MatIconRegistry, MatIcon } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
-import social from './social.js';
+import socialCodeExample from './page-social-code-example.js';
 import * as hljs from 'highlight.js';
 const languages = ['html', 'typescript', 'css'];
 
 @Component({
-  selector: 'page-social-component',
-  template: ``
+  template: ``,
+  selector: 'page-social-component'
 })
 export class PageSocialComponent { }
 
@@ -52,7 +52,7 @@ export class PageSocialDescriptionComponent {
   `,
 })
 export class PageSocialCodeHtmlComponent {
-  html_content = hljs.highlightAuto(social.html, languages).value;
+  html_content = hljs.highlightAuto(socialCodeExample.html, languages).value;
 }
 
 @Component({
@@ -62,7 +62,7 @@ export class PageSocialCodeHtmlComponent {
   `,
 })
 export class PageSocialCodeCssComponent {
-  css_content = hljs.highlightAuto(social.css, languages).value;
+  css_content = hljs.highlightAuto(socialCodeExample.css, languages).value;
 }
 
 @Component({
@@ -72,7 +72,7 @@ export class PageSocialCodeCssComponent {
   `,
 })
 export class PageSocialCodeTsComponent {
-  ts_content = hljs.highlightAuto(social.ts, languages).value;
+  ts_content = hljs.highlightAuto(socialCodeExample.ts, languages).value;
 }
 
 @Component({

@@ -7,7 +7,7 @@ import {
   PageAvatarCodeTsComponent,
   PageAvatarApiComponent,
   PageAvatarComponent
-} from './avatar.component';
+} from './page-avatar.component';
 
 export const PageAvatarRoutes: Routes = [
   {

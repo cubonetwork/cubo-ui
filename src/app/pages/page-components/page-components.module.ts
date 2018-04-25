@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatTabsModule, MatExpansionModule, MatChipsModule, MatCardModule, MatListModule } from '@angular/material';
 
-import { PageComponentsRouting } from './components.routing';
-import { PageComponentsComponent } from './components.component';
+import { PageComponentsRouting } from './page-components.routing';
+import { PageComponentsComponent } from './page-components.component';
 
 @NgModule({
   imports: [

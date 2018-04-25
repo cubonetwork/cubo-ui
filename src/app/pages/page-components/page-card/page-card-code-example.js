@@ -1,4 +1,4 @@
-const card = {
+const codeCardExample = {
   html: `
   <cb-card>
     <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'"></cb-avatar>
@@ -48,4 +48,4 @@ const card = {
   `
 };
 
-module.exports = card;
+module.exports = codeCardExample;

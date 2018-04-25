@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import avatar from './avatar.js';
+import avatarCodeExample from './page-avatar-code-example.js';
 import * as hljs from 'highlight.js';
 const languages = ['html', 'typescript', 'css'];
 
 @Component({
-  selector: 'page-avatar',
-  template: ``
+  template: ``,
+  selector: 'page-avatar'
 })
 export class PageAvatarComponent {}
 
@@ -45,7 +45,7 @@ export class PageAvatarDescriptionComponent { }
   `,
 })
 export class PageAvatarCodeHtmlComponent {
-  html_content = hljs.highlightAuto(avatar.html, languages).value;
+  html_content = hljs.highlightAuto(avatarCodeExample.html, languages).value;
 }
 
 @Component({
@@ -55,7 +55,7 @@ export class PageAvatarCodeHtmlComponent {
   `,
 })
 export class PageAvatarCodeCssComponent {
-  css_content = hljs.highlightAuto(avatar.css, languages).value;
+  css_content = hljs.highlightAuto(avatarCodeExample.css, languages).value;
 }
 
 @Component({
@@ -65,7 +65,7 @@ export class PageAvatarCodeCssComponent {
   `,
 })
 export class PageAvatarCodeTsComponent {
-  ts_content = hljs.highlightAuto(avatar.ts, languages).value;
+  ts_content = hljs.highlightAuto(avatarCodeExample.ts, languages).value;
 }
 
 export class PageAvatarRenderComponent { }

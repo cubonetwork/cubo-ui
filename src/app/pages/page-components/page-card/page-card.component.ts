@@ -1,13 +1,13 @@
 import { MatChipsModule, MatIconRegistry } from '@angular/material';
 import { Component } from '@angular/core';
-import card from './card.js';
+import codeCardExample from './page-card-code-example.js';
 import * as hljs from 'highlight.js';
 import { DomSanitizer } from '@angular/platform-browser';
 const languages = ['html', 'typescript', 'css'];
 
 @Component({
-  selector: 'page-card-component',
-  template: ``
+  template: ``,
+  selector: 'page-card-component'
 })
 export class PageCardComponent {}
 
@@ -102,7 +102,7 @@ export class PageCardDescriptionComponent {
   `
 })
 export class PageCardCodeHtmlComponent {
-  html_content = hljs.highlightAuto(card.html, languages).value;
+  html_content = hljs.highlightAuto(codeCardExample.html, languages).value;
 }
 
 @Component({
@@ -112,7 +112,7 @@ export class PageCardCodeHtmlComponent {
   `
 })
 export class PageCardCodeCssComponent {
-  css_content = hljs.highlightAuto(card.css, languages).value;
+  css_content = hljs.highlightAuto(codeCardExample.css, languages).value;
 }
 
 @Component({
@@ -122,7 +122,7 @@ export class PageCardCodeCssComponent {
   `
 })
 export class PageCardCodeTsComponent {
-  ts_content = hljs.highlightAuto(card.ts, languages).value;
+  ts_content = hljs.highlightAuto(codeCardExample.ts, languages).value;
 }
 
 @Component({
