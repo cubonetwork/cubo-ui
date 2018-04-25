@@ -16,7 +16,9 @@ export class PageSocialComponent { }
   template: `
   <p>cb-social makes it easier to integrate icons from social media.</p>
   <h2>Select Social Media</h2>
-  <p>It is possible to add the social media icons trough the MatIconRegistry module.</p>
+  <p>It is possible to add the social media icons through the MatIconRegistry module, if you opt to use the MatIcon.</p>
+  <p>In this example, we decided to use the icons from the MatIconModule, so to register then we used the MatIconRegistry module,
+    but this is not mandatory, it is possible to user your own icons without the material library.</p>
   <h2>Themings</h2>
   <p>The default color for all the items is gray, it changes to the original social media color when the user hovers the icon.</p>
   <h2>Social Media Examples</h2>
