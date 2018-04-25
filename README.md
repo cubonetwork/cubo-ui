@@ -5,7 +5,7 @@
 [![license](https://img.shields.io/github/license/cubonetwork/cubo-ui.svg)](./license.md)
 [![GitHub contributors](https://img.shields.io/github/contributors/cubonetwork/cubo-ui.svg)](https://github.com/cubonetwork/cubo-ui/graphs/contributors)
 
-This project uses [Angular](https://angular.io/) as framework and [Angular Material](https://material.angular.io) as basic UI components.
+This project uses [Angular](https://angular.io/) as framework and [Angular Material](https://material.angular.io) for basic UI components.
 
 ## Getting Started
 
@@ -43,11 +43,11 @@ This project uses [Cubo Coding Style](https://github.com/cubonetwork/coding-styl
 
 ### Tasks
 
-- `npm start`: run all tasks and initialize watch for changes and a server
-- `npm run build`: run all production tasks create a `dist` folder to deploy
-- `npm run lint`: lint javascript and css
+- `npm start`: run all tasks, initialize watch for changes and a starts a server
+- `npm run build`: run all production tasks and create a `dist` folder to deploy
+- `npm run lint`: lint for javascript and css
 - `npm run fix`: command to fix all eslint errors
-- `npm run deploy`: run all tasks to build and deploy on gh-pages
+- `npm run deploy`: run all build tasks and deploy on gh-pages
 
 ## License
 
