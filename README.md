@@ -9,7 +9,7 @@ This project uses [Angular](https://angular.io/) as framework and [Angular Mater
 
 ## Getting Started
 
-- [View lib's documentation](lib/README.md)
+- [View lib's documentation](src/lib/README.md)
 
 ### Using as developer
 
