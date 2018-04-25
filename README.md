@@ -5,38 +5,13 @@
 [![license](https://img.shields.io/github/license/cubonetwork/cubo-ui.svg)](./license.md)
 [![GitHub contributors](https://img.shields.io/github/contributors/cubonetwork/cubo-ui.svg)](https://github.com/cubonetwork/cubo-ui/graphs/contributors)
 
-This project uses [Angular](https://angular.io/) as framework and main dependency and [Angular Material](https://material.angular.io).
+This project uses [Angular](https://angular.io/) as framework and [Angular Material](https://material.angular.io) as basic UI components.
 
 ## Getting Started
 
-### Using as a dependency
+- [View lib's documentation](lib/README.md)
 
-```sh
-npm install cubo-ui
-```
-
-#### app.module.ts
-
-```ts
-...
-import { CbAvatarModule } from 'cubo-ui/cb-avatar/cb-avatar.module';
-...
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    ...
-  ],
-  ...
-  imports: [
-    ...
-    CbAvatarModule
-  ],
-  ... 
-})
-```
-
-### Using to development it
+### Using as developer
 
 ```sh
 # install dependencies
