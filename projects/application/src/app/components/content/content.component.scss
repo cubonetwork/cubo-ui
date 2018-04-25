@@ -1,0 +1,101 @@
+// ==================================================
+// Content
+// ==================================================
+
+@import 'variables';
+
+:host {
+  @include mat-typography-level-to-styles($typography, body-1);
+  display: block;
+  margin-top: $space;
+
+  &:not(:last-child) {
+    margin-bottom: $space;
+  }
+
+  ::ng-deep h1 {
+    @include mat-typography-level-to-styles($typography, subheading-1);
+
+    &:not(:first-child) {
+      margin-top: $space-md;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $space;
+    }
+  }
+
+  ::ng-deep h2 {
+    @include mat-typography-level-to-styles($typography, subheading-2);
+    border-bottom: $pattern-border solid 1px;
+    padding-bottom: $space-xxs;
+
+    &:not(:first-child) {
+      margin-top: $space-md;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $space-sm;
+    }
+  }
+
+  ::ng-deep h3 {
+    @include mat-typography-level-to-styles($typography, subheading-2);
+
+    &:not(:first-child) {
+      margin-top: $space;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $space-xs;
+    }
+  }
+
+  ::ng-deep code {
+    background: $gray-lighter;
+    color: $gray-darker;
+    margin-bottom: $space-md;
+    padding: $space-xs;
+  }
+
+  ::ng-deep p {
+    &:not(:last-child) {
+      margin-bottom: $space;
+    }
+  }
+
+  ::ng-deep table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+
+    &:not(:first-child) {
+      margin-top: $space-md;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $space-md;
+    }
+  }
+
+  ::ng-deep tr {
+    &:not(:last-child) {
+      border-bottom: 1px solid $pattern-border;
+    }
+  }
+
+  ::ng-deep th,
+  ::ng-deep td {
+    padding: $space-xs;
+  }
+
+  ::ng-deep th {
+    background: $gray-white;
+    color: $gray-dark;
+    font-weight: 400;
+    text-align: left;
+  }
+}
+
+
+
