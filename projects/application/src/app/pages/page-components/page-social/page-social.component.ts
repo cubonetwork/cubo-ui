@@ -111,5 +111,5 @@ export class PageSocialRenderComponent {
   `
 })
 export class PageSocialApiComponent {
-  import_content = hljs.highlightAuto(`import { CbSocialModule } from '@cubo/cb-social.module';`, ['nohighlight']).value;
+  import_content = hljs.highlightAuto(`import { CbSocialModule } from 'cubo-ui';`, ['nohighlight']).value;
  }

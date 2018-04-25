@@ -125,5 +125,5 @@ export class PageAvatarRenderComponent { }
   `,
 })
 export class PageAvatarApiComponent {
-  import_content = hljs.highlightAuto(`import { CbAvatarModule } from '@cubo/cb-avatar.module';`, ['nohighlight']).value;
+  import_content = hljs.highlightAuto(`import { CbAvatarModule } from 'cubo-ui';`, ['nohighlight']).value;
  }

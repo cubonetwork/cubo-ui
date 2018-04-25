@@ -163,7 +163,7 @@ export class PageCardRenderComponent {}
 })
 export class PageCardApiComponent {
   import_content = hljs.highlightAuto(
-    `import { CbCardModule } from '@cubo/cb-card.module';`,
+    `import { CbCardModule } from 'cubo-ui';`,
     ['nohighlight']
   ).value;
 }
