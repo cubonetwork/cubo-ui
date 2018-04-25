@@ -13,7 +13,6 @@ export class PageAvatarComponent {}
   selector: 'page-avatar-description',
   template: `
   <p>cb-avatar is made for using avatar images in your app. This directive supports images in (png, jpg, etc.). If you do not provide an image url, it uses a default one.</p>
-  <h2>Code</h2>
   <h2>Without image</h2>
   <p>If a image is not set, the component expects a name property. Given this property, it renders the name initials as the avatar image.</p>
   <h3>Initials</h3>
