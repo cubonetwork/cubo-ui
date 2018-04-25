@@ -1,4 +1,4 @@
-import { CbAvatarModule } from 'cubo-ui/cb-avatar/cb-avatar.module';
+import { CbAvatarModule } from '@lib';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '@app/shared/shared.module';

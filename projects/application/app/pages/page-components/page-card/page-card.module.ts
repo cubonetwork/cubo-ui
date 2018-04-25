@@ -1,7 +1,5 @@
-import { CbSocialModule } from 'cubo-ui/cb-social/cb-social.module';
-import { CbAvatarModule } from 'cubo-ui/cb-avatar/cb-avatar.module';
+import { CbSocialModule, CbAvatarModule, CbCardModule } from '@lib';
 import { MatChipsModule, MatIconModule, MatButtonModule } from '@angular/material';
-import { CbCardModule } from 'cubo-ui/cb-card/cb-card.module';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
 

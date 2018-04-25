@@ -2,7 +2,7 @@
 // Card Subtitle
 // -------------------------------------------------
 
-@import '~cubo-ui/styles/variables';
+@import '../styles/variables';
 
 :host {
   @include mat-typography-level-to-styles($typography, subheading-1);

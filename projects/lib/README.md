@@ -17,7 +17,7 @@ npm install cubo-ui
 
 ```ts
 ...
-import { CbAvatarModule } from 'cubo-ui/cb-avatar/cb-avatar.module';
+import { CbAvatarModule } from 'cubo-ui';
 ...
 
 @NgModule({
