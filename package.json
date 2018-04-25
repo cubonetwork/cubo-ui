@@ -5,7 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href 'https://cubonetwork.github.io/cubo-ui/'",
+    "build": "ng build application --prod --base-href 'https://cubonetwork.github.io/cubo-ui/'",
+    "build:lib": "ng build lib --prod",
     "deploy": "npm run build && ngh --message='New release 🎉'",
     "test": "ng test",
     "lint": "npm run lint:ts && npm run lint:css",
