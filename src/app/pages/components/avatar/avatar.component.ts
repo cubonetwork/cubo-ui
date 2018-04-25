@@ -12,15 +12,16 @@ export class PageAvatarComponent {}
 @Component({
   selector: 'page-avatar-description',
   template: `
-  <p>cb-avatar is made for using avatar images in your app. This directive supports images in (png, jpg, etc.). If you do not provide an image url, it uses a default one.</p>
+  <p>cb-avatar is made for using avatar images in your app. This directive supports images in (png, jpg, etc.). If you do not provide an image url, you can provide
+  a name so the avatar is going to be the name initials.</p>
   <h2>Without image</h2>
   <p>If a image is not set, the component expects a name property. Given this property, it renders the name initials as the avatar image.</p>
   <h3>Initials</h3>
   <cb-avatar [name]="'Eleven Stranger'"></cb-avatar>
   <h2>Input</h2>
-  <p>The cb-avatar can receive an image or a name input to display as an avatar.</p>
+  <p>The cb-avatar can receive an image url or a name input to display as an avatar.</p>
   <h2>Size</h2>
-  <p>The selected image size can be changed by using size property. By default, the selected size is large. This can be changed to xsmall, small, medium, or xlarge.</p>
+  <p>The selected image size can be changed through the size property. By default, the selected size is large. This can be changed to xsmall, small, medium, or xlarge.</p>
   <h3>Extra Small</h3>
   <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'" [size]="'xsmall'"></cb-avatar>
   <h3>Small</h3>
