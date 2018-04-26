@@ -2,6 +2,7 @@
 
 > UI components to using on Angular
 
+![Travis](https://img.shields.io/travis/cubonetwork/cubo-ui.svg)
 [![license](https://img.shields.io/github/license/cubonetwork/cubo-ui.svg)](./license.md)
 [![GitHub contributors](https://img.shields.io/github/contributors/cubonetwork/cubo-ui.svg)](https://github.com/cubonetwork/cubo-ui/graphs/contributors)
 
