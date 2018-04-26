@@ -58,7 +58,7 @@
     "protractor": "~5.3.1",
     "rupture-sass": "^0.2.3",
     "sass-lint": "^1.12.1",
-    "ts-node": "~6.0.0",
+    "ts-node": "^6.0.1",
     "tsickle": ">=0.25.5",
     "tslib": "^1.7.1",
     "tslint": "~5.9.1",
