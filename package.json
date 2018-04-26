@@ -7,7 +7,7 @@
     "start": "ng serve",
     "build": "ng build application --prod --base-href 'https://cubonetwork.github.io/cubo-ui/'",
     "build:lib": "ng build lib --prod",
-    "deploy": "npm run build && ngh --repo=https://19c04cd91873c994a0ee0dc73a07aafda7fed73a@github.com/cubonetwork/cubo-ui.git --name='Travis CI' --email=dev@cubo.network --message='New release 🎉' --no-silent",
+    "deploy": "npm run build && ngh --repo=https://GH_TOKEN@github.com/cubonetwork/cubo-ui.git --name='Travis CI' --email=dev@cubo.network --message='New release 🎉' --no-silent",
     "test": "ng test",
     "lint": "npm run lint:ts && npm run lint:css",
     "lint:ts": "tslint -c tslint.json 'src/**/*.ts'",
