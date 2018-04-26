@@ -13,8 +13,8 @@
     margin-bottom: $space;
   }
 
-  ::ng-deep h1 {
-    @include mat-typography-level-to-styles($typography, subheading-1);
+  & ::ng-deep h1 {
+    @include mat-typography-level-to-styles($typography, headline);
 
     &:not(:first-child) {
       margin-top: $space-md;
@@ -25,8 +25,8 @@
     }
   }
 
-  ::ng-deep h2 {
-    @include mat-typography-level-to-styles($typography, subheading-2);
+  & ::ng-deep h2 {
+    @include mat-typography-level-to-styles($typography, title);
     border-bottom: $pattern-border solid 1px;
     padding-bottom: $space-xxs;
 
@@ -39,7 +39,7 @@
     }
   }
 
-  ::ng-deep h3 {
+  & ::ng-deep h3 {
     @include mat-typography-level-to-styles($typography, subheading-2);
 
     &:not(:first-child) {
@@ -47,24 +47,26 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: $space-xs;
+      margin-bottom: $space-sm;
     }
   }
 
-  ::ng-deep code {
+  & ::ng-deep code {
     background: $gray-lighter;
     color: $gray-darker;
     margin-bottom: $space-md;
     padding: $space-xs;
   }
 
-  ::ng-deep p {
+  & ::ng-deep p {
+    @include mat-typography-level-to-styles($typography, body-1);
+
     &:not(:last-child) {
       margin-bottom: $space;
     }
   }
 
-  ::ng-deep table {
+  & ::ng-deep table {
     border-collapse: collapse;
     table-layout: fixed;
     width: 100%;
@@ -78,18 +80,18 @@
     }
   }
 
-  ::ng-deep tr {
+  & ::ng-deep tr {
     &:not(:last-child) {
       border-bottom: 1px solid $pattern-border;
     }
   }
 
-  ::ng-deep th,
-  ::ng-deep td {
+  & ::ng-deep th,
+  & ::ng-deep td {
     padding: $space-xs;
   }
 
-  ::ng-deep th {
+  & ::ng-deep th {
     background: $gray-white;
     color: $gray-dark;
     font-weight: 400;
