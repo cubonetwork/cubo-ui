@@ -44,7 +44,6 @@
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~9.6.6",
-    "angular-cli-ghpages": "^0.5.2",
     "codelyzer": "~4.3.0",
     "cubo-schematics": "^1.0.6",
     "husky": "^0.14.3",
