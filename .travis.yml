@@ -1,8 +1,6 @@
 language: node_js
 node_js:
   - "8"
-deploy:
-  github-token: $GITHUB_TOKEN
 install:
   - npm i -g angular-cli-ghpages
   - npm i
@@ -11,3 +9,10 @@ cache:
     - "node_modules"
 script:
   - npm run deploy
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: master
