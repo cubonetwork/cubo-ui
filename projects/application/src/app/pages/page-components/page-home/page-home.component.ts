@@ -6,7 +6,6 @@ const languages = ['html', 'typescript'];
 @Component({
   selector: 'page-home-component',
   templateUrl: './page-home.component.html',
-  styleUrls: ['./page-home.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
