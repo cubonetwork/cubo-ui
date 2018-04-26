@@ -7,8 +7,5 @@ install:
 cache:
   directories:
     - "node_modules"
-before_scrip: 
-  - git config --global user.name "Travis-CI"
-  - git config --global user.email "dev@cubo.nework"
 script:
   - npm run deploy
