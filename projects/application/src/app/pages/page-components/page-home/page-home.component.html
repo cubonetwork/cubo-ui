@@ -1,43 +1,23 @@
 <app-content>
-  <h1>UI components to be used on Angular</h1>
+  <h1>UI components for Angular</h1>
   <p>This project uses Angular as framework and Angular Material for basic UI components.</p>
+  <p>You can find more informations at <a href="https://github.com/cubonetwork/cubo-ui">Github.</a></p>
 
   <h2>Getting Started</h2>
   <h3>Application</h3>
 
-  <div>
+  <pre class="example">
     <code [innerHtml]="import_content"></code>
-  </div>
+  </pre>
 
-  <h2>Schematics Generator</h2>
-  <p>Generates a component</p>
+  <h3>Using as dependency</h3>
+  <pre class="example">
+    <code [innerHtml]="install"></code>
+  </pre>
 
-  <div>
-    <code [innerHtml]="generate_component"></code>
-  </div>
+  <h3>app.module.ts</h3>
+  <pre class="example">
+     <code [innerHtml]="import_component"></code>
+  </pre>
 
-  <p>Generates a page</p>
-  <div>
-    <code [innerHtml]="generate_page"></code>
-  </div>
-
-  <p>With the commands above, you have everything to start.</p>
-
-  <h2>Lib</h2>
-  <p>Generate a new release</p>
-  <div>
-    <code [innerHtml]="generate_release"></code>
-  </div>
-
-  <h2>Code Standard</h2>
-  <p>This project uses <a href="https://github.com/cubonetwork/coding-style">Cubo Coding Style</a></p>
-
-  <h2>Tasks</h2>
-  <ul>
-    <li>npm start: run all tasks, initialize watch for changes and a starts a server</li>
-    <li>npm run build: run all production tasks and create a dist folder to deploy</li>
-    <li>npm run lint: lint for javascript and css</li>
-    <li>npm run fix: command to fix all eslint errors</li>
-    <li>npm run deploy: run all build tasks and deploy on gh-pages</li>
-  </ul>
 </app-content>

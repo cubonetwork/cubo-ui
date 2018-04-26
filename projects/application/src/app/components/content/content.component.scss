@@ -58,6 +58,12 @@
     padding: $space-xs;
   }
 
+  & ::ng-deep .example {
+    background: $gray-lighter;
+    line-height: 3rem;
+    overflow: hidden;
+  }
+
   & ::ng-deep p {
     @include mat-typography-level-to-styles($typography, body-1);
 
