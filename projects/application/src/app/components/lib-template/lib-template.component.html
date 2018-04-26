@@ -1,0 +1,38 @@
+<mat-tab-group>
+  <mat-tab label="Example">
+    <mat-card-content class="tab-content">
+      <app-content>
+        <router-outlet name="description"></router-outlet>
+      </app-content>
+      <mat-accordion>
+        <mat-expansion-panel class="panel">
+          <mat-expansion-panel-header class="panel__header">
+            View Code
+          </mat-expansion-panel-header>
+          <mat-tab-group>
+            <mat-tab label="HTML">
+              <pre class="panel__code">
+                  <router-outlet name="code-html"></router-outlet>
+                </pre>
+            </mat-tab>
+            <mat-tab label="TS">
+              <pre class="panel__code">
+                <router-outlet name="code-ts"></router-outlet>
+              </pre>
+            </mat-tab>
+            <mat-tab label="CSS">
+              <pre class="panel__code">
+                <router-outlet name="code-css"></router-outlet>
+              </pre>
+            </mat-tab>
+          </mat-tab-group>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card-content>
+  </mat-tab>
+  <mat-tab label="API">
+    <app-content>
+      <router-outlet name="api"></router-outlet>
+    </app-content>
+  </mat-tab>
+</mat-tab-group>
