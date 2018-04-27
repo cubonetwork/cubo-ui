@@ -45,7 +45,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~9.6.6",
     "codelyzer": "~4.3.0",
-    "cubo-schematics": "^1.0.6",
+    "cubo-schematics": "^1.0.8",
     "husky": "^0.14.3",
     "jasmine-core": "~3.1.0",
     "jasmine-spec-reporter": "~4.2.1",

@@ -157,10 +157,10 @@
     }
   },
   "schematics": {
-    "@schematics/angular:component": {
+    "cubo-schematics:component": {
       "styleext": "scss"
     },
-    "cubo-schematics": {
+    "cubo-schematics:page": {
       "styleext": "scss"
     }
   }
