@@ -30,8 +30,7 @@
               }
             ],
             "styles": [
-              "projects/application/src/styles/style.scss",
-              "projects/application/src/styles/themes.scss"
+              "projects/application/src/style.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["projects/application/src/styles"]
@@ -86,7 +85,7 @@
             "karmaConfig": "projects/application/karma.conf.js",
             "styles": [
               {
-                "input": "projects/application/src/styles/style.scss"
+                "input": "projects/application/src/style.scss"
               }
             ],
             "stylePreprocessorOptions": {
