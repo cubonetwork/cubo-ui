@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700');
-@import '~@angular/material/theming';
 @import 'cubo-ui-theme';
-@import 'variables';
 @include mat-core();
 
 .cubo-ui {
