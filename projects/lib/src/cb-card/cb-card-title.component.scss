@@ -2,7 +2,7 @@
 // Card
 // -------------------------------------------------
 
-@import '../styles/variables';
+@import '../styles/core';
 
 :host {
   @include mat-typography-level-to-styles($typography, title);
