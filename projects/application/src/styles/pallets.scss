@@ -1,6 +1,4 @@
-@import "~@angular/material/theming";
-
-$cubo-ui-primary: (
+$blue-pallet: (
   50: #e2f2f6,
   100: #b8dee8,
   200: #88c9d9,
@@ -33,7 +31,7 @@ $cubo-ui-primary: (
   )
 );
 
-$cubo-ui-accent: (
+$green-pallet: (
   50: #f3f7e8,
   100: #e0ecc5,
   200: #cce09e,
@@ -65,8 +63,3 @@ $cubo-ui-accent: (
     A700: #000000
   )
 );
-
-$my-theme-primary: mat-palette($cubo-ui-primary, 300, 300, 900);
-$my-theme-accent: mat-palette($cubo-ui-accent);
-
-$cubo-ui-theme: mat-light-theme($my-theme-primary, $my-theme-accent);

@@ -2,10 +2,8 @@
 // Scaffolding
 // ==================================================
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700');
 @import 'highlight.js/styles/monokai-sublime.css';
 @import 'core';
-@import 'themes';
 
 * {
   box-sizing: border-box;
@@ -30,10 +28,7 @@ html {
 }
 
 body {
-  @include mat-typography-level-to-styles($typography, body-1);
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
-  background-color: $white;
-  color: $brand-text;
 }
