@@ -9,7 +9,6 @@ import {
   PageCardCodeHtmlComponent,
   PageCardCodeCssComponent,
   PageCardCodeTsComponent,
-  PageCardRenderComponent,
   PageCardApiComponent,
   PageCardComponent
 } from './page-card.component';
@@ -29,7 +28,6 @@ import {
     PageCardCodeHtmlComponent,
     PageCardCodeCssComponent,
     PageCardCodeTsComponent,
-    PageCardRenderComponent,
     PageCardApiComponent,
     PageCardComponent
   ]

@@ -5,7 +5,6 @@ import {
   PageCardCodeHtmlComponent,
   PageCardCodeCssComponent,
   PageCardCodeTsComponent,
-  PageCardRenderComponent,
   PageCardApiComponent,
   PageCardComponent
 } from './page-card.component';
@@ -37,11 +36,6 @@ export const PageCardRoutes: Routes = [
         path: '',
         component: PageCardCodeCssComponent,
         outlet: 'code-css'
-      },
-      {
-        path: '',
-        component: PageCardRenderComponent,
-        outlet: 'render'
       },
       {
         path: '',

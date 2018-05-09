@@ -21,7 +21,7 @@ export class PageSocialComponent { }
     but this is not mandatory, it is possible to user your own icons without the material library.</p>
   <h2>Themings</h2>
   <p>The default color for all the items is gray, it changes to the original social media color when the user hovers the icon.</p>
-  <h2>Social Media Examples</h2>
+  <h2>Examples</h2>
   <div>
     <cb-social>
       <mat-icon svgIcon="linkedin"></mat-icon>
@@ -76,13 +76,6 @@ export class PageSocialCodeCssComponent {
 export class PageSocialCodeTsComponent {
   ts_content = hljs.highlightAuto(socialCodeExample.ts, languages).value;
 }
-
-@Component({
-  selector: 'page-social-render',
-  template: ``,
-})
-export class PageSocialRenderComponent {
- }
 
 @Component({
   selector: 'page-social-api',

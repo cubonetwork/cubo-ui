@@ -5,7 +5,6 @@ import {
   PageSocialCodeHtmlComponent,
   PageSocialCodeCssComponent,
   PageSocialCodeTsComponent,
-  PageSocialRenderComponent,
   PageSocialApiComponent,
   PageSocialComponent
 } from './page-social.component';
@@ -37,11 +36,6 @@ export const PageSocialRoutes: Routes = [
         path: '',
         component: PageSocialCodeCssComponent,
         outlet: 'code-css'
-      },
-      {
-        path: '',
-        component: PageSocialRenderComponent,
-        outlet: 'render'
       },
       {
         path: '',

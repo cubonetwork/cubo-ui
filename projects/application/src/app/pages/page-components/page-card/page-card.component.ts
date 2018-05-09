@@ -41,7 +41,7 @@ export class PageCardComponent {}
       </tr>
       </tbody>
     </table>
-    <h2>Card</h2>
+    <h2>Example</h2>
     <cb-card>
       <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'"></cb-avatar>
       <cb-card-title>Eleven</cb-card-title>
@@ -124,16 +124,6 @@ export class PageCardCodeCssComponent {
 export class PageCardCodeTsComponent {
   ts_content = hljs.highlightAuto(codeCardExample.ts, languages).value;
 }
-
-@Component({
-  selector: 'page-card-render',
-  template: `
-    <cb-card>
-      <cb-card-title>Simple card</cb-card-title>
-    </cb-card>
-  `
-})
-export class PageCardRenderComponent {}
 
 @Component({
   selector: 'page-card-api',
