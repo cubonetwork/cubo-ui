@@ -1,6 +1,2 @@
 @import 'cubo-ui-theme';
 @include mat-core();
-
-.cubo-ui {
-  @include angular-material-theme($cubo-ui-theme);
-}
