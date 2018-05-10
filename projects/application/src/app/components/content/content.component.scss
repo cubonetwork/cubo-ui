@@ -51,10 +51,15 @@
     }
   }
 
-  & ::ng-deep code {
+  & ::ng-deep pre {
     background: $gray-lighter;
     color: $gray-darker;
     margin-bottom: $space-md;
+    padding: $space-xs;
+  }
+
+  & ::ng-deep code {
+    background: $gray-lighter;
     padding: $space-xs;
   }
 

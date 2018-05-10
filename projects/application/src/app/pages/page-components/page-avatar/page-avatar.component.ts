@@ -68,8 +68,6 @@ export class PageAvatarCodeTsComponent {
   ts_content = hljs.highlightAuto(avatarCodeExample.ts, languages).value;
 }
 
-export class PageAvatarRenderComponent { }
-
 @Component({
   selector: 'page-avatar-api',
   template: `
@@ -77,7 +75,7 @@ export class PageAvatarRenderComponent { }
     API reference for Cubo Avatar
   </h2>
   <div>
-    <code [innerHtml]="import_content"></code>
+    <pre><code [innerHtml]="import_content"></code></pre>
   </div>
   <h2>
     Directives
@@ -125,5 +123,13 @@ export class PageAvatarRenderComponent { }
   `,
 })
 export class PageAvatarApiComponent {
-  import_content = hljs.highlightAuto(`import { CbAvatarModule } from 'cubo-ui';`, ['nohighlight']).value;
+  import_content = hljs.highlightAuto(`import { CbAvatarModule } from 'cubo-ui';
+
+  @NgModule({
+    imports: [
+      CommonModule,
+      CbAvatarModule
+    ]
+  })
+  export class ExampleModule { }`, ['nohighlight']).value;
  }
