@@ -18,30 +18,30 @@
 // Sizes
 // -------------------------------------------------
 
-:host(.-extra-small) {
+:host(.avatar--extra-small) {
   font-size: $space;
   height: $space-md;
   width: $space-md;
 }
 
-:host(.-small) {
+:host(.avatar--small) {
   height: $space-lg;
   width: $space-lg;
 }
 
-:host(.-medium) {
+:host(.avatar--medium) {
   font-size: $space-md;
   height: $space-xlg;
   width: $space-xlg;
 }
 
-:host(.-large) {
+:host(.avatar--large) {
   font-size: $space-xlg;
   height: ($space-xlg * 2);
   width: ($space-xlg * 2);
 }
 
-:host(.-extra-large) {
+:host(.avatar--extra-large) {
   display: block;
   font-size: $space-xxlg;
   overflow: hidden;
@@ -58,18 +58,6 @@
     right: 0;
     top: 0;
     width: 100%;
-  }
-}
-
-// -------------------------------------------------
-// Types
-// -------------------------------------------------
-
-:host(.-square) {
-  border-radius: 0;
-
-  > * {
-    object-fit: contain;
   }
 }
 

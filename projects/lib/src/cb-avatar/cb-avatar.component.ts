@@ -8,37 +8,32 @@ import {
 
 /**
 * Component `<cb-avatar>` to create a avatar
-* @param imageUrl Url of image
-* @param imageAlt Alt of image
-* @param type Avatar's type (circle / square)
-* @param size Avatar's size (xsmall, small, medium, large, xlarge)
-* @param lazyload Enable or disable the lazyload
+* @param image Url of avatar
+* @param name Name of avatar
+* @param size Avatar's size (xsmall / small / medium / large / xlarge)
 */
 @Component({
   selector: 'cb-avatar',
   template: `
-  <img class="avatar" src="{{imageUrl}}" alt="{{imageAlt}}" *ngIf="imageUrl">
-  <span class="initials" *ngIf="!imageUrl">{{letters}}</span>
+  <img class="avatar" src="{{image}}" alt="{{name}}" *ngIf="image">
+  <span class="initials" *ngIf="!image">{{letters}}</span>
   <ng-content></ng-content>
   `,
   styleUrls: ['./cb-avatar.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.Default,
   host: {
-    '[class.-extra-small]': 'size ===  "xsmall"',
-    '[class.-small]': 'size ===  "small"',
-    '[class.-medium]': 'size ===  "medium"',
-    '[class.-large]': 'size ===  "large"',
-    '[class.-extra-large]': 'size ===  "xlarge"',
-    '[class.-square]': 'type ===  "square"'
+    '[class.avatar--extra-small]': 'size ===  "xsmall"',
+    '[class.avatar--small]': 'size ===  "small"',
+    '[class.avatar--medium]': 'size ===  "medium"',
+    '[class.avatar--large]': 'size ===  "large"',
+    '[class.avatar--extra-large]': 'size ===  "xlarge"'
   }
 })
 export class CbAvatarComponent implements OnInit {
-  @Input() imageUrl: string;
-  @Input() imageAlt: string;
+  @Input() image: string;
   @Input() name: string;
   @Input() size = 'large';
-  @Input() type = 'circle';
 
   nameSplit: Array<String>;
   letters: String;
