@@ -2,7 +2,6 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@a
 
 /**
 * Component `<cb-menu>` to floating menu based on material ui
-* @param {boolean} active  Show or hide
 * @param {string} position Set menu position ('top left' / 'top right'
 * / 'bottom left' / 'bottom right')
 */
