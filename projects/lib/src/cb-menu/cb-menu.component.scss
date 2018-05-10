@@ -5,8 +5,11 @@
 @import '../styles/core';
 
 :host {
+  display: inline-block;
   position: relative;
+}
 
+:host(.menu--backdrop) {
   &:before {
     background: rgba($gray-darker, .85);
     bottom: 0;
@@ -20,7 +23,7 @@
   }
 }
 
-:host(.menu--active) {
+:host(.menu--backdrop.menu--active) {
   &:before {
     opacity: 1;
     visibility: visible;
@@ -29,6 +32,7 @@
 }
 
 .button {
+  display: inline-block;
   position: relative;
 
   :host(.menu--active) & {
@@ -37,6 +41,7 @@
 }
 
 .content {
+  display: block;
   position: absolute;
   transition: visibility .15s;
   visibility: hidden;

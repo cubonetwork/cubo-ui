@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@a
 
 /**
 * Component `<cb-menu>` to floating menu based on material ui
+* @param {boolean} backdrop Enable or disable backdrop (Default is true)
 * @param {string} position Set menu position ('top left' / 'top right'
 * / 'bottom left' / 'bottom right')
 */
@@ -20,6 +21,7 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@a
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '(document:click)': 'hiddenMenu($event)',
+    '[class.menu--backdrop]': 'backdrop === true',
     '[class.menu--active]': 'active === true',
     '[class.menu--top-left]': 'position === "top left"',
     '[class.menu--top-right]': 'position === "top right"',
@@ -29,6 +31,7 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@a
 })
 export class CbMenuComponent {
   @Input() position = 'top left';
+  @Input() backdrop = true;
   active = false;
 
   toggleMenu(event) {
