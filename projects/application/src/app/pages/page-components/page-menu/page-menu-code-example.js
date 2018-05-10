@@ -1,22 +1,24 @@
 const MenuCodeExample = {
   html: `
-  <nav class="navigation">
-    <button mat-fab color="primary" (click)="shouldShowMenu = !shouldShowMenu">Menu</button>
-    <cb-menu role="navigation" [position]="'bottom right'" [active]="shouldShowMenu">
+  <cb-menu role="navigation" [position]="'bottom right'" [backdrop]="false">
+    <cb-menu-button>
+      <button mat-fab color="primary">Menu</button>
+    </cb-menu-button>
+    <cb-menu-content>
       <cb-menu-item>
-        <cb-menu-chip style="background: darkorange">DARK ORANGE</cb-menu-chip>
+        <button mat-fab style="background: darkorange">C</button>
       </cb-menu-item>
       <cb-menu-item>
-        <cb-menu-chip style="background: cornflowerblue; color: white">CORN FLOWER BLUE</cb-menu-chip>
+        <button mat-fab style="background: cornflowerblue; color: white">U</button>
       </cb-menu-item>
       <cb-menu-item>
-        <cb-menu-chip style="background: darkorange">DARK ORANGE</cb-menu-chip>
+        <button mat-fab style="background: darkorange">B</button>
       </cb-menu-item>
       <cb-menu-item>
-        <cb-menu-chip style="background: mediumspringgreen">MEDIUM SPRING GREEN</cb-menu-chip>
+        <button mat-fab style="background: green">O</button>
       </cb-menu-item>
-    </cb-menu>
-  </nav>
+    </cb-menu-content>
+  </cb-menu>
   `,
   ts: `
   import {Component} from '@angular/core';
@@ -26,14 +28,10 @@ const MenuCodeExample = {
     templateUrl: 'menu-example.html',
     styleUrls: ['menu-example.css']
   })
-  export class MenuExample {
-    shouldShowMenu = false;
-  }
+  export class MenuExample { }
   `,
   css: `
-  .navigation {
-    position: relative;
-  }
+  /** No CSS for this example */
   `
 };
 
