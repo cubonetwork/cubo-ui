@@ -73,9 +73,9 @@ export class PageAvatarCodeTsComponent {
   template: `
   <h1>API reference</h1>
 
-  <div>
+  <p>
     <pre><code [innerHtml]="import_content"></code></pre>
-  </div>
+  </p>
 
   <h2>Directives</h2>
 

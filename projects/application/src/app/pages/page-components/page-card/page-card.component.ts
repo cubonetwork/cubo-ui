@@ -128,19 +128,16 @@ export class PageCardCodeTsComponent {
 @Component({
   selector: 'page-card-api',
   template: `
-    <h2>
-      API reference for Cubo Card
-    </h2>
+    <h1>API reference</h1>
+
     <div>
-      <code [innerHtml]='import_content'></code>
+      <pre><code [innerHtml]='import_content'></code></pre>
     </div>
-    <h2>
-      Directives
-    </h2>
-    <h3>
-      CbCard
-    </h3>
-    <p>A cubo card component</p>
+
+    <h2>Directives</h2>
+
+    <h3>CbCard</h3>
+
     <p>
       <span>Selector: </span>
       <code>cb-card</code>
@@ -152,8 +149,14 @@ export class PageCardCodeTsComponent {
   `
 })
 export class PageCardApiComponent {
-  import_content = hljs.highlightAuto(
-    `import { CbCardModule } from 'cubo-ui';`,
-    ['nohighlight']
-  ).value;
+  import_content = hljs.highlightAuto(`
+  import { CbCardModule } from 'cubo-ui';
+
+  @NgModule({
+    imports: [
+      CbCardModule
+    ]
+  })
+  export class PageCardModule { }
+  `, ['nohighlight']).value;
 }
