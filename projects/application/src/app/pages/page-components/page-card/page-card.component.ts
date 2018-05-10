@@ -43,7 +43,7 @@ export class PageCardComponent {}
     </table>
     <h2>Example</h2>
     <cb-card>
-      <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'"></cb-avatar>
+      <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
       <cb-card-title>Eleven</cb-card-title>
       <cb-card-subtitle>Character @ Stranger Things</cb-card-subtitle>
       <cb-card-badges>
