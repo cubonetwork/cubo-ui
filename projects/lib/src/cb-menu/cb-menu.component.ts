@@ -2,8 +2,8 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@a
 
 /**
 * Component `<cb-menu>` to floating menu based on material ui
-* @param {boolean} backdrop Enable or disable backdrop (Default is true)
-* @param {string} position Set menu position ('top left' / 'top right'
+* @param backdrop Enable or disable backdrop (Default is true)
+* @param position Set menu position ('top left' / 'top right'
 * / 'bottom left' / 'bottom right')
 */
 @Component({
