@@ -23,16 +23,16 @@ export class PageAvatarComponent {}
   <h2>Size</h2>
   <p>The selected image size can be changed through the size property. By default, the selected size is large. This can be changed to xsmall, small, medium, or xlarge.</p>
   <h3>Extra Small</h3>
-  <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'" [size]="'xsmall'"></cb-avatar>
+  <cb-avatar [image]="'https://bit.ly/2vvFXCO'" [size]="'xsmall'"></cb-avatar>
   <h3>Small</h3>
-  <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'" [size]="'small'"></cb-avatar>
+  <cb-avatar [image]="'https://bit.ly/2vvFXCO'" [size]="'small'"></cb-avatar>
   <h3>Medium</h3>
-  <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'" [size]="'medium'"></cb-avatar>
+  <cb-avatar [image]="'https://bit.ly/2vvFXCO'" [size]="'medium'"></cb-avatar>
   <h3>Large</h3>
-  <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'"></cb-avatar>
+  <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
   <h3>Extra Large</h3>
   <div style="max-width: 300px">
-    <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'" [size]="'xlarge'"></cb-avatar>
+    <cb-avatar [image]="'https://bit.ly/2vvFXCO'" [size]="'xlarge'"></cb-avatar>
   </div>
   `,
 })
@@ -68,32 +68,31 @@ export class PageAvatarCodeTsComponent {
   ts_content = hljs.highlightAuto(avatarCodeExample.ts, languages).value;
 }
 
-export class PageAvatarRenderComponent { }
-
 @Component({
   selector: 'page-avatar-api',
   template: `
-  <h2>
-    API reference for Cubo Avatar
-  </h2>
+  <h1>API reference</h1>
+
   <div>
-    <code [innerHtml]="import_content"></code>
+    <pre><code [innerHtml]="import_content"></code></pre>
   </div>
-  <h2>
-    Directives
-  </h2>
-  <h3>
-    CbAvatar
-  </h3>
+
+  <h2>Directives</h2>
+
+  <h3>CbAvatar</h3>
+
   <p>A cubo avatar component</p>
+
   <p>
     <span>Selector: </span>
     <code>cb-avatar</code>
   </p>
+
   <p>
     <span>Exported as: </span>
     <code>CbAvatar</code>
   </p>
+
   <table>
     <tbody>
      <tr>
@@ -101,12 +100,8 @@ export class PageAvatarRenderComponent { }
       <th>Description</th>
      </tr>
      <tr>
-      <td>@Input() imageUrl: string;</td>
+      <td>@Input() image: string;</td>
       <td>The link for the avatar's image.</td>
-     </tr>
-     <tr>
-      <td>@Input() imageAlt: string;</td>
-      <td>The alt description.</td>
      </tr>
      <tr>
       <td>@Input() name: string;</td>
@@ -114,16 +109,21 @@ export class PageAvatarRenderComponent { }
      </tr>
      <tr>
       <td>@Input() size: string;</td>
-      <td>Size of the avatar.</td>
-    </tr>
-    <tr>
-      <td>@Input() type: string;</td>
-      <td>Wheter the avatar is a circle or a square.</td>
+      <td>Size of the avatar: <code>xsmall</code>, <code>small</code>, <code>medium</code>, <code>large</code>, <code>xlarge</code></td>
     </tr>
     </tbody>
   </table>
   `,
 })
 export class PageAvatarApiComponent {
-  import_content = hljs.highlightAuto(`import { CbAvatarModule } from 'cubo-ui';`, ['nohighlight']).value;
+  import_content = hljs.highlightAuto(`
+  import { CbAvatarModule } from 'cubo-ui';
+
+  @NgModule({
+    imports: [
+      CbAvatarModule
+    ]
+  })
+  export class ExampleModule { }
+  `, ['nohighlight']).value;
  }

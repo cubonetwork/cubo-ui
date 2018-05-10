@@ -41,7 +41,14 @@ export const PageComponentsRoutes: Routes = [
             path: 'social',
             loadChildren: '@app/pages/page-components/page-social/page-social.module#PageSocialModule',
             data: {
-              meta: { title: 'social' }
+              meta: { title: 'Social' }
+            }
+          },
+          {
+            path: 'menu',
+            loadChildren: '@app/pages/page-components/page-menu/page-menu.module#PageMenuModule',
+            data: {
+              meta: { title: 'Menu' }
             }
           },
         ]

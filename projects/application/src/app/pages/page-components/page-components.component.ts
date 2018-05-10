@@ -24,6 +24,10 @@ export class PageComponentsComponent {
     {
       'path': 'social',
       'name': 'Social'
+    },
+    {
+      'path': 'menu',
+      'name': 'Menu'
     }
   ];
 }

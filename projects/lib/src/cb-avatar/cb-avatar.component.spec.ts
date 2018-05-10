@@ -1,16 +1,13 @@
-import { TestBed, ComponentFixture, async } from '@angular/core/testing';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
-import { By } from '@angular/platform-browser';
 
 import { CbAvatarComponent } from './cb-avatar.component';
 
-
 describe('CbAvatarComponent', () => {
-
   let comp: CbAvatarComponent;
   let fixture: ComponentFixture<CbAvatarComponent>;
   let element: HTMLElement;
-  const imageUrl = 'https://bit.ly/2vvFXCO';
+  const image = 'https://bit.ly/2vvFXCO';
   const name = 'Darth Vader';
 
   beforeEach(() => {
@@ -22,12 +19,12 @@ describe('CbAvatarComponent', () => {
     comp = fixture.componentInstance;
   });
 
-  fit('shows the image for the given url', () => {
-    comp.imageUrl = imageUrl;
+  it('shows the image for the given url', () => {
+    comp.image = image;
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('img');
 
-    expect(element.getAttribute('src')).toContain(imageUrl);
+    expect(element.getAttribute('src')).toContain(image);
   });
 
   it('shows the initials when there is no image', () => {
@@ -43,7 +40,7 @@ describe('CbAvatarComponent', () => {
     fixture.detectChanges();
     element = fixture.debugElement.nativeElement;
 
-    expect(element.getAttribute('class')).toContain('-extra-small');
+    expect(element.getAttribute('class')).toContain('avatar--extra-small');
   });
 
   it('has small class when size is small', () => {
@@ -51,7 +48,7 @@ describe('CbAvatarComponent', () => {
     fixture.detectChanges();
     element = fixture.debugElement.nativeElement;
 
-    expect(element.getAttribute('class')).toContain('-small');
+    expect(element.getAttribute('class')).toContain('avatar--small');
   });
 
   it('has medium class when size is medium', () => {
@@ -59,7 +56,7 @@ describe('CbAvatarComponent', () => {
     fixture.detectChanges();
     element = fixture.debugElement.nativeElement;
 
-    expect(element.getAttribute('class')).toContain('-medium');
+    expect(element.getAttribute('class')).toContain('avatar--medium');
   });
 
   it('has large class when size is large', () => {
@@ -67,7 +64,7 @@ describe('CbAvatarComponent', () => {
     fixture.detectChanges();
     element = fixture.debugElement.nativeElement;
 
-    expect(element.getAttribute('class')).toContain('-large');
+    expect(element.getAttribute('class')).toContain('avatar--large');
   });
 
   it('has extra-large class when size is extra-large', () => {
@@ -75,14 +72,6 @@ describe('CbAvatarComponent', () => {
     fixture.detectChanges();
     element = fixture.debugElement.nativeElement;
 
-    expect(element.getAttribute('class')).toContain('-extra-large');
-  });
-
-  it('has square class when type is square', () => {
-    comp.type = 'square';
-    fixture.detectChanges();
-    element = fixture.debugElement.nativeElement;
-
-    expect(element.getAttribute('class')).toContain('-square');
+    expect(element.getAttribute('class')).toContain('avatar--extra-large');
   });
 });

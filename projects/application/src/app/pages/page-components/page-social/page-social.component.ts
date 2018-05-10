@@ -14,14 +14,14 @@ export class PageSocialComponent { }
 @Component({
   selector: 'page-social-description',
   template: `
-  <p>cb-social makes it easier to integrate icons from social media.</p>
+  <p><code>cb-social</code> makes it easier to integrate icons from social media.</p>
   <h2>Select Social Media</h2>
   <p>It is possible to add the social media icons through the MatIconRegistry module, if you opt to use the MatIcon.</p>
   <p>In this example, we decided to use the icons from the MatIconModule, so to register then we used the MatIconRegistry module,
     but this is not mandatory, it is possible to user your own icons without the material library.</p>
   <h2>Themings</h2>
   <p>The default color for all the items is gray, it changes to the original social media color when the user hovers the icon.</p>
-  <h2>Social Media Examples</h2>
+  <h2>Examples</h2>
   <div>
     <cb-social>
       <mat-icon svgIcon="linkedin"></mat-icon>
@@ -78,32 +78,21 @@ export class PageSocialCodeTsComponent {
 }
 
 @Component({
-  selector: 'page-social-render',
-  template: ``,
-})
-export class PageSocialRenderComponent {
- }
-
-@Component({
   selector: 'page-social-api',
   template: `
-    <h2>
-      API reference for Social
-    </h2>
+    <h1>API reference</h1>
+
     <div>
-      <code [innerHtml]="import_content"></code>
+      <pre><code [innerHtml]="import_content"></code></pre>
     </div>
-    <h2>
-      Directives
-    </h2>
-    <h3>
-      CbSocial
-    </h3>
-    <p>A cubo social  component</p>
+
+    <h2>Directives</h2>
+
     <p>
       <span>Selector: </span>
       <code>cb-social</code>
     </p>
+
     <p>
       <span>Exported as: </span>
       <code>CbSocial</code>
@@ -111,5 +100,14 @@ export class PageSocialRenderComponent {
   `
 })
 export class PageSocialApiComponent {
-  import_content = hljs.highlightAuto(`import { CbSocialModule } from 'cubo-ui';`, ['nohighlight']).value;
+  import_content = hljs.highlightAuto(`
+  import { CbSocialModule } from 'cubo-ui';
+
+  @NgModule({
+    imports: [
+      CbSocialModule
+    ]
+  })
+  export class ExampleModule { }
+  `, ['nohighlight']).value;
  }

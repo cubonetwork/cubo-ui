@@ -9,7 +9,6 @@ import {
   PageSocialCodeHtmlComponent,
   PageSocialCodeCssComponent,
   PageSocialCodeTsComponent,
-  PageSocialRenderComponent,
   PageSocialApiComponent,
   PageSocialComponent
 } from './page-social.component';
@@ -25,7 +24,6 @@ import {
     PageSocialCodeHtmlComponent,
     PageSocialCodeCssComponent,
     PageSocialCodeTsComponent,
-    PageSocialRenderComponent,
     PageSocialApiComponent,
     PageSocialComponent
   ]

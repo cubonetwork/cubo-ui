@@ -1,0 +1,13 @@
+@import "core";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+$cubo-ui-primary: mat-palette($blue-pallet);
+$cubo-ui-accent: mat-palette($green-pallet);
+$cubo-ui-theme: mat-light-theme($cubo-ui-primary, $cubo-ui-accent);
+
+.cubo-ui {
+  @include angular-material-theme($cubo-ui-theme);
+  @include mat-typography-level-to-styles($typography, body-1);
+  background-color: $white;
+  color: $brand-text;
+}

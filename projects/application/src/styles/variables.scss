@@ -100,7 +100,7 @@ $rupture: map-merge($rupture,
 // 4. Typography
 // --------------------------------------------------
 
-$font-family-primary   : 'Roboto, sans-serif';
+$font-family-primary: 'Open Sans, sans-serif';
 $typography: mat-typography-config(
   $font-family:   $font-family-primary,
   $display-4:     mat-typography-level(11.2rem, 11.2rem, 300),
@@ -111,8 +111,8 @@ $typography: mat-typography-config(
   $title:         mat-typography-level(2.4rem, 3.2rem, 500),
   $subheading-2:  mat-typography-level(2rem, 2.8rem, 400),
   $subheading-1:  mat-typography-level(1.8rem, 2.4rem, 400),
-  $body-2:        mat-typography-level(1.8rem, 2.4rem, 500),
-  $body-1:        mat-typography-level(1.8rem, 2.4rem, 400),
+  $body-2:        mat-typography-level(1.6rem, 2.4rem, 500),
+  $body-1:        mat-typography-level(1.6rem, 2.4rem, 400),
   $caption:       mat-typography-level(1.2rem, 2rem, 400),
   $button:        mat-typography-level(1.4rem, 1.4rem, 500),
   $input:         mat-typography-level(1.6rem, 1.25, 400)

@@ -30,7 +30,8 @@
               }
             ],
             "styles": [
-              "projects/application/src/style.scss"
+              "projects/application/src/style.scss",
+              "projects/application/src/themes/themes.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["projects/application/src/styles"]
@@ -84,9 +85,8 @@
             "tsConfig": "projects/application/tsconfig.spec.json",
             "karmaConfig": "projects/application/karma.conf.js",
             "styles": [
-              {
-                "input": "projects/application/src/style.scss"
-              }
+              "projects/application/src/style.scss",
+              "projects/application/src/themes/themes.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["projects/application/src/styles"]

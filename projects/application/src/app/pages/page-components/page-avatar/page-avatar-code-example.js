@@ -1,6 +1,6 @@
 const avatarCodeExample = {
   html: `
-    <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'"></cb-avatar>`,
+    <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>`,
   ts: `
     import {Component} from '@angular/core';
 

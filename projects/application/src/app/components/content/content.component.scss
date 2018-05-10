@@ -8,6 +8,7 @@
   @include mat-typography-level-to-styles($typography, body-1);
   display: block;
   margin-top: $space;
+  overflow-x: hidden;
 
   &:not(:last-child) {
     margin-bottom: $space;
@@ -51,10 +52,15 @@
     }
   }
 
-  & ::ng-deep code {
+  & ::ng-deep pre {
     background: $gray-lighter;
     color: $gray-darker;
     margin-bottom: $space-md;
+    padding: $space-xs;
+  }
+
+  & ::ng-deep code {
+    background: $gray-lighter;
     padding: $space-xs;
   }
 

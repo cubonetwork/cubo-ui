@@ -14,9 +14,9 @@ export class PageCardComponent {}
 @Component({
   selector: 'page-card-description',
   template: `
-    <p>cb-card is a content container for text, photos, chips in the context of a single subject.</p>
+    <p><code>cb-card</code> is a content container for text, photos, chips in the context of a single subject.</p>
     <h2>Basic card</h2>
-    <p>The most basic card needs only a cb-card element with some content. However, it provides a number of preset sections that you can use inside of a cb-card.</p>
+    <p>The most basic card needs only a <code>cb-card</code> element with some content. However, it provides a number of preset sections that you can use inside of a cb-card.</p>
     <table>
       <tbody>
       <tr>
@@ -41,9 +41,9 @@ export class PageCardComponent {}
       </tr>
       </tbody>
     </table>
-    <h2>Card</h2>
+    <h2>Example</h2>
     <cb-card>
-      <cb-avatar [imageUrl]="'https://bit.ly/2vvFXCO'"></cb-avatar>
+      <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
       <cb-card-title>Eleven</cb-card-title>
       <cb-card-subtitle>Character @ Stranger Things</cb-card-subtitle>
       <cb-card-badges>
@@ -126,31 +126,16 @@ export class PageCardCodeTsComponent {
 }
 
 @Component({
-  selector: 'page-card-render',
-  template: `
-    <cb-card>
-      <cb-card-title>Simple card</cb-card-title>
-    </cb-card>
-  `
-})
-export class PageCardRenderComponent {}
-
-@Component({
   selector: 'page-card-api',
   template: `
-    <h2>
-      API reference for Cubo Card
-    </h2>
+    <h1>API reference</h1>
+
     <div>
-      <code [innerHtml]='import_content'></code>
+      <pre><code [innerHtml]='import_content'></code></pre>
     </div>
-    <h2>
-      Directives
-    </h2>
-    <h3>
-      CbCard
-    </h3>
-    <p>A cubo card component</p>
+
+    <h2>Directives</h2>
+
     <p>
       <span>Selector: </span>
       <code>cb-card</code>
@@ -162,8 +147,14 @@ export class PageCardRenderComponent {}
   `
 })
 export class PageCardApiComponent {
-  import_content = hljs.highlightAuto(
-    `import { CbCardModule } from 'cubo-ui';`,
-    ['nohighlight']
-  ).value;
+  import_content = hljs.highlightAuto(`
+  import { CbCardModule } from 'cubo-ui';
+
+  @NgModule({
+    imports: [
+      CbCardModule
+    ]
+  })
+  export class ExampleModule { }
+  `, ['nohighlight']).value;
 }
