@@ -1,0 +1,80 @@
+// ==================================================
+// Floating menu - Item
+// ==================================================
+
+@import '../styles/core';
+
+@mixin menuTransitionToTop($index) {
+  &:nth-child(#{$index}) {
+    transform: translateY(calc(#{-($index) * 100%} - #{$space-xs * $index}));
+    transition-delay: .05s * $index;
+  }
+}
+
+@mixin menuTransitionToBottom($index) {
+  &:nth-child(#{$index}) {
+    transform: translateY(calc(#{($index - 1) * 100%} + #{$space-xs * $index}));
+    transition-delay: .05s * $index;
+  }
+}
+
+:host {
+  opacity: 0;
+  position: absolute;
+  transition: transform .3s, opacity .15s;
+  width: 50vw;
+  z-index: $zindex-menu + 1;
+}
+
+:host-context(.menu--active) {
+  opacity: 1;
+}
+
+:host-context(.menu--active.menu--bottom-left) {
+  @for $index from 1 through 10 {
+    @include menuTransitionToBottom($index);
+  }
+}
+
+:host-context(.menu--active.menu--bottom-right) {
+  @for $index from 1 through 10 {
+    @include menuTransitionToBottom($index);
+  }
+}
+
+:host-context(.menu--active.menu--top-left) {
+  @for $index from 1 through 10 {
+    @include menuTransitionToTop($index);
+  }
+}
+
+:host-context(.menu--active.menu--top-right) {
+  @for $index from 1 through 10 {
+    @include menuTransitionToTop($index);
+  }
+}
+
+:host-context(.menu--bottom-right) {
+  left: 0;
+  text-align: left;
+  transform: translateY(0);
+}
+
+:host-context(.menu--bottom-left) {
+  right: 0;
+  text-align: right;
+  transform: translateY(0);
+}
+
+:host-context(.menu--top-right) {
+  left: 0;
+  text-align: left;
+  transform: translateY(-100%);
+}
+
+:host-context(.menu--top-left) {
+  right: 0;
+  text-align: right;
+  transform: translateY(-100%);
+}
+

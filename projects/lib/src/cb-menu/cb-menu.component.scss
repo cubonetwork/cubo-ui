@@ -1,0 +1,68 @@
+// ==================================================
+// Floating menu
+// ==================================================
+
+@import '../styles/core';
+
+:host {
+  position: relative;
+
+  &:before {
+    background: rgba($gray-darker, .85);
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+  }
+}
+
+:host(.menu--active) {
+  &:before {
+    opacity: 1;
+    visibility: visible;
+    z-index: $zindex-menu - 1;
+  }
+}
+
+.button {
+  position: relative;
+
+  :host(.menu--active) & {
+    z-index: $zindex-menu;
+  }
+}
+
+.content {
+  position: absolute;
+  transition: visibility .15s;
+  visibility: hidden;
+
+  :host(.menu--active) & {
+    visibility: visible;
+    z-index: $zindex-menu;
+  }
+
+  :host(.menu--bottom-left) & {
+    right: 0;
+    top: 100%;
+  }
+
+  :host(.menu--bottom-right) & {
+    left: 0;
+    top: 100%;
+  }
+
+  :host(.menu--top-left) & {
+    bottom: 100%;
+    right: 0;
+  }
+
+  :host(.menu--top-right) & {
+    bottom: 100%;
+    left: 0;
+  }
+}

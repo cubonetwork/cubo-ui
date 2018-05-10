@@ -1,0 +1,20 @@
+// ==================================================
+// Floating menu - Chip
+// ==================================================
+
+@import '../styles/core';
+
+:host {
+  @include mat-typography-level-to-styles($typography, caption);
+  align-items: center;
+  border-radius: $space-md;
+  display: inline-flex;
+  height: $space-md;
+  justify-content: center;
+  padding-left: $space-sm;
+  padding-right: $space-sm;
+
+  &:not(:last-child) {
+    margin-bottom: $space-xs;
+  }
+}
