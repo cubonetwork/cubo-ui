@@ -80,23 +80,22 @@ export class PageSocialCodeTsComponent {
 @Component({
   selector: 'page-social-api',
   template: `
-    <h2>
-      API reference for Social
-    </h2>
+    <h1>API reference</h1>
+
     <div>
-      <code [innerHtml]="import_content"></code>
+      <pre><code [innerHtml]="import_content"></code></pre>
     </div>
-    <h2>
-      Directives
-    </h2>
-    <h3>
-      CbSocial
-    </h3>
+
+    <h2>Directives</h2>
+
+    <h3>CbSocial</h3>
+
     <p>A cubo social  component</p>
     <p>
       <span>Selector: </span>
       <code>cb-social</code>
     </p>
+
     <p>
       <span>Exported as: </span>
       <code>CbSocial</code>
@@ -104,5 +103,14 @@ export class PageSocialCodeTsComponent {
   `
 })
 export class PageSocialApiComponent {
-  import_content = hljs.highlightAuto(`import { CbSocialModule } from 'cubo-ui';`, ['nohighlight']).value;
+  import_content = hljs.highlightAuto(`
+  import { CbSocialModule } from 'cubo-ui';
+
+  @NgModule({
+    imports: [
+      CbSocialModule
+    ]
+  })
+  export class PageSocialModule { }
+  `, ['nohighlight']).value;
  }
