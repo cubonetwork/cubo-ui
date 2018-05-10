@@ -73,9 +73,9 @@ export class PageAvatarCodeTsComponent {
   template: `
   <h1>API reference</h1>
 
-  <p>
+  <div>
     <pre><code [innerHtml]="import_content"></code></pre>
-  </p>
+  </div>
 
   <h2>Directives</h2>
 
@@ -124,13 +124,14 @@ export class PageAvatarCodeTsComponent {
   `,
 })
 export class PageAvatarApiComponent {
-  import_content = hljs.highlightAuto(`import { CbAvatarModule } from 'cubo-ui';
+  import_content = hljs.highlightAuto(`
+  import { CbAvatarModule } from 'cubo-ui';
 
   @NgModule({
     imports: [
-      CommonModule,
       CbAvatarModule
     ]
   })
-  export class ExampleModule { }`, ['nohighlight']).value;
+  export class ExampleModule { }
+  `, ['nohighlight']).value;
  }
