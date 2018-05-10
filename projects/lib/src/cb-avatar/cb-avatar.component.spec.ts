@@ -4,9 +4,7 @@ import { By } from '@angular/platform-browser';
 
 import { CbAvatarComponent } from './cb-avatar.component';
 
-
 describe('CbAvatarComponent', () => {
-
   let comp: CbAvatarComponent;
   let fixture: ComponentFixture<CbAvatarComponent>;
   let element: HTMLElement;
@@ -22,7 +20,7 @@ describe('CbAvatarComponent', () => {
     comp = fixture.componentInstance;
   });
 
-  fit('shows the image for the given url', () => {
+  it('shows the image for the given url', () => {
     comp.imageUrl = imageUrl;
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('img');
