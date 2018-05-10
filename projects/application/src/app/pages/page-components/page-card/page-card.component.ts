@@ -14,9 +14,9 @@ export class PageCardComponent {}
 @Component({
   selector: 'page-card-description',
   template: `
-    <p>cb-card is a content container for text, photos, chips in the context of a single subject.</p>
+    <p><code>cb-card</code> is a content container for text, photos, chips in the context of a single subject.</p>
     <h2>Basic card</h2>
-    <p>The most basic card needs only a cb-card element with some content. However, it provides a number of preset sections that you can use inside of a cb-card.</p>
+    <p>The most basic card needs only a <code>cb-card</code> element with some content. However, it provides a number of preset sections that you can use inside of a cb-card.</p>
     <table>
       <tbody>
       <tr>
@@ -136,8 +136,6 @@ export class PageCardCodeTsComponent {
 
     <h2>Directives</h2>
 
-    <h3>CbCard</h3>
-
     <p>
       <span>Selector: </span>
       <code>cb-card</code>
@@ -157,6 +155,6 @@ export class PageCardApiComponent {
       CbCardModule
     ]
   })
-  export class PageCardModule { }
+  export class ExampleModule { }
   `, ['nohighlight']).value;
 }

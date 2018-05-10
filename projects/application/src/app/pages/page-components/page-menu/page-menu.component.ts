@@ -12,11 +12,11 @@ export class PageMenuComponent {}
 @Component({
   selector: 'page-menu-description',
   template: `
-    <p><em>cb-menu</em> makes it use to create a floating menu based on material ui. The main objective is be a holder with animations, it doesn't have template style and the propose is use with any element.</p>
+    <p><code>cb-menu</code> makes it use to create a floating menu based on material ui. The main objective is be a holder with animations, it doesn't have template style and the propose is use with any element.</p>
 
     <h3>Menu chip</h3>
 
-    <p><em>cb-menu-chip</em> can be use inside others components, without <em>cb-menu</em> or  <em>cb-menu-item</em> dependency.</p>
+    <p><code>cb-menu-chip</code> can be use inside others components, without <code>cb-menu</code> or <code>cb-menu-item</code> dependency.</p>
 
     <div>
       <cb-menu-chip style="background: cyan">Menu chip example</cb-menu-chip>
@@ -116,9 +116,9 @@ export class PageMenuComponent {}
       </cb-menu>
     </div>
 
-    <h3>Use with other component</h3>
+    <h3>Use with other component without backdrop</h3>
     <div style="height: 250px;">
-      <cb-menu role="navigation" [position]="'bottom right'">
+      <cb-menu role="navigation" [position]="'bottom right'" [backdrop]="false">
         <cb-menu-button>
           <button mat-fab color="primary">Menu</button>
         </cb-menu-button>
@@ -140,13 +140,7 @@ export class PageMenuComponent {}
     </div>
   `
 })
-export class PageMenuDescriptionComponent {
-  shouldShowMenuBottomRight = false;
-  shouldShowMenuBottomLeft = false;
-  shouldShowMenuTopRight = false;
-  shouldShowMenuTopLeft = false;
-  shouldShowMenuOtherExample = false;
-}
+export class PageMenuDescriptionComponent { }
 
 @Component({
   selector: 'page-menu-code-html',
@@ -182,17 +176,51 @@ export class PageMenuCodeTsComponent {
 @Component({
   selector: 'page-menu-api',
   template: `
+  <h1>API reference</h1>
+
   <div>
-    <code [innerHtml]='import_content'></code>
+    <pre><code [innerHtml]="import_content"></code></pre>
   </div>
+
   <h2>Directives</h2>
-  <h3>CbMenuComponent</h3>
+
   <p>
     <span>Selector: </span>
     <code>cb-menu</code>
   </p>
+
+  <p>
+    <span>Exported as: </span>
+    <code>CbMenu</code>
+  </p>
+
+  <table>
+    <tbody>
+     <tr>
+      <th>Name</th>
+      <th>Description</th>
+     </tr>
+     <tr>
+      <td>@Input() position: string;</td>
+      <td>Position of menu: <code>top left</code>, <code>top right</code>, <code>bottom left</code>,  <code>bottom right</code></td>
+     </tr>
+     <tr>
+      <td>@Input() backdrop: boolean;</td>
+      <td>Enable or disable backdrop. Default: <code>true</code></td>
+     </tr>
+    </tbody>
+  </table>
   `
 })
 export class PageMenuApiComponent {
-  import_content = hljs.highlightAuto(`import { CbMenuModule } from 'cubo-ui';`, ['nohighlight']).value;
+  import_content = hljs.highlightAuto(`
+  import { CbMenuModule } from 'cubo-ui';
+
+  @NgModule({
+    imports: [
+      CbMenuModule
+    ]
+  })
+  export class ExampleModule { }
+  `, ['nohighlight']).value;
 }

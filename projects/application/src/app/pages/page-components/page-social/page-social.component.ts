@@ -14,7 +14,7 @@ export class PageSocialComponent { }
 @Component({
   selector: 'page-social-description',
   template: `
-  <p>cb-social makes it easier to integrate icons from social media.</p>
+  <p><code>cb-social</code> makes it easier to integrate icons from social media.</p>
   <h2>Select Social Media</h2>
   <p>It is possible to add the social media icons through the MatIconRegistry module, if you opt to use the MatIcon.</p>
   <p>In this example, we decided to use the icons from the MatIconModule, so to register then we used the MatIconRegistry module,
@@ -88,9 +88,6 @@ export class PageSocialCodeTsComponent {
 
     <h2>Directives</h2>
 
-    <h3>CbSocial</h3>
-
-    <p>A cubo social  component</p>
     <p>
       <span>Selector: </span>
       <code>cb-social</code>
@@ -111,6 +108,6 @@ export class PageSocialApiComponent {
       CbSocialModule
     ]
   })
-  export class PageSocialModule { }
+  export class ExampleModule { }
   `, ['nohighlight']).value;
  }
