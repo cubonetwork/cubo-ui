@@ -11,7 +11,7 @@
     "brace-style": 2,
     "declarations-before-nesting": 2,
     "empty-line-between-blocks": 2,
-    "leading-zero": 2,
+    "leading-zero": 0,
     "one-declaration-per-line": 2,
     "space-after-colon": 2,
     "space-between-parens": 2,

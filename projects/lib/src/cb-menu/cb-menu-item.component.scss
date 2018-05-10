@@ -6,20 +6,19 @@
 
 @mixin menuTransitionToTop($index) {
   &:nth-child(#{$index}) {
-    transform: translateY(calc(#{-($index) * 100%} - #{$space-xs * $index}));
+    transform: translateY(calc((#{-($index + 0.001) * 100%} - #{$space-xs * $index})));
     transition-delay: .05s * $index;
   }
 }
 
 @mixin menuTransitionToBottom($index) {
   &:nth-child(#{$index}) {
-    transform: translateY(calc(#{($index - 1) * 100%} + #{$space-xs * $index}));
+    transform: translateY(calc(#{(($index + 0.001) - 1) * 100%} + #{$space-xs * $index}));
     transition-delay: .05s * $index;
   }
 }
 
 :host {
-  left: 0;
   opacity: 0;
   position: absolute;
   transition: transform .3s, opacity .15s;
