@@ -71,27 +71,28 @@ export class PageAvatarCodeTsComponent {
 @Component({
   selector: 'page-avatar-api',
   template: `
-  <h2>
-    API reference for Cubo Avatar
-  </h2>
+  <h1>API reference</h1>
+
   <div>
     <pre><code [innerHtml]="import_content"></code></pre>
   </div>
-  <h2>
-    Directives
-  </h2>
-  <h3>
-    CbAvatar
-  </h3>
+
+  <h2>Directives</h2>
+
+  <h3>CbAvatar</h3>
+
   <p>A cubo avatar component</p>
+
   <p>
     <span>Selector: </span>
     <code>cb-avatar</code>
   </p>
+
   <p>
     <span>Exported as: </span>
     <code>CbAvatar</code>
   </p>
+
   <table>
     <tbody>
      <tr>
