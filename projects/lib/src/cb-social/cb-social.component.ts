@@ -17,6 +17,7 @@ import {
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
+    'class': 'cb-social',
     'role': 'button'
   }
 })

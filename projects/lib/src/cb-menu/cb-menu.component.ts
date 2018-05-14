@@ -20,6 +20,7 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@a
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
+    'class': 'cb-menu',
     '(document:click)': 'hiddenMenu($event)',
     '[class.menu--backdrop]': 'backdrop === true',
     '[class.menu--active]': 'active === true',
@@ -54,7 +55,8 @@ export class CbMenuComponent {
     <ng-content></ng-content>
   `,
   encapsulation: ViewEncapsulation.Emulated,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { 'class': 'cb-menu-button' }
 })
 export class CbMenuButtonComponent { }
 
@@ -67,7 +69,8 @@ export class CbMenuButtonComponent { }
     <ng-content></ng-content>
   `,
   encapsulation: ViewEncapsulation.Emulated,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { 'class': 'cb-menu-content' }
 })
 export class CbMenuContentComponent { }
 
@@ -82,7 +85,8 @@ export class CbMenuContentComponent { }
   `,
   styleUrls: ['./cb-menu-item.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { 'class': 'cb-menu-item' }
 })
 export class CbMenuItemComponent { }
 
@@ -98,6 +102,7 @@ export class CbMenuItemComponent { }
   `,
   styleUrls: ['./cb-menu-chip.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { 'class': 'cb-menu-chip' }
 })
 export class CbMenuChipComponent { }

@@ -23,6 +23,7 @@ import {
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.Default,
   host: {
+    'class': 'cb-avatar',
     '[class.avatar--extra-small]': 'size ===  "xsmall"',
     '[class.avatar--small]': 'size ===  "small"',
     '[class.avatar--medium]': 'size ===  "medium"',

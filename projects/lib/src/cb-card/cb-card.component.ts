@@ -7,7 +7,8 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, S
   `,
   styleUrls: ['./cb-card.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { 'class': 'cb-card' }
 })
 export class CbCardComponent { }
 
@@ -18,7 +19,8 @@ export class CbCardComponent { }
 	`,
   styleUrls: ['./cb-card-footer.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { 'class': 'cb-card-footer' }
 })
 export class CbCardFooterComponent { }
 
@@ -30,7 +32,7 @@ export class CbCardFooterComponent { }
   styleUrls: ['./cb-card-title.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { 'class': 'title' }
+  host: { 'class': 'cb-card-title' }
 })
 export class CbCardTitleComponent { }
 
@@ -42,7 +44,7 @@ export class CbCardTitleComponent { }
   styleUrls: ['./cb-card-subtitle.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { 'class': 'subtitle' }
+  host: { 'class': 'cb-card-subtitle' }
 })
 export class CbCardSubtitleComponent { }
 
@@ -53,6 +55,7 @@ export class CbCardSubtitleComponent { }
 	`,
   styleUrls: ['./cb-card-badges.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { 'class': 'cb-card-badges' }
 })
 export class CbCardBadgesComponent { }
