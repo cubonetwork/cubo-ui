@@ -44,7 +44,7 @@ Generate a new release
 
 ```sh
 # generate a build
-npm run build:lib 
+npm run build:lib
 
 # publish new release
 cd projects/lib/dist
@@ -57,11 +57,18 @@ This project uses [Cubo Coding Style](https://github.com/cubonetwork/coding-styl
 
 ### Tasks
 
+#### From Application
+
 - `npm start`: run all tasks, initialize watch for changes and a starts a server
 - `npm run build`: run all production tasks and create a `dist` folder to deploy
 - `npm run lint`: lint for javascript and css
 - `npm run fix`: command to fix all eslint errors
 - `npm run deploy`: run all build tasks and deploy on gh-pages
+
+#### From Lib
+
+- `npm run build:lib`: run all lib tasks and create a `dist` folder to deploy
+- `npm run deploy:lib`: run all build tasks to lib and deploy on npm
 
 ## License
 
