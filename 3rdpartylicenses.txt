@@ -428,7 +428,7 @@ MIT
 MIT
 MIT
 
-@angular/flex-layout@6.0.0-beta.15-cca27c0
+@angular/flex-layout@6.0.0-beta.15-086d038
 MIT
 The MIT License
 
