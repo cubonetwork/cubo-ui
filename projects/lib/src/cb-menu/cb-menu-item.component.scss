@@ -6,14 +6,14 @@
 
 @mixin menuTransitionToTop($index) {
   &:nth-child(#{$index}) {
-    transform: translateY(calc((#{-($index + 0.001) * 100%} - #{$space-xs * $index})));
+    transform: translateY(calc((#{-($index + 0.001) * 100%} - #{$space-sm * $index})));
     transition-delay: .05s * $index;
   }
 }
 
 @mixin menuTransitionToBottom($index) {
   &:nth-child(#{$index}) {
-    transform: translateY(calc(#{(($index + 0.001) - 1) * 100%} + #{$space-xs * $index}));
+    transform: translateY(calc(#{(($index + 0.001) - 1) * 100%} + #{$space-sm * $index}));
     transition-delay: .05s * $index;
   }
 }
