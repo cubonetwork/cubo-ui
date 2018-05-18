@@ -9,6 +9,6 @@
   display: block;
 
   &:not(:last-child):not(:empty) {
-    margin-bottom: $space;
+    margin-bottom: $space-xs;
   }
 }

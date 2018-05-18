@@ -4,17 +4,20 @@
 
 @import '../../../application/src/styles/core';
 
-:host {
+:host(.cb-card-footer) {
   align-items: center;
-  border-top: 1px solid $pattern-border;
   display: flex;
   justify-content: space-between;
-  margin-top: $space;
   padding-top: $space-sm;
+  white-space: nowrap;
   width: 100%;
-  word-break: break-all;
 
-  @include above(sm) {
-    margin-top: auto;
+  & ::ng-deep > * {
+    margin-bottom: 0;
   }
+}
+
+:host(.cb-card-footer--border) {
+  border-top: 1px solid $pattern-border;
+  margin-top: $space-sm;
 }

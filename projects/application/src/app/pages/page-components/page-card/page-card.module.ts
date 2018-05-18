@@ -1,4 +1,4 @@
-import { CbSocialModule, CbAvatarModule, CbCardModule } from 'cubo-ui';
+import { CbSocialModule, CbAvatarModule, CbCardModule } from '@lib';
 import { MatChipsModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';

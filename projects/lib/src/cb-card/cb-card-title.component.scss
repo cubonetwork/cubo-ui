@@ -7,12 +7,5 @@
 :host {
   @include mat-typography-level-to-styles($typography, title);
   display: block;
-
-  &:not(:first-child) {
-    margin-top: $space-xs;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: ($space-xxs / 2);
-  }
+  margin-bottom: ($space-xxs / 2);
 }

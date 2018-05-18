@@ -43,28 +43,39 @@ export class PageCardComponent {}
     </table>
     <h2>Example</h2>
 
-    <div style="display: flex; justify-content: space-between; max-width: 32rem; margin-left: 3.4rem; margin-bottom: 3.4rem">
+    <div style="display: flex; justify-content: space-between; max-width: 34rem; margin-left: 3.4rem; margin-bottom: 2.4rem">
       <div style="width: 16rem;">
         <cb-card [size]="'small'">
-          <img src="https://cubo.network/assets/svg/logo/logo-cubo-redpoint.svg" alt="Cubo">
-          <cb-card-footer>
-            <cb-card-title>Small title</cb-card-title>
-            <cb-card-pretitle>Small pretitle</cb-card-pretitle>
+          <cb-card-image>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Beatles_logo.svg/2000px-Beatles_logo.svg.png" alt="Beatles">
+          </cb-card-image>
+          <cb-card-footer [border]="false">
+            <cb-card-title>Beatles</cb-card-title>
+            <cb-card-pretitle>Band</cb-card-pretitle>
+          </cb-card-footer>
+        </cb-card>
+      </div>
+      <div style="width: 16rem;">
+        <cb-card [size]="'small'">
+          <cb-card-image>
+            <img src="http://famfonts.com/wp-content/uploads/guns-n-roses-wide.png" alt="Beatles">
+          </cb-card-image>
+          <cb-card-footer [border]="false">
+            <cb-card-title>Guns N' Roses</cb-card-title>
+            <cb-card-pretitle>Band</cb-card-pretitle>
           </cb-card-footer>
         </cb-card>
       </div>
     </div>
 
-    <div style="max-width: 32rem; margin-left: 3.4rem; margin-bottom: 3.4rem">
+    <div style="max-width: 34rem; margin-left: 3.4rem; margin-bottom: 2.4rem">
       <cb-card>
         <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
         <cb-card-title>Eleven</cb-card-title>
         <cb-card-subtitle>Character @ Stranger Things</cb-card-subtitle>
-        <cb-card-badges>
-          <mat-chip-list>
-            <mat-chip color="primary" selected="true">Hero</mat-chip>
-          </mat-chip-list>
-        </cb-card-badges>
+        <mat-chip-list style="position: absolute; left: 1.6rem; top: 1.6rem;">
+          <mat-chip color="primary" selected="true">Hero</mat-chip>
+        </mat-chip-list>
         <cb-card-footer>
           <div class="social">
             <cb-social>

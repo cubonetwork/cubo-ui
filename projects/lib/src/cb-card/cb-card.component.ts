@@ -3,7 +3,10 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, S
 @Component({
   selector: 'cb-card',
   template: `
-    <ng-content></ng-content>
+    <div class="content">
+      <ng-content></ng-content>
+    </div>
+    <ng-content select="cb-card-footer"></ng-content>
   `,
   styleUrls: ['./cb-card.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
@@ -25,9 +28,14 @@ export class CbCardComponent {
   styleUrls: ['./cb-card-footer.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { 'class': 'cb-card-footer' }
+  host: {
+    'class': 'cb-card-footer',
+    '[class.cb-card-footer--border]': 'border ===  true'
+  }
 })
-export class CbCardFooterComponent { }
+export class CbCardFooterComponent {
+  @Input() border = true;
+}
 
 @Component({
   selector: 'cb-card-title, [cbCardTitle]',
@@ -37,10 +45,7 @@ export class CbCardFooterComponent { }
   styleUrls: ['./cb-card-title.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    'class': 'cb-card-title',
-    '[class.cb-card-title--small]': 'size ===  "small"'
-  }
+  host: { 'class': 'cb-card-title' }
 })
 export class CbCardTitleComponent {
   @Input() size: string;
@@ -63,26 +68,23 @@ export class CbCardSubtitleComponent { }
   template: `
     <ng-content></ng-content>
 	`,
-  styleUrls: ['./cb-card-subtitle.component.scss'],
+  styleUrls: ['./cb-card-pretitle.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    'class': 'cb-card-pretitle',
-    '[class.cb-card-pretitle--small]': 'size ===  "small"'
-  }
+  host: { 'class': 'cb-card-pretitle' }
 })
 export class CbCardPretitleComponent {
   @Input() size: string;
 }
 
 @Component({
-  selector: 'cb-card-badges',
+  selector: 'cb-card-image',
   template: `
     <ng-content></ng-content>
 	`,
-  styleUrls: ['./cb-card-badges.component.scss'],
+  styleUrls: ['./cb-card-image.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { 'class': 'cb-card-badges' }
+  host: { 'class': 'cb-card-image' }
 })
-export class CbCardBadgesComponent { }
+export class CbCardImageComponent { }

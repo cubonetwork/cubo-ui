@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import {
   CbCardComponent,
-  CbCardBadgesComponent,
+  CbCardImageComponent,
   CbCardFooterComponent,
   CbCardTitleComponent,
   CbCardPretitleComponent,
@@ -13,7 +13,7 @@ import {
 @NgModule({
   exports: [
     CbCardComponent,
-    CbCardBadgesComponent,
+    CbCardImageComponent,
     CbCardFooterComponent,
     CbCardTitleComponent,
     CbCardPretitleComponent,
@@ -21,7 +21,7 @@ import {
   ],
   declarations: [
     CbCardComponent,
-    CbCardBadgesComponent,
+    CbCardImageComponent,
     CbCardFooterComponent,
     CbCardTitleComponent,
     CbCardPretitleComponent,

@@ -6,13 +6,8 @@
 
 :host {
   @include mat-typography-level-to-styles($typography, title);
+  color: map-get($pallet-gray, 500);
   display: block;
-
-  &:not(:first-child) {
-    margin-top: $space-xs;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: ($space-xxs / 2);
-  }
+  font-weight: 400;
+  margin-bottom: ($space-xxs / 2);
 }

@@ -1,11 +1,14 @@
 // -------------------------------------------------
-// Card Chips
+// Card Image
 // -------------------------------------------------
 
 @import '../../../application/src/styles/core';
 
 :host {
-  left: $space-sm;
-  position: absolute;
-  top: $space-sm;
+  margin-bottom: auto;
+  margin-top: auto;
+
+  & ::ng-deep img {
+    max-width: 100%;
+  }
 }
