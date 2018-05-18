@@ -21,7 +21,7 @@ import {
   `,
   styleUrls: ['./cb-avatar.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
-  changeDetection: ChangeDetectionStrategy.Default,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'class': 'cb-avatar',
     '[class.avatar--extra-small]': 'size ===  "xsmall"',

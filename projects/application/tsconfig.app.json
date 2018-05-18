@@ -8,7 +8,7 @@
     "paths": {
       "@app/*": ["app/*"],
       "@env/*": ["environments/*"],
-      "@lib": ["../../lib/src/index"]
+      "@lib": ["../../lib/src/public_api"]
     }
   },
   "exclude": [

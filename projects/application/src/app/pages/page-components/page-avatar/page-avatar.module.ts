@@ -1,7 +1,8 @@
-import { CbAvatarModule } from '@lib';
+import { CbAvatarModule } from 'cubo-ui';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '@app/shared/shared.module';
+import { MatExpansionModule } from '@angular/material';
 
 import {
   PageAvatarDescriptionComponent,
@@ -12,7 +13,6 @@ import {
   PageAvatarComponent
 } from './page-avatar.component';
 import { PageAvatarRouting } from './page-avatar.routing';
-import { MatExpansionModule } from '@angular/material';
 
 @NgModule({
   imports: [

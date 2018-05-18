@@ -1,0 +1,21 @@
+// --------------------------------------------------
+// Typography
+// --------------------------------------------------
+
+$font-family-primary: '"Open Sans", sans-serif';
+$typography: mat-typography-config(
+  $font-family:   $font-family-primary,
+  $display-4:     mat-typography-level(11.2rem, 11.2rem, 300),
+  $display-3:     mat-typography-level(5.6rem, 6.2rem, 300),
+  $display-2:     mat-typography-level(4.5rem, 5.3rem, 300),
+  $display-1:     mat-typography-level(3rem, 4rem, 300),
+  $headline:      mat-typography-level(2.4rem, 3.4rem, 400),
+  $title:         mat-typography-level(2rem, 3rem, 600),
+  $subheading-2:  mat-typography-level(1.8rem, 2.8rem, 300),
+  $subheading-1:  mat-typography-level(1.6rem, 2.4rem, 400),
+  $body-2:        mat-typography-level(1.4rem, 2.4rem, 600),
+  $body-1:        mat-typography-level(1.4rem, 2.4rem, 400),
+  $caption:       mat-typography-level(1.2rem, 1.8rem, 400),
+  $button:        mat-typography-level(1.4rem, 2.2rem, 600),
+  $input:         mat-typography-level(1.6rem, 1.25, 400)
+);
