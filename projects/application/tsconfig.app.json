@@ -9,7 +9,7 @@
       "@app/*": ["app/*"],
       "@env/*": ["environments/*"],
       "@lib:dev": ["../../lib/src/index"],
-      "@lib:dist": ["../../lib/dist/index"]
+      "@lib:dist": ["../../lib/dist"]
     }
   },
   "exclude": [
