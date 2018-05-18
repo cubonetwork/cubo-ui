@@ -2,7 +2,7 @@
 // Floating menu - Item
 // ==================================================
 
-@import '../styles/core';
+@import '../../../application/src/styles/core';
 
 @mixin menuTransitionToTop($index) {
   &:nth-child(#{$index}) {

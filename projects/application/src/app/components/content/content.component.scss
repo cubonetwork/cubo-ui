@@ -5,8 +5,9 @@
 @import 'core';
 
 :host {
-  @include mat-typography-level-to-styles($typography, body-1);
   display: block;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
   margin-top: $space;
   overflow-x: hidden;
 
@@ -41,7 +42,9 @@
   }
 
   & ::ng-deep h3 {
-    @include mat-typography-level-to-styles($typography, subheading-2);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.8rem;
 
     &:not(:first-child) {
       margin-top: $space;
@@ -71,7 +74,8 @@
   }
 
   & ::ng-deep p {
-    @include mat-typography-level-to-styles($typography, body-1);
+    font-size: 1.6rem;
+    line-height: 2.6rem;
 
     &:not(:last-child) {
       margin-bottom: $space;
