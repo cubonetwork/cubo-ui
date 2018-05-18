@@ -1,5 +1,5 @@
 import { MatButtonModule, MatChipsModule } from '@angular/material';
-import { CbMenuModule } from '@lib:dev';
+import { CbMenuModule } from 'cubo-ui';
 import { NgModule } from '@angular/core';
 
 import { PageMenuRouting } from './page-menu.routing';
