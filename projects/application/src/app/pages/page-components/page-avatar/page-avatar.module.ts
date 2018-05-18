@@ -1,4 +1,4 @@
-import { CbAvatarModule } from '@lib';
+import { CbAvatarModule } from '@lib:dev';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '@app/shared/shared.module';
