@@ -8,9 +8,14 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, S
   styleUrls: ['./cb-card.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { 'class': 'cb-card' }
+  host: {
+    'class': 'cb-card',
+    '[class.cb-card--small]': 'size ===  "small"'
+  }
 })
-export class CbCardComponent { }
+export class CbCardComponent {
+  @Input() size: string;
+}
 
 @Component({
   selector: 'cb-card-footer',
@@ -32,9 +37,14 @@ export class CbCardFooterComponent { }
   styleUrls: ['./cb-card-title.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { 'class': 'cb-card-title' }
+  host: {
+    'class': 'cb-card-title',
+    '[class.cb-card-title--small]': 'size ===  "small"'
+  }
 })
-export class CbCardTitleComponent { }
+export class CbCardTitleComponent {
+  @Input() size: string;
+}
 
 @Component({
   selector: 'cb-card-subtitle, [cbCardSubtitle]',
@@ -47,6 +57,23 @@ export class CbCardTitleComponent { }
   host: { 'class': 'cb-card-subtitle' }
 })
 export class CbCardSubtitleComponent { }
+
+@Component({
+  selector: 'cb-card-pretitle, [cbCardPretitle]',
+  template: `
+    <ng-content></ng-content>
+	`,
+  styleUrls: ['./cb-card-subtitle.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    'class': 'cb-card-pretitle',
+    '[class.cb-card-pretitle--small]': 'size ===  "small"'
+  }
+})
+export class CbCardPretitleComponent {
+  @Input() size: string;
+}
 
 @Component({
   selector: 'cb-card-badges',

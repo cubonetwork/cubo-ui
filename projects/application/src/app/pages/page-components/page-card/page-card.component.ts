@@ -42,36 +42,50 @@ export class PageCardComponent {}
       </tbody>
     </table>
     <h2>Example</h2>
-    <cb-card>
-      <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
-      <cb-card-title>Eleven</cb-card-title>
-      <cb-card-subtitle>Character @ Stranger Things</cb-card-subtitle>
-      <cb-card-badges>
-        <mat-chip-list>
-          <mat-chip color="primary" selected="true">Hero</mat-chip>
-          <mat-chip color="accent" selected="true">Superpower</mat-chip>
-        </mat-chip-list>
-      </cb-card-badges>
-      <cb-card-footer>
-        <div class="social">
-          <cb-social>
-            <mat-icon svgIcon="linkedin"></mat-icon>
-          </cb-social>
-          <cb-social>
-            <mat-icon svgIcon="github"></mat-icon>
-          </cb-social>
-          <cb-social>
-            <mat-icon svgIcon="twitter"></mat-icon>
-          </cb-social>
-          <cb-social>
-            <mat-icon svgIcon="instagram"></mat-icon>
-          </cb-social>
-        </div>
-        <div class="actions">
-          <button mat-button color="primary">Click me!</button>
-        </div>
-      </cb-card-footer>
-    </cb-card>
+
+    <div style="display: flex; justify-content: space-between; max-width: 32rem; margin-left: 3.4rem; margin-bottom: 3.4rem">
+      <div style="width: 16rem;">
+        <cb-card [size]="'small'">
+          <img src="https://cubo.network/assets/svg/logo/logo-cubo-redpoint.svg" alt="Cubo">
+          <cb-card-footer>
+            <cb-card-title>Small title</cb-card-title>
+            <cb-card-pretitle>Small pretitle</cb-card-pretitle>
+          </cb-card-footer>
+        </cb-card>
+      </div>
+    </div>
+
+    <div style="max-width: 32rem; margin-left: 3.4rem; margin-bottom: 3.4rem">
+      <cb-card>
+        <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
+        <cb-card-title>Eleven</cb-card-title>
+        <cb-card-subtitle>Character @ Stranger Things</cb-card-subtitle>
+        <cb-card-badges>
+          <mat-chip-list>
+            <mat-chip color="primary" selected="true">Hero</mat-chip>
+          </mat-chip-list>
+        </cb-card-badges>
+        <cb-card-footer>
+          <div class="social">
+            <cb-social>
+              <mat-icon svgIcon="linkedin"></mat-icon>
+            </cb-social>
+            <cb-social>
+              <mat-icon svgIcon="github"></mat-icon>
+            </cb-social>
+            <cb-social>
+              <mat-icon svgIcon="twitter"></mat-icon>
+            </cb-social>
+            <cb-social>
+              <mat-icon svgIcon="instagram"></mat-icon>
+            </cb-social>
+          </div>
+          <div class="actions">
+            <button mat-button color="primary">Click me!</button>
+          </div>
+        </cb-card-footer>
+      </cb-card>
+    </div>
   `
 })
 export class PageCardDescriptionComponent {

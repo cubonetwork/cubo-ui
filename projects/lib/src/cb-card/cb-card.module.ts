@@ -6,6 +6,7 @@ import {
   CbCardBadgesComponent,
   CbCardFooterComponent,
   CbCardTitleComponent,
+  CbCardPretitleComponent,
   CbCardSubtitleComponent,
 } from './cb-card.component';
 
@@ -15,6 +16,7 @@ import {
     CbCardBadgesComponent,
     CbCardFooterComponent,
     CbCardTitleComponent,
+    CbCardPretitleComponent,
     CbCardSubtitleComponent,
   ],
   declarations: [
@@ -22,6 +24,7 @@ import {
     CbCardBadgesComponent,
     CbCardFooterComponent,
     CbCardTitleComponent,
+    CbCardPretitleComponent,
     CbCardSubtitleComponent,
   ],
   imports: [

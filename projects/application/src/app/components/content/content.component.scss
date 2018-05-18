@@ -8,7 +8,6 @@
   @include mat-typography-level-to-styles($typography, body-1);
   display: block;
   margin-top: $space;
-  overflow-x: hidden;
 
   &:not(:last-child) {
     margin-bottom: $space;

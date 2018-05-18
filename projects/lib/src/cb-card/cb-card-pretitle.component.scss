@@ -1,8 +1,8 @@
 // -------------------------------------------------
-// Card Title
+// Card Pretitle
 // -------------------------------------------------
 
-@import '../styles/core';
+@import '../../../application/src/styles/core';
 
 :host {
   @include mat-typography-level-to-styles($typography, title);

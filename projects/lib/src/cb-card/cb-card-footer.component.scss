@@ -12,6 +12,7 @@
   margin-top: $space;
   padding-top: $space-sm;
   width: 100%;
+  word-break: break-all;
 
   @include above(sm) {
     margin-top: auto;

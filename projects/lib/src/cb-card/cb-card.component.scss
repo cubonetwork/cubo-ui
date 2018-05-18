@@ -4,16 +4,16 @@
 
 @import '../styles/core';
 
-:host {
+:host(.cb-card) {
   align-items: center;
   border: $pattern-border solid 1px;
+  box-shadow: 0 2px 3px 0 rgba(map-get($pallet-gray, 200), .5);
   color: $brand-text;
   cursor: pointer;
   display: flex;
   fill: $gray;
   flex-direction: column;
   height: 100%;
-  overflow: hidden;
   padding: $space-sm;
   position: relative;
   width: 100%;
@@ -27,3 +27,14 @@
     }
   }
 }
+
+:host(.cb-card--small) {
+  padding: $space-xs;
+
+  & ::ng-deep * {
+    font-size: .9em;
+    line-height: 1.4em;
+  }
+}
+
+
