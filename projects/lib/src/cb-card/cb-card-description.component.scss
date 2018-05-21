@@ -1,17 +1,15 @@
 // -------------------------------------------------
-// Card Pretitle
+// Card Description
 // -------------------------------------------------
 
 @import '../../../application/src/styles/core';
 
-:host(.cb-card-pretitle) {
+:host(.cb-card-description) {
   @include mat-typography-level-to-styles($typography, body-1);
-  color: map-get($pallet-gray, 500);
   display: block;
-  font-weight: 300;
 
-  &:not(:first-child) {
-    margin-top: $space-xs;
+  &:not(:last-child) {
+    margin-bottom: $space-xs;
   }
 }
 
@@ -19,7 +17,7 @@
   font-size: .9em;
   line-height: 1.4em;
 
-  &:not(:first-child) {
-    margin-top: 0;
+  &:not(:last-child) {
+    margin-bottom: 0;
   }
 }

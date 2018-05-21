@@ -13,11 +13,13 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, S
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'class': 'cb-card',
-    '[class.cb-card--small]': 'size ===  "small"'
+    '[class.cb-card--small]': 'size ===  "small"',
+    '[class.cb-card--center]': 'center ===  true'
   }
 })
 export class CbCardComponent {
   @Input() size: string;
+  @Input() center = false;
 }
 
 @Component({
@@ -52,16 +54,16 @@ export class CbCardTitleComponent {
 }
 
 @Component({
-  selector: 'cb-card-subtitle, [cbCardSubtitle]',
+  selector: 'cb-card-info, [cbCardInfo]',
   template: `
     <ng-content></ng-content>
 	`,
-  styleUrls: ['./cb-card-subtitle.component.scss'],
+  styleUrls: ['./cb-card-info.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { 'class': 'cb-card-subtitle' }
+  host: { 'class': 'cb-card-info' }
 })
-export class CbCardSubtitleComponent { }
+export class CbCardInfoComponent { }
 
 @Component({
   selector: 'cb-card-pretitle, [cbCardPretitle]',
@@ -73,9 +75,19 @@ export class CbCardSubtitleComponent { }
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { 'class': 'cb-card-pretitle' }
 })
-export class CbCardPretitleComponent {
-  @Input() size: string;
-}
+export class CbCardPretitleComponent { }
+
+@Component({
+  selector: 'cb-card-description, [cbCardDescription]',
+  template: `
+    <ng-content></ng-content>
+	`,
+  styleUrls: ['./cb-card-description.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { 'class': 'cb-card-description' }
+})
+export class CbCardDescriptionComponent { }
 
 @Component({
   selector: 'cb-card-image',

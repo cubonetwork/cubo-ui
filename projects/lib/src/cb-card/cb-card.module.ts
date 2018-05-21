@@ -4,10 +4,11 @@ import { NgModule } from '@angular/core';
 import {
   CbCardComponent,
   CbCardImageComponent,
-  CbCardFooterComponent,
   CbCardTitleComponent,
   CbCardPretitleComponent,
-  CbCardSubtitleComponent,
+  CbCardDescriptionComponent,
+  CbCardFooterComponent,
+  CbCardInfoComponent
 } from './cb-card.component';
 
 @NgModule({
@@ -17,7 +18,8 @@ import {
     CbCardFooterComponent,
     CbCardTitleComponent,
     CbCardPretitleComponent,
-    CbCardSubtitleComponent,
+    CbCardDescriptionComponent,
+    CbCardInfoComponent
   ],
   declarations: [
     CbCardComponent,
@@ -25,7 +27,8 @@ import {
     CbCardFooterComponent,
     CbCardTitleComponent,
     CbCardPretitleComponent,
-    CbCardSubtitleComponent,
+    CbCardDescriptionComponent,
+    CbCardInfoComponent
   ],
   imports: [
     CommonModule
