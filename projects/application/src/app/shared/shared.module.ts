@@ -1,3 +1,4 @@
+import { MatExpansionModule, MatTabsModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -7,13 +8,17 @@ import { RouterModule } from '@angular/router';
   imports: [
     RouterModule,
     CommonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTabsModule,
+    MatExpansionModule
   ],
   declarations: [ ],
   exports: [
     RouterModule,
     CommonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTabsModule,
+    MatExpansionModule
   ]
 })
 export class SharedModule { }

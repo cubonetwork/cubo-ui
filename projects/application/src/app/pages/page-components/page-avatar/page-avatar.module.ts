@@ -3,7 +3,6 @@ import { CbAvatarModule } from 'cubo-ui';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '@app/shared/shared.module';
-import { MatExpansionModule, MatTabsModule } from '@angular/material';
 
 import {
   PageAvatarExampleComponent,
@@ -18,8 +17,6 @@ import { PageAvatarRouting } from './page-avatar.routing';
     PageAvatarRouting,
     SharedModule,
     CbAvatarModule,
-    MatExpansionModule,
-    MatTabsModule,
     ContentModule
   ],
   declarations: [
