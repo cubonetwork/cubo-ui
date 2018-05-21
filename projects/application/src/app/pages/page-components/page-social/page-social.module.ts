@@ -1,3 +1,4 @@
+import { ContentModule } from '@app/components/content/content.module';
 import { CbSocialModule } from 'cubo-ui';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
@@ -5,25 +6,21 @@ import { MatIconModule } from '@angular/material';
 
 import { PageSocialRouting } from './page-social.routing';
 import {
-  PageSocialDescriptionComponent,
-  PageSocialCodeHtmlComponent,
-  PageSocialCodeCssComponent,
-  PageSocialCodeTsComponent,
+  PageSocialExampleComponent,
   PageSocialApiComponent,
   PageSocialComponent
 } from './page-social.component';
 
 @NgModule({
   imports: [
+    SharedModule,
     PageSocialRouting,
     CbSocialModule,
-    MatIconModule
+    MatIconModule,
+    ContentModule
   ],
   declarations: [
-    PageSocialDescriptionComponent,
-    PageSocialCodeHtmlComponent,
-    PageSocialCodeCssComponent,
-    PageSocialCodeTsComponent,
+    PageSocialExampleComponent,
     PageSocialApiComponent,
     PageSocialComponent
   ]

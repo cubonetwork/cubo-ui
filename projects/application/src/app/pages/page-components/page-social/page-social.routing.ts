@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {
-  PageSocialDescriptionComponent,
-  PageSocialCodeHtmlComponent,
-  PageSocialCodeCssComponent,
-  PageSocialCodeTsComponent,
+  PageSocialExampleComponent,
   PageSocialApiComponent,
   PageSocialComponent
 } from './page-social.component';
@@ -12,37 +9,17 @@ import {
 export const PageSocialRoutes: Routes = [
   {
     path: '',
-    children: [
-      {
-        path: '',
-        component: PageSocialComponent
-      },
-      {
-        path: '',
-        component: PageSocialDescriptionComponent,
-        outlet: 'description'
-      },
-      {
-        path: '',
-        component: PageSocialCodeHtmlComponent,
-        outlet: 'code-html'
-      },
-      {
-        path: '',
-        component: PageSocialCodeTsComponent,
-        outlet: 'code-ts'
-      },
-      {
-        path: '',
-        component: PageSocialCodeCssComponent,
-        outlet: 'code-css'
-      },
-      {
-        path: '',
-        component: PageSocialApiComponent,
-        outlet: 'api'
-      }
-    ]
+    component: PageSocialExampleComponent,
+    outlet: 'example'
+  },
+  {
+    path: '',
+    component: PageSocialApiComponent,
+    outlet: 'api'
+  },
+  {
+    path: '',
+    component: PageSocialComponent
   }
 ];
 @NgModule({
