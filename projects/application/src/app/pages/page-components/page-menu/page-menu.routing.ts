@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {
-  PageMenuDescriptionComponent,
-  PageMenuCodeHtmlComponent,
-  PageMenuCodeCssComponent,
-  PageMenuCodeTsComponent,
+  PageMenuExampleComponent,
   PageMenuApiComponent,
   PageMenuComponent
 } from './page-menu.component';
@@ -19,23 +16,8 @@ export const PageMenuRoutes: Routes = [
       },
       {
         path: '',
-        component: PageMenuDescriptionComponent,
-        outlet: 'description'
-      },
-      {
-        path: '',
-        component: PageMenuCodeHtmlComponent,
-        outlet: 'code-html'
-      },
-      {
-        path: '',
-        component: PageMenuCodeTsComponent,
-        outlet: 'code-ts'
-      },
-      {
-        path: '',
-        component: PageMenuCodeCssComponent,
-        outlet: 'code-css'
+        component: PageMenuExampleComponent,
+        outlet: 'example'
       },
       {
         path: '',

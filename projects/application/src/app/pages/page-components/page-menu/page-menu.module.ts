@@ -1,13 +1,11 @@
+import { ContentModule } from '@app/components/content/content.module';
 import { MatButtonModule, MatChipsModule } from '@angular/material';
 import { CbMenuModule } from 'cubo-ui';
 import { NgModule } from '@angular/core';
 
 import { PageMenuRouting } from './page-menu.routing';
 import {
-  PageMenuDescriptionComponent,
-  PageMenuCodeHtmlComponent,
-  PageMenuCodeCssComponent,
-  PageMenuCodeTsComponent,
+  PageMenuExampleComponent,
   PageMenuApiComponent,
   PageMenuComponent
 } from './page-menu.component';
@@ -17,13 +15,11 @@ import {
     PageMenuRouting,
     CbMenuModule,
     MatButtonModule,
-    MatChipsModule
+    MatChipsModule,
+    ContentModule
   ],
   declarations: [
-    PageMenuDescriptionComponent,
-    PageMenuCodeHtmlComponent,
-    PageMenuCodeCssComponent,
-    PageMenuCodeTsComponent,
+    PageMenuExampleComponent,
     PageMenuApiComponent,
     PageMenuComponent
   ]
