@@ -1,6 +1,5 @@
-import { ContentModule } from '@app/components/content/content.module';
 import { SharedModule } from '@app/shared/shared.module';
-import { MatTabsModule, MatExpansionModule, MatChipsModule, MatCardModule } from '@angular/material';
+import { MatTabsModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 
 import { LibTemplateComponent } from './lib-template.component';
@@ -8,11 +7,7 @@ import { LibTemplateComponent } from './lib-template.component';
 @NgModule({
   imports: [
     SharedModule,
-    MatTabsModule,
-    MatExpansionModule,
-    MatChipsModule,
-    MatCardModule,
-    ContentModule
+    MatTabsModule
   ],
   exports: [
     LibTemplateComponent

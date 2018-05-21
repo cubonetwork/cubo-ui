@@ -1,0 +1,50 @@
+<app-content>
+  <h1>API reference</h1>
+
+  <div>
+    <pre><code [innerHtml]="import_content"></code></pre>
+  </div>
+
+  <h2>Directives</h2>
+
+  <h3>CbAvatar</h3>
+
+  <p>A cubo avatar component</p>
+
+  <p>
+    <span>Selector: </span>
+    <code>cb-avatar</code>
+  </p>
+
+  <p>
+    <span>Exported as: </span>
+    <code>CbAvatar</code>
+  </p>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>@Input() image: string;</td>
+        <td>The link for the avatar's image.</td>
+      </tr>
+      <tr>
+        <td>@Input() name: string;</td>
+        <td>An avatar can be created with the name initials instead of an image.</td>
+      </tr>
+      <tr>
+        <td>@Input() size: string;</td>
+        <td>Size of the avatar:
+          <code>xsmall</code>,
+          <code>small</code>,
+          <code>medium</code>,
+          <code>large</code>,
+          <code>xlarge</code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</app-content>

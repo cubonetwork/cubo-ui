@@ -1,0 +1,66 @@
+<app-content>
+  <p> cb-avatar is made for using avatar images in your app. This directive supports images in (png, jpg, etc.). If you do not provide an image url, you can provide a name so the avatar is going to be the name initials.</p>
+
+  <h2>Without image</h2>
+
+  <p>If a image is not set, the component expects a name property. Given this property, it renders the name initials as the avatar image.</p>
+
+  <h3>Initials</h3>
+
+  <cb-avatar [name]="'Eleven Stranger'"></cb-avatar>
+
+  <h2>Input</h2>
+
+  <p>The cb-avatar can receive an image url or a name input to display as an avatar.</p>
+
+  <h2>Size</h2>
+
+  <p>The selected image size can be changed through the size property. By default, the selected size is large. This can be changed to xsmall, small, medium, or xlarge.</p>
+
+  <h3>Extra Small</h3>
+
+  <cb-avatar [image]="'https://bit.ly/2vvFXCO'" [size]="'xsmall'"></cb-avatar>
+
+  <h3>Small</h3>
+
+  <cb-avatar [image]="'https://bit.ly/2vvFXCO'" [size]="'small'"></cb-avatar>
+
+  <h3>Medium</h3>
+
+  <cb-avatar [image]="'https://bit.ly/2vvFXCO'" [size]="'medium'"></cb-avatar>
+
+  <h3>Large</h3>
+
+  <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
+
+  <h3>Extra Large</h3>
+
+  <div style="max-width: 300px">
+    <cb-avatar [image]="'https://bit.ly/2vvFXCO'" [size]="'xlarge'"></cb-avatar>
+  </div>
+</app-content>
+
+<mat-accordion>
+  <mat-expansion-panel class="panel">
+    <mat-expansion-panel-header class="panel__header">
+      View Code
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre class="panel__code">
+          <code [innerHtml]='codeHtml'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="TS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeTs'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="CSS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeCss'></code>
+        </pre>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</mat-accordion>

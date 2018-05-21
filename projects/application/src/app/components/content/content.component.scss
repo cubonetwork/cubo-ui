@@ -55,19 +55,21 @@
   }
 
   & ::ng-deep pre {
-    background: rgba(map-get($pallet-gray, 100), .5);
+    background: map-get($light-theme, overlap);
+    box-shadow: 0 2px 3px 0 rgba(map-get($pallet-gray, 200), .5);
     color: map-get($light-theme, text-primary);
     margin-bottom: $space-md;
     padding: $space-xs;
   }
 
   & ::ng-deep code {
-    background: rgba(map-get($pallet-gray, 100), .5);
+    background: map-get($light-theme, overlap);
     padding: $space-xs;
   }
 
   & ::ng-deep .example {
-    background: rgba(map-get($pallet-gray, 100), .5);
+    background: map-get($light-theme, overlap);
+    box-shadow: 0 2px 3px 0 rgba(map-get($pallet-gray, 200), .5);
     line-height: 3rem;
     overflow: hidden;
   }

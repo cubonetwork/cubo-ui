@@ -1,14 +1,12 @@
+import { ContentModule } from '@app/components/content/content.module';
 import { CbAvatarModule } from 'cubo-ui';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '@app/shared/shared.module';
-import { MatExpansionModule } from '@angular/material';
+import { MatExpansionModule, MatTabsModule } from '@angular/material';
 
 import {
-  PageAvatarDescriptionComponent,
-  PageAvatarCodeHtmlComponent,
-  PageAvatarCodeCssComponent,
-  PageAvatarCodeTsComponent,
+  PageAvatarExampleComponent,
   PageAvatarApiComponent,
   PageAvatarComponent
 } from './page-avatar.component';
@@ -20,13 +18,12 @@ import { PageAvatarRouting } from './page-avatar.routing';
     PageAvatarRouting,
     SharedModule,
     CbAvatarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTabsModule,
+    ContentModule
   ],
   declarations: [
-    PageAvatarDescriptionComponent,
-    PageAvatarCodeHtmlComponent,
-    PageAvatarCodeCssComponent,
-    PageAvatarCodeTsComponent,
+    PageAvatarExampleComponent,
     PageAvatarApiComponent,
     PageAvatarComponent
   ]
