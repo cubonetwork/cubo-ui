@@ -1,5 +1,23 @@
 import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, SimpleChanges, OnChanges } from '@angular/core';
 
+/**
+* Component `<cb-card>` to create a card
+* @param size Card's size (small)
+* @param center Centralize card (true or false)
+*
+* Example:
+* <cb-card>
+*   <cb-card-image>
+*     <img src="x" alt="x">
+*   </cb-card-image>
+*   <cb-card-pretitle>...</cb-card-pretitle>
+*   <cb-card-title>...</cb-card-title>
+*   <cb-card-info>...</cb-card-info>
+*   <cb-card-footer>
+*   ...
+*   </cb-card-footer>
+* </cb-card>
+*/
 @Component({
   selector: 'cb-card',
   template: `
@@ -22,6 +40,13 @@ export class CbCardComponent {
   @Input() center = false;
 }
 
+/**
+* Component `<cb-card-footer>` to create a card footer
+* @param border Activate border (true or false)
+*
+* Example:
+* <cb-card-footer>...</cb-card-footer>
+*/
 @Component({
   selector: 'cb-card-footer',
   template: `
@@ -39,6 +64,12 @@ export class CbCardFooterComponent {
   @Input() border = true;
 }
 
+/**
+* Component `<cb-card-title>` to create a card title
+*
+* Example:
+* <cb-card-title>...</cb-card-title>
+*/
 @Component({
   selector: 'cb-card-title, [cbCardTitle]',
   template: `
@@ -53,6 +84,12 @@ export class CbCardTitleComponent {
   @Input() size: string;
 }
 
+/**
+* Component `<cb-card-info>` to create a card info
+*
+* Example:
+* <cb-card-info>...</cb-card-info>
+*/
 @Component({
   selector: 'cb-card-info, [cbCardInfo]',
   template: `
@@ -65,6 +102,12 @@ export class CbCardTitleComponent {
 })
 export class CbCardInfoComponent { }
 
+/**
+* Component `<cb-card-pretitle>` to create a card pretitle
+*
+* Example:
+* <cb-card-pretitle>...</cb-card-pretitle>
+*/
 @Component({
   selector: 'cb-card-pretitle, [cbCardPretitle]',
   template: `
@@ -77,6 +120,12 @@ export class CbCardInfoComponent { }
 })
 export class CbCardPretitleComponent { }
 
+/**
+* Component `<cb-card-description>` to create a card description
+*
+* Example:
+* <cb-card-description>...</cb-card-description>
+*/
 @Component({
   selector: 'cb-card-description, [cbCardDescription]',
   template: `
@@ -89,6 +138,14 @@ export class CbCardPretitleComponent { }
 })
 export class CbCardDescriptionComponent { }
 
+/**
+* Component `<cb-card-image>` to create a card image
+*
+* Example:
+* <cb-card-image>
+*   <img src="x" alt="x">
+* </cb-card-image>
+*/
 @Component({
   selector: 'cb-card-image',
   template: `
