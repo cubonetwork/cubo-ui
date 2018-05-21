@@ -1,3 +1,4 @@
+import { SharedModule } from '@app/shared/shared.module';
 import { ContentModule } from '@app/components/content/content.module';
 import { MatButtonModule, MatChipsModule } from '@angular/material';
 import { CbMenuModule } from 'cubo-ui';
@@ -12,6 +13,7 @@ import {
 
 @NgModule({
   imports: [
+    SharedModule,
     PageMenuRouting,
     CbMenuModule,
     MatButtonModule,

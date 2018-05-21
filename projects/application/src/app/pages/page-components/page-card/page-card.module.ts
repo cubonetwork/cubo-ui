@@ -13,6 +13,7 @@ import {
 
 @NgModule({
   imports: [
+    SharedModule,
     PageCardRouting,
     CbCardModule,
     MatChipsModule,
