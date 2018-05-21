@@ -1,7 +1,10 @@
 <app-content>
   <p><code>cb-card</code> is a content container for text, photos, chips in the context of a single subject.</p>
-  <h2>Basic card</h2>
+
   <p>The most basic card needs only a <code>cb-card</code> element with some content. However, it provides a number of preset sections that you can use inside of a cb-card.</p>
+
+  <h3>Components</h3>
+
   <table>
     <tbody>
       <tr>
@@ -10,15 +13,23 @@
       </tr>
       <tr>
         <td>cb-card-title</td>
-        <td>Card title</td>
+        <td>Use to add a title inside card</td>
       </tr>
       <tr>
-        <td>cb-card-subtitle</td>
-        <td>Card subtitle</td>
+        <td>cb-card-pretitle</td>
+        <td>Use to add a pretitle inside card</td>
       </tr>
       <tr>
-        <td>cb-card-badges</td>
-        <td>Card badges, intended to receive chips</td>
+        <td>cb-card-description</td>
+        <td>Use to add a descriptiom inside card</td>
+      </tr>
+      <tr>
+        <td>cb-card-images</td>
+        <td>Use to add a card images</td>
+      </tr>
+      <tr>
+        <td>cb-card-info</td>
+        <td>Use to add a card info</td>
       </tr>
       <tr>
         <td>cb-card-footer</td>
@@ -26,10 +37,13 @@
       </tr>
     </tbody>
   </table>
+
+  <h2>Card examples</h2>
+
 </app-content>
 
-<div style="max-width: 34rem; margin-left: 3.4rem;">
-  <div style="display: flex; justify-content: space-between; margin-bottom: 2.4rem;">
+<div style="max-width: 34rem; margin-left: 3.2rem; margin-bottom: 2.4rem;">
+  <div style="display: flex; justify-content: space-between;">
     <a style="width: 16rem; display: block;">
       <cb-card [size]="'small'">
         <cb-card-image>
@@ -53,7 +67,35 @@
       </cb-card>
     </a>
   </div>
-  <a style="margin-bottom: 2.4rem; display: block">
+</div>
+
+<mat-accordion>
+  <mat-expansion-panel class="panel">
+    <mat-expansion-panel-header class="panel__header">
+      View Code
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre class="panel__code">
+          <code [innerHtml]='codeSmallHtml'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="TS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeTs'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="CSS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeCss'></code>
+        </pre>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<div style="max-width: 34rem; margin-left: 3.2rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
+  <a style="display: block">
     <cb-card>
       <cb-card-image>
         <img src="https://cubo.network/assets/img/logo/cubo.png" alt="Cubo">
@@ -83,7 +125,35 @@
       </cb-card-footer>
     </cb-card>
   </a>
-  <a style="margin-bottom: 2.4rem; display: block">
+</div>
+
+<mat-accordion>
+  <mat-expansion-panel class="panel">
+    <mat-expansion-panel-header class="panel__header">
+      View Code
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre class="panel__code">
+          <code [innerHtml]='codeCompanyHtml'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="TS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeTs'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="CSS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeCss'></code>
+        </pre>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<div style="max-width: 34rem; margin-left: 3.2rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
+  <a style="display: block">
     <cb-card>
       <cb-card-image>
         <img src="https://vignette.wikia.nocookie.net/logopedia/images/6/68/DragonBall_logo.png/revision/latest?cb=20110817185055" alt="Naruto">
@@ -97,7 +167,35 @@
       </cb-card-footer>
     </cb-card>
   </a>
-  <a style="margin-bottom: 2.4rem; display: block">
+</div>
+
+<mat-accordion>
+  <mat-expansion-panel class="panel">
+    <mat-expansion-panel-header class="panel__header">
+      View Code
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre class="panel__code">
+          <code [innerHtml]='codeAnimesHtml'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="TS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeTs'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="CSS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeCss'></code>
+        </pre>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<div style="max-width: 34rem; margin-left: 3.2rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
+  <a style="display: block">
     <cb-card [center]="true">
       <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
       <cb-card-title>Eleven</cb-card-title>
@@ -127,3 +225,28 @@
     </cb-card>
   </a>
 </div>
+
+<mat-accordion>
+  <mat-expansion-panel class="panel">
+    <mat-expansion-panel-header class="panel__header">
+      View Code
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre class="panel__code">
+          <code [innerHtml]='codeHtml'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="TS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeTs'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="CSS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeCss'></code>
+        </pre>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</mat-accordion>

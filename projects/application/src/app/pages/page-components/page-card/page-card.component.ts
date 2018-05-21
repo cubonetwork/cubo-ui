@@ -15,7 +15,60 @@ export class PageCardComponent {}
   templateUrl: 'page-card-example.html'
 })
 export class PageCardExampleComponent {
-  htmlCode = hljs.highlightAuto(`
+  codeSmallHtml = hljs.highlightAuto(`
+  <cb-card [size]="'small'">
+    <cb-card-image>
+      <img src="string" alt="Alt">
+    </cb-card-image>
+    <cb-card-footer [border]="false">
+      <cb-card-title>Beatles</cb-card-title>
+      <cb-card-pretitle>Band</cb-card-pretitle>
+    </cb-card-footer>
+  </cb-card>`, languages).value;
+
+  codeCompanyHtml = hljs.highlightAuto(`
+  <cb-card>
+    <cb-card-image>
+      <img src="string" alt="Alt">
+    </cb-card-image>
+    <cb-card-pretitle>Cubo</cb-card-pretitle>
+    <cb-card-description>
+      <p><a href="http://cubo.network/" target="_blank">cubo.network/</a></p>
+      <p>São Paulo</p>
+    </cb-card-description>
+    <cb-card-footer>
+      <div class="social">
+        <cb-social>
+          <mat-icon svgIcon="linkedin"></mat-icon>
+        </cb-social>
+        <cb-social>
+          <mat-icon svgIcon="github"></mat-icon>
+        </cb-social>
+        <cb-social>
+          <mat-icon svgIcon="twitter"></mat-icon>
+        </cb-social>
+        <cb-social>
+          <mat-icon svgIcon="instagram"></mat-icon>
+        </cb-social>
+      </div>
+    </cb-card-footer>
+  </cb-card>`, languages).value;
+
+  codeAnimesHtml = hljs.highlightAuto(`
+  <cb-card>
+    <cb-card-image>
+      <img src="string" alt="Alt">
+    </cb-card-image>
+    <cb-card-pretitle>Animes</cb-card-pretitle>
+    <cb-card-title>Dragon Ball</cb-card-title>
+    <cb-card-info>🇯🇵 Japan</cb-card-info>
+    <cb-card-info>✨ 1984</cb-card-info>
+    <cb-card-footer>
+      <button mat-raised-button color="primary">Ver mais detalhes</button>
+    </cb-card-footer>
+  </cb-card>`, languages).value;
+
+  codeHtml = hljs.highlightAuto(`
   <cb-card>
     <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
     <cb-card-title>Eleven</cb-card-title>
@@ -45,24 +98,24 @@ export class PageCardExampleComponent {
         <button mat-button color="primary">Click me!</button>
       </div>
     </cb-card-footer>
-  </cb-card>`, ['nohighlight']).value;
+  </cb-card>`, languages).value;
 
-  tsCode = hljs.highlightAuto(`
+  codeTs = hljs.highlightAuto(`
   import {Component} from '@angular/core';
 
   /**
    * @title Basic card
    */
   @Component({
-    selector: 'card-overview-example',
-    templateUrl: 'card-overview-example.html',
-    styleUrls: ['card-overview-example.css']
+    selector: 'card-example',
+    templateUrl: 'card-example.html',
+    styleUrls: ['card-example.css']
   })
-  export class CardOverviewExample {}`, ['nohighlight']).value;
+  export class CardOverviewExample {}`, languages).value;
 
-  cssCode = hljs.highlightAuto(`
+  codeCss = hljs.highlightAuto(`
   /** No CSS for this example */
-  `, ['nohighlight']).value;
+  `, languages).value;
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
