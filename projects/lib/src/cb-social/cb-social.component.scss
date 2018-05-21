@@ -5,7 +5,8 @@
 @import '../../../application/src/styles/core';
 
 :host {
-  display: inline-block;
+  align-items: center;
+  display: inline-flex;
   filter: grayscale(100);
   margin-right: $space-xs;
   opacity: .75;

@@ -28,7 +28,7 @@
 
   & ::ng-deep h2 {
     @include mat-typography-level-to-styles($typography, title);
-    border-bottom: $pattern-border solid 1px;
+    border-bottom: $border-default;
     padding-bottom: $space-xxs;
 
     &:not(:first-child) {
@@ -55,19 +55,19 @@
   }
 
   & ::ng-deep pre {
-    background: $gray-lighter;
-    color: $gray-darker;
+    background: rgba(map-get($pallet-gray, 100), .5);
+    color: map-get($light-theme, text-primary);
     margin-bottom: $space-md;
     padding: $space-xs;
   }
 
   & ::ng-deep code {
-    background: $gray-lighter;
+    background: rgba(map-get($pallet-gray, 100), .5);
     padding: $space-xs;
   }
 
   & ::ng-deep .example {
-    background: $gray-lighter;
+    background: rgba(map-get($pallet-gray, 100), .5);
     line-height: 3rem;
     overflow: hidden;
   }
@@ -93,26 +93,23 @@
     &:not(:last-child) {
       margin-bottom: $space-md;
     }
-  }
 
-  & ::ng-deep tr {
-    &:not(:last-child) {
-      border-bottom: 1px solid $pattern-border;
+    tr {
+      &:not(:last-child) {
+        border-bottom: $border-tiny;
+      }
+    }
+
+    th,
+    td {
+      padding: $space-xs;
+    }
+
+    th {
+      background: rgba(map-get($pallet-gray, 100), .5);
+      color: map-get($light-theme, text-primary);
+      font-weight: 400;
+      text-align: left;
     }
   }
-
-  & ::ng-deep th,
-  & ::ng-deep td {
-    padding: $space-xs;
-  }
-
-  & ::ng-deep th {
-    background: $gray-white;
-    color: $gray-dark;
-    font-weight: 400;
-    text-align: left;
-  }
 }
-
-
-

@@ -1,68 +1,16 @@
 // ==================================================
 // Variables
 //
-// 1. Colors
-// 2. Spaces
-// 3. Media Queries
-// 4. zIndex
-// 5. Easing
+// 1. Spaces
+// 2. Media Queries
+// 3. zIndex
+// 4. Easing
 // ==================================================
 
 @import '~rupture-sass/rupture';
 
 // --------------------------------------------------
-// 1. Colors
-// --------------------------------------------------
-
-//
-// Grays
-// --------------------------------------------------
-
-$gray-darker  : #282828;
-$gray-dark    : #333;
-$gray         : #666;
-$gray-medium  : #aaa;
-$gray-light   : #c8c8c8;
-$gray-lighter : #eeeeee;
-$gray-white   : #fafafa;
-
-//
-// Pallets
-// --------------------------------------------------
-
-$white          : #fff;
-$orange         : #e66a1f;
-$orange-light   : #e96800;
-$yellow         : #ffba00;
-$blue           : #1192b2;
-$blue-dark      : #0f4d8e;
-$blue-light     : #1192b2;
-$blue-clean     : #e9eef4;
-$red            : #f15a5e;
-$green          : #338d0f;
-
-//
-// Brands
-// --------------------------------------------------
-
-$brand-bg        : $white;
-$brand-text      : $gray-darker;
-$brand-primary   : $blue-light;
-$brand-secondary : $green;
-$brand-alternate : $orange;
-
-$brand-success   : #009c0f;
-$brand-info      : $blue-light;
-$brand-warning   : $yellow;
-$brand-danger    : #dd413a;
-
-// Patterns
-// --------------------------------------------------
-
-$pattern-border : $gray-lighter;
-
-// --------------------------------------------------
-// 2. Spaces
+// 1. Spaces
 // --------------------------------------------------
 
 $space-xxs    : .4rem;
@@ -79,7 +27,7 @@ $space-indent : $space-xxs;
 $header-height : 6.5rem;
 
 // --------------------------------------------------
-// 3. Media Queries
+// 2. Media Queries
 // --------------------------------------------------
 
 $screen-xs   : 380px;  // xExtra small screen / phone
@@ -96,7 +44,7 @@ $rupture: map-merge($rupture,
 );
 
 // --------------------------------------------------
-// 4. zIndex
+// 3. zIndex
 // --------------------------------------------------
 
 $zindex-bg           : -1;
@@ -105,7 +53,7 @@ $zindex-header       : 10;
 $zindex-menu         : 1000;
 
 // --------------------------------------------------
-// 5. Easing
+// 4. Easing
 // --------------------------------------------------
 
 $ease-in-cubic    : cubic-bezier(.55, 55, .675, .19);

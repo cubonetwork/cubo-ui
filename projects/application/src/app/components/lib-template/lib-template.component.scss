@@ -10,7 +10,8 @@
   }
 
   &__code {
-    background: $gray-darker;
-    color: $white;
+    background: map-get($dark-theme, bg);
+    color: map-get($dark-theme, text-primary);
   }
 }
+

@@ -8,6 +8,6 @@ $cubo-ui-theme: mat-light-theme($cubo-ui-primary, $cubo-ui-accent);
 .cubo-ui {
   @include angular-material-theme($cubo-ui-theme);
   @include mat-typography-level-to-styles($typography, body-1);
-  background-color: $white;
-  color: $brand-text;
+  background-color: map-get($light-theme, bg);
+  color: map-get($light-theme, textg);
 }
