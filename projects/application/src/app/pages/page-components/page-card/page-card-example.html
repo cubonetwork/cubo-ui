@@ -1,0 +1,129 @@
+<app-content>
+  <p><code>cb-card</code> is a content container for text, photos, chips in the context of a single subject.</p>
+  <h2>Basic card</h2>
+  <p>The most basic card needs only a <code>cb-card</code> element with some content. However, it provides a number of preset sections that you can use inside of a cb-card.</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Element</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>cb-card-title</td>
+        <td>Card title</td>
+      </tr>
+      <tr>
+        <td>cb-card-subtitle</td>
+        <td>Card subtitle</td>
+      </tr>
+      <tr>
+        <td>cb-card-badges</td>
+        <td>Card badges, intended to receive chips</td>
+      </tr>
+      <tr>
+        <td>cb-card-footer</td>
+        <td>Section anchored to the bottom of the card</td>
+      </tr>
+    </tbody>
+  </table>
+</app-content>
+
+<div style="max-width: 34rem; margin-left: 3.4rem;">
+  <div style="display: flex; justify-content: space-between; margin-bottom: 2.4rem;">
+    <a style="width: 16rem; display: block;">
+      <cb-card [size]="'small'">
+        <cb-card-image>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Beatles_logo.svg/2000px-Beatles_logo.svg.png" alt="Beatles">
+        </cb-card-image>
+        <cb-card-footer [border]="false">
+          <cb-card-title>Beatles</cb-card-title>
+          <cb-card-pretitle>Band</cb-card-pretitle>
+        </cb-card-footer>
+      </cb-card>
+    </a>
+    <a style="width: 16rem; display: block;">
+      <cb-card [size]="'small'">
+        <cb-card-image>
+          <img src="http://famfonts.com/wp-content/uploads/guns-n-roses-wide.png" alt="Beatles">
+        </cb-card-image>
+        <cb-card-footer [border]="false">
+          <cb-card-title>Guns N' Roses</cb-card-title>
+          <cb-card-pretitle>Band</cb-card-pretitle>
+        </cb-card-footer>
+      </cb-card>
+    </a>
+  </div>
+  <a style="margin-bottom: 2.4rem; display: block">
+    <cb-card>
+      <cb-card-image>
+        <img src="https://cubo.network/assets/img/logo/cubo.png" alt="Cubo">
+      </cb-card-image>
+      <cb-card-pretitle>Cubo</cb-card-pretitle>
+      <cb-card-description>
+        <p>
+          <a href="http://cubo.network/" target="_blank">cubo.network/</a>
+        </p>
+        <p>São Paulo</p>
+      </cb-card-description>
+      <cb-card-footer>
+        <div class="social">
+          <cb-social>
+            <mat-icon svgIcon="linkedin"></mat-icon>
+          </cb-social>
+          <cb-social>
+            <mat-icon svgIcon="github"></mat-icon>
+          </cb-social>
+          <cb-social>
+            <mat-icon svgIcon="twitter"></mat-icon>
+          </cb-social>
+          <cb-social>
+            <mat-icon svgIcon="instagram"></mat-icon>
+          </cb-social>
+        </div>
+      </cb-card-footer>
+    </cb-card>
+  </a>
+  <a style="margin-bottom: 2.4rem; display: block">
+    <cb-card>
+      <cb-card-image>
+        <img src="https://vignette.wikia.nocookie.net/logopedia/images/6/68/DragonBall_logo.png/revision/latest?cb=20110817185055" alt="Naruto">
+      </cb-card-image>
+      <cb-card-pretitle>Animes</cb-card-pretitle>
+      <cb-card-title>Dragon Ball</cb-card-title>
+      <cb-card-info>🇯🇵 Japan</cb-card-info>
+      <cb-card-info>✨ 1984</cb-card-info>
+      <cb-card-footer>
+        <button mat-raised-button color="primary">Ver mais detalhes</button>
+      </cb-card-footer>
+    </cb-card>
+  </a>
+  <a style="margin-bottom: 2.4rem; display: block">
+    <cb-card [center]="true">
+      <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
+      <cb-card-title>Eleven</cb-card-title>
+      <cb-card-description>Character @ Stranger Things</cb-card-description>
+      <mat-chip-list style="position: absolute; left: 1.6rem; top: 1.6rem;">
+        <mat-chip color="accent" selected="true">Hero</mat-chip>
+      </mat-chip-list>
+      <cb-card-footer>
+        <div class="social">
+          <cb-social>
+            <mat-icon svgIcon="linkedin"></mat-icon>
+          </cb-social>
+          <cb-social>
+            <mat-icon svgIcon="github"></mat-icon>
+          </cb-social>
+          <cb-social>
+            <mat-icon svgIcon="twitter"></mat-icon>
+          </cb-social>
+          <cb-social>
+            <mat-icon svgIcon="instagram"></mat-icon>
+          </cb-social>
+        </div>
+        <div class="actions">
+          <button mat-button color="primary">Click me!</button>
+        </div>
+      </cb-card-footer>
+    </cb-card>
+  </a>
+</div>
