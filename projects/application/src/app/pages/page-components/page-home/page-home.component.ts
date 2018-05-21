@@ -1,6 +1,5 @@
 import { Component, ViewEncapsulation, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import * as hljs from 'highlight.js';
-import home from './home';
 const languages = ['html', 'typescript'];
 
 @Component({
@@ -10,7 +9,24 @@ const languages = ['html', 'typescript'];
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PageHomeComponent {
-  import_content = hljs.highlightAuto(home.import_content, languages).value;
-  install = hljs.highlightAuto(home.install, languages).value;
-  import_component = hljs.highlightAuto(home.import_component, ['nohighlight']).value;
+  import_content = hljs.highlightAuto(`
+  # install dependencies
+  $ npm i
+
+  # Run the project
+  $ npm start`, languages).value;
+
+  install = hljs.highlightAuto(`
+  npm install cubo-ui`, languages).value;
+
+  import_component = hljs.highlightAuto(`
+  import { CbAvatarModule } from 'cubo-ui';
+  @NgModule({
+    declarations: [
+      AppComponent,
+    ],
+    imports: [
+      CbAvatarModule
+    ],
+  })`, ['nohighlight']).value;
 }
