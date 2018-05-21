@@ -9,10 +9,6 @@ import {
 export const PageCardRoutes: Routes = [
   {
     path: '',
-    component: PageCardComponent
-  },
-  {
-    path: '',
     component: PageCardExampleComponent,
     outlet: 'example'
   },
@@ -20,6 +16,10 @@ export const PageCardRoutes: Routes = [
     path: '',
     component: PageCardApiComponent,
     outlet: 'api'
+  },
+  {
+    path: '',
+    component: PageCardComponent
   }
 ];
 @NgModule({

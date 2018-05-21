@@ -7,25 +7,20 @@ import {
 } from './page-menu.component';
 
 export const PageMenuRoutes: Routes = [
-  {
-    path: '',
-    children: [
-      {
-        path: '',
-        component: PageMenuComponent
-      },
-      {
-        path: '',
-        component: PageMenuExampleComponent,
-        outlet: 'example'
-      },
-      {
-        path: '',
-        component: PageMenuApiComponent,
-        outlet: 'api'
-      }
-    ]
-  }
+    {
+      path: '',
+      component: PageMenuExampleComponent,
+      outlet: 'example'
+    },
+    {
+      path: '',
+      component: PageMenuApiComponent,
+      outlet: 'api'
+    },
+    {
+      path: '',
+      component: PageMenuComponent
+    }
 ];
 @NgModule({
   imports: [RouterModule.forChild(PageMenuRoutes)],

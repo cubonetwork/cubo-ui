@@ -10,10 +10,6 @@ import {
 export const PageAvatarRoutes: Routes = [
   {
     path: '',
-    component: PageAvatarComponent,
-  },
-  {
-    path: '',
     component: PageAvatarExampleComponent,
     outlet: 'example'
   },
@@ -21,6 +17,10 @@ export const PageAvatarRoutes: Routes = [
     path: '',
     component: PageAvatarApiComponent,
     outlet: 'api'
+  },
+  {
+    path: '',
+    component: PageAvatarComponent,
   }
 ];
 @NgModule({
