@@ -16,7 +16,7 @@
     "fix:ts": "tslint -c tslint.json 'projects/**/*.ts' --fix",
     "prepush": "npm run test",
     "precommit": "npm run lint",
-    "postinstall": "npm link ./projects/lib/dist",
+    "postinstall": "npm run build:lib && npm link ./projects/lib/dist",
     "analyzer": "npm run build && webpack-bundle-analyzer ./dist/stats.json"
   },
   "dependencies": {
