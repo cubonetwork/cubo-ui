@@ -11,7 +11,7 @@
 
 :host(.menu--backdrop) {
   &:before {
-    background: rgba($black, .95);
+    background: rgba(map-get($dark-theme, bg), .9);
     bottom: 0;
     content: '';
     height: 100vh;
