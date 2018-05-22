@@ -1,0 +1,55 @@
+<app-content>
+  <p><code>cb-social</code> makes it easier to integrate icons from social media.</p>
+
+  <h2>Select Social Media</h2>
+
+  <p>It is possible to add the social media icons through the MatIconRegistry module, if you opt to use the MatIcon.</p>
+
+  <p>In this example, we decided to use the icons from the MatIconModule, so to register then we used the MatIconRegistry module, but this is not mandatory, it is possible to user your own icons without the material library.</p>
+
+  <h2>Themings</h2>
+
+  <p>The default color for all the items is gray, it changes to the original social media color when the user hovers the icon.</p>
+
+  <h2>Examples</h2>
+
+  <div>
+    <cb-social>
+      <mat-icon svgIcon="linkedin"></mat-icon>
+    </cb-social>
+    <cb-social>
+      <mat-icon svgIcon="github"></mat-icon>
+    </cb-social>
+    <cb-social>
+      <mat-icon svgIcon="twitter"></mat-icon>
+    </cb-social>
+    <cb-social>
+      <mat-icon svgIcon="instagram"></mat-icon>
+    </cb-social>
+  </div>
+</app-content>
+
+<mat-accordion>
+  <mat-expansion-panel class="panel">
+    <mat-expansion-panel-header class="panel__header">
+      View Code
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre class="panel__code">
+          <code [innerHtml]='codeHtml'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="TS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeTs'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="CSS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeCss'></code>
+        </pre>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</mat-accordion>

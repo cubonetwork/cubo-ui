@@ -4,16 +4,26 @@
 
 @import '../../../application/src/styles/core';
 
-:host {
+:host(.cb-card-footer) {
   align-items: center;
-  border-top: 1px solid $pattern-border;
   display: flex;
   justify-content: space-between;
-  margin-top: $space;
-  padding-top: $space-sm;
+  padding: 1.25rem $space-sm;
+  white-space: nowrap;
   width: 100%;
 
-  @include above(sm) {
-    margin-top: auto;
+  & ::ng-deep > * {
+    align-items: center;
+    display: flex;
   }
+}
+
+:host(.cb-card-footer--border) {
+  border-top: $border-default;
+}
+
+:host-context(.cb-card--small) {
+  font-size: .9em;
+  line-height: 1.4em;
+  padding: $space-xs;
 }

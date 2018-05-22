@@ -1,16 +1,15 @@
 // -------------------------------------------------
-// Card Title
+// Card Description
 // -------------------------------------------------
 
 @import '../../../application/src/styles/core';
 
-:host(.cb-card-title) {
-  @include mat-typography-level-to-styles($typography, subheading-1);
+:host(.cb-card-description) {
+  @include mat-typography-level-to-styles($typography, body-1);
   display: block;
-  font-weight: 600;
 
   &:not(:last-child) {
-    margin-bottom: $space-sm;
+    margin-bottom: $space-xs;
   }
 }
 

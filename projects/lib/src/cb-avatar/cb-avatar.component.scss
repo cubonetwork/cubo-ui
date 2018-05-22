@@ -5,7 +5,7 @@
 @import '../../../application/src/styles/core';
 
 :host {
-  background-color: $gray-lighter;
+  background-color: map-get($light-theme, overlap);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
@@ -66,7 +66,7 @@
 // -------------------------------------------------
 
 .avatar {
-  background-color: $white;
+  background-color: map-get($light-theme, bg);
   display: block;
   height: 100%;
   object-fit: cover;
@@ -75,7 +75,7 @@
 
 .initials {
   align-items: center;
-  color: $gray;
+  color: map-get($light-theme, bg);
   display: flex;
   font-weight: 600;
   height: 100%;

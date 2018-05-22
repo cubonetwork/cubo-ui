@@ -1,0 +1,20 @@
+// ==================================================
+// Lib Template
+// ==================================================
+
+@import 'core';
+
+:host {
+  & ::ng-deep .panel {
+    &__header {
+      @include mat-typography-level-to-styles($typography, body-1);
+    }
+
+    &__code {
+      background: map-get($dark-theme, bg);
+      color: map-get($dark-theme, text-primary);
+    }
+  }
+}
+
+

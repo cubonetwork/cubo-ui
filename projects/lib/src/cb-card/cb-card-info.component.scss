@@ -1,14 +1,20 @@
 // -------------------------------------------------
-// Card Subtitle
+// Card List
 // -------------------------------------------------
 
 @import '../../../application/src/styles/core';
 
 :host {
   @include mat-typography-level-to-styles($typography, subheading-1);
-  display: block;
+  align-items: center;
+  display: flex;
 
-  &:not(:last-child):not(:empty) {
-    margin-bottom: $space;
+  &:not(:last-child) {
+    margin-bottom: $space-xs;
   }
+}
+
+:host(.cb-card--small) {
+  font-size: .9em;
+  line-height: 1.4em;
 }

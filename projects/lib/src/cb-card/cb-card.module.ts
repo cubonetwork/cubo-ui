@@ -3,26 +3,32 @@ import { NgModule } from '@angular/core';
 
 import {
   CbCardComponent,
-  CbCardBadgesComponent,
-  CbCardFooterComponent,
+  CbCardImageComponent,
   CbCardTitleComponent,
-  CbCardSubtitleComponent,
+  CbCardPretitleComponent,
+  CbCardDescriptionComponent,
+  CbCardFooterComponent,
+  CbCardInfoComponent
 } from './cb-card.component';
 
 @NgModule({
   exports: [
     CbCardComponent,
-    CbCardBadgesComponent,
+    CbCardImageComponent,
     CbCardFooterComponent,
     CbCardTitleComponent,
-    CbCardSubtitleComponent,
+    CbCardPretitleComponent,
+    CbCardDescriptionComponent,
+    CbCardInfoComponent
   ],
   declarations: [
     CbCardComponent,
-    CbCardBadgesComponent,
+    CbCardImageComponent,
     CbCardFooterComponent,
     CbCardTitleComponent,
-    CbCardSubtitleComponent,
+    CbCardPretitleComponent,
+    CbCardDescriptionComponent,
+    CbCardInfoComponent
   ],
   imports: [
     CommonModule

@@ -1,4 +1,4 @@
-import { LibTemplateModule } from '@app/components/lib-template/lib-template.module';
+import { LibTemplateModule } from './lib-template/lib-template.module';
 import { SharedModule } from '@app/shared/shared.module';
 import { NgModule } from '@angular/core';
 import { NavbarModule } from '@app/components/navbar/navbar.module';

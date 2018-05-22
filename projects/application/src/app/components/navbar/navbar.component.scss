@@ -5,7 +5,7 @@
 @import 'core';
 
 .navbar {
-  background: rgba($gray-white, .2);
+  background: map-get($light-theme, bg);
 
   @include below(sm) {
     display: none;
@@ -19,7 +19,7 @@
     position: relative;
 
     &:before {
-      background: $brand-primary;
+      background: map-get($light-theme, accent);
       bottom : 0;
       content: '';
       position: absolute;
@@ -30,14 +30,16 @@
 }
 
 .nav-list {
-  box-shadow: 0 0 1px 0 rgba($gray-darker, .4);
+  background-color: map-get($light-theme, overlap);
+  border: $border-tiny;
+  box-shadow: 0 0 2px 0 rgba(map-get($pallet-gray, 100), .5);
   padding: 0;
 }
 
 .button-mobile {
   @include mat-typography-level-to-styles($typography, body-2);
   align-items: center;
-  background: $brand-primary;
+  background: map-get($light-theme, accent);
   color: $white;
   cursor: pointer;
   display: flex;

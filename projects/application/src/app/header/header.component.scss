@@ -7,9 +7,9 @@
 
 :host {
   align-items: center;
-  background: rgba($gray-white, .95);
-  border-bottom: $pattern-border solid 1px;
-  box-shadow: 0 0 1px 0 rgba($gray-darker, .4);
+  background: rgba(map-get($light-theme, overlap), .95);
+  border-bottom: $border-default;
+  box-shadow: 0 0 1px 0 rgba(map-get($pallet-gray, 100), .5);
   display: flex;
   height: $header-height;
   justify-content: space-between;
@@ -28,15 +28,15 @@
 
 .logo {
   @include mat-typography-level-to-styles($typography, headline);
-  color: $brand-primary;
+  color: map-get($pallet-blue, 500);
   font-weight: 700;
   text-decoration: none;
 
   &--color-1 {
-    color: $brand-secondary;
+    color: map-get($pallet-green, 500);
   }
 
   &--color-2 {
-    color: $brand-alternate;
+    color: map-get($pallet-orange, 500);
   }
 }

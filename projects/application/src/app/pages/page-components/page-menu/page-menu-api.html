@@ -1,0 +1,43 @@
+<app-content>
+  <h1>API reference</h1>
+
+  <div>
+    <pre><code [innerHtml]="import_content"></code></pre>
+  </div>
+
+  <h2>Directives</h2>
+
+  <p>
+    <span>Selector: </span>
+    <code>cb-menu</code>
+  </p>
+
+  <p>
+    <span>Exported as: </span>
+    <code>CbMenu</code>
+  </p>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>@Input() position: string;</td>
+        <td>Position of menu:
+          <code>top left</code>,
+          <code>top right</code>,
+          <code>bottom left</code>,
+          <code>bottom right</code>
+        </td>
+      </tr>
+      <tr>
+        <td>@Input() backdrop: boolean;</td>
+        <td>Enable or disable backdrop. Default:
+          <code>true</code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</app-content>

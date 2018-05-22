@@ -1,10 +1,9 @@
-import { LibTemplateComponent } from '@app/components/lib-template/lib-template.component';
+import { LibTemplateComponent } from './lib-template/lib-template.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MetaGuard } from '@ngx-meta/core';
 
 import { PageComponentsComponent } from './page-components.component';
-
 
 export const PageComponentsRoutes: Routes = [
   {
