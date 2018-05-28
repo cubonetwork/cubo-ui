@@ -75,7 +75,7 @@
 
 .initials {
   align-items: center;
-  color: map-get($light-theme, bg);
+  color: map-get($pallet-gray, 600);
   display: flex;
   font-weight: 600;
   height: 100%;
