@@ -41,7 +41,6 @@ export class CbMenuComponent {
   }
 
   hiddenMenu(event) {
-    event.stopPropagation();
     this.active = false;
   }
 }
