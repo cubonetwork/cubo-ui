@@ -46,7 +46,9 @@ export class CbAvatarComponent implements OnInit {
   ngOnInit() {
     if (this.name) {
       this.nameSplit = this.name.split(' ');
-      this.letters = this.nameSplit[0].charAt(0).toUpperCase() + this.nameSplit[1].charAt(0).toUpperCase();
+      this.nameSplit[1] ?
+        this.letters = this.nameSplit[0].charAt(0).toUpperCase() + this.nameSplit[1].charAt(0).toUpperCase() :
+        this.letters = this.nameSplit[0].charAt(0).toUpperCase();
     }
   }
 }

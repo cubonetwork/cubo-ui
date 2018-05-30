@@ -8,7 +8,8 @@ describe('CbAvatarComponent', () => {
   let fixture: ComponentFixture<CbAvatarComponent>;
   let element: HTMLElement;
   const image = 'https://bit.ly/2vvFXCO';
-  const name = 'Darth Vader';
+  const nameTwoWords = 'Darth Vader';
+  const nameOneWord = 'Darth';
 
   beforeEach(() => {
 
@@ -27,12 +28,23 @@ describe('CbAvatarComponent', () => {
     expect(element.getAttribute('src')).toContain(image);
   });
 
-  it('shows the initials when there is no image', () => {
-    comp.name = name;
-    fixture.detectChanges();
-    element = fixture.nativeElement.querySelector('span');
+  describe('when there is no image', () => {
+    it('shows the initials with 2 letters', () => {
+      comp.name = nameTwoWords;
+      fixture.detectChanges();
+      element = fixture.nativeElement.querySelector('span');
 
-    expect(element.innerHTML).toContain('DV');
+      expect(element.innerHTML).toContain('DV');
+    });
+
+    it('shows the initials with only one letter', () => {
+      comp.name = nameOneWord;
+      fixture.detectChanges();
+      element = fixture.nativeElement.querySelector('span');
+
+      expect(element.innerHTML).toContain('D');
+    });
+
   });
 
   it('has extra-small class when size is extra-small', () => {
