@@ -13,9 +13,27 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 6000px;
+  width: 10000px;
 }
 
 .cb-carousel-indicators {
   margin-top: 1em;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  li {
+    background-color: map-get($pallet-gray, 200);
+    border-radius: 50%;
+    height: $space-xs;
+    margin: $space-xxs;
+    width: $space-xs;
+  }
+
+  li.active {
+    background-color: map-get($pallet-blue, 300);
+  }
 }

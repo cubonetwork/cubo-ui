@@ -1,12 +1,16 @@
-<p>
-  page-carousel  example works!
-</p>
+<cb-carousel #carousel>
+  <ng-container *cbCarouselItem>
+    <div style="width: 300px">
+      <h2>Bem-vindo ao Mapa de Relacionamentos!</h2>
+      <h3>Precisando de contatos em uma corporate?</h3>
+      <p>Você busca pelo nome da empresa e te mostramos quais founders do Cubo podem te ajudar a fazer essa conexão</p>
+      <button mat-button (click)="next()">Próximo</button>
+    </div>
+  </ng-container>
 
-
-<cb-carousel>
-  <ng-container *ngFor="let item of items;">
-    <ng-container *cbCarouselItem>
-      <div class="item">{{item.title}}</div>
-    </ng-container>
+  <ng-container *cbCarouselItem>
+    <h2>Compartilhe seus contatos</h2>
+    <p>O Mapa de Relacionamentos é uma rede colaborativa e, para começar a usá-la, você precisa contribuir compartilhando seus contatos.</p>
+    <button mat-button (click)="prev()">Anterior</button>
   </ng-container>
 </cb-carousel>

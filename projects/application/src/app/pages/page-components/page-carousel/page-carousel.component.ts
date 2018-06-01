@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, ViewChild } from '@angular/core';
+import { CbCarouselComponent } from 'cubo-ui';
 
 @Component({
   template: ``,
@@ -11,11 +12,15 @@ export class PageCarouselComponent { }
   templateUrl: 'page-carousel-example.html'
 })
 export class PageCarouselExampleComponent { 
-  items = [
-    { title: 'Slide 1' },
-    { title: 'Slide 2' },
-    { title: 'Slide 3' },
-  ];
+  @ViewChild('carousel') private carousel: CbCarouselComponent;
+
+  next() {
+    this.carousel.next();
+  }
+
+  prev() {
+    this.carousel.prev();
+  }
 }
 
 @Component({
