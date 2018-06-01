@@ -50,7 +50,7 @@ export class CbCarouselComponent implements AfterViewInit {
   private currentSlide = 0;
   carouselWrapperStyle = { };
 
-  constructor( private builder: AnimationBuilder ) { }
+  constructor(private builder: AnimationBuilder) { }
 
   next() {
     if ( this.currentSlide + 1 === this.items.length ) {

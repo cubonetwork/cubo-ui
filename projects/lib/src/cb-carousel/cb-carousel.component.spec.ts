@@ -1,5 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { 
+  animate, 
+  AnimationBuilder, 
+  AnimationFactory, 
+  AnimationPlayer, 
+  style 
+} from '@angular/animations';
 import { CbCarouselComponent, CbCarouselItemDirective } from './cb-carousel.component';
 
 describe('CbCarouselComponent', () => {
@@ -11,16 +17,14 @@ describe('CbCarouselComponent', () => {
       declarations: [ 
         CbCarouselComponent,
         CbCarouselItemDirective 
+      ],
+      providers: [
+        AnimationBuilder
       ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
+    });
     fixture = TestBed.createComponent(CbCarouselComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
