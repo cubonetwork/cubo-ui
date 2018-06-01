@@ -15,7 +15,8 @@ export class PageCarouselComponent { }
   templateUrl: 'page-carousel-example.html'
 })
 export class PageCarouselExampleComponent { 
-  @ViewChild('carousel') private carousel: CbCarouselComponent;
+  @ViewChild('simpleCarousel') private simpleCarousel: CbCarouselComponent;
+  @ViewChild('imageCarousel') private imageCarousel: CbCarouselComponent;
 
   codeSimpleHtml = hljs.highlightAuto(`
   <cb-carousel #carousel>
@@ -41,7 +42,7 @@ export class PageCarouselExampleComponent {
     </ng-container>
   </cb-carousel>`, languages).value;
 
-  codeTs = hljs.highlightAuto(`
+  codeSimpleTs = hljs.highlightAuto(`
   import {Component} from '@angular/core';
 
   /**
@@ -68,12 +69,60 @@ export class PageCarouselExampleComponent {
   /** No CSS for this example */
   `, languages).value;
 
-  next() {
-    this.carousel.next();
+  nextSimpleCarousel() {
+    this.simpleCarousel.next();
   }
 
-  prev() {
-    this.carousel.prev();
+  prevSimpleCarousel() {
+    this.simpleCarousel.prev();
+  }
+
+  codeImageHtml = hljs.highlightAuto(`
+  <cb-carousel [showIndicators]="true" #carousel>
+    <ng-container *cbCarouselItem>
+      <img src="..." width="300" alt="Beatles">      
+    </ng-container>
+    <ng-container *cbCarouselItem>
+      <img src="..." width="300" alt="Guns n' Roses">
+    </ng-container>
+    <ng-container *cbCarouselItem>
+      <img src="..." width="300" alt="Nirvana">
+    </ng-container>
+  </cb-carousel>
+  <div style="display: flex; justify-content: space-between;">
+    <button mat-button color="primary" (click)="prev()">Anterior</button>
+    <button mat-button color="primary" (click)="next()">Próximo</button>
+  </div>`, languages).value;
+
+  codeImageTs = hljs.highlightAuto(`
+  import {Component} from '@angular/core';
+
+  /**
+   * @title Image carousel
+   */
+  @Component({
+    selector: 'carousel-image',
+    templateUrl: 'carousel-image.html',
+    styleUrls: ['carousel-image.css']
+  })
+  export class CarouselImageComponent {
+    @ViewChild('carousel') private carousel: CbCarouselComponent;
+
+    next() {
+      this.carousel.next();
+    }
+  
+    prev() {
+      this.carousel.prev();
+    }
+  }`, languages).value;
+
+  nextImageCarousel() {
+    this.imageCarousel.next();
+  }
+
+  prevImageCarousel() {
+    this.imageCarousel.prev();
   }
 }
 
