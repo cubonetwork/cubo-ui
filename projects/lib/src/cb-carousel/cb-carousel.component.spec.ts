@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CbCarouselComponent } from './cb-carousel.component';
+import { CbCarouselComponent, CbCarouselItemDirective } from './cb-carousel.component';
 
 describe('CbCarouselComponent', () => {
   let component: CbCarouselComponent;
@@ -8,7 +8,10 @@ describe('CbCarouselComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CbCarouselComponent ]
+      declarations: [ 
+        CbCarouselComponent,
+        CbCarouselItemDirective 
+      ]
     })
     .compileComponents();
   }));
