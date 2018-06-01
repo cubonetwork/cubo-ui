@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { CbCarouselModule } from 'cubo-ui';
 import { SharedModule } from '@app/shared/shared.module';
 import { PageCarouselRouting } from './page-carousel.routing';
-import { MatButtonModule } from '@angular/material';
-import { PageCarouselComponent, PageCarouselExampleComponent, PageCarouselApiComponent } from './page-carousel.component';
+import { MatButtonModule, MatDialogModule } from '@angular/material';
+import { PageCarouselComponent, PageCarouselExampleComponent, PageCarouselApiComponent, CarouselDialogExampleComponent } from './page-carousel.component';
 
 @NgModule({
   imports: [
@@ -12,12 +12,17 @@ import { PageCarouselComponent, PageCarouselExampleComponent, PageCarouselApiCom
     ContentModule,
     CbCarouselModule,
     PageCarouselRouting,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   declarations: [
     PageCarouselComponent,
     PageCarouselExampleComponent,
-    PageCarouselApiComponent
+    PageCarouselApiComponent,
+    CarouselDialogExampleComponent
+  ],
+  entryComponents: [
+    CarouselDialogExampleComponent
   ]
 })
 export class PageCarouselModule { }

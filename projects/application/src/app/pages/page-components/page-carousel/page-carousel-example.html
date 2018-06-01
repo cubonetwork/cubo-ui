@@ -1,8 +1,7 @@
 <app-content>
   <p>
     <code>cb-carousel</code> should be used to create an onboarding screen, slides transitions, videos or images transition sliders and others.
-    <br/><br/>
-    On mobile devices the slide's transitions could be made by swipe right or swipe left.
+    On mobile devices the slide's transitions was implemented using <a href="http://hammerjs.github.io/" target="_blank">hammerjs</a>
   </p>
 
   <h2>Carousel examples</h2>
@@ -101,3 +100,32 @@
     </mat-tab-group>
   </mat-expansion-panel>
 </mat-accordion>
+
+<div style="max-width: 34rem; margin-left: 3.2rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
+  <button mat-raised-button (click)="openDialog()">Carousel on dialog</button>
+</div>
+
+<mat-accordion>
+    <mat-expansion-panel class="panel">
+      <mat-expansion-panel-header class="panel__header">
+        View Code
+      </mat-expansion-panel-header>
+      <mat-tab-group>
+        <mat-tab label="HTML">
+          <pre class="panel__code">
+            <code [innerHtml]='codeDialogHtml'></code>
+          </pre>
+        </mat-tab>
+        <mat-tab label="TS">
+          <pre class="panel__code">
+            <code [innerHtml]='codeDialogTs'></code>
+          </pre>
+        </mat-tab>
+        <mat-tab label="CSS">
+          <pre class="panel__code">
+            <code [innerHtml]='codeCss'></code>
+          </pre>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-expansion-panel>
+  </mat-accordion>

@@ -48,7 +48,8 @@ export class CbCarouselComponent implements AfterViewInit {
   @ViewChild('indicators') private indicators: ElementRef;
 
   @Input() showIndicators = true;
-  private itemWidth: number;
+  @Input() width = 0;
+  private slideWidth: number;
   private currentSlide = 0;
   carouselWrapperStyle = { };
   indicatorsStyle = { };
@@ -58,18 +59,18 @@ export class CbCarouselComponent implements AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => {
       this.setFirstSlideWidth();
-      this.carouselWrapperStyle = { width: `${this.itemWidth}px` };
-      this.indicatorsStyle = { 'margin-left': `${(this.itemWidth / 2) - (this.slides.length * 10) / 2}px` };
+      this.carouselWrapperStyle = { width: `${this.slideWidth}px` };
+      this.indicatorsStyle = { 'margin-left': `${(this.slideWidth / 2) - (this.slides.length * 10) / 2}px` };
     });
   }
 
   private setFirstSlideWidth() {
-    this.itemWidth = this.carousel.nativeElement.children[0].getBoundingClientRect().width;
+    this.slideWidth = this.width === 0 ? this.carousel.nativeElement.children[0].getBoundingClientRect().width : this.width;
   }
 
   private startSlideTransition() {
     const slideTransition: AnimationFactory = this.animationBuilder.build([
-      animate('250ms ease-in', style({ transform: `translateX(-${this.currentSlide * this.itemWidth}px)` }))
+      animate('250ms ease-in', style({ transform: `translateX(-${this.currentSlide * this.slideWidth}px)` }))
     ]);
     slideTransition.create(this.carousel.nativeElement).play();
     this.updateIndicator();
