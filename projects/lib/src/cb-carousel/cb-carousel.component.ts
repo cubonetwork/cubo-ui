@@ -50,7 +50,7 @@ export class CbCarouselComponent implements AfterViewInit {
   @Input() showIndicators = true;
   @Input() width = 0;
   private slideWidth: number;
-  private currentSlide = 0;
+  currentSlide = 0;
   carouselWrapperStyle = { };
   indicatorsStyle = { };
 
