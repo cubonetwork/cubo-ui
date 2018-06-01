@@ -1,3 +1,34 @@
-<p>
-  page-carousel api works!
-</p>
+<app-content>
+    <h1>API reference</h1>
+  
+    <div>
+      <pre><code [innerHtml]='import_content'></code></pre>
+    </div>
+  
+    <h2>Directives</h2>
+  
+    <p>
+      <span>Attribute: </span>
+      <code>*cbCarouselItem</code>
+      Used to identify a carousel item.
+    </p>
+    
+    <h3>cb-carousel</h3>
+  
+    <table>
+      <tbody>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>@Input() showIndicators;</td>
+          <td>Show or hide slide indicator. Default:
+            <code>true</code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </app-content>
+  

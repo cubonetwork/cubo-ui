@@ -1,16 +1,54 @@
+<app-content>
+  <p><code>cb-carousel</code> should be used to create an onboarding screen, slides transitions, videos or images transition sliders and others.</p>
+
+  <h2>Carousel examples</h2>
+</app-content>
+
 <cb-carousel #carousel>
   <ng-container *cbCarouselItem>
-    <div style="width: 300px">
+    <div style="width: 300px; height: 230px; text-align: center; border: solid 1px rgba(177, 174, 179, 0.5); background-color: #fff; padding: 10px;">
       <h2>Bem-vindo ao Mapa de Relacionamentos!</h2>
       <h3>Precisando de contatos em uma corporate?</h3>
-      <p>Você busca pelo nome da empresa e te mostramos quais founders do Cubo podem te ajudar a fazer essa conexão</p>
+      <p>Você busca pelo nome da empresa e te 
+        mostramos quais founders do Cubo podem 
+        te ajudar a fazer essa conexão</p>
       <button mat-button (click)="next()">Próximo</button>
     </div>
   </ng-container>
 
   <ng-container *cbCarouselItem>
-    <h2>Compartilhe seus contatos</h2>
-    <p>O Mapa de Relacionamentos é uma rede colaborativa e, para começar a usá-la, você precisa contribuir compartilhando seus contatos.</p>
-    <button mat-button (click)="prev()">Anterior</button>
+    <div style="width: 300px; height: 230px; text-align: center; border: solid 1px rgba(177, 174, 179, 0.5); background-color: #fff; padding: 10px;">
+      <h2>Compartilhe seus contatos</h2>
+      <p>O Mapa de Relacionamentos é uma 
+        rede colaborativa e, para começar a usá-la, 
+        você precisa contribuir compartilhando seus 
+        contatos.</p>
+      <button mat-button (click)="prev()">Anterior</button>
+    </div>
   </ng-container>
 </cb-carousel>
+
+<mat-accordion>
+  <mat-expansion-panel class="panel">
+    <mat-expansion-panel-header class="panel__header">
+      View Code
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre class="panel__code">
+          <code [innerHtml]='codeSimpleHtml'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="TS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeTs'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="CSS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeCss'></code>
+        </pre>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</mat-accordion>

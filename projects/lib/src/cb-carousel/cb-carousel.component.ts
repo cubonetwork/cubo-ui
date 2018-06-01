@@ -59,7 +59,7 @@ export class CbCarouselComponent implements AfterViewInit {
     setTimeout(() => {
       this.setFirstSlideWidth();
       this.carouselWrapperStyle = { width: `${this.itemWidth}px` };
-      this.indicatorsStyle = { 'margin-left': `${(this.itemWidth / 2) - (this.slides.length * 12) / 2}px` };
+      this.indicatorsStyle = { 'margin-left': `${(this.itemWidth / 2) - (this.slides.length * 10) / 2}px` };
     });
   }
 
