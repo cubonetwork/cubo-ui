@@ -27,7 +27,7 @@ export class CbCarouselItemDirective {
 @Component({
   selector: 'cb-carousel',
   template: `
-    <div class="cb-carousel-wrapper" [ngStyle]="carouselWrapperStyle">
+    <div class="cb-carousel-wrapper" [ngStyle]="carouselWrapperStyle" (swiperight)="prev()" (swipeleft)="next()">
       <ul class="cb-carousel-inner" #carousel>
         <li *ngFor="let item of slides;" class="cb-carousel-item">
           <ng-container [ngTemplateOutlet]="item.template"></ng-container>
