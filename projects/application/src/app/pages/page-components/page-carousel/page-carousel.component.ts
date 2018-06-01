@@ -10,7 +10,13 @@ export class PageCarouselComponent { }
   selector: 'page-carousel-example',
   templateUrl: 'page-carousel-example.html'
 })
-export class PageCarouselExampleComponent { }
+export class PageCarouselExampleComponent { 
+  items = [
+    { title: 'Slide 1' },
+    { title: 'Slide 2' },
+    { title: 'Slide 3' },
+  ];
+}
 
 @Component({
   selector: 'page-carousel-api',

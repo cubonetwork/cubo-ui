@@ -1,3 +1,12 @@
 <p>
   page-carousel  example works!
 </p>
+
+
+<cb-carousel>
+  <ng-container *ngFor="let item of items;">
+    <ng-container *cbCarouselItem>
+      <div class="item">{{item.title}}</div>
+    </ng-container>
+  </ng-container>
+</cb-carousel>

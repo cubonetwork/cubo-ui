@@ -2,6 +2,20 @@
 // CbCarousel
 // ==================================================
 
-// -------------------------------------------------
-// x
-// -------------------------------------------------
+@import '../../../application/src/styles/core';
+
+.cb-carousel-wrapper {
+  overflow: hidden;
+}
+
+.cb-carousel-inner {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 6000px;
+}
+
+.cb-carousel-indicators {
+  margin-top: 1em;
+}

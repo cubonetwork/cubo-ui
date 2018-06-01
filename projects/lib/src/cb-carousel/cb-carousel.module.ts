@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CbCarouselComponent } from './cb-carousel.component';
+import { CbCarouselComponent, CbCarouselItemDirective } from './cb-carousel.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   exports: [
-    CbCarouselComponent
+    CbCarouselComponent,
+    CbCarouselItemDirective
   ],
   declarations: [
-    CbCarouselComponent
+    CbCarouselComponent,
+    CbCarouselItemDirective
   ]
 })
 export class CbCarouselModule { }
