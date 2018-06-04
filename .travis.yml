@@ -1,9 +1,10 @@
+sudo: required
 language: node_js
 node_js:
   - "8"
 install:
   - npm i -g angular-cli-ghpages
-  - sudo npm i
+  - npm i
 cache:
   directories:
     - "node_modules"
