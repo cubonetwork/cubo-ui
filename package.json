@@ -1,6 +1,6 @@
 {
   "name": "cubo-ui-srcs",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -16,7 +16,7 @@
     "fix:ts": "tslint -c tslint.json 'projects/**/*.ts' --fix",
     "prepush": "npm run test",
     "precommit": "npm run lint",
-    "postinstall": "npm run build:lib; npm link ./projects/lib/dist",
+    "postinstall": "npm run build:lib && npm link ./projects/lib/dist",
     "analyzer": "npm run build && webpack-bundle-analyzer ./dist/stats.json"
   },
   "dependencies": {
