@@ -18,22 +18,22 @@
 
 .cb-carousel-indicators {
   margin-top: 1em;
+}
 
-  ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-  }
+.list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
 
-  li {
+  &__item {
     background-color: map-get($pallet-gray, 200);
     border-radius: 50%;
     height: $space-xs;
     margin: $space-xxs;
     width: $space-xs;
-  }
 
-  li.active {
-    background-color: map-get($pallet-blue, 300);
+    &--active {
+      background-color: map-get($pallet-blue, 300);
+    }
   }
 }

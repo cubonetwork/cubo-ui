@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation, ChangeDetectionStrategy, ViewChild, Inject } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { CbCarouselComponent } from 'cubo-ui';
 import * as hljs from 'highlight.js';
 import { DomSanitizer } from '@angular/platform-browser';

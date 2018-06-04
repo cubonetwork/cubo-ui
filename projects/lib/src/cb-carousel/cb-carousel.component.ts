@@ -35,8 +35,8 @@ export class CbCarouselItemDirective {
       </ul>
     </div>
     <div *ngIf="showIndicators" class="cb-carousel-indicators">
-      <ul [ngStyle]="indicatorsStyle" #indicators>
-        <li *ngFor="let item of slides; let i = index" [class]="i === 0 ? 'active' : ''" (click)="goToSlide(i)"></li>
+      <ul [ngStyle]="indicatorsStyle" class="list" #indicators>
+        <li *ngFor="let item of slides; let i = index" [class]="i === 0 ? 'list__item list__item--active' : 'list__item'" (click)="goToSlide(i)"></li>
       </ul>
     </div>
   `,
@@ -83,9 +83,9 @@ export class CbCarouselComponent implements AfterViewInit {
 
   updateIndicator() {
     for (const indicator of this.indicators.nativeElement.children) {
-      indicator.className = '';
+      indicator.className = 'list__item';
     }
-    this.indicators.nativeElement.children[this.currentSlide].className = 'active';
+    this.indicators.nativeElement.children[this.currentSlide].className = 'list__item list__item--active';
   }
 
   next() {
