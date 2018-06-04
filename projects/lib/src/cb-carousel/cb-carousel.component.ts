@@ -1,23 +1,5 @@
-import { 
-  AfterViewInit, 
-  Component, 
-  ContentChildren, 
-  Directive, 
-  ElementRef, 
-  Input, 
-  OnInit, 
-  QueryList, 
-  TemplateRef, 
-  ViewChild, 
-  ViewChildren 
-} from '@angular/core';
-import { 
-  animate, 
-  AnimationBuilder, 
-  AnimationFactory, 
-  AnimationPlayer, 
-  style 
-} from '@angular/animations';
+import { AfterViewInit, Component, ContentChildren, Directive, ElementRef, Input, OnInit, QueryList, TemplateRef, ViewChild, ViewChildren } from '@angular/core';
+import { animate, AnimationBuilder, AnimationFactory, AnimationPlayer, style } from '@angular/animations';
 
 @Directive({ selector: '[cbCarouselItem]' })
 export class CbCarouselItemDirective {
@@ -89,16 +71,10 @@ export class CbCarouselComponent implements AfterViewInit {
   }
 
   next() {
-    if (this.currentSlide + 1 === this.slides.length) {
-      return;
-    }
-    this.goToSlide((this.currentSlide + 1) % this.slides.length);
+    return (this.currentSlide + 1 === this.slides.length) ? false : this.goToSlide((this.currentSlide + 1) % this.slides.length);
   }
 
   prev() {
-    if (this.currentSlide === 0) {
-      return;
-    } 
-    this.goToSlide(((this.currentSlide - 1) + this.slides.length) % this.slides.length);
+    return (this.currentSlide === 0) ? false : this.goToSlide(((this.currentSlide - 1) + this.slides.length) % this.slides.length);
   }
 }
