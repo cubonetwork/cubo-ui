@@ -28,6 +28,10 @@ export class PageComponentsComponent {
     {
       'path': 'menu',
       'name': 'Menu'
+    },
+    {
+      'path': 'carousel',
+      'name': 'Carousel'
     }
   ];
 }

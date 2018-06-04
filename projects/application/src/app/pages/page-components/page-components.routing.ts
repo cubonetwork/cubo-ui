@@ -50,6 +50,13 @@ export const PageComponentsRoutes: Routes = [
               meta: { title: 'Menu' }
             }
           },
+          {
+            path: 'carousel',
+            loadChildren: '@app/pages/page-components/page-carousel/page-carousel.module#PageCarouselModule',
+            data: {
+              meta: { title: 'Carousel' }
+            }
+          },
         ]
       }
     ]

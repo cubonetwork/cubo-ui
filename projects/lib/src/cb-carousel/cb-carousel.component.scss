@@ -1,0 +1,39 @@
+// ==================================================
+// CbCarousel
+// ==================================================
+
+@import '../../../application/src/styles/core';
+
+.cb-carousel-wrapper {
+  overflow: hidden;
+}
+
+.cb-carousel-inner {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 10000px;
+}
+
+.cb-carousel-indicators {
+  margin-top: 1em;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+
+  &__item {
+    background-color: map-get($pallet-gray, 200);
+    border-radius: 50%;
+    height: $space-xs;
+    margin: $space-xxs;
+    width: $space-xs;
+
+    &--active {
+      background-color: map-get($pallet-blue, 300);
+    }
+  }
+}
