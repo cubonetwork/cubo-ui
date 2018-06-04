@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -25,8 +25,12 @@ export class NavbarComponent {
   @Input() menu = [];
   showMenu = false;
 
+  constructor(private ref: ChangeDetectorRef) {}
+
   toggleMenu(event) {
     event.stopPropagation();
+    this.ref.detectChanges();
     this.showMenu = !this.showMenu;
+    this.ref.detectChanges();
   }
 }
