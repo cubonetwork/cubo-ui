@@ -3,7 +3,7 @@ node_js:
   - "8"
 install:
   - npm i -g angular-cli-ghpages
-  - npm i
+  - sudo npm i
 cache:
   directories:
     - "node_modules"
