@@ -17,6 +17,8 @@
 }
 
 .cb-carousel-indicators {
+  display: flex;
+  justify-content: center;
   margin-top: 1em;
 }
 
@@ -24,6 +26,7 @@
   display: flex;
   flex-direction: row;
   list-style: none;
+  padding: 0;
 
   &__item {
     background-color: map-get($pallet-gray, 200);

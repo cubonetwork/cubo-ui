@@ -16,8 +16,8 @@ export class CbCarouselItemDirective {
         </li>
       </ul>
     </div>
-    <div *ngIf="showIndicators" class="cb-carousel-indicators">
-      <ul [ngStyle]="indicatorsStyle" class="list" #indicators>
+    <div *ngIf="showIndicators" class="cb-carousel-indicators" [ngStyle]="carouselWrapperStyle">
+      <ul class="list" #indicators>
         <li *ngFor="let item of slides; let i = index" [class]="i === 0 ? 'list__item list__item--active' : 'list__item'" (click)="goToSlide(i)"></li>
       </ul>
     </div>
@@ -34,15 +34,13 @@ export class CbCarouselComponent implements AfterViewInit {
   private slideWidth: number;
   currentSlide = 0;
   carouselWrapperStyle = { };
-  indicatorsStyle = { };
-
+  
   constructor(private animationBuilder: AnimationBuilder) { }
 
   ngAfterViewInit() {
     setTimeout(() => {
       this.setFirstSlideWidth();
       this.carouselWrapperStyle = { width: `${this.slideWidth}px` };
-      this.indicatorsStyle = { 'margin-left': `${(this.slideWidth / 2) - (this.slides.length * 10) / 2}px` };
     });
   }
 
