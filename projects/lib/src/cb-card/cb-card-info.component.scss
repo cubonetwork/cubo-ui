@@ -9,6 +9,10 @@
   align-items: center;
   display: flex;
 
+  &:first-of-type {
+    margin-top: $space-sm;
+  }
+
   &:not(:last-child) {
     margin-bottom: $space-xs;
   }
