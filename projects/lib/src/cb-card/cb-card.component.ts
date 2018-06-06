@@ -22,7 +22,10 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, S
   selector: 'cb-card',
   template: `
     <div class="content">
-      <ng-content></ng-content>
+      <ng-content select="cb-card-image"></ng-content>
+      <div class="content__info">
+        <ng-content></ng-content>
+      </div>
     </div>
     <ng-content select="cb-card-footer"></ng-content>
   `,
@@ -32,12 +35,15 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, S
   host: {
     'class': 'cb-card',
     '[class.cb-card--small]': 'size ===  "small"',
-    '[class.cb-card--center]': 'center ===  true'
+    '[class.cb-card--center]': 'center ===  true',
+    '[class.cb-card--column]': 'orientation ===  "column"',
+    '[class.cb-card--row]': 'orientation ===  "row"'
   }
 })
 export class CbCardComponent {
   @Input() size: string;
   @Input() center = false;
+  @Input() orientation = 'column';
 }
 
 /**

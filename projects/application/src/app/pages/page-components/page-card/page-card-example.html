@@ -197,7 +197,9 @@
 <div style="max-width: 34rem; margin-left: 3.2rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
   <a style="display: block">
     <cb-card [center]="true">
-      <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
+      <cb-card-image>
+        <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
+      </cb-card-image>
       <cb-card-title>Eleven</cb-card-title>
       <cb-card-description>Character @ Stranger Things</cb-card-description>
       <mat-chip-list style="position: absolute; left: 1.6rem; top: 1.6rem;">
@@ -235,6 +237,65 @@
       <mat-tab label="HTML">
         <pre class="panel__code">
           <code [innerHtml]='codeHtml'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="TS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeTs'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="CSS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeCss'></code>
+        </pre>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<div style="max-width: 34rem; margin-left: 3.2rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
+  <a style="display: block">
+    <cb-card [orientation]="'row'">
+      <cb-card-image>
+        <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
+      </cb-card-image>
+      <cb-card-title>Eleven</cb-card-title>
+      <cb-card-description>Character @ Stranger Things</cb-card-description>
+      <mat-chip-list style="position: absolute; left: 1.6rem; top: 1.6rem;">
+        <mat-chip color="accent" selected="true">Hero</mat-chip>
+      </mat-chip-list>
+      <cb-card-footer>
+        <div class="social">
+          <cb-social>
+            <mat-icon svgIcon="linkedin"></mat-icon>
+          </cb-social>
+          <cb-social>
+            <mat-icon svgIcon="github"></mat-icon>
+          </cb-social>
+          <cb-social>
+            <mat-icon svgIcon="twitter"></mat-icon>
+          </cb-social>
+          <cb-social>
+            <mat-icon svgIcon="instagram"></mat-icon>
+          </cb-social>
+        </div>
+        <div class="actions">
+          <button mat-button color="primary">Click me!</button>
+        </div>
+      </cb-card-footer>
+    </cb-card>
+  </a>
+</div>
+
+<mat-accordion>
+  <mat-expansion-panel class="panel">
+    <mat-expansion-panel-header class="panel__header">
+      View Code
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre class="panel__code">
+          <code [innerHtml]='codeOrientationRowHtml'></code>
         </pre>
       </mat-tab>
       <mat-tab label="TS">

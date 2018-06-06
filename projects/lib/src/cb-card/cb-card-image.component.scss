@@ -13,8 +13,8 @@
     margin-bottom: $space-xs;
   }
 
-  & ::ng-deep img,
-  & ::ng-deep svg {
+  & ::ng-deep > img,
+  & ::ng-deep > svg {
     max-height: 4rem;
     max-width: 100%;
   }
