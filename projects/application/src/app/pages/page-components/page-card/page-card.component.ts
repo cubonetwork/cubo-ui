@@ -74,7 +74,7 @@ export class PageCardExampleComponent {
       <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
     </cb-card-image>
     <cb-card-title>Eleven</cb-card-title>
-    <cb-card-subtitle>Character @ Stranger Things</cb-card-subtitle>
+    <cb-card-description>Character @ Stranger Things</cb-card-description>
     <cb-card-badges>
       <mat-chip-list>
         <mat-chip color="primary" selected="true">Hero</mat-chip>
@@ -125,7 +125,7 @@ export class PageCardExampleComponent {
       <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
     </cb-card-image>
     <cb-card-title>Eleven</cb-card-title>
-    <cb-card-subtitle>Character @ Stranger Things</cb-card-subtitle>
+    <cb-card-description>Character @ Stranger Things</cb-card-description>
     <cb-card-badges>
       <mat-chip-list>
         <mat-chip color="primary" selected="true">Hero</mat-chip>
