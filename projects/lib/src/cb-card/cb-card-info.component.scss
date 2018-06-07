@@ -5,7 +5,7 @@
 @import '../../../application/src/styles/core';
 
 :host {
-  @include mat-typography-level-to-styles($typography, subheading-1);
+  @include mat-typography-level-to-styles($typography, body-1);
   align-items: center;
   display: flex;
 
