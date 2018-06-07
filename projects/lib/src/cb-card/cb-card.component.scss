@@ -27,7 +27,6 @@ a > :host(:hover) {
 
 .content {
   display: flex;
-  height: 100%;
   padding: $space-sm;
 
   :host(.cb-card--center) & {
@@ -48,12 +47,20 @@ a > :host(:hover) {
   }
 
   &__info {
+    &:empty {
+      display: none;
+    }
+
     :host(.cb-card--center) & {
       text-align: center;
     }
 
     :host(.cb-card--row) & {
-      margin-left: $space-sm; 
+      margin-left: $space-sm;
+    }
+
+    :host(.cb-card--column) & {
+      margin-top: $space-sm;
     }
   }
 }
