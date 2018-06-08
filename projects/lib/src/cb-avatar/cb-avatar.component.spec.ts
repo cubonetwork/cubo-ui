@@ -1,3 +1,4 @@
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 
@@ -12,8 +13,8 @@ describe('CbAvatarComponent', () => {
   const nameOneWord = 'Darth';
 
   beforeEach(() => {
-
     TestBed.configureTestingModule({
+      imports: [LazyLoadImageModule],
       declarations: [ CbAvatarComponent ],
     });
     fixture = TestBed.createComponent(CbAvatarComponent);
@@ -25,7 +26,7 @@ describe('CbAvatarComponent', () => {
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('img');
 
-    expect(element.getAttribute('src')).toContain(image);
+    expect(element.getAttribute('ng-reflect-lazy-image')).toContain(image);
   });
 
   describe('when there is no image', () => {
