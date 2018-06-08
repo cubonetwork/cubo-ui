@@ -11,6 +11,7 @@
   border-radius: 50%;
   display: inline-block;
   overflow: hidden;
+  position: relative;
   vertical-align: middle;
 }
 
@@ -67,11 +68,19 @@
 
 .avatar {
   background-color: map-get($light-theme, bg);
-  display: block;
+  bottom: 0;
   height: 100%;
+  left: 0;
   object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 100%;
 }
+
+// -------------------------------------------------
+// Initials
+// -------------------------------------------------
 
 .initials {
   align-items: center;
