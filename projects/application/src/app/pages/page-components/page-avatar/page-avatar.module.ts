@@ -1,5 +1,5 @@
 import { ContentModule } from '@app/components/content/content.module';
-import { CbAvatarModule } from '@lib';
+import { CbAvatarModule } from 'cubo-ui';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '@app/shared/shared.module';
