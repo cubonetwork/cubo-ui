@@ -16,9 +16,9 @@ export class PageCarouselComponent { }
   template: `
   <h1 mat-dialog-title>Carousel in a Dialog</h1>
   <mat-dialog-content>
-    <cb-carousel [width]="300" #carousel>
+    <cb-carousel #carousel>
       <ng-container *cbCarouselItem>
-        <div style="width: 300px; height: 230px; text-align: center; border: solid 1px rgba(177, 174, 179, 0.5); background-color: #fff; padding: 10px;">
+        <div style="height: 230px; text-align: center; border: solid 1px rgba(177, 174, 179, 0.5); background-color: #fff; padding: 10px;">
           <h2>Bem-vindo ao Mapa de Relacionamentos!</h2>
           <h3>Precisando de contatos em uma corporate?</h3>
           <p>Você busca pelo nome da empresa e te
@@ -29,7 +29,7 @@ export class PageCarouselComponent { }
       </ng-container>
 
       <ng-container *cbCarouselItem>
-        <div style="width: 300px; height: 230px; text-align: center; border: solid 1px rgba(177, 174, 179, 0.5); background-color: #fff; padding: 10px;">
+        <div style="height: 230px; text-align: center; border: solid 1px rgba(177, 174, 179, 0.5); background-color: #fff; padding: 10px;">
           <h2>Compartilhe seus contatos</h2>
           <p>O Mapa de Relacionamentos é uma
           rede colaborativa e, para começar a usá-la,
