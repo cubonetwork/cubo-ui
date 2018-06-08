@@ -9,17 +9,17 @@ export class CbCarouselItemDirective {
 @Component({
   selector: 'cb-carousel',
   template: `
-    <div class="cb-carousel-wrapper" [ngStyle]="carouselWrapperStyle" (swiperight)="prev()" (swipeleft)="next()">
-      <ul class="cb-carousel-inner" #carousel>
-        <li *ngFor="let item of slides;" class="cb-carousel-item">
+    <div class="wrapper" (swiperight)="prev()" (swipeleft)="next()">
+      <div class="inner" #carousel>
+        <section *ngFor="let item of slides;" class="inner__item">
           <ng-container [ngTemplateOutlet]="item.template"></ng-container>
-        </li>
-      </ul>
+        </section>
+      </div>
     </div>
-    <div *ngIf="showIndicators" class="cb-carousel-indicators" [ngStyle]="carouselWrapperStyle">
-      <ul class="list" #indicators>
-        <li *ngFor="let item of slides; let i = index" [class]="i === 0 ? 'list__item list__item--active' : 'list__item'" (click)="goToSlide(i)"></li>
-      </ul>
+    <div *ngIf="showIndicators" class="indicators">
+      <nav class="list" #indicators>
+        <button *ngFor="let item of slides; let i = index" [class]="i === 0 ? 'list__item list__item--active' : 'list__item'" (click)="goToSlide(i)"></button>
+      </nav>
     </div>
   `,
   styleUrls: ['./cb-carousel.component.scss']
@@ -30,27 +30,15 @@ export class CbCarouselComponent implements AfterViewInit {
   @ViewChild('indicators') private indicators: ElementRef;
 
   @Input() showIndicators = true;
-  @Input() width = 0;
-  private slideWidth: number;
   currentSlide = 0;
-  carouselWrapperStyle = { };
   
   constructor(private animationBuilder: AnimationBuilder) { }
 
-  ngAfterViewInit() {
-    setTimeout(() => {
-      this.setFirstSlideWidth();
-      this.carouselWrapperStyle = { width: `${this.slideWidth}px` };
-    });
-  }
-
-  private setFirstSlideWidth() {
-    this.slideWidth = this.width === 0 ? this.carousel.nativeElement.children[0].getBoundingClientRect().width : this.width;
-  }
+  ngAfterViewInit() { }
 
   private startSlideTransition() {
     const slideTransition: AnimationFactory = this.animationBuilder.build([
-      animate('250ms ease-in', style({ transform: `translateX(-${this.currentSlide * this.slideWidth}px)` }))
+      animate('250ms ease-in', style({ transform: `translateX(-${this.currentSlide * 100}%)` }))
     ]);
     slideTransition.create(this.carousel.nativeElement).play();
     this.updateIndicator();
