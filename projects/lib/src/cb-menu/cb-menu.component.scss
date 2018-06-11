@@ -35,6 +35,7 @@
 .button {
   display: inline-block;
   position: relative;
+  text-align: center;
 
   :host(.menu--active) & {
     z-index: $zindex-menu;
