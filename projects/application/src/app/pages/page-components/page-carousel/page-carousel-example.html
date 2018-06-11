@@ -7,10 +7,10 @@
   <h2>Carousel examples</h2>
 </app-content>
 
-<div style="max-width: 34rem; margin-left: 3.2rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
+<div style="max-width: 34rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
   <cb-carousel [showIndicators]="true" #simpleCarousel>
     <ng-container *cbCarouselItem>
-      <div style="width: 300px; height: 230px; text-align: center; border: solid 1px rgba(177, 174, 179, 0.5); background-color: #fff; padding: 10px;">
+      <div style="height: 230px; text-align: center; border: solid 1px rgba(177, 174, 179, 0.5); background-color: #fff; padding: 10px;">
         <h2>Bem-vindo ao Mapa de Relacionamentos!</h2>
         <h3>Precisando de contatos em uma corporate?</h3>
         <p>Você busca pelo nome da empresa e te 
@@ -21,7 +21,7 @@
     </ng-container>
 
     <ng-container *cbCarouselItem>
-      <div style="width: 300px; height: 230px; text-align: center; border: solid 1px rgba(177, 174, 179, 0.5); background-color: #fff; padding: 10px;">
+      <div style="height: 230px; text-align: center; border: solid 1px rgba(177, 174, 179, 0.5); background-color: #fff; padding: 10px;">
         <h2>Compartilhe seus contatos</h2>
         <p>O Mapa de Relacionamentos é uma 
           rede colaborativa e, para começar a usá-la, 
@@ -58,7 +58,7 @@
   </mat-expansion-panel>
 </mat-accordion>
 
-<div style="max-width: 34rem; margin-left: 3.2rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
+<div style="max-width: 34rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
   <cb-carousel [showIndicators]="true" #imageCarousel>
     <ng-container *cbCarouselItem>
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Beatles_logo.svg/2000px-Beatles_logo.svg.png" width="300" alt="Beatles">      
@@ -101,7 +101,7 @@
   </mat-expansion-panel>
 </mat-accordion>
 
-<div style="max-width: 34rem; margin-left: 3.2rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
+<div style="max-width: 34rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
   <button mat-raised-button (click)="openDialog()">Carousel on dialog</button>
 </div>
 
