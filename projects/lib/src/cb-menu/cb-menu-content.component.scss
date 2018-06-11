@@ -1,0 +1,37 @@
+// ==================================================
+// Floating menu
+// ==================================================
+
+@import '../../../application/src/styles/core';
+
+:host {
+  display: block;
+  position: absolute;
+  transition: visibility .15s;
+  visibility: hidden;
+}
+
+:host-context(.menu--active) {
+  visibility: visible;
+  z-index: $zindex-menu;
+}
+
+:host-context(.menu--bottom-left) {
+  right: 0;
+  top: 100%;
+}
+
+:host-context(.menu--bottom-right) {
+  left: 0;
+  top: 100%;
+}
+
+:host-context(.menu--top-left) {
+  bottom: 100%;
+  right: 0;
+}
+
+:host-context(.menu--top-right) {
+  bottom: 100%;
+  left: 0;
+}

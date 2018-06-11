@@ -7,6 +7,7 @@
 :host {
   display: inline-block;
   position: relative;
+  text-align: center;
 }
 
 :host(.menu--backdrop) {
@@ -29,47 +30,5 @@
     opacity: 1;
     visibility: visible;
     z-index: $zindex-menu - 1;
-  }
-}
-
-.button {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-
-  :host(.menu--active) & {
-    z-index: $zindex-menu;
-  }
-}
-
-.content {
-  display: block;
-  position: absolute;
-  transition: visibility .15s;
-  visibility: hidden;
-
-  :host(.menu--active) & {
-    visibility: visible;
-    z-index: $zindex-menu;
-  }
-
-  :host(.menu--bottom-left) & {
-    right: 0;
-    top: 100%;
-  }
-
-  :host(.menu--bottom-right) & {
-    left: 0;
-    top: 100%;
-  }
-
-  :host(.menu--top-left) & {
-    bottom: 100%;
-    right: 0;
-  }
-
-  :host(.menu--top-right) & {
-    bottom: 100%;
-    left: 0;
   }
 }
