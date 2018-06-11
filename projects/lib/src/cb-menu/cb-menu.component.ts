@@ -9,7 +9,7 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, ChangeDet
 @Component({
   selector: 'cb-menu, [cbMenu]',
   template: `
-    <div (click)="toggleMenu($event)">
+    <div class="button" (click)="toggleMenu($event)">
       <ng-content select="cb-menu-button"></ng-content>
     </div>
     <ng-content select="cb-menu-content"></ng-content>
