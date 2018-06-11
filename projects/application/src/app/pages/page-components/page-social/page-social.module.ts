@@ -1,5 +1,5 @@
 import { ContentModule } from '@app/components/content/content.module';
-import { CbSocialModule } from 'cubo-ui';
+import { CbSocialModule } from '@lib';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
 import { MatIconModule } from '@angular/material';

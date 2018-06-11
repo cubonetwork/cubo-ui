@@ -179,7 +179,7 @@ export class PageCardExampleComponent {
 })
 export class PageCardApiComponent {
   import_content = hljs.highlightAuto(`
-  import { CbCardModule } from 'cubo-ui';
+  import { CbCardModule } from '@lib';
 
   @NgModule({
     imports: [

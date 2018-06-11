@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation, ChangeDetectionStrategy, ViewChild, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { CbCarouselComponent } from 'cubo-ui';
+import { CbCarouselComponent } from '@lib';
 import * as hljs from 'highlight.js';
 import { DomSanitizer } from '@angular/platform-browser';
 const languages = ['html', 'typescript', 'css'];
@@ -266,7 +266,7 @@ export class PageCarouselExampleComponent {
 })
 export class PageCarouselApiComponent { 
   import_content = hljs.highlightAuto(`
-  import { CbCarouselModule } from 'cubo-ui';
+  import { CbCarouselModule } from '@lib';
 
   @NgModule({
     imports: [
