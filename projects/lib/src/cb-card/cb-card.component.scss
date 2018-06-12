@@ -55,11 +55,11 @@ a > :host(:hover) {
       text-align: center;
     }
 
-    :host(.cb-card--row) & {
+    :host(.cb-card--row) &:not(:last-child) {
       margin-left: $space-sm;
     }
 
-    :host(.cb-card--column) & {
+    :host(.cb-card--column) &:not(:last-child) {
       margin-top: $space-sm;
     }
   }
