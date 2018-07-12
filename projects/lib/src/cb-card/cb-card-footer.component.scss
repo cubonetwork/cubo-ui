@@ -8,7 +8,10 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 1.25rem $space-sm;
+  padding-bottom: $space-xs;
+  padding-left: $space-xs;
+  padding-right: $space-xs;
+  padding-top: $space-xs;
   white-space: nowrap;
   width: 100%;
 
@@ -25,5 +28,6 @@
 :host-context(.cb-card--small) {
   font-size: .9em;
   line-height: 1.4em;
-  padding: $space-xs;
+  padding-left: $space-xs;
+  padding-right: $space-xs;
 }
