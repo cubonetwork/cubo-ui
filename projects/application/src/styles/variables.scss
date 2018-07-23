@@ -67,11 +67,6 @@ $ease-in-out-quad : cubic-bezier(.25, .46, .45, .94);
 // 5. Assets
 // --------------------------------------------------
 
-$default-shadow: 0 7px 9px 0 rgba(map-get($pallet-gray, 300), .4);
-$default-shadow-light: 0 2px 6px 0 rgba(map-get($pallet-gray, 200), .4);
-$default-shadow-dark: 0 2px 6px 0 rgba(map-get($pallet-gray, 900), .4);
-
 $border-default: rgba(map-get($pallet-gray, 200), .3) solid 1px;
-
-$border-radius: $space-xxs;
+$border-radius: .2rem;
 
