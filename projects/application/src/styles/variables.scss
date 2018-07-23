@@ -5,6 +5,7 @@
 // 2. Media Queries
 // 3. zIndex
 // 4. Easing
+// 5. Assets
 // ==================================================
 
 @import '~rupture-sass/rupture';
@@ -61,3 +62,16 @@ $ease-out-cubic   : cubic-bezier(.215, .61, .355, 1);
 $ease-out-back    : cubic-bezier(.175, .885, .32, 1.275);
 $ease-in-quart    : cubic-bezier(.895, 3, .685, .22);
 $ease-in-out-quad : cubic-bezier(.25, .46, .45, .94);
+
+// --------------------------------------------------
+// 5. Assets
+// --------------------------------------------------
+
+$default-shadow: 0 7px 9px 0 rgba(map-get($pallet-gray, 300), .4);
+$default-shadow-light: 0 2px 6px 0 rgba(map-get($pallet-gray, 200), .4);
+$default-shadow-dark: 0 2px 6px 0 rgba(map-get($pallet-gray, 900), .4);
+
+$border-default: rgba(map-get($pallet-gray, 200), .3) solid 1px;
+
+$border-radius: $space-xxs;
+
