@@ -6,7 +6,8 @@
 
 :host(.cb-card) {
   background-color: map-get($light-theme, overlap);
-  box-shadow: 0 2px 3px 0 rgba(map-get($pallet-gray, 200), .5);
+  border-radius: $border-radius;
+  box-shadow: 0 2px 8px 0 rgba(172,172,172, .5);
   color: map-get($light-theme, text-primary);
   display: flex;
   flex-direction: column;
