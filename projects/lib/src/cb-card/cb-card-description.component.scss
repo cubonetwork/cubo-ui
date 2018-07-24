@@ -7,17 +7,9 @@
 :host(.cb-card-description) {
   @include mat-typography-level-to-styles($typography, body-1);
   display: block;
-
-  &:not(:last-child) {
-    margin-bottom: $space-xs;
-  }
 }
 
 :host-context(.cb-card--small) {
   font-size: .9em;
   line-height: 1.4em;
-
-  &:not(:last-child) {
-    margin-bottom: 0;
-  }
 }
