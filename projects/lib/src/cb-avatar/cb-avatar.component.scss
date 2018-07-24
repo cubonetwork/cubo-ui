@@ -5,7 +5,7 @@
 @import '../../../application/src/styles/core';
 
 :host {
-  background-color: map-get($light-theme, overlap);
+  background-color: map-get($light-theme, bg);
   background-repeat: no-repeat;
   background-size: cover;
   border: $border-default;
