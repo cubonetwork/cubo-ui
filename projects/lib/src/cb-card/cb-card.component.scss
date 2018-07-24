@@ -14,6 +14,7 @@
   height: 100%;
   justify-content: space-between;
   position: relative;
+  text-align: left;
   width: 100%;
 }
 
@@ -32,6 +33,7 @@ a > :host(:hover) {
 
   :host(.cb-card--center) & {
     align-items: center;
+    text-align: center;
   }
 
   :host(.cb-card--small) & {
