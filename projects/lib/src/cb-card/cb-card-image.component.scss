@@ -5,12 +5,17 @@
 @import '../../../application/src/styles/core';
 
 :host(.cb-card-image) {
-  margin-top: $space-xs;
+  $height: 4rem;
+  display: block;
   max-width: ($screen-xs / 2);
+
+  &:not(:first-child) {
+    margin-top: $space-xs;
+  }
 
   & ::ng-deep > img,
   & ::ng-deep > svg {
-    max-height: 4rem;
+    max-height: $height;
     max-width: 100%;
   }
 }
