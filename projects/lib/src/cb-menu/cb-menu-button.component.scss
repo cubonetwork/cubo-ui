@@ -1,0 +1,15 @@
+// ==================================================
+// Floating menu
+// ==================================================
+
+@import '../../../application/src/styles/core';
+
+:host {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+:host-context(.menu--active) {
+  z-index: $zindex-menu;
+}

@@ -31,7 +31,7 @@
 
 .nav-list {
   background-color: map-get($light-theme, overlap);
-  border: $border-tiny;
+  border: $border-default;
   box-shadow: 0 0 2px 0 rgba(map-get($pallet-gray, 100), .5);
   padding: 0;
 }

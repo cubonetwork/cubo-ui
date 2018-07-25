@@ -98,7 +98,7 @@
 
     tr {
       &:not(:last-child) {
-        border-bottom: $border-tiny;
+        border-bottom: $border-default;
       }
     }
 

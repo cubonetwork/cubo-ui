@@ -4,32 +4,44 @@
 
 @import '../../../application/src/styles/core';
 
-.cb-carousel-wrapper {
+:host {
+  display: block;
+  width: 100%;
+}
+
+.wrapper {
   overflow: hidden;
 }
 
-.cb-carousel-inner {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 10000px;
+.inner { 
+  white-space: nowrap;
+  width: 100%;
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    width: 100%;
+  }
 }
 
-.cb-carousel-indicators {
+.indicators {
+  display: flex;
+  justify-content: center;
   margin-top: 1em;
 }
 
 .list {
   display: flex;
-  flex-direction: row;
-  list-style: none;
+  flex-direction: row; 
 
   &__item {
     background-color: map-get($pallet-gray, 200);
+    border: 0;
     border-radius: 50%;
     height: $space-xs;
     margin: $space-xxs;
+    padding: 0;
     width: $space-xs;
 
     &--active {

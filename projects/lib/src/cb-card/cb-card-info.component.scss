@@ -5,12 +5,16 @@
 @import '../../../application/src/styles/core';
 
 :host {
-  @include mat-typography-level-to-styles($typography, subheading-1);
+  @include mat-typography-level-to-styles($typography, body-1);
   align-items: center;
   display: flex;
 
+  &:first-of-type {
+    margin-top: $space-sm;
+  }
+
   &:not(:last-child) {
-    margin-bottom: $space-xs;
+    margin-bottom: $space-sm;
   }
 }
 

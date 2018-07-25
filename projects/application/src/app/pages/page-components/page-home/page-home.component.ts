@@ -20,7 +20,7 @@ export class PageHomeComponent {
   npm install cubo-ui`, languages).value;
 
   import_component = hljs.highlightAuto(`
-  import { CbAvatarModule } from 'cubo-ui';
+  import { CbAvatarModule } from '@lib';
   @NgModule({
     declarations: [
       AppComponent,

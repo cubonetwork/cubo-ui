@@ -9,17 +9,9 @@
   color: map-get($pallet-gray, 500);
   display: block;
   font-weight: 300;
-
-  &:not(:first-child) {
-    margin-top: $space-xs;
-  }
 }
 
 :host-context(.cb-card--small) {
   font-size: .9em;
   line-height: 1.4em;
-
-  &:not(:first-child) {
-    margin-top: 0;
-  }
 }

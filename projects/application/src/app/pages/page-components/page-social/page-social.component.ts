@@ -68,7 +68,7 @@ export class PageSocialExampleComponent {
 })
 export class PageSocialApiComponent {
   import_content = hljs.highlightAuto(`
-  import { CbSocialModule } from 'cubo-ui';
+  import { CbSocialModule } from '@lib';
 
   @NgModule({
     imports: [

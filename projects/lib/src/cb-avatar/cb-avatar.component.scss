@@ -5,12 +5,15 @@
 @import '../../../application/src/styles/core';
 
 :host {
-  background-color: map-get($light-theme, overlap);
+  background-color: map-get($light-theme, bg);
   background-repeat: no-repeat;
   background-size: cover;
+  border: $border-default;
   border-radius: 50%;
+  color: map-get($pallet-gray, 600);
   display: inline-block;
   overflow: hidden;
+  position: relative;
   vertical-align: middle;
 }
 
@@ -19,7 +22,7 @@
 // -------------------------------------------------
 
 :host(.avatar--extra-small) {
-  font-size: $space;
+  font-size: 1.2rem;
   height: $space-md;
   width: $space-md;
 }
@@ -46,19 +49,7 @@
   font-size: $space-xxlg;
   overflow: hidden;
   padding-bottom: calc((2/2) * 100%);
-  position: relative;
   width: 100%;
-
-  & > * {
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    object-fit: cover;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-  }
 }
 
 // -------------------------------------------------
@@ -67,15 +58,22 @@
 
 .avatar {
   background-color: map-get($light-theme, bg);
-  display: block;
+  bottom: 0;
   height: 100%;
+  left: 0;
   object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 100%;
 }
 
+// -------------------------------------------------
+// Initials
+// -------------------------------------------------
+
 .initials {
   align-items: center;
-  color: map-get($pallet-gray, 600);
   display: flex;
   font-weight: 600;
   height: 100%;

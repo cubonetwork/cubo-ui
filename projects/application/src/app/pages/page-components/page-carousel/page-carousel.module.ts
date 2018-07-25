@@ -1,6 +1,6 @@
 import { ContentModule } from '@app/components/content/content.module';
 import { NgModule } from '@angular/core';
-import { CbCarouselModule } from 'cubo-ui';
+import { CbCarouselModule } from '@lib';
 import { SharedModule } from '@app/shared/shared.module';
 import { PageCarouselRouting } from './page-carousel.routing';
 import { MatButtonModule, MatDialogModule } from '@angular/material';

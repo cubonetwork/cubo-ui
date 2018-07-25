@@ -15,7 +15,7 @@ import {
 @Component({
   selector: 'cb-avatar',
   template: `
-  <img class="avatar" src="{{image}}" alt="{{name}}" *ngIf="image">
+  <img class="avatar" [lazyLoad]="image" [offset]="50" alt="{{name}}" *ngIf="image">
   <span class="initials" *ngIf="!image">{{letters}}</span>
   <ng-content></ng-content>
   `,

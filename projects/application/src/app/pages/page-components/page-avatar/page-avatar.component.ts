@@ -38,7 +38,7 @@ export class PageAvatarExampleComponent {
 })
 export class PageAvatarApiComponent {
   import_content = hljs.highlightAuto(`
-  import { CbAvatarModule } from 'cubo-ui';
+  import { CbAvatarModule } from '@lib';
 
   @NgModule({
     imports: [

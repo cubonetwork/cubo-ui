@@ -12,9 +12,7 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@a
     <div class="button" (click)="toggleMenu($event)">
       <ng-content select="cb-menu-button"></ng-content>
     </div>
-    <nav class="content">
-      <ng-content select="cb-menu-content"></ng-content>
-    </nav>
+    <ng-content select="cb-menu-content"></ng-content>
   `,
   styleUrls: ['./cb-menu.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
@@ -52,12 +50,15 @@ export class CbMenuComponent {
 */
 @Component({
   selector: 'cb-menu-button',
+  styleUrls: ['./cb-menu-button.component.scss'],
   template: `
     <ng-content></ng-content>
   `,
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { 'class': 'cb-menu-button' }
+  host: {
+    'class': 'cb-menu-button'
+  }
 })
 export class CbMenuButtonComponent { }
 
@@ -66,6 +67,7 @@ export class CbMenuButtonComponent { }
 */
 @Component({
   selector: 'cb-menu-content',
+  styleUrls: ['./cb-menu-content.component.scss'],
   template: `
     <ng-content></ng-content>
   `,

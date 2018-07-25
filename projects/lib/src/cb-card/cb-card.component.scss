@@ -6,13 +6,15 @@
 
 :host(.cb-card) {
   background-color: map-get($light-theme, overlap);
-  box-shadow: 0 2px 3px 0 rgba(map-get($pallet-gray, 200), .5);
+  border-radius: $border-radius;
+  box-shadow: 0 2px 8px 0 rgba(172,172,172, .5);
   color: map-get($light-theme, text-primary);
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
   position: relative;
+  text-align: left;
   width: 100%;
 }
 
@@ -27,15 +29,41 @@ a > :host(:hover) {
 
 .content {
   display: flex;
-  flex-direction: column;
-  height: 100%;
   padding: $space-sm;
 
   :host(.cb-card--center) & {
     align-items: center;
+    text-align: center;
   }
 
   :host(.cb-card--small) & {
     padding: $space-xs;
+  }
+
+  :host(.cb-card--column) & {
+    flex-direction: column;
+  }
+
+  :host(.cb-card--row) & {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__info {
+    &:empty {
+      display: none;
+    }
+
+    :host(.cb-card--center) & {
+      text-align: center;
+    }
+
+    :host(.cb-card--row) &:not(:first-child) {
+      margin-left: $space-sm;
+    }
+
+    :host(.cb-card--column) &:not(:first-child) {
+      margin-top: $space-sm;
+    }
   }
 }

@@ -16,7 +16,7 @@
             "index": "projects/application/src/index.html",
             "main": "projects/application/main.ts",
             "polyfills": "projects/application/polyfills.ts",
-            "tsConfig": "projects/application/tsconfig.app.json",
+            "tsConfig": "tsconfig.json",
             "assets": [
               {
                 "glob": "manifest.json",

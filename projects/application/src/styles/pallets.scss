@@ -6,7 +6,7 @@ $white: #ffffff;
 $black: #000000;
 
 $pallet-gray: (
-  50: #f7f7f7,
+  50: #f9f9f9,
   100: #e3e0e4,
   200: #b1aeb3,
   300: #928e94,
@@ -172,6 +172,3 @@ $dark-theme: (
   text-secondary: map-get($pallet-gray, 300),
   text-disabled: map-get($pallet-gray, 200)
 );
-
-$border-tiny: solid 1px rgba(map-get($pallet-gray, 100), .5);
-$border-default: solid 1px rgba(map-get($pallet-gray, 200), .5);
