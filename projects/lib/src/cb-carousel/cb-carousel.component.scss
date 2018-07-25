@@ -13,7 +13,7 @@
   overflow: hidden;
 }
 
-.inner { 
+.inner {
   white-space: nowrap;
   width: 100%;
 
@@ -33,7 +33,7 @@
 
 .list {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
 
   &__item {
     background-color: map-get($pallet-gray, 200);
@@ -45,7 +45,7 @@
     width: $space-xs;
 
     &--active {
-      background-color: map-get($pallet-blue, 300);
+      background-color: map-get($pallet-blue, 500);
     }
   }
 }
