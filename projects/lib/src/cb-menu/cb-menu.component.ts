@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, ChangeDetectorRef } from '@angular/core';
 
 /**
 * Component `<cb-menu>` to floating menu based on material ui
@@ -33,11 +33,13 @@ export class CbMenuComponent {
   @Input() backdrop = true;
   active = false;
 
-  constructor() {}
+  constructor(private ref: ChangeDetectorRef) {}
 
   toggleMenu(event) {
+    this.ref.detectChanges();
     event.stopPropagation();
     this.active = !this.active;
+    this.ref.detectChanges();
   }
 
   hiddenMenu(event) {
