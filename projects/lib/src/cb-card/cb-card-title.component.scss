@@ -8,9 +8,17 @@
   @include mat-typography-level-to-styles($typography, subheading-1);
   display: block;
   font-weight: 600;
+
+  &:not(:last-child) {
+    margin-bottom: $space-xxs;
+  }
 }
 
 :host-context(.cb-card--small) {
   font-size: .9em;
   line-height: 1.4em;
+
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
