@@ -15,7 +15,7 @@ import {
 @Component({
   selector: 'cb-avatar',
   template: `
-  <img class="avatar" [lazyLoad]="image" [offset]="50" alt="{{name}}" *ngIf="image">
+  <img class="avatar" [defaultImage]="defaultImage" [lazyLoad]="image" [offset]="50" alt="{{name}}" *ngIf="image">
   <span class="initials" *ngIf="!image">{{letters}}</span>
   <ng-content></ng-content>
   `,
@@ -35,6 +35,7 @@ export class CbAvatarComponent implements OnInit {
   @Input() image: string;
   @Input() name: string;
   @Input() size = 'large';
+  defaultImage = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
   nameSplit: Array<String>;
   letters: String;
