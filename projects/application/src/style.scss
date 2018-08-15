@@ -42,12 +42,3 @@ a {
     text-decoration: underline;
   }
 }
-
-[ng-reflect-lazy-image] {
-  filter: blur($space);
-  transition: filter .3s, -webkit-filter .3s;
-
-  &.ng-lazyloaded {
-    filter: blur(0);
-  }
-}

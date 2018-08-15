@@ -66,6 +66,15 @@
   right: 0;
   top: 0;
   width: 100%;
+
+  &[lazyimage] {
+    filter: blur($space);
+    transition: filter .3s, -webkit-filter .3s;
+
+    &.ng-lazyloaded {
+      filter: blur(0);
+    }
+  }
 }
 
 // -------------------------------------------------
