@@ -36,20 +36,15 @@ export class CbAvatarComponent implements OnInit {
   @Input() name: string;
   @Input() size = 'large';
   defaultImage = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
-
   nameSplit: Array<String>;
   letters: String;
-
-  getInitials() {
-    this.nameSplit = this.name.split(' ');
-  }
 
   ngOnInit() {
     if (this.name) {
       this.nameSplit = this.name.split(' ');
-      this.nameSplit[1] ?
-        this.letters = this.nameSplit[0].charAt(0).toUpperCase() + this.nameSplit[1].charAt(0).toUpperCase() :
-        this.letters = this.nameSplit[0].charAt(0).toUpperCase();
+      this.nameSplit[1]
+        ? this.letters = this.nameSplit[0].charAt(0).toUpperCase() + this.nameSplit[1].charAt(0).toUpperCase()
+        : this.letters = this.nameSplit[0].charAt(0).toUpperCase();
     }
   }
 }
