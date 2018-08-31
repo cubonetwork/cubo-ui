@@ -44,6 +44,13 @@ export const PageComponentsRoutes: Routes = [
             }
           },
           {
+            path: 'chip',
+            loadChildren: '@app/pages/page-components/page-chip/page-chip.module#PageChipModule',
+            data: {
+              meta: { title: 'Chip' }
+            }
+          },
+          {
             path: 'menu',
             loadChildren: '@app/pages/page-components/page-menu/page-menu.module#PageMenuModule',
             data: {
