@@ -22,16 +22,16 @@ export class PageComponentsComponent {
       'name': 'Card'
     },
     {
-      'path': 'social',
-      'name': 'Social'
+      'path': 'carousel',
+      'name': 'Carousel'
     },
     {
       'path': 'menu',
       'name': 'Menu'
     },
     {
-      'path': 'carousel',
-      'name': 'Carousel'
-    }
+      'path': 'social',
+      'name': 'Social'
+    },
   ];
 }
