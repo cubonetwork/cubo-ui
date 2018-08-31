@@ -3,15 +3,18 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import {
-  CbChipComponent
+  CbChipComponent,
+  CbChipListComponent
 } from './cb-chip.component';
 
 @NgModule({
   exports: [
-    CbChipComponent
+    CbChipComponent,
+    CbChipListComponent
   ],
   declarations: [
-    CbChipComponent
+    CbChipComponent,
+    CbChipListComponent
   ],
   imports: [
     CommonModule,
