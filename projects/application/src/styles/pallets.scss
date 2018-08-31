@@ -1,5 +1,5 @@
 // ==================================================
-// Pallets
+// pallets
 // ==================================================
 
 $white: #ffffff;
@@ -14,7 +14,7 @@ $pallet-gray: (
   500: #777777,
   600: #69666c,
   700: #5b575e,
-  800: #4d4950,
+  800: #3f3c42,
   900: #232323,
   contrast: (
     50: #232323,
@@ -32,15 +32,15 @@ $pallet-gray: (
 
 $pallet-orange: (
   50: #ffffff,
-  100: #f5d1b5,
-  200: #eeb98f,
-  300: #eea972,
-  400: #ec9957,
-  500: #ec8c3f,
-  600: #ea7d25,
-  700: #e96800,
-  800: #e35400,
-  900: #342d28,
+  100: #ffdca9,
+  200: #ffd18c,
+  300: #ffc36c,
+  400: #ffb64b,
+  500: #ffa726,
+  600: #f39720,
+  700: #de8017,
+  800: #ce6c0f,
+  900: #bc5708,
   contrast: (
     50: #232323,
     100: #232323,
@@ -107,15 +107,15 @@ $pallet-yellow: (
 
 $pallet-green: (
   50: #ffffff,
-  100: #cedea3,
-  200: #c1d688,
-  300: #b0cd64,
-  400: #a5c64b,
-  500: #99c032,
-  600: #82ae22,
-  700: #70a117,
-  800: #5a940c,
-  900: #417e05,
+  100: #adebce,
+  200: #95e5c0,
+  300: #7cdeb1,
+  400: #5bd69e,
+  500: #3fcf8d,
+  600: #2dc176,
+  700: #19b05b,
+  800: #0b9e42,
+  900: #03882a,
   contrast: (
     50: #232323,
     100: #232323,
@@ -132,12 +132,12 @@ $pallet-green: (
 
 $pallet-blue: (
   50: #ffffff,
-  100: #91c4fe,
-  200: #7cb9fe,
-  300: #64acfd,
-  400: #489dfd,
-  500: #268bfd,
-  600: #1b76fd,
+  100: #bedcff,
+  200: #9fccfe,
+  300: #8ac0fe,
+  400: #66adfd,
+  500: #409aff,
+  600: #2181fd,
   700: #0d5bfc,
   800: #0444e9,
   900: #0020dd,
@@ -157,7 +157,7 @@ $pallet-blue: (
 
 $light-theme: (
   bg: map-get($pallet-gray, 50),
-  accent: map-get($pallet-blue, 400),
+  accent: map-get($pallet-orange, 400),
   overlap: $white,
   text-primary: map-get(map-get($pallet-gray, contrast), 50),
   text-secondary: map-get($pallet-gray, 400),
@@ -165,10 +165,11 @@ $light-theme: (
 );
 
 $dark-theme: (
-  bg: map-get($pallet-gray, 900),
-  accent: map-get($pallet-blue, 400),
+  bg: map-get($pallet-gray, 800),
+  accent: map-get($pallet-orange, 400),
   overlap: $black,
-  text-primary: map-get(map-get($pallet-gray, contrast), 900),
+  text-primary: map-get(map-get($pallet-gray, contrast), 800),
   text-secondary: map-get($pallet-gray, 300),
   text-disabled: map-get($pallet-gray, 200)
 );
+
