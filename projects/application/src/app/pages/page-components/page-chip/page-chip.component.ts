@@ -1,3 +1,5 @@
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material';
 import { Component } from '@angular/core';
 import * as hljs from 'highlight.js';
 const languages = ['html', 'typescript', 'css'];
@@ -30,6 +32,11 @@ export class PageChipExampleComponent {
   codeCss = hljs.highlightAuto(`
     /** No CSS for this example */
   `, languages).value;
+
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer ) {
+    iconRegistry.addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg'));
+    iconRegistry.addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/twitter.svg'));
+  }
 }
 
 @Component({

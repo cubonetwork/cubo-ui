@@ -5,5 +5,129 @@
 @import '../../../application/src/styles/core';
 
 :host {
+  @include mat-typography-level-to-styles($typography, body-2);
+  border: map-get($pallet-gray, 600) solid 1px;
+  border-radius: $space-md;
+  color: map-get($pallet-gray, 600);
+  display: inline-block;
+}
 
+.content {
+  align-items: center;
+  display: flex;
+  height: $space;
+  padding-left: $space-sm;
+  padding-right: $space-sm;
+}
+
+// -------------------------------------------------
+// Icon
+// -------------------------------------------------
+
+:host(.cb-chip--icon) {
+  padding-left: $space-sm;
+  position: relative;
+}
+
+.icon {
+  border-radius: 50%;
+  left: ($space-xxs / 2);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform: scale(.8);
+}
+
+// -------------------------------------------------
+// Styles
+// -------------------------------------------------
+
+:host(.cb-chip--uppercase) {
+  @include mat-typography-level-to-styles($typography, caption);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+// -------------------------------------------------
+// Colors without background
+// -------------------------------------------------
+
+:host(.cb-chip--color-blue):not(.cb-chip--bg) {
+  $color: map-get($pallet-blue, 500);
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
+:host(.cb-chip--color-green):not(.cb-chip--bg) {
+  $color: map-get($pallet-green, 500);
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
+:host(.cb-chip--color-orange):not(.cb-chip--bg) {
+  $color: map-get($pallet-orange, 500);
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
+:host(.cb-chip--color-gray-light):not(.cb-chip--bg) {
+  $color: map-get($pallet-gray, 200);
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
+// -------------------------------------------------
+// Colors with background
+// -------------------------------------------------
+
+:host(.cb-chip--color-blue.cb-chip--bg) {
+  $color: map-get($pallet-blue, 500);
+  background-color: $color;
+  border-color: $color;
+
+  &, & > * {
+    color: map-get(map-get($pallet-blue, contrast), 500);
+  }
+}
+
+:host(.cb-chip--color-green.cb-chip--bg) {
+  $color: map-get($pallet-green, 500);
+  background-color: $color;
+  border-color: $color;
+
+  &, & > * {
+    color: map-get(map-get($pallet-green, contrast), 500);
+  }
+}
+
+:host(.cb-chip--color-orange.cb-chip--bg) {
+  $color: map-get($pallet-orange, 500);
+  background-color: $color;
+  border-color: $color;
+
+  &, & > * {
+    color: map-get(map-get($pallet-orange, contrast), 500);
+  }
+}
+
+:host(.cb-chip--color-gray-light.cb-chip--bg) {
+  $color: map-get($pallet-gray, 200);
+  background-color: $color;
+  border-color: $color;
+
+  &, & > * {
+    color: map-get(map-get($pallet-gray, contrast), 200);
+  }
 }

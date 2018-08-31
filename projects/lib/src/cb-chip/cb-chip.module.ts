@@ -1,3 +1,4 @@
+import { MatIconModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
@@ -13,7 +14,8 @@ import {
     CbChipComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatIconModule
   ]
 })
 export class CbChipModule { }
