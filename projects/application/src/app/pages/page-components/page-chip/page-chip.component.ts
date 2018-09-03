@@ -16,7 +16,53 @@ export class PageChipComponent {}
 })
 export class PageChipExampleComponent {
   codeHtml = hljs.highlightAuto(`
-    <cb-chip [image]="'https://bit.ly/2vvFXCO'"></cb-chip>`, languages).value;
+    // Single chip
+
+    <cb-chip>Default chip</cb-chip>
+
+    // Sizes
+
+    <cb-chip size="small">Small chip</cb-chip>
+    <cb-chip size="medium">Medium chip</cb-chip>
+    <cb-chip size="large">Large chip</cb-chip>
+
+    // With icons
+
+    <cb-chip size="small" icon="github">Small chip</cb-chip>
+    <cb-chip size="medium" icon="github">Medium chip</cb-chip>
+    <cb-chip size="large" icon="github">Large chip</cb-chip>
+
+    // Colors
+
+    <cb-chip color="blue">Blue chip</cb-chip>
+    <cb-chip color="green">Green chip</cb-chip>
+    <cb-chip color="orange">Orange chip</cb-chip>
+    <cb-chip color="gray-light">Gray light chip</cb-chip>
+
+    // Colors with background
+
+    <cb-chip color="blue" bg="true">Blue chip</cb-chip>
+    <cb-chip color="green" bg="true">Green chip</cb-chip>
+    <cb-chip color="orange" bg="true">Orange chip</cb-chip>
+    <cb-chip color="gray-light" bg="true">Gray light chip</cb-chip>
+
+    // Chip List - Direction: Vertical
+
+    <cb-chip-list direction="vertical">
+      <cb-chip color="blue" bg="true">Blue chip</cb-chip>
+      <cb-chip color="green" bg="true">Green chip</cb-chip>
+      <cb-chip color="orange" bg="true">Orange chip</cb-chip>
+      <cb-chip color="gray-light" bg="true">Gray light chip</cb-chip>
+    </cb-chip-list>
+
+    // Chip List - Direction: Horizontal
+
+    <cb-chip-list direction="horizontal">
+      <cb-chip color="blue" bg="true">Blue chip</cb-chip>
+      <cb-chip color="green" bg="true">Green chip</cb-chip>
+      <cb-chip color="orange" bg="true">Orange chip</cb-chip>
+      <cb-chip color="gray-light" bg="true">Gray light chip</cb-chip>
+    </cb-chip-list>`, languages).value;
 
   codeTs = hljs.highlightAuto(`
     import {Component} from '@angular/core';

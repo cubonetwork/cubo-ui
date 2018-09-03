@@ -1,17 +1,56 @@
 <app-content>
+  <p><em>cb-chip</em> is made for using as a chip in your app.</p>
+
+  <h2>Single chip</h2>
+
+  <cb-chip>Default chip</cb-chip>
+
+  <h3>Sizes</h3>
+
+  <cb-chip size="small">Small chip</cb-chip>
+  <cb-chip size="medium">Medium chip</cb-chip>
+  <cb-chip size="large">Large chip</cb-chip>
+
+  <h3>With icons</h3>
+
+  <cb-chip size="small" icon="github">Small chip</cb-chip>
+  <cb-chip size="medium" icon="github">Medium chip</cb-chip>
+  <cb-chip size="large" icon="github">Large chip</cb-chip>
+
+  <h3>Colors</h3>
+
+  <cb-chip color="blue">Blue chip</cb-chip>
+  <cb-chip color="green">Green chip</cb-chip>
+  <cb-chip color="orange">Orange chip</cb-chip>
+  <cb-chip color="gray-light">Gray light chip</cb-chip>
+
+  <h3>Colors with background</h3>
+
+  <cb-chip color="blue" bg="true">Blue chip</cb-chip>
+  <cb-chip color="green" bg="true">Green chip</cb-chip>
+  <cb-chip color="orange" bg="true">Orange chip</cb-chip>
+  <cb-chip color="gray-light" bg="true">Gray light chip</cb-chip>
+
+  <h2>Chip list</h2>
+
+  <p><em>cb-chip-list</em> is made for create a wrapper to use more the one <em>cb-chip</em> and provide a spacements between items.</p>
+
+  <h3>Direction: Vertical</h3>
+
   <cb-chip-list direction="vertical">
-    <cb-chip>Normal</cb-chip>
-    <cb-chip uppercase="true">Uppercase</cb-chip>
-    <cb-chip color="blue">Blue chip</cb-chip>
-    <cb-chip color="green">Green chip</cb-chip>
-    <cb-chip color="orange">Orange chip</cb-chip>
-    <cb-chip color="gray-light">Gray Light chip</cb-chip>
-    <cb-chip color="blue" bg="true">Blue chip with bg</cb-chip>
-    <cb-chip color="green" bg="true">Green chip with bg</cb-chip>
-    <cb-chip color="orange" bg="true">Orange chip with bg</cb-chip>
-    <cb-chip color="gray-light" bg="true">Gray Light chip with bg</cb-chip>
-    <cb-chip color="blue" bg="true" icon="github">Blue chip with bg and icon</cb-chip>
-    <cb-chip color="green" bg="true" icon="twitter">Green chip with bg and icon</cb-chip>
+    <cb-chip color="blue" bg="true">Blue chip</cb-chip>
+    <cb-chip color="green" bg="true">Green chip</cb-chip>
+    <cb-chip color="orange" bg="true">Orange chip</cb-chip>
+    <cb-chip color="gray-light" bg="true">Gray light chip</cb-chip>
+  </cb-chip-list>
+
+  <h3>Direction: Horizontal</h3>
+
+  <cb-chip-list direction="horizontal">
+    <cb-chip color="blue" bg="true">Blue chip</cb-chip>
+    <cb-chip color="green" bg="true">Green chip</cb-chip>
+    <cb-chip color="orange" bg="true">Orange chip</cb-chip>
+    <cb-chip color="gray-light" bg="true">Gray light chip</cb-chip>
   </cb-chip-list>
 </app-content>
 

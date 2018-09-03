@@ -9,8 +9,6 @@
 
   <h3>CbChip</h3>
 
-  <p>A cubo chip component</p>
-
   <p>
     <span>Selector: </span>
     <code>cb-chip</code>
@@ -28,21 +26,56 @@
         <th>Description</th>
       </tr>
       <tr>
-        <td>@Input() image: string;</td>
-        <td>The link for the chip's image.</td>
+        <td>@Input() bg: boolean;</td>
+        <td>Set if bg is true or false.</td>
       </tr>
       <tr>
-        <td>@Input() name: string;</td>
-        <td>An chip can be created with the name initials instead of an image.</td>
+        <td>@Input() icon: string;</td>
+        <td>Set icon to chip.</td>
       </tr>
       <tr>
         <td>@Input() size: string;</td>
         <td>Size of the chip:
-          <code>xsmall</code>,
           <code>small</code>,
-          <code>medium</code>,
-          <code>large</code>,
-          <code>xlarge</code>
+          <code>medium (default)</code>,
+          <code>large</code>
+        </td>
+      </tr>
+      <tr>
+        <td>@Input() color: string;</td>
+        <td>Color of the chip:
+          <code>blue</code>,
+          <code>green</code>,
+          <code>orange</code>,
+          <code>green-light</code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>CbChipList</h3>
+
+  <p>
+    <span>Selector: </span>
+    <code>cb-chip-list</code>
+  </p>
+
+  <p>
+    <span>Exported as: </span>
+    <code>CbChipList</code>
+  </p>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>@Input() direction: string;</td>
+        <td>Direction of list:
+          <code>vertical</code>,
+          <code>horizontal (default)</code>
         </td>
       </tr>
     </tbody>
