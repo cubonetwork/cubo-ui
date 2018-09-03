@@ -7,10 +7,10 @@ import {
 
 /**
 * Component `<cb-chip>` to create a chip
-* @param uppercase Set if uppercase is true or false
 * @param bg Set if bg is true or false
 * @param icon Set icon to chip
-* @param color Select color of chip
+* @param color Select color of chip (blue, orange, green, gray, gray-light)
+* @param size Select size of chip (small or large)
 */
 @Component({
   selector: 'cb-chip',
@@ -25,20 +25,22 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'class': 'cb-chip',
-    '[class.cb-chip--uppercase]': 'uppercase',
-    '[class.cb-chip--bg]': 'bg',
-    '[class.cb-chip--icon]': 'icon',
-    '[class.cb-chip--color-blue]': 'color === "blue"',
-    '[class.cb-chip--color-green]': 'color === "green"',
-    '[class.cb-chip--color-gray-light]': 'color === "gray-light"',
-    '[class.cb-chip--color-orange]': 'color === "orange"'
+    '[class.chip--bg]': 'bg',
+    '[class.chip--icon]': 'icon',
+    '[class.chip--color-blue]': 'color === "blue"',
+    '[class.chip--color-green]': 'color === "green"',
+    '[class.chip--color-gray-light]': 'color === "gray-light"',
+    '[class.chip--color-orange]': 'color === "orange"',
+    '[class.chip--size-small]': 'size === "small"',
+    '[class.chip--size-medium]': 'size === "medium"',
+    '[class.chip--size-large]': 'size === "large"'
   }
 })
 export class CbChipComponent {
-  @Input() uppercase = false;
   @Input() bg = false;
   @Input() color: string;
   @Input() icon: string;
+  @Input() size = 'medium';
 }
 
 /**

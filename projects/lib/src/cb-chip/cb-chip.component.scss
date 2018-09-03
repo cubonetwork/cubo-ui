@@ -5,17 +5,48 @@
 @import '../../../application/src/styles/core';
 
 :host {
-  @include mat-typography-level-to-styles($typography, body-2);
-  border: map-get($pallet-gray, 600) solid 1px;
-  border-radius: $space-md;
-  color: map-get($pallet-gray, 600);
+  border: map-get($pallet-gray, 800) solid 1px;
+  border-radius: $space-lg;
+  color: map-get($pallet-gray, 800);
   display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .content {
   align-items: center;
   display: flex;
+  height: 100%;
+}
+
+// -------------------------------------------------
+// Size
+// -------------------------------------------------
+
+:host(.chip--size-small) {
+  $font-size: .8rem;
+  font-size: $font-size;
+  height: 1.8rem;
+  line-height: $font-size;
+  padding-left: $space-xs;
+  padding-right: $space-xs;
+}
+
+:host(.chip--size-medium) {
+  $font-size: 1rem;
+  font-size: $font-size;
   height: $space;
+  line-height: $font-size;
+  padding-left: $space-xs;
+  padding-right: $space-xs;
+}
+
+:host(.chip--size-large) {
+  $font-size: 1rem;
+  font-size: $font-size;
+  height: $space-md;
+  line-height: $font-size;
   padding-left: $space-sm;
   padding-right: $space-sm;
 }
@@ -24,35 +55,50 @@
 // Icon
 // -------------------------------------------------
 
-:host(.cb-chip--icon) {
-  padding-left: $space-sm;
+:host(.chip--icon) {
   position: relative;
+}
+
+:host(.chip--size-small.chip--icon) {
+  padding-left: $space-sm + $space-xxs;
+}
+
+:host(.chip--size-medium.chip--icon) {
+  padding-left: $space + $space-xxs;
+}
+
+:host(.chip--size-large.chip--icon) {
+  padding-left: $space-md + $space-xxs;
+}
+
+:host(.chip--size-small) .icon {
+  left: -4px;
+  top: -4px;
+  transform: scale(.5);
+}
+
+:host(.chip--size-medium) .icon {
+  left: 0;
+  top: -1px;
+  transform: scale(.7);
+}
+
+:host(.chip--size-large) .icon {
+  left: 3px;
+  top: 3px;
 }
 
 .icon {
   border-radius: 50%;
-  left: ($space-xxs / 2);
   overflow: hidden;
   position: absolute;
-  top: 0;
-  transform: scale(.8);
-}
-
-// -------------------------------------------------
-// Styles
-// -------------------------------------------------
-
-:host(.cb-chip--uppercase) {
-  @include mat-typography-level-to-styles($typography, caption);
-  font-weight: 600;
-  text-transform: uppercase;
 }
 
 // -------------------------------------------------
 // Colors without background
 // -------------------------------------------------
 
-:host(.cb-chip--color-blue):not(.cb-chip--bg) {
+:host(.chip--color-blue):not(.chip--bg) {
   $color: map-get($pallet-blue, 500);
   border-color: $color;
 
@@ -61,7 +107,7 @@
   }
 }
 
-:host(.cb-chip--color-green):not(.cb-chip--bg) {
+:host(.chip--color-green):not(.chip--bg) {
   $color: map-get($pallet-green, 500);
   border-color: $color;
 
@@ -70,7 +116,7 @@
   }
 }
 
-:host(.cb-chip--color-orange):not(.cb-chip--bg) {
+:host(.chip--color-orange):not(.chip--bg) {
   $color: map-get($pallet-orange, 500);
   border-color: $color;
 
@@ -79,7 +125,7 @@
   }
 }
 
-:host(.cb-chip--color-gray-light):not(.cb-chip--bg) {
+:host(.chip--color-gray-light):not(.chip--bg) {
   $color: map-get($pallet-gray, 200);
   border-color: $color;
 
@@ -92,7 +138,7 @@
 // Colors with background
 // -------------------------------------------------
 
-:host(.cb-chip--color-blue.cb-chip--bg) {
+:host(.chip--color-blue.chip--bg) {
   $color: map-get($pallet-blue, 500);
   background-color: $color;
   border-color: $color;
@@ -102,7 +148,7 @@
   }
 }
 
-:host(.cb-chip--color-green.cb-chip--bg) {
+:host(.chip--color-green.chip--bg) {
   $color: map-get($pallet-green, 500);
   background-color: $color;
   border-color: $color;
@@ -112,7 +158,7 @@
   }
 }
 
-:host(.cb-chip--color-orange.cb-chip--bg) {
+:host(.chip--color-orange.chip--bg) {
   $color: map-get($pallet-orange, 500);
   background-color: $color;
   border-color: $color;
@@ -122,7 +168,7 @@
   }
 }
 
-:host(.cb-chip--color-gray-light.cb-chip--bg) {
+:host(.chip--color-gray-light.chip--bg) {
   $color: map-get($pallet-gray, 200);
   background-color: $color;
   border-color: $color;
