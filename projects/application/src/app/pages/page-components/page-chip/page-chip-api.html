@@ -1,0 +1,83 @@
+<app-content>
+  <h1>API reference</h1>
+
+  <div>
+    <pre><code [innerHtml]="import_content"></code></pre>
+  </div>
+
+  <h2>Directives</h2>
+
+  <h3>CbChip</h3>
+
+  <p>
+    <span>Selector: </span>
+    <code>cb-chip</code>
+  </p>
+
+  <p>
+    <span>Exported as: </span>
+    <code>CbChip</code>
+  </p>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>@Input() bg: boolean;</td>
+        <td>Set if bg is true or false.</td>
+      </tr>
+      <tr>
+        <td>@Input() icon: string;</td>
+        <td>Set icon to chip.</td>
+      </tr>
+      <tr>
+        <td>@Input() size: string;</td>
+        <td>Size of the chip:
+          <code>small</code>,
+          <code>medium (default)</code>,
+          <code>large</code>
+        </td>
+      </tr>
+      <tr>
+        <td>@Input() color: string;</td>
+        <td>Color of the chip:
+          <code>blue</code>,
+          <code>green</code>,
+          <code>orange</code>,
+          <code>green-light</code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>CbChipList</h3>
+
+  <p>
+    <span>Selector: </span>
+    <code>cb-chip-list</code>
+  </p>
+
+  <p>
+    <span>Exported as: </span>
+    <code>CbChipList</code>
+  </p>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>@Input() direction: string;</td>
+        <td>Direction of list:
+          <code>vertical</code>,
+          <code>horizontal (default)</code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</app-content>

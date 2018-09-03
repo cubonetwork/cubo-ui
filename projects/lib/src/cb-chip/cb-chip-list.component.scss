@@ -1,0 +1,22 @@
+// -------------------------------------------------
+// Chip List
+// -------------------------------------------------
+
+@import '../../../application/src/styles/core';
+
+:host(.list--v) {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+
+  & ::ng-deep > * {
+    margin-bottom: $space-xs;
+  }
+}
+
+:host(.list--h) {
+  & ::ng-deep > * {
+    margin-bottom: $space-xs;
+    margin-right: $space-xs;
+  }
+}

@@ -37,10 +37,17 @@ export const PageComponentsRoutes: Routes = [
             }
           },
           {
-            path: 'social',
-            loadChildren: '@app/pages/page-components/page-social/page-social.module#PageSocialModule',
+            path: 'carousel',
+            loadChildren: '@app/pages/page-components/page-carousel/page-carousel.module#PageCarouselModule',
             data: {
-              meta: { title: 'Social' }
+              meta: { title: 'Carousel' }
+            }
+          },
+          {
+            path: 'chip',
+            loadChildren: '@app/pages/page-components/page-chip/page-chip.module#PageChipModule',
+            data: {
+              meta: { title: 'Chip' }
             }
           },
           {
@@ -51,10 +58,10 @@ export const PageComponentsRoutes: Routes = [
             }
           },
           {
-            path: 'carousel',
-            loadChildren: '@app/pages/page-components/page-carousel/page-carousel.module#PageCarouselModule',
+            path: 'social',
+            loadChildren: '@app/pages/page-components/page-social/page-social.module#PageSocialModule',
             data: {
-              meta: { title: 'Carousel' }
+              meta: { title: 'Social' }
             }
           },
         ]
