@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
 
-  & ::ng-deep > * {
+  & ::ng-deep > *:not(:last-child) {
     margin-bottom: $space-xs;
   }
 }
@@ -17,6 +17,9 @@
 :host(.list--h) {
   & ::ng-deep > * {
     margin-bottom: $space-xs;
+  }
+
+  & ::ng-deep > *:not(:last-child) {
     margin-right: $space-xs;
   }
 }
