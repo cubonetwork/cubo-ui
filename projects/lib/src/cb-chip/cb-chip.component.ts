@@ -48,17 +48,16 @@ export class CbChipComponent {
 @Component({
   selector: 'cb-chip-list',
   template: `
-    <div class="item">
-      <ng-content select="cb-chip"></ng-content>
-    </div>
+    <ng-content select="cb-chip"></ng-content>
   `,
   styleUrls: ['./cb-chip-list.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    '[class.cb-chip-list--h]': 'position === "horizontal"'
+    '[class.list--h]': 'direction === "horizontal"',
+    '[class.list--v]': 'direction === "vertical"'
   }
 })
 export class CbChipListComponent {
-  @Input() position = 'vertical';
+  @Input() direction = 'horizontal';
 }
