@@ -28,6 +28,7 @@
 }
 
 :host(.avatar--small) {
+  font-size: $space;
   height: $space-lg;
   width: $space-lg;
 }
