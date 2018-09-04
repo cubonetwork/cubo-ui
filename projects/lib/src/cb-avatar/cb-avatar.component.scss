@@ -40,8 +40,8 @@
 
 :host(.avatar--large) {
   font-size: $space-xlg;
-  height: ($space-xlg * 2);
-  width: ($space-xlg * 2);
+  height: ($space-xlg * 1.5);
+  width: ($space-xlg * 1.5);
 }
 
 :host(.avatar--extra-large) {
