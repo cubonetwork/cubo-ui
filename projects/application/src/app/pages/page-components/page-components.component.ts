@@ -26,6 +26,10 @@ export class PageComponentsComponent {
       'name': 'Chip'
     },
     {
+      'path': 'flag',
+      'name': 'Flag'
+    },
+    {
       'path': 'carousel',
       'name': 'Carousel'
     },

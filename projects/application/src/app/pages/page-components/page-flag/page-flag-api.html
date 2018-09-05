@@ -1,0 +1,48 @@
+<app-content>
+  <h1>API reference</h1>
+
+  <div>
+    <pre><code [innerHtml]="import_content"></code></pre>
+  </div>
+
+  <h2>Directives</h2>
+
+  <p>
+    <span>Selector: </span>
+    <code>cb-flag</code>
+  </p>
+
+  <p>
+    <span>Exported as: </span>
+    <code>CbFlag</code>
+  </p>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>@Input() icon: string;</td>
+        <td>Set icon to flag.</td>
+      </tr>
+      <tr>
+        <td>@Input() left: number;</td>
+        <td>Add <code>position: absolute</code> and set distance to left side.</td>
+      </tr>
+      <tr>
+        <td>@Input() right: number;</td>
+        <td>Add <code>position: absolute</code> and set distance to right side.</td>
+      </tr>
+      <tr>
+        <td>@Input() color: string;</td>
+        <td>Color of the flag:
+          <code>blue</code>,
+          <code>green</code>,
+          <code>orange</code>,
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</app-content>

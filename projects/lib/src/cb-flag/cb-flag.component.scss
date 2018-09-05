@@ -1,0 +1,95 @@
+// ==================================================
+// Flag
+// ==================================================
+
+@import '../../../application/src/styles/core';
+
+:host {
+  $font-size: 1rem;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: $font-size;
+  font-weight: 600;
+  height: $space-md - ($space / 2);
+  justify-content: center;
+  padding-left: $space-xxs;
+  padding-right: $space-xxs;
+  position: relative;
+  text-transform: uppercase;
+  vertical-align: top;
+  width: $space;
+
+  &, &:before {
+    background-color: map-get($pallet-gray, 200);
+  }
+
+  &:before {
+    border-radius: 50%;
+    bottom: -($space / 2);
+    content: '';
+    height: $space;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: $zindex-default;
+  }
+}
+
+.icon {
+  $size: $space-sm;
+  bottom: -($size / 2.5);
+  color: map-get(map-get($pallet-gray, contrast), 200);
+  height: $size;
+  position: absolute;
+  width: $size;
+  z-index: $zindex-default + 1;
+}
+
+// -------------------------------------------------
+// With position
+// -------------------------------------------------
+
+:host(.flag--position) {
+  position: absolute;
+  top: 0;
+}
+
+// -------------------------------------------------
+// Colors
+// -------------------------------------------------
+
+:host(.flag--color-blue) {
+  $color: map-get($pallet-blue, 500);
+
+  &, &:before {
+    background-color: $color;
+  }
+
+  .icon {
+    color: map-get(map-get($pallet-blue, contrast), 500);
+  }
+}
+
+:host(.flag--color-green) {
+  $color: map-get($pallet-green, 500);
+
+  &, &:before {
+    background-color: $color;
+  }
+
+  .icon {
+    color: map-get(map-get($pallet-green, contrast), 500);
+  }
+}
+
+:host(.flag--color-orange) {
+  $color: map-get($pallet-orange, 500);
+
+  &, &:before {
+    background-color: $color;
+  }
+
+  .icon {
+    color: map-get(map-get($pallet-orange, contrast), 500);
+  }
+}
