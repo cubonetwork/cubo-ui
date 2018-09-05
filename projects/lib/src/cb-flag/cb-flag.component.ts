@@ -10,12 +10,15 @@ import {
 
 /**
 * Component `<cb-flag>` to create a flag
+* @param icon Set the icon
 * @param color Select color of flag (blue, orange, green)
+* @param left Set left distante
+* @param right Set right distante
 */
 @Component({
   selector: 'cb-flag',
   template: `
-    <ng-content></ng-content>
+    <mat-icon class="icon" svgIcon="{{icon}}"></mat-icon>
   `,
   styleUrls: ['./cb-flag.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
@@ -31,6 +34,7 @@ import {
   }
 })
 export class CbFlagComponent implements OnInit {
+  @Input() icon: string;
   @Input() color: string;
   @Input() left: number;
   @Input() right: number;

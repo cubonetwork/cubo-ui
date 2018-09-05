@@ -1,3 +1,4 @@
+import { MatIconModule } from '@angular/material';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 
@@ -10,6 +11,7 @@ describe('CbFlagComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [ MatIconModule ],
       declarations: [ CbFlagComponent ],
     });
     fixture = TestBed.createComponent(CbFlagComponent);
