@@ -15,9 +15,31 @@ export class PageFlagComponent { }
   templateUrl: 'page-flag-example.html'
 })
 export class PageFlagExampleComponent {
-  codeHtml = hljs.highlightAuto(``, languages).value;
+  codeHtml = hljs.highlightAuto(`
+  // Basic
 
-  codeTs = hljs.highlightAuto(``, languages).value;
+  <cb-flag>Flag</cb-flag>
+
+  // Colors
+
+  <cb-flag color="blue"><mat-icon svgIcon="github"></mat-icon></cb-flag>
+  <cb-flag color="orange">Flag</cb-flag>
+  <cb-flag color="green"><mat-icon svgIcon="github"></mat-icon></cb-flag>
+
+  // With position
+
+  <cb-flag color="blue" left="20"><mat-icon svgIcon="github"></mat-icon></cb-flag>
+  <cb-flag color="green" right="20"><mat-icon svgIcon="github"></mat-icon></cb-flag>`, languages).value;
+
+  codeTs = hljs.highlightAuto(`
+  import {Component} from '@angular/core';
+
+  @Component({
+    selector: 'flag-overview-example',
+    templateUrl: 'flag-overview-example.html',
+    styleUrls: ['flag-overview-example.css']
+  })
+  export class FlagOverviewExample {}`, languages).value;
 
   codeCss = hljs.highlightAuto(`
   /** No CSS for this example */

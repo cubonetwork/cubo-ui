@@ -1,10 +1,23 @@
 <app-content>
-  <p><code>cb-flag</code> makes it easier to integrate icons from flag media.</p>
+  <p><code>cb-flag</code> is made for using as a flags in your app.</p>
 
-  <h2>Examples</h2>
+  <h2>Basic</h2>
+
+  <cb-flag>Flag</cb-flag>
+
+  <h2>Colors</h2>
 
   <div>
-    <cb-flag>Flag</cb-flag>
+    <cb-flag color="blue"><mat-icon svgIcon="github"></mat-icon></cb-flag>
+    <cb-flag color="orange">Flag</cb-flag>
+    <cb-flag color="green"><mat-icon svgIcon="github"></mat-icon></cb-flag>
+  </div>
+
+  <h2>With position</h2>
+
+  <div style="border: gray solid 1px; height: 10rem; width: 20rem;">
+    <cb-flag color="blue" left="20"><mat-icon svgIcon="github"></mat-icon></cb-flag>
+    <cb-flag color="green" right="20"><mat-icon svgIcon="github" style="height: 1.6rem; width: 1.6rem;"></mat-icon></cb-flag>
   </div>
 </app-content>
 
