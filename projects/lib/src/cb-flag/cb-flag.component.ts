@@ -32,8 +32,8 @@ import {
 })
 export class CbFlagComponent implements OnInit {
   @Input() color: string;
-  @Input() left: string;
-  @Input() right: string;
+  @Input() left: number;
+  @Input() right: number;
 
   constructor(
     private el: ElementRef,
