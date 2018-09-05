@@ -5,4 +5,64 @@
 @import '../../../application/src/styles/core';
 
 :host {
+  $font-size: 1rem;
+  align-items: flex-end;
+  background-color: map-get($pallet-gray, 200);
+  border-radius: 0 0 $space-lg $space-lg;
+  display: inline-flex;
+  font-family: 'Open Sans', sans-serif;
+  font-size: $font-size;
+  font-weight: 600;
+  height: $space-md;
+  justify-content: center;
+  overflow: hidden;
+  padding-bottom: $space-xxs;
+  padding-left: $space-xxs;
+  padding-right: $space-xxs;
+  text-transform: uppercase;
+  vertical-align: top;
+
+  &, & > * {
+    color: map-get(map-get($pallet-gray, contrast), 200);
+  }
+}
+
+// -------------------------------------------------
+// With position
+// -------------------------------------------------
+
+:host(.flag--position) {
+  position: absolute;
+  top: 0;
+}
+
+// -------------------------------------------------
+// Colors
+// -------------------------------------------------
+
+:host(.flag--color-blue) {
+  $color: map-get($pallet-blue, 500);
+  background-color: $color;
+
+  &, & > * {
+    color: map-get(map-get($pallet-blue, contrast), 500);
+  }
+}
+
+:host(.flag--color-green) {
+  $color: map-get($pallet-green, 500);
+  background-color: $color;
+
+  &, & > * {
+    color: map-get(map-get($pallet-green, contrast), 500);
+  }
+}
+
+:host(.flag--color-orange) {
+  $color: map-get($pallet-orange, 500);
+  background-color: $color;
+
+  &, & > * {
+    color: map-get(map-get($pallet-orange, contrast), 500);
+  }
 }

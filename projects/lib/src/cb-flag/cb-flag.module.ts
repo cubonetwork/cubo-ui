@@ -14,6 +14,6 @@ import {
   ],
   imports: [
     CommonModule
-  ],
+  ]
 })
 export class CbFlagModule { }
