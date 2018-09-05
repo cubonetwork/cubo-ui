@@ -8,13 +8,14 @@
   $font-size: 1rem;
   align-items: flex-end;
   background-color: map-get($pallet-gray, 200);
-  border-radius: 0 0 $space-lg $space-lg;
+  border-radius: 0 0 50% 50%;
   display: inline-flex;
   font-family: 'Open Sans', sans-serif;
   font-size: $font-size;
   font-weight: 600;
   height: $space-md;
   justify-content: center;
+  min-width: $space;
   overflow: hidden;
   padding-bottom: $space-xxs;
   padding-left: $space-xxs;
