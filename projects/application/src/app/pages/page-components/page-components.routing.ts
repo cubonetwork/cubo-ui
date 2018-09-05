@@ -51,6 +51,13 @@ export const PageComponentsRoutes: Routes = [
             }
           },
           {
+            path: 'flag',
+            loadChildren: '@app/pages/page-components/page-flag/page-flag.module#PageFlagModule',
+            data: {
+              meta: { title: 'Flag' }
+            }
+          },
+          {
             path: 'menu',
             loadChildren: '@app/pages/page-components/page-menu/page-menu.module#PageMenuModule',
             data: {
