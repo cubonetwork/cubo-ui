@@ -3,7 +3,7 @@ import { DebugElement } from '@angular/core';
 
 import { CbFlagComponent } from './cb-flag.component';
 
-fdescribe('CbFlagComponent', () => {
+describe('CbFlagComponent', () => {
   let comp: CbFlagComponent;
   let fixture: ComponentFixture<CbFlagComponent>;
   let element: HTMLElement;
