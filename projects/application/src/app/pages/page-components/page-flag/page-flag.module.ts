@@ -2,7 +2,6 @@ import { CbFlagModule } from '@lib';
 import { ContentModule } from '@app/components/content/content.module';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
-import { MatIconModule } from '@angular/material';
 
 import { PageFlagRouting } from './page-flag.routing';
 import {
@@ -16,7 +15,6 @@ import {
     SharedModule,
     PageFlagRouting,
     CbFlagModule,
-    MatIconModule,
     ContentModule
   ],
   declarations: [

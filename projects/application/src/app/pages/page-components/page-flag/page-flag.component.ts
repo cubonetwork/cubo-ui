@@ -18,18 +18,18 @@ export class PageFlagExampleComponent {
   codeHtml = hljs.highlightAuto(`
   // Basic
 
-  <cb-flag>Flag</cb-flag>
+  <cb-flag icon="github"></cb-flag>
 
   // Colors
 
-  <cb-flag color="blue"><mat-icon svgIcon="github"></mat-icon></cb-flag>
-  <cb-flag color="orange">Flag</cb-flag>
-  <cb-flag color="green"><mat-icon svgIcon="github"></mat-icon></cb-flag>
+  <cb-flag color="blue" icon="github"></cb-flag>
+  <cb-flag color="orange" icon="github"></cb-flag>
+  <cb-flag color="green" icon="github"></cb-flag>
 
   // With position
 
-  <cb-flag color="blue" left="20"><mat-icon svgIcon="github"></mat-icon></cb-flag>
-  <cb-flag color="green" right="20"><mat-icon svgIcon="github"></mat-icon></cb-flag>`, languages).value;
+  <cb-flag color="blue" left="20" icon="github"></cb-flag>
+  <cb-flag color="green" right="20" icon="github"></cb-flag>`, languages).value;
 
   codeTs = hljs.highlightAuto(`
   import {Component} from '@angular/core';
@@ -47,7 +47,6 @@ export class PageFlagExampleComponent {
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer ) {
     iconRegistry.addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg'));
-    iconRegistry.addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/twitter.svg'));
   }
 }
 
