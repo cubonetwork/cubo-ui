@@ -6,26 +6,43 @@
 
 :host {
   $font-size: 1rem;
-  align-items: flex-end;
-  background-color: map-get($pallet-gray, 200);
-  border-radius: 0 0 50% 50%;
-  display: inline-flex;
+  display: inline-block;
   font-family: 'Open Sans', sans-serif;
   font-size: $font-size;
   font-weight: 600;
-  height: $space-md;
+  height: $space-md - ($space / 2);
   justify-content: center;
-  min-width: $space;
-  overflow: hidden;
-  padding-bottom: .5rem;
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding-left: $space-xxs;
+  padding-right: $space-xxs;
+  position: relative;
   text-transform: uppercase;
   vertical-align: top;
+  width: $space;
 
-  &, & > * {
-    color: map-get(map-get($pallet-gray, contrast), 200);
+  &, &:before {
+    background-color: map-get($pallet-gray, 200);
   }
+
+  &:before {
+    border-radius: 50%;
+    bottom: -($space / 2);
+    content: '';
+    height: $space;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: $zindex-default;
+  }
+}
+
+.icon {
+  $size: $space-sm;
+  bottom: -($size / 2.5);
+  color: map-get(map-get($pallet-gray, contrast), 200);
+  height: $size;
+  position: absolute;
+  width: $size;
+  z-index: $zindex-default + 1;
 }
 
 // -------------------------------------------------
@@ -43,27 +60,36 @@
 
 :host(.flag--color-blue) {
   $color: map-get($pallet-blue, 500);
-  background-color: $color;
 
-  &, & > * {
+  &, &:before {
+    background-color: $color;
+  }
+
+  .icon {
     color: map-get(map-get($pallet-blue, contrast), 500);
   }
 }
 
 :host(.flag--color-green) {
   $color: map-get($pallet-green, 500);
-  background-color: $color;
 
-  &, & > * {
+  &, &:before {
+    background-color: $color;
+  }
+
+  .icon {
     color: map-get(map-get($pallet-green, contrast), 500);
   }
 }
 
 :host(.flag--color-orange) {
   $color: map-get($pallet-orange, 500);
-  background-color: $color;
 
-  &, & > * {
+  &, &:before {
+    background-color: $color;
+  }
+
+  .icon {
     color: map-get(map-get($pallet-orange, contrast), 500);
   }
 }
