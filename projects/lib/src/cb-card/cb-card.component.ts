@@ -22,7 +22,9 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, S
   selector: 'cb-card',
   template: `
     <div class="content">
-      <ng-content select="cb-card-image"></ng-content>
+      <div class="content__image">
+        <ng-content select="cb-card-image"></ng-content>
+      </div>
       <div class="content__info">
         <ng-content></ng-content>
       </div>

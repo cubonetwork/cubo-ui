@@ -38,6 +38,11 @@ a > :host(:hover) {
 
   :host(.cb-card--small) & {
     padding: $space-xs;
+
+    &__image {
+      height: 6.6rem;
+      justify-content: center;
+    }
   }
 
   :host(.cb-card--column) & {
@@ -47,6 +52,11 @@ a > :host(:hover) {
   :host(.cb-card--row) & {
     align-items: center;
     flex-direction: row;
+  }
+
+  &__image {
+    align-items: center;
+    display: flex;
   }
 
   &__info {
