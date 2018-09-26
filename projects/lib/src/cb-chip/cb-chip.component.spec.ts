@@ -120,6 +120,14 @@ describe('CbChipComponent', () => {
 
       expect(element.getAttribute('class')).toContain('chip--color-gray-light');
     });
+
+    it('gray-lighter, should have the gray-lighter class', () => {
+      comp.color = 'gray-lighter';
+      fixture.detectChanges();
+      element = fixture.debugElement.nativeElement;
+
+      expect(element.getAttribute('class')).toContain('chip--color-gray-lighter');
+    });
   });
 });
 

@@ -134,6 +134,15 @@
   }
 }
 
+:host(.chip--color-gray-lighter):not(.chip--bg) {
+  $color: map-get($pallet-gray, 100);
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
 // -------------------------------------------------
 // Colors with background
 // -------------------------------------------------
@@ -175,5 +184,15 @@
 
   &, & > * {
     color: map-get(map-get($pallet-gray, contrast), 200);
+  }
+}
+
+:host(.chip--color-gray-lighter.chip--bg) {
+  $color: map-get($pallet-gray, 100);
+  background-color: $color;
+  border-color: $color;
+
+  &, & > * {
+    color: map-get(map-get($pallet-gray, contrast), 100);
   }
 }
