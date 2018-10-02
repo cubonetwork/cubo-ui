@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "8"
 install:
-  - npm i -g angular-cli-ghpages
+  - npm i -g @angular/cli angular-cli-ghpages
 cache:
   directories:
     - "node_modules"
