@@ -161,6 +161,15 @@
   }
 }
 
+:host(.chip--color-platinum):not(.chip--bg) {
+  $color: #b1aeb3;
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
 
 // -------------------------------------------------
 // Colors with background
@@ -228,6 +237,15 @@
 
 :host(.chip--color-gold.chip--bg) {
   background: linear-gradient(180deg, #ffd34e 0%, #f39720 100%);
+  border: none;
+
+  &, & > * {
+    color: $white;
+  }
+}
+
+:host(.chip--color-platinum.chip--bg) {
+  background: linear-gradient(180deg, #b1aeb3 0%, #737679 100%);
   border: none;
 
   &, & > * {
