@@ -128,6 +128,46 @@ describe('CbChipComponent', () => {
 
       expect(element.getAttribute('class')).toContain('chip--color-gray-lighter');
     });
+
+    it('purple, should have the purple class', () => {
+      comp.color = 'purple';
+      fixture.detectChanges();
+      element = fixture.debugElement.nativeElement;
+
+      expect(element.getAttribute('class')).toContain('chip--color-purple');
+    });
+
+    it('platinum, should have the platinum class', () => {
+      comp.color = 'platinum';
+      fixture.detectChanges();
+      element = fixture.debugElement.nativeElement;
+
+      expect(element.getAttribute('class')).toContain('chip--color-platinum');
+    });
+
+    it('gold, should have the gold class', () => {
+      comp.color = 'gold';
+      fixture.detectChanges();
+      element = fixture.debugElement.nativeElement;
+
+      expect(element.getAttribute('class')).toContain('chip--color-gold');
+    });
+
+    it('silver, should have the silver class', () => {
+      comp.color = 'silver';
+      fixture.detectChanges();
+      element = fixture.debugElement.nativeElement;
+
+      expect(element.getAttribute('class')).toContain('chip--color-silver');
+    });
+
+    it('bronze, should have the bronze class', () => {
+      comp.color = 'bronze';
+      fixture.detectChanges();
+      element = fixture.debugElement.nativeElement;
+
+      expect(element.getAttribute('class')).toContain('chip--color-bronze');
+    });
   });
 });
 
