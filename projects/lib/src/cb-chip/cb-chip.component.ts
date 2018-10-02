@@ -34,6 +34,7 @@ import {
     '[class.chip--color-orange]': 'color === "orange"',
     '[class.chip--color-purple]': 'color === "purple"',
     '[class.chip--color-platinum]': 'color === "platinum"',
+    '[class.chip--color-silver]': 'color === "silver"',
     '[class.chip--color-gold]': 'color === "gold"',
     '[class.chip--size-small]': 'size === "small"',
     '[class.chip--size-medium]': 'size === "medium"',

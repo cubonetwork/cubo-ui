@@ -152,6 +152,15 @@
   }
 }
 
+:host(.chip--color-platinum):not(.chip--bg) {
+  $color: #737679;
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
 :host(.chip--color-gold):not(.chip--bg) {
   $color: #f39720;
   border-color: $color;
@@ -161,15 +170,14 @@
   }
 }
 
-:host(.chip--color-platinum):not(.chip--bg) {
-  $color: #b1aeb3;
+:host(.chip--color-silver):not(.chip--bg) {
+  $color: #bab8bb;
   border-color: $color;
 
   &, & > * {
     color: $color;
   }
 }
-
 
 // -------------------------------------------------
 // Colors with background
@@ -235,6 +243,15 @@
   }
 }
 
+:host(.chip--color-platinum.chip--bg) {
+  background: linear-gradient(180deg, #b1aeb3 0%, #737679 100%);
+  border: none;
+
+  &, & > * {
+    color: $white;
+  }
+}
+
 :host(.chip--color-gold.chip--bg) {
   background: linear-gradient(180deg, #ffd34e 0%, #f39720 100%);
   border: none;
@@ -244,8 +261,8 @@
   }
 }
 
-:host(.chip--color-platinum.chip--bg) {
-  background: linear-gradient(180deg, #b1aeb3 0%, #737679 100%);
+:host(.chip--color-silver.chip--bg) {
+  background: linear-gradient(180deg, #d2d2d3 0%, #bab8bb 100%);
   border: none;
 
   &, & > * {
