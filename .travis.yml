@@ -3,6 +3,7 @@ node_js:
   - "8"
 install:
   - npm i -g @angular/cli angular-cli-ghpages
+  - npm i
 cache:
   directories:
     - "node_modules"
