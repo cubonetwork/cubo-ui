@@ -143,6 +143,51 @@
   }
 }
 
+:host(.chip--color-purple):not(.chip--bg) {
+  $color: #ad6ad5;
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
+:host(.chip--color-platinum):not(.chip--bg) {
+  $color: #737679;
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
+:host(.chip--color-gold):not(.chip--bg) {
+  $color: #f39720;
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
+:host(.chip--color-silver):not(.chip--bg) {
+  $color: #bab8bb;
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
+:host(.chip--color-bronze):not(.chip--bg) {
+  $color: #a74d06;
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
 // -------------------------------------------------
 // Colors with background
 // -------------------------------------------------
@@ -150,7 +195,7 @@
 :host(.chip--color-blue.chip--bg) {
   $color: map-get($pallet-blue, 500);
   background-color: $color;
-  border-color: $color;
+  border: none;
 
   &, & > * {
     color: map-get(map-get($pallet-blue, contrast), 500);
@@ -160,7 +205,7 @@
 :host(.chip--color-green.chip--bg) {
   $color: map-get($pallet-green, 500);
   background-color: $color;
-  border-color: $color;
+  border: none;
 
   &, & > * {
     color: map-get(map-get($pallet-green, contrast), 500);
@@ -170,7 +215,7 @@
 :host(.chip--color-orange.chip--bg) {
   $color: map-get($pallet-orange, 500);
   background-color: $color;
-  border-color: $color;
+  border: none;
 
   &, & > * {
     color: map-get(map-get($pallet-orange, contrast), 500);
@@ -180,7 +225,7 @@
 :host(.chip--color-gray-light.chip--bg) {
   $color: map-get($pallet-gray, 200);
   background-color: $color;
-  border-color: $color;
+  border: none;
 
   &, & > * {
     color: map-get(map-get($pallet-gray, contrast), 200);
@@ -190,9 +235,55 @@
 :host(.chip--color-gray-lighter.chip--bg) {
   $color: map-get($pallet-gray, 100);
   background-color: $color;
-  border-color: $color;
+  border: none;
 
   &, & > * {
     color: map-get(map-get($pallet-gray, contrast), 100);
+  }
+}
+
+:host(.chip--color-purple.chip--bg) {
+  $color: #ad6ad5;
+  background-color: $color;
+  border: none;
+
+  &, & > * {
+    color: $white;
+  }
+}
+
+:host(.chip--color-platinum.chip--bg) {
+  background: linear-gradient(180deg, #b1aeb3 0%, #737679 100%);
+  border: none;
+
+  &, & > * {
+    color: $white;
+  }
+}
+
+:host(.chip--color-gold.chip--bg) {
+  background: linear-gradient(180deg, #ffd34e 0%, #f39720 100%);
+  border: none;
+
+  &, & > * {
+    color: $white;
+  }
+}
+
+:host(.chip--color-silver.chip--bg) {
+  background: linear-gradient(180deg, #d2d2d3 0%, #bab8bb 100%);
+  border: none;
+
+  &, & > * {
+    color: $white;
+  }
+}
+
+:host(.chip--color-bronze.chip--bg) {
+  background: linear-gradient(180deg, #f6ac63 0%, #a74d06 100%);
+  border: none;
+
+  &, & > * {
+    color: $white;
   }
 }

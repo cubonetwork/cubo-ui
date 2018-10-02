@@ -32,6 +32,11 @@ import {
     '[class.chip--color-gray-light]': 'color === "gray-light"',
     '[class.chip--color-gray-lighter]': 'color === "gray-lighter"',
     '[class.chip--color-orange]': 'color === "orange"',
+    '[class.chip--color-purple]': 'color === "purple"',
+    '[class.chip--color-platinum]': 'color === "platinum"',
+    '[class.chip--color-gold]': 'color === "gold"',
+    '[class.chip--color-silver]': 'color === "silver"',
+    '[class.chip--color-bronze]': 'color === "bronze"',
     '[class.chip--size-small]': 'size === "small"',
     '[class.chip--size-medium]': 'size === "medium"',
     '[class.chip--size-large]': 'size === "large"'
