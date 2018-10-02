@@ -143,6 +143,15 @@
   }
 }
 
+:host(.chip--purple):not(.chip--bg) {
+  $color: #ad6ad5;
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
 // -------------------------------------------------
 // Colors with background
 // -------------------------------------------------
@@ -194,5 +203,15 @@
 
   &, & > * {
     color: map-get(map-get($pallet-gray, contrast), 100);
+  }
+}
+
+:host(.chip--color-purple.chip--bg) {
+  $color: #ad6ad5;
+  background-color: $color;
+  border-color: $color;
+
+  &, & > * {
+    color: $white;
   }
 }
