@@ -7,6 +7,7 @@
 :host(.cb-card-image) {
   $height: 6.6rem;
   display: block;
+  max-height: 100%;
   max-width: ($screen-xs / 2);
 
   &:not(:first-child) {
