@@ -144,7 +144,7 @@
 }
 
 :host(.chip--color-purple):not(.chip--bg) {
-  $color: #ad6ad5;
+  $color: map-get($pallet-purple, 500);
   border-color: $color;
 
   &, & > * {

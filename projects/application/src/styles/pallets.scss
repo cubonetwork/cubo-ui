@@ -155,6 +155,31 @@ $pallet-blue: (
   )
 );
 
+$pallet-purple: (
+  50: #ffffff,
+  100: #d1abe7,
+  200: #c698e2,
+  300: #bd88dd,
+  400: #b67ada,
+  500: #ad6ad5,
+  600: #a05bcd,
+  700: #8e48c1,
+  800: #7a31b5,
+  900: #601ea1,
+  contrast: (
+    50: #232323,
+    100: #232323,
+    200: #232323,
+    300: #ffffff,
+    600: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff
+  )
+);
+
 $light-theme: (
   bg: map-get($pallet-gray, 50),
   accent: map-get($pallet-orange, 400),
