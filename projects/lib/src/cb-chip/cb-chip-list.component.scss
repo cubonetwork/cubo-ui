@@ -4,9 +4,12 @@
 
 @import '../../../application/src/styles/core';
 
+:host {
+  display: flex;
+}
+
 :host(.list--v) {
   align-items: flex-start;
-  display: flex;
   flex-direction: column;
 
   & ::ng-deep > *:not(:last-child) {
