@@ -22,9 +22,9 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, S
   selector: 'cb-card',
   template: `
     <div class="content">
-      <div class="content__image">
-        <ng-content select="cb-card-image"></ng-content>
-      </div>
+
+      <ng-content select="cb-card-image"></ng-content>
+
       <div class="content__info">
         <ng-content></ng-content>
       </div>
@@ -148,6 +148,7 @@ export class CbCardDescriptionComponent { }
 
 /**
 * Component `<cb-card-image>` to create a card image
+* @param center Centralize image (true or false)
 *
 * Example:
 * <cb-card-image>
@@ -162,6 +163,11 @@ export class CbCardDescriptionComponent { }
   styleUrls: ['./cb-card-image.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { 'class': 'cb-card-image' }
+  host: {
+    'class': 'cb-card-image',
+    '[class.cb-card-image--center]': 'center ===  true'
+  }
 })
-export class CbCardImageComponent { }
+export class CbCardImageComponent {
+  @Input() center = false;
+}

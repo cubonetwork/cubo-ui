@@ -6,9 +6,15 @@
 
 :host(.cb-card-image) {
   $height: 4rem;
-  display: block;
+  align-items: center;
+  display: flex;
   max-height: 100%;
   max-width: ($screen-xs / 2);
+  min-height: $height;
+
+  &--center {
+    justify-content: center;
+  }
 
   &:not(:first-child) {
     margin-top: $space-xs;
