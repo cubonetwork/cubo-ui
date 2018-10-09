@@ -22,9 +22,7 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, S
   selector: 'cb-card',
   template: `
     <div class="content">
-
       <ng-content select="cb-card-image"></ng-content>
-
       <div class="content__info">
         <ng-content></ng-content>
       </div>
@@ -165,7 +163,7 @@ export class CbCardDescriptionComponent { }
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'class': 'cb-card-image',
-    '[class.cb-card-image--center]': 'center ===  true'
+    '[class.cb-card-image--center]': 'center === true'
   }
 })
 export class CbCardImageComponent {
