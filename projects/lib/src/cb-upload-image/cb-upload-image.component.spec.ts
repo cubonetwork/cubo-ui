@@ -20,6 +20,14 @@ fdescribe('CbUploadImageComponent', () => {
     comp = fixture.componentInstance;
   });
 
+  it('shows the label text for the given label', () => {
+    comp.label = label;
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('.upload__button');
+
+    expect(element.innerHTML).toContain(label);
+  });
+
   it('shows the preview image for the given url', () => {
     comp.image = image;
     fixture.detectChanges();
