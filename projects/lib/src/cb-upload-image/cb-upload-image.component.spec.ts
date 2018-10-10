@@ -3,7 +3,7 @@ import { DebugElement } from '@angular/core';
 
 import { CbUploadImageComponent } from './cb-upload-image.component';
 
-fdescribe('CbUploadImageComponent', () => {
+describe('CbUploadImageComponent', () => {
   let comp: CbUploadImageComponent;
   let fixture: ComponentFixture<CbUploadImageComponent>;
   let element: HTMLElement;
