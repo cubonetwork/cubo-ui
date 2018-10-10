@@ -22,7 +22,7 @@ export class PageCarouselComponent { }
           <h2>Bem-vindo ao Mapa de Relacionamentos!</h2>
           <h3>Precisando de contatos em uma corporate?</h3>
           <p>Você busca pelo nome da empresa e te
-          mostramos quais founders do Cubo podem 
+          mostramos quais founders do Cubo podem
           te ajudar a fazer essa conexão</p>
           <button mat-button (click)="next()" color="primary">Próximo</button>
         </div>
@@ -64,7 +64,7 @@ export class CarouselDialogExampleComponent {
   selector: 'page-carousel-example',
   templateUrl: 'page-carousel-example.html'
 })
-export class PageCarouselExampleComponent { 
+export class PageCarouselExampleComponent {
   @ViewChild('simpleCarousel') private simpleCarousel: CbCarouselComponent;
   @ViewChild('imageCarousel') private imageCarousel: CbCarouselComponent;
 
@@ -77,7 +77,7 @@ export class PageCarouselExampleComponent {
         <h2>Bem-vindo ao Mapa de Relacionamentos!</h2>
         <h3>Precisando de contatos em uma corporate?</h3>
         <p>Você busca pelo nome da empresa e te
-        mostramos quais founders do Cubo podem 
+        mostramos quais founders do Cubo podem
         te ajudar a fazer essa conexão</p>
         <button mat-button (click)="next()">Próximo</button>
       </div>
@@ -111,7 +111,7 @@ export class PageCarouselExampleComponent {
     next() {
       this.carousel.next();
     }
-  
+
     prev() {
       this.carousel.prev();
     }
@@ -132,7 +132,7 @@ export class PageCarouselExampleComponent {
   codeImageHtml = hljs.highlightAuto(`
   <cb-carousel [showIndicators]="true" #carousel>
     <ng-container *cbCarouselItem>
-      <img src="..." width="300" alt="Beatles">      
+      <img src="..." width="300" alt="Beatles">
     </ng-container>
     <ng-container *cbCarouselItem>
       <img src="..." width="300" alt="Guns n' Roses">
@@ -163,7 +163,7 @@ export class PageCarouselExampleComponent {
     next() {
       this.carousel.next();
     }
-  
+
     prev() {
       this.carousel.prev();
     }
@@ -186,7 +186,7 @@ export class PageCarouselExampleComponent {
   codeDialogHtml = hljs.highlightAuto(`
   <button mat-raised-button (click)="openDialog()">Carousel on dialog</button>
   `, languages).value;
-  
+
   codeDialogTs = hljs.highlightAuto(`
   import {Component} from '@angular/core';
 
@@ -220,12 +220,12 @@ export class PageCarouselExampleComponent {
             <h2>Bem-vindo ao Mapa de Relacionamentos!</h2>
             <h3>Precisando de contatos em uma corporate?</h3>
             <p>Você busca pelo nome da empresa e te
-            mostramos quais founders do Cubo podem 
+            mostramos quais founders do Cubo podem
             te ajudar a fazer essa conexão</p>
             <button mat-button (click)="next()" color="primary">Próximo</button>
           </div>
         </ng-container>
-  
+
         <ng-container *cbCarouselItem>
           <div style="width: 300px; height: 230px; text-align: center; border: solid 1px rgba(177, 174, 179, 0.5); background-color: #fff; padding: 10px;">
             <h2>Compartilhe seus contatos</h2>
@@ -244,15 +244,15 @@ export class PageCarouselExampleComponent {
   })
   export class CarouselDialogExampleComponent {
     @ViewChild('carousel') private carousel: CbCarouselComponent;
-  
+
     constructor(
       public dialogRef: MatDialogRef<CarouselDialogExampleComponent>,
       @Inject(MAT_DIALOG_DATA) public data: any) { }
-  
+
     next() {
       this.carousel.next();
     }
-  
+
     prev() {
       this.carousel.prev();
     }
@@ -264,9 +264,9 @@ export class PageCarouselExampleComponent {
   selector: 'page-carousel-api',
   templateUrl: 'page-carousel-api.html'
 })
-export class PageCarouselApiComponent { 
+export class PageCarouselApiComponent {
   import_content = hljs.highlightAuto(`
-  import { CbCarouselModule } from '@lib';
+  import { CbCarouselModule } from 'cubo-ui';
 
   @NgModule({
     imports: [

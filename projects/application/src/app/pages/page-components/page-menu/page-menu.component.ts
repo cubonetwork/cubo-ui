@@ -56,7 +56,7 @@ export class PageMenuExampleComponent {
 })
 export class PageMenuApiComponent {
   import_content = hljs.highlightAuto(`
-  import { CbMenuModule } from '@lib';
+  import { CbMenuModule } from 'cubo-ui';
 
   @NgModule({
     imports: [

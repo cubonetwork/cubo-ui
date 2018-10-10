@@ -56,7 +56,7 @@ export class PageFlagExampleComponent {
 })
 export class PageFlagApiComponent {
   import_content = hljs.highlightAuto(`
-  import { CbFlagModule } from '@lib';
+  import { CbFlagModule } from 'cubo-ui';
 
   @NgModule({
     imports: [
