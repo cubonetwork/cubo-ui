@@ -8,7 +8,7 @@ import {
   Output,
   EventEmitter
 } from '@angular/core';
-import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
+import { DomSanitizer, SafeStyle, SafeHtml } from '@angular/platform-browser';
 
 /**
  * Component `<cb-upload-image>` to make a share action
@@ -39,11 +39,11 @@ export class CbUploadImageComponent implements OnInit {
   @Input() image: string;
   @Input() size = '64';
   @Input() fit: 'contain' | 'cover' = 'contain';
-  @Input() type: 'square' | 'circle' = 'square';
+  @Input() type: '' | 'circle' = '';
   @Output() uploaded: EventEmitter<any> = new EventEmitter();
 
   _bg: SafeStyle;
-  _image: SafeStyle;
+  _image: SafeHtml;
   _borderRadius: string;
   _height: string;
   _width: string;
@@ -55,7 +55,7 @@ export class CbUploadImageComponent implements OnInit {
 
   ngOnInit() {
     this._bg = this.bg ? this.sanitizer.bypassSecurityTrustStyle(`url(${this.bg})`) : '';
-    this._image = this.image ? this.sanitizer.bypassSecurityTrustStyle(`url(${this.image})`) : '';
+    this._image = this.image ? this.sanitizer.bypassSecurityTrustResourceUrl(`${this.image}`) : '';
     this._borderRadius = this.type === 'circle' ? '50%' : '0';
     this._height = `${this.size}px`;
     this._width = this.type === 'circle' ? `${this.size}px` : 'auto';
