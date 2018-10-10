@@ -40,3 +40,21 @@
     top: -999em;
   }
 }
+
+.preview {
+  background-image: url('cb-upload-image-bg.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: $space-sm $space-sm;
+  border: $border-default;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $space-xs;
+  overflow: hidden;
+  text-align: center;
+
+  &__image {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
