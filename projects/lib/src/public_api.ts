@@ -5,3 +5,4 @@ export * from './cb-menu/index';
 export * from './cb-carousel/index';
 export * from './cb-chip/index';
 export * from './cb-flag/index';
+export * from './cb-upload-image/index';

@@ -1,0 +1,22 @@
+// ==================================================
+// Social Media
+// ==================================================
+
+@import '../../../application/src/styles/core';
+
+:host {
+  align-items: center;
+  display: inline-flex;
+  filter: grayscale(100);
+  margin-right: $space-xs;
+  opacity: .75;
+  text-align: center;
+  transition: filter .3s, opacity .3s;
+  will-change: filter;
+
+  &:hover,
+  &:focus {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+}

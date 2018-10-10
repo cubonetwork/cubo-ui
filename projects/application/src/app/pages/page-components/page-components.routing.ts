@@ -71,6 +71,13 @@ export const PageComponentsRoutes: Routes = [
               meta: { title: 'Social' }
             }
           },
+          {
+            path: 'upload-image',
+            loadChildren: '@app/pages/page-components/page-upload-image/page-upload-image.module#PageUploadImageModule',
+            data: {
+              meta: { title: 'UploadImage' }
+            }
+          }
         ]
       }
     ]

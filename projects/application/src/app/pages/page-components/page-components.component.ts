@@ -41,5 +41,9 @@ export class PageComponentsComponent {
       'path': 'social',
       'name': 'Social'
     },
+    {
+      'path': 'upload-image',
+      'name': 'Upload Image'
+    },
   ];
 }
