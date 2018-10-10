@@ -4,7 +4,9 @@ import {
   ChangeDetectionStrategy,
   Input,
   OnInit,
-  ChangeDetectorRef
+  ChangeDetectorRef,
+  Output,
+  EventEmitter
 } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 
@@ -38,6 +40,7 @@ export class CbUploadImageComponent implements OnInit {
   @Input() size = '64';
   @Input() fit: 'contain' | 'cover' = 'contain';
   @Input() type: 'square' | 'circle' = 'square';
+  @Output() uploaded: EventEmitter<any> = new EventEmitter();
 
   _bg: SafeStyle;
   _image: SafeStyle;
@@ -59,12 +62,16 @@ export class CbUploadImageComponent implements OnInit {
   }
 
   uploadImage(upload) {
-    if (upload.target.files && upload.target.files[0]) {
+    const file = upload.target.files[0];
+
+    if (upload.target.files && file) {
       const reader = new FileReader();
-      reader.readAsDataURL(upload.target.files[0]);
+
+      reader.readAsDataURL(file);
       reader.onload = (e: any) => {
         this._image = e.target.result;
         this.ref.detectChanges();
+        this.uploaded.emit(file);
       };
     }
   }
