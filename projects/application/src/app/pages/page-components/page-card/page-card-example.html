@@ -42,7 +42,7 @@
 
 </app-content>
 
-<div style="max-width: 34rem; margin-left: 3.2rem; margin-bottom: 2.4rem;">
+<div style="max-width: 52rem; margin-left: 3.2rem; margin-bottom: 2.4rem;">
   <div style="display: flex; justify-content: space-between;">
     <a style="width: 16rem; display: block;">
       <cb-card [size]="'small'">
@@ -66,6 +66,18 @@
         </cb-card-footer>
       </cb-card>
     </a>
+    <a style="width: 16rem; display: block;">
+      <cb-card [size]="'small'">
+        <cb-card-image [center]="true">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Beatles_logo.svg/2000px-Beatles_logo.svg.png" alt="Beatles">
+        </cb-card-image>
+        <cb-card-footer [border]="false">
+          <cb-card-title>Beatles</cb-card-title>
+          <cb-card-pretitle>Band</cb-card-pretitle>
+        </cb-card-footer>
+      </cb-card>
+    </a>
+
   </div>
 </div>
 
@@ -158,6 +170,45 @@
       <cb-card-image>
         <img src="https://vignette.wikia.nocookie.net/logopedia/images/6/68/DragonBall_logo.png/revision/latest?cb=20110817185055" alt="Naruto">
       </cb-card-image>
+      <cb-card-pretitle>Animes</cb-card-pretitle>
+      <cb-card-title>Dragon Ball</cb-card-title>
+      <cb-card-info>🇯🇵 Japan</cb-card-info>
+      <cb-card-info>✨ 1984</cb-card-info>
+      <cb-card-footer>
+        <button mat-raised-button color="primary">Ver mais detalhes</button>
+      </cb-card-footer>
+    </cb-card>
+  </a>
+</div>
+
+<mat-accordion>
+  <mat-expansion-panel class="panel">
+    <mat-expansion-panel-header class="panel__header">
+      View Code
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre class="panel__code">
+          <code [innerHtml]='codeAnimesHtml'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="TS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeTs'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="CSS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeCss'></code>
+        </pre>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<div style="max-width: 34rem; margin-left: 3.2rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
+  <a style="display: block">
+    <cb-card>
       <cb-card-pretitle>Animes</cb-card-pretitle>
       <cb-card-title>Dragon Ball</cb-card-title>
       <cb-card-info>🇯🇵 Japan</cb-card-info>
