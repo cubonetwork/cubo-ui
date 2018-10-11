@@ -1,13 +1,4 @@
-import {
-  Component,
-  ViewEncapsulation,
-  ChangeDetectionStrategy,
-  Input,
-  OnInit,
-  ChangeDetectorRef,
-  Output,
-  EventEmitter
-} from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, ChangeDetectorRef, Output, EventEmitter } from '@angular/core';
 import { DomSanitizer, SafeStyle, SafeHtml } from '@angular/platform-browser';
 
 /**
@@ -18,7 +9,7 @@ import { DomSanitizer, SafeStyle, SafeHtml } from '@angular/platform-browser';
   template: `
     <div class="upload">
       <label class="upload__button">
-        <input class="upload__input" type="file" (change)="uploadImage($event)" #upload>
+        <input class="upload__input" type="file" accept="image/*" (change)="uploadImage($event)" #upload>
         {{ label }}
       </label>
     </div>
