@@ -15,12 +15,32 @@ export class PageUploadImageComponent { }
   templateUrl: 'page-upload-image-example.html'
 })
 export class PageUploadImageExampleComponent {
-  codeHtml = hljs.highlightAuto(``, languages).value;
+  codeHtml = hljs.highlightAuto(`
+    // Basic example
 
-  codeTs = hljs.highlightAuto(``, languages).value;
+    <cb-upload-image class="upload"></cb-upload-image>
+
+    // Circle example
+
+    <cb-upload-image class="upload-circle" type="circle"></cb-upload-image>
+  `, languages).value;
+
+  codeTs = hljs.highlightAuto(`
+  import { Component } from '@angular/core';
+
+  @Component({
+    selector: 'upload-image-overview-example',
+    templateUrl: 'upload-image-overview-example.html',
+    styleUrls: ['upload-image-overview-example.css']
+  })
+  export class UploadImageOverviewExample {}`, languages).value;
 
   codeCss = hljs.highlightAuto(`
-  /** No CSS for this example */
+  .upload-circle {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30rem;
+  }
   `, languages).value;
 
   constructor() { }

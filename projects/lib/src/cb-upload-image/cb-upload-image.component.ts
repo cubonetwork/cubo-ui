@@ -3,6 +3,13 @@ import { DomSanitizer, SafeStyle, SafeHtml } from '@angular/platform-browser';
 
 /**
  * Component `<cb-upload-image>` to make a share action
+ * @param label Set if bg is true or false
+ * @param bg Set bg image to preview
+ * @param image Set image to preview
+ * @param size Set size of preview
+ * @param fit Change fit of image preview
+ * @param type Set type style of preview:
+ * @param uploaded Emit value after upload is done
  */
 @Component({
   selector: 'cb-upload-image',
