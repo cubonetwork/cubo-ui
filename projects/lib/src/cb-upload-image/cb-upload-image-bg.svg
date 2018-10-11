@@ -1,15 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="Onboarding-+-Operacoes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Cadastro-Founder-4-Perfil-Startup-COMPLETO-(desk)" transform="translate(-674.000000, -375.000000)">
-            <g id="round-photo-24px-(1)" transform="translate(671.000000, 372.000000)">
-                <g id="Bounding_Boxes">
-                    <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                </g>
-                <g id="Rounded" transform="translate(3.000000, 3.000000)" fill="#B1AEB3" fill-rule="nonzero">
-                    <path d="M18,16 L18,2 C18,0.9 17.1,0 16,0 L2,0 C0.9,0 0,0.9 0,2 L0,16 C0,17.1 0.9,18 2,18 L16,18 C17.1,18 18,17.1 18,16 Z M5.9,10.98 L8,13.51 L11.1,9.52 C11.3,9.26 11.7,9.26 11.9,9.53 L15.41,14.21 C15.66,14.54 15.42,15.01 15.01,15.01 L3.02,15.01 C2.6,15.01 2.37,14.53 2.63,14.2 L5.12,11 C5.31,10.74 5.69,10.73 5.9,10.98 Z" id="Shape"></path>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
 </svg>
