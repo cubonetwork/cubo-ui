@@ -18,11 +18,11 @@ import { DomSanitizer, SafeStyle, SafeHtml } from '@angular/platform-browser';
   template: `
     <div class="upload">
       <label class="upload__button">
-        <input class="upload__input" type="file" (change)="uploadImage($event)">
+        <input class="upload__input" type="file" (change)="uploadImage($event)" #upload>
         {{ label }}
       </label>
     </div>
-    <div class="preview" [style.background-image]="_bg" [style.height]="_height" [style.width]="_width" [style.border-radius]="_borderRadius">
+    <div class="preview" [style.background-image]="_bg" [style.height]="_height" [style.width]="_width" [style.border-radius]="_borderRadius" (click)="upload.click()">
       <img class="preview__image" [src]="_image" *ngIf="_image" [style.object-fit]="fit">
     </div>
   `,
