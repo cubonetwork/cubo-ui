@@ -22,8 +22,8 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
       </label>
     </div>
     <div class="preview" [style.height]="size + 'px'" [style.width]="_width" [style.border-radius]="_borderRadius" (click)="upload.click()">
-      <span class="preview__icon" aria-hidden="true" [style.background-image]="_icon"></span>
-      <img class="preview__image" [src]="_value" *ngIf="_value" [style.object-fit]="fit">
+      <span class="preview__icon" aria-hidden="true" [style.background-image]="_icon" *ngIf="!_value"></span>
+      <img class="preview__image" [src]="_value" [style.object-fit]="fit" *ngIf="_value">
     </div>
   `,
   providers: [
@@ -78,7 +78,10 @@ export class CbUploadImageComponent implements ControlValueAccessor {
     if (upload.target.files && file) {
       const reader = new FileReader();
       reader.readAsDataURL(file);
-      reader.onload = (e: any) => this.writeValue(e.target.result);
+      reader.onload = (e: any) => {
+        this._value = e.target.result;
+        this.writeValue(file);
+      };
     }
   }
 
@@ -99,7 +102,6 @@ export class CbUploadImageComponent implements ControlValueAccessor {
   }
 
   writeValue(value: string): void {
-    this._value = value;
     this.onChange(value);
     this.onTouched();
     this.ref.detectChanges();
