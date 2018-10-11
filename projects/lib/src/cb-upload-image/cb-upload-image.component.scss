@@ -57,7 +57,7 @@
   text-align: center;
 
   &__icon {
-    background-image: url('cb-upload-image-bg.svg');
+    background-image: url('data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%2224%22 height%3D%2224%22 viewBox%3D%220 0 24 24%22%3E    %3Cpath d%3D%22M0 0h24v24H0z%22 fill%3D%22none%22%2F%3E    %3Cpath d%3D%22M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z%22%2F%3E%3C%2Fsvg%3E');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: $space $space;
