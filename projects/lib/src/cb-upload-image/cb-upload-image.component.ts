@@ -1,5 +1,6 @@
-import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, ChangeDetectorRef, Output, EventEmitter } from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, ChangeDetectorRef, forwardRef } from '@angular/core';
 import { DomSanitizer, SafeStyle, SafeHtml } from '@angular/platform-browser';
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 /**
  * Component `<cb-upload-image>` to make a share action
@@ -9,7 +10,6 @@ import { DomSanitizer, SafeStyle, SafeHtml } from '@angular/platform-browser';
  * @param size Set size of preview
  * @param fit Change fit of image preview
  * @param type Set type style of preview:
- * @param uploaded Emit value after upload is done
  */
 @Component({
   selector: 'cb-upload-image',
@@ -20,10 +20,18 @@ import { DomSanitizer, SafeStyle, SafeHtml } from '@angular/platform-browser';
         {{ label }}
       </label>
     </div>
-    <div class="preview" [style.background-image]="_bg" [style.height]="_height" [style.width]="_width" [style.border-radius]="_borderRadius" (click)="upload.click()">
-      <img class="preview__image" [src]="_image" *ngIf="_image" [style.object-fit]="fit">
+    <div class="preview" [style.height]="size + 'px'" [style.width]="_width" [style.border-radius]="_borderRadius" (click)="upload.click()">
+      <span class="preview__icon" aria-hidden="true" [style.background-image]="_icon"></span>
+      <img class="preview__image" [src]="_value" *ngIf="_value" [style.object-fit]="fit">
     </div>
   `,
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => CbUploadImageComponent),
+      multi: true
+    }
+  ],
   styleUrls: ['./cb-upload-image.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.Default,
@@ -31,46 +39,63 @@ import { DomSanitizer, SafeStyle, SafeHtml } from '@angular/platform-browser';
     'class': 'cb-upload-image'
   }
 })
-export class CbUploadImageComponent implements OnInit {
-  @Input() label = 'Upload image';
-  @Input() bg: string;
-  @Input() image: string;
-  @Input() size = '64';
-  @Input() fit: 'contain' | 'cover' = 'contain';
-  @Input() type: '' | 'circle' = '';
-  @Output() uploaded: EventEmitter<any> = new EventEmitter();
-
-  _bg: SafeStyle;
-  _image: SafeHtml;
+export class CbUploadImageComponent implements ControlValueAccessor {
+  _icon: SafeStyle;
+  _value: SafeHtml;
   _borderRadius: string;
-  _height: string;
   _width: string;
+
+  @Input() disabled = false;
+  @Input() fit: 'contain' | 'cover' = 'contain';
+  @Input() label = 'Upload image';
+  @Input() size = 64;
+
+  @Input() set value(value: string) {
+    this._value = this.sanitizer.bypassSecurityTrustResourceUrl(`${value}`);
+  }
+
+  @Input() set icon(value: string) {
+    this._icon = this.sanitizer.bypassSecurityTrustStyle(`url(${value})`);
+  }
+
+  @Input() set type(value: 'circle' | '') {
+    if (value === 'circle') {
+      this._borderRadius = '50%';
+      this._width = `${this.size}px`;
+    }
+  }
 
   constructor(
     private sanitizer: DomSanitizer,
     private ref: ChangeDetectorRef
   ) {}
 
-  ngOnInit() {
-    this._bg = this.bg ? this.sanitizer.bypassSecurityTrustStyle(`url(${this.bg})`) : '';
-    this._image = this.image ? this.sanitizer.bypassSecurityTrustResourceUrl(`${this.image}`) : '';
-    this._borderRadius = this.type === 'circle' ? '50%' : '0';
-    this._height = `${this.size}px`;
-    this._width = this.type === 'circle' ? `${this.size}px` : 'auto';
-  }
-
   uploadImage(upload) {
     const file = upload.target.files[0];
 
     if (upload.target.files && file) {
       const reader = new FileReader();
-
       reader.readAsDataURL(file);
-      reader.onload = (e: any) => {
-        this._image = e.target.result;
-        this.ref.detectChanges();
-        this.uploaded.emit(file);
-      };
+      reader.onload = (e: any) => this.writeValue(e.target.result);
     }
+  }
+
+  onChange = (value: string) => {};
+
+  onTouched = () => {};
+
+  registerOnChange(fn: (value: string) => void): void {
+    this.onChange = fn;
+  }
+
+  registerOnTouched(fn: () => void): void {
+    this.onTouched = fn;
+  }
+
+  writeValue(value: string): void {
+    this._value = value;
+    this.onChange(value);
+    this.onTouched();
+    this.ref.detectChanges();
   }
 }
