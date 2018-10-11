@@ -43,7 +43,7 @@ export class PageComponentsComponent {
     },
     {
       'path': 'upload-image',
-      'name': 'Upload Image'
+      'name': 'Upload image'
     },
   ];
 }
