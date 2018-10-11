@@ -16,7 +16,7 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
   template: `
     <div class="upload">
       <label class="upload__button">
-        <input class="upload__input" type="file" accept="image/*" (change)="uploadImage($event)" #upload>
+        <input class="upload__input" type="file" accept="image/*" [disabled]="disabled" (change)="uploadImage($event)" #upload>
         {{ label }}
       </label>
     </div>
@@ -36,7 +36,8 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.Default,
   host: {
-    'class': 'cb-upload-image'
+    'class': 'cb-upload-image',
+    '[class.upload-image--disabled]': 'disabled',
   }
 })
 export class CbUploadImageComponent implements ControlValueAccessor {
@@ -90,6 +91,10 @@ export class CbUploadImageComponent implements ControlValueAccessor {
 
   registerOnTouched(fn: () => void): void {
     this.onTouched = fn;
+  }
+
+  setDisabledState(isDisabled: boolean): void {
+    this.disabled = isDisabled;
   }
 
   writeValue(value: string): void {

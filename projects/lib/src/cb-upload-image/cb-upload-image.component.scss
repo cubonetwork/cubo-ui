@@ -6,6 +6,12 @@
 
 :host {
   display: block;
+  position: relative;
+}
+
+:host(.upload-image--disabled) {
+  cursor: not-allowed;
+  opacity: .5;
 }
 
 .upload {
