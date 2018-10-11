@@ -5,11 +5,12 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 /**
  * Component `<cb-upload-image>` to make a share action
  * @param label Set if bg is true or false
- * @param bg Set bg image to preview
- * @param image Set image to preview
+ * @param icon Set bg icon to preview
+ * @param value Set image to preview
  * @param size Set size of preview
  * @param fit Change fit of image preview
- * @param type Set type style of preview:
+ * @param type Set type style of preview
+ * @param disabled Set true or false to disabled
  */
 @Component({
   selector: 'cb-upload-image',

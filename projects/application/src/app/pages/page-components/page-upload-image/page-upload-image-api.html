@@ -24,37 +24,41 @@
         <th>Description</th>
       </tr>
       <tr>
-        <td>@Input() label: string;</td>
+        <td>@Input() label: string</td>
         <td>Set label to upload file</td>
       </tr>
       <tr>
-        <td>@Input() bg: string;</td>
-        <td>Set bg image to preview</td>
+        <td>@Input() icon: string</td>
+        <td>Set icon image to preview</td>
       </tr>
       <tr>
-        <td>@Input() image: string;</td>
+        <td>@Input() value: string</td>
         <td>Set image to preview</td>
       </tr>
       <tr>
-        <td>@Input() size: string;</td>
+        <td>@Input() size: string</td>
         <td>Set size of preview</td>
       </tr>
       <tr>
-        <td>@Input() fit: string;</td>
+        <td>@Input() fit: string</td>
         <td>Change fit of image preview:
           <code>contain (default)</code>,
           <code>cover</code>
         </td>
       </tr>
       <tr>
-        <td>@Input() type: string;</td>
+        <td>@Input() type: string</td>
         <td>Set type style of preview:
           <code>circle</code>
         </td>
       </tr>
       <tr>
-        <td>@Output() uploaded: EventEmitter;</td>
-        <td>Emit value after upload is done</td>
+        <td>@Input() disabled: boolean</td>
+        <td>Set true or false to disabled</td>
+      </tr>
+      <tr>
+        <td>ngControl: NgControl</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
