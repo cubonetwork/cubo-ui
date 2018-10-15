@@ -53,11 +53,11 @@ export class CbUploadImageComponent implements ControlValueAccessor {
   @Input() size = 64;
 
   @Input() set value(value: string) {
-    this._value = this.sanitizer.bypassSecurityTrustResourceUrl(`${value}`);
+    this._value = value && this.sanitizer.bypassSecurityTrustResourceUrl(`${value}`);
   }
 
-  @Input() set icon(value: string) {
-    this._icon = this.sanitizer.bypassSecurityTrustStyle(`url(${value})`);
+  @Input() set icon(icon: string) {
+    this._icon = this.icon && this.sanitizer.bypassSecurityTrustStyle(`url(${icon})`);
   }
 
   @Input() set type(value: 'circle' | '') {
