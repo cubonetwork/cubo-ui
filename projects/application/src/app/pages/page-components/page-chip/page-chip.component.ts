@@ -91,7 +91,7 @@ export class PageChipExampleComponent {
 })
 export class PageChipApiComponent {
   import_content = hljs.highlightAuto(`
-  import { CbChipModule } from '@lib';
+  import { CbChipModule } from 'cubo-ui';
 
   @NgModule({
     imports: [
