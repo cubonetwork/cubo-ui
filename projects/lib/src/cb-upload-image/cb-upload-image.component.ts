@@ -23,7 +23,7 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
     </div>
     <div class="preview" [style.height]="size + 'px'" [style.width]="_width" [style.border-radius]="_borderRadius" (click)="upload.click()">
       <span class="preview__icon" aria-hidden="true" [style.background-image]="_icon" *ngIf="!_value"></span>
-      <img class="preview__image" [src]="_value" [style.object-fit]="fit" *ngIf="_value">
+      <img class="preview__image" [src]="_value" [style.height]="'100%'" [style.width]="'100%'" [style.object-fit]="fit" *ngIf="_value">
     </div>
   `,
   providers: [
