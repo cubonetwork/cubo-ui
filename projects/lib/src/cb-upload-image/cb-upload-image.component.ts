@@ -79,7 +79,7 @@ export class CbUploadImageComponent implements ControlValueAccessor {
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = (e: any) => {
-        this._value = e.target.result;
+        this._value = this.sanitizer.bypassSecurityTrustResourceUrl(e.target.result);
         this.writeValue(file);
       };
     }
