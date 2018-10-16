@@ -10,8 +10,12 @@
 }
 
 :host(.upload-image--disabled) {
-  cursor: not-allowed;
   opacity: .5;
+
+  &,
+  & * {
+    cursor: not-allowed;
+  }
 }
 
 .upload {
