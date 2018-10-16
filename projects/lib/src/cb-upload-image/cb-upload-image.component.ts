@@ -16,7 +16,7 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
   selector: 'cb-upload-image',
   template: `
     <div class="upload">
-      <label class="upload__button">
+      <label class="upload__button" [ngClass]="{ 'upload__button--disabled': disabled }">
         <input class="upload__input" type="file" accept="image/*" [disabled]="disabled" (change)="uploadImage($event)" #upload>
         {{ label }}
       </label>
