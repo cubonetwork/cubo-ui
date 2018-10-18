@@ -52,7 +52,7 @@ export class CbUploadImageComponent implements ControlValueAccessor {
   @Input() fit: 'contain' | 'cover' = 'contain';
   @Input() label = 'Upload image';
   @Input() size = 64;
-  @Input() accept = '.png, .jpg, .jpeg';
+  @Input() accept = '.png, .jpg, .jpeg, .gif';
 
   @Input() set value(value: string) {
     this._value = value && this.sanitizer.bypassSecurityTrustResourceUrl(`${value}`);
