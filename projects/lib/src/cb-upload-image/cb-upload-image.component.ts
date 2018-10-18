@@ -10,14 +10,15 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
  * @param size Set size of preview
  * @param fit Change fit of image preview
  * @param type Set type style of preview
+ * @param accept Set the accept formats
  * @param disabled Set true or false to disabled
  */
 @Component({
   selector: 'cb-upload-image',
   template: `
     <div class="upload">
-      <label class="upload__button">
-        <input class="upload__input" type="file" accept="image/*" [disabled]="disabled" (change)="uploadImage($event)" #upload>
+      <label class="upload__button" [ngClass]="{ 'upload__button--disabled': disabled }">
+        <input class="upload__input" type="file" [accept]="accept" [disabled]="disabled" (change)="uploadImage($event)" #upload>
         {{ label }}
       </label>
     </div>
@@ -51,13 +52,14 @@ export class CbUploadImageComponent implements ControlValueAccessor {
   @Input() fit: 'contain' | 'cover' = 'contain';
   @Input() label = 'Upload image';
   @Input() size = 64;
+  @Input() accept = '.png, .jpg, .jpeg';
 
   @Input() set value(value: string) {
-    this._value = this.sanitizer.bypassSecurityTrustResourceUrl(`${value}`);
+    this._value = value && this.sanitizer.bypassSecurityTrustResourceUrl(`${value}`);
   }
 
-  @Input() set icon(value: string) {
-    this._icon = this.sanitizer.bypassSecurityTrustStyle(`url(${value})`);
+  @Input() set icon(icon: string) {
+    this._icon = this.sanitizer.bypassSecurityTrustStyle(`url(${icon})`);
   }
 
   @Input() set type(value: 'circle' | '') {
