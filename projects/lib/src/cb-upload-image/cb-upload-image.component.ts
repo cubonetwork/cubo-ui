@@ -55,7 +55,7 @@ export class CbUploadImageComponent implements ControlValueAccessor {
   @Input() accept = '.png, .jpg, .jpeg, .gif';
 
   @Input() set value(value: string) {
-    this._value = value && this.sanitizer.bypassSecurityTrustResourceUrl(`${value}`);
+    this._value = (typeof value === 'string') ? this.sanitizer.bypassSecurityTrustResourceUrl(`${value}`) : '';
   }
 
   @Input() set icon(icon: string) {
