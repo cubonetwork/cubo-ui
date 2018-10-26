@@ -7,6 +7,7 @@ import {
   CbCardTitleComponent,
   CbCardPretitleComponent,
   CbCardDescriptionComponent,
+  CbCardHeaderComponent,
   CbCardFooterComponent,
   CbCardInfoComponent
 } from './cb-card.component';
@@ -15,6 +16,7 @@ import {
   exports: [
     CbCardComponent,
     CbCardImageComponent,
+    CbCardHeaderComponent,
     CbCardFooterComponent,
     CbCardTitleComponent,
     CbCardPretitleComponent,
@@ -24,6 +26,7 @@ import {
   declarations: [
     CbCardComponent,
     CbCardImageComponent,
+    CbCardHeaderComponent,
     CbCardFooterComponent,
     CbCardTitleComponent,
     CbCardPretitleComponent,
