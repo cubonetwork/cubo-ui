@@ -31,7 +31,6 @@ a > :host(:hover) {
   display: flex;
   padding: $space-sm;
 
-
   :host(.cb-card--center) & {
     align-items: center;
     text-align: center;
