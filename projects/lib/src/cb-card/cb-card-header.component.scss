@@ -1,0 +1,13 @@
+// -------------------------------------------------
+// Card Header
+// -------------------------------------------------
+
+@import '../../../application/src/styles/core';
+
+:host(.cb-card-header) {
+  display: flex;
+  justify-content: space-between;
+  padding-left: $space-sm;
+  padding-right: $space-sm;
+  padding-top: $space-sm;
+}

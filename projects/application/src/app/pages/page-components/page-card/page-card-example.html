@@ -35,10 +35,14 @@
         <td>cb-card-footer</td>
         <td>Section anchored to the bottom of the card</td>
       </tr>
+      <tr>
+        <td>cb-card-header</td>
+        <td>Section anchored to the top of the card</td>
+      </tr>
     </tbody>
   </table>
 
-  <h2>Card examples</h2>
+  <h3>Card examples</h3>
 
 </app-content>
 
@@ -253,9 +257,9 @@
       </cb-card-image>
       <cb-card-title>Eleven</cb-card-title>
       <cb-card-description>Character @ Stranger Things</cb-card-description>
-      <mat-chip-list style="position: absolute; left: 1.6rem; top: 1.6rem;">
-        <mat-chip color="accent" selected="true">Hero</mat-chip>
-      </mat-chip-list>
+      <cb-chip-list style="position: absolute; left: 1.6rem; top: 1.6rem;">
+        <cb-chip color="green" bg="true">Hero</cb-chip>
+      </cb-chip-list>
       <cb-card-footer>
         <div class="social">
           <cb-social>
@@ -307,14 +311,14 @@
 <div style="max-width: 34rem; margin-left: 3.2rem; margin-top: 6.4rem; margin-bottom: 2.4rem;">
   <a style="display: block">
     <cb-card [orientation]="'row'">
+      <cb-card-header>
+        <cb-chip color="green" bg="true">Hero</cb-chip>
+      </cb-card-header>
       <cb-card-image>
         <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
       </cb-card-image>
       <cb-card-title>Eleven</cb-card-title>
       <cb-card-description>Character @ Stranger Things</cb-card-description>
-      <mat-chip-list style="position: absolute; left: 1.6rem; top: 1.6rem;">
-        <mat-chip color="accent" selected="true">Hero</mat-chip>
-      </mat-chip-list>
       <cb-card-footer>
         <div class="social">
           <cb-social>

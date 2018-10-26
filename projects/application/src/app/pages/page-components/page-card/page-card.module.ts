@@ -1,6 +1,6 @@
 import { ContentModule } from '@app/components/content/content.module';
-import { CbSocialModule, CbAvatarModule, CbCardModule } from '@lib';
-import { MatChipsModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { CbSocialModule, CbAvatarModule, CbCardModule, CbChipModule } from '@lib';
+import { MatIconModule, MatButtonModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
 
@@ -16,7 +16,7 @@ import {
     SharedModule,
     PageCardRouting,
     CbCardModule,
-    MatChipsModule,
+    CbChipModule,
     CbAvatarModule,
     CbSocialModule,
     MatIconModule,

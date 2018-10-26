@@ -21,6 +21,7 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, S
 @Component({
   selector: 'cb-card',
   template: `
+    <ng-content select="cb-card-header"></ng-content>
     <div class="content">
       <ng-content select="cb-card-image"></ng-content>
       <div class="content__info">
@@ -35,16 +36,36 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, OnInit, S
   host: {
     'class': 'cb-card',
     '[class.cb-card--small]': 'size ===  "small"',
-    '[class.cb-card--center]': 'center ===  true',
     '[class.cb-card--column]': 'orientation ===  "column"',
-    '[class.cb-card--row]': 'orientation ===  "row"'
+    '[class.cb-card--row]': 'orientation ===  "row"',
+    '[class.cb-card--center]': 'center',
   }
 })
 export class CbCardComponent {
-  @Input() size: string;
+  @Input() size: 'small';
+  @Input() orientation: 'column' | 'row' = 'column';
   @Input() center = false;
-  @Input() orientation = 'column';
 }
+
+/**
+* Component `<cb-card-header>` to create a card header
+*
+* Example:
+* <cb-card-header>...</cb-card-header>
+*/
+@Component({
+  selector: 'cb-card-header',
+  template: `
+    <ng-content></ng-content>
+	`,
+  styleUrls: ['./cb-card-header.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    'class': 'cb-card-header'
+  }
+})
+export class CbCardHeaderComponent { }
 
 /**
 * Component `<cb-card-footer>` to create a card footer
@@ -63,7 +84,7 @@ export class CbCardComponent {
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'class': 'cb-card-footer',
-    '[class.cb-card-footer--border]': 'border ===  true'
+    '[class.cb-card-footer--border]': 'border'
   }
 })
 export class CbCardFooterComponent {
@@ -86,9 +107,7 @@ export class CbCardFooterComponent {
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { 'class': 'cb-card-title' }
 })
-export class CbCardTitleComponent {
-  @Input() size: string;
-}
+export class CbCardTitleComponent {}
 
 /**
 * Component `<cb-card-info>` to create a card info
@@ -163,7 +182,7 @@ export class CbCardDescriptionComponent { }
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'class': 'cb-card-image',
-    '[class.cb-card-image--center]': 'center === true'
+    '[class.cb-card-image--center]': 'center'
   }
 })
 export class CbCardImageComponent {
