@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, ChangeDetectorRef } from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@angular/core';
 
 /**
 * Component `<cb-menu>` to floating menu based on material ui
@@ -24,22 +24,20 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, ChangeDet
     '[class.menu--active]': 'active === true',
     '[class.menu--top-left]': 'position === "top left"',
     '[class.menu--top-right]': 'position === "top right"',
+    '[class.menu--top-center]': 'position === "top center"',
     '[class.menu--bottom-left]': 'position === "bottom left"',
-    '[class.menu--bottom-right]': 'position === "bottom right"'
+    '[class.menu--bottom-right]': 'position === "bottom right"',
+    '[class.menu--bottom-center]': 'position === "bottom center"'
   }
 })
 export class CbMenuComponent {
-  @Input() position = 'top left';
+  @Input() position: 'top left' | 'top right' | 'top center' | 'bottom left' | 'bottom right' | 'bottom center' = 'top left';
   @Input() backdrop = true;
   active = false;
 
-  constructor(private ref: ChangeDetectorRef) {}
-
   toggleMenu(event) {
-    this.ref.detectChanges();
     event.stopPropagation();
     this.active = !this.active;
-    this.ref.detectChanges();
   }
 
   hiddenMenu(event) {
@@ -91,9 +89,14 @@ export class CbMenuContentComponent { }
   styleUrls: ['./cb-menu-item.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { 'class': 'cb-menu-item' }
+  host: {
+    'class': 'cb-menu-item',
+    '[style.width.px]': 'size'
+   }
 })
-export class CbMenuItemComponent { }
+export class CbMenuItemComponent {
+  size: number;
+}
 
 /**
 * Component `<cb-menu-chip>` to create a menu item

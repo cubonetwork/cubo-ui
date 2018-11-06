@@ -7,7 +7,7 @@
 @mixin menuTransitionToTop($index) {
   &:nth-child(#{$index}) {
     transform: translateY(calc((#{-($index + 0.001) * 100%} - #{$space-sm * $index})));
-    transition-duration: .1s * $index;
+    transition-duration: .09s * $index;
     transition-property: transform;
   }
 }
@@ -15,7 +15,7 @@
 @mixin menuTransitionToBottom($index) {
   &:nth-child(#{$index}) {
     transform: translateY(calc(#{(($index + 0.001) - 1) * 100%} + #{$space-sm * $index}));
-    transition-duration: .1s * $index;
+    transition-duration: .09s * $index;
     transition-property: transform;
   }
 }
@@ -23,7 +23,6 @@
 :host {
   opacity: 0;
   position: absolute;
-  width: 100vw;
   z-index: $zindex-menu + 1;
 }
 
@@ -31,51 +30,36 @@
   opacity: 1;
 }
 
-:host-context(.menu--active.menu--bottom-left) {
-  @for $index from 1 through 10 {
+:host-context(.menu--active[class*="bottom"]) {
+  @for $index from 1 through 12 {
     @include menuTransitionToBottom($index);
   }
 }
 
-:host-context(.menu--active.menu--bottom-right) {
-  @for $index from 1 through 10 {
-    @include menuTransitionToBottom($index);
-  }
-}
-
-:host-context(.menu--active.menu--top-left) {
-  @for $index from 1 through 10 {
+:host-context(.menu--active[class*="top"]) {
+  @for $index from 1 through 12 {
     @include menuTransitionToTop($index);
   }
 }
 
-:host-context(.menu--active.menu--top-right) {
-  @for $index from 1 through 10 {
-    @include menuTransitionToTop($index);
-  }
-}
-
-:host-context(.menu--bottom-right) {
-  left: 0;
-  text-align: left;
+:host-context([class*="bottom"]) {
   transform: translateY(0);
 }
 
-:host-context(.menu--bottom-left) {
-  right: 0;
-  text-align: right;
-  transform: translateY(0);
+:host-context([class*="top"]) {
+  transform: translateY(-100%);
 }
 
-:host-context(.menu--top-right) {
+:host-context([class*="center"]) {
+  text-align: center;
+}
+
+:host-context([class*="left"]) {
+  right: 0;
+  text-align: right;
+}
+
+:host-context([class*="right"]) {
   left: 0;
   text-align: left;
-  transform: translateY(-100%);
 }
-
-:host-context(.menu--top-left) {
-  right: 0;
-  text-align: right;
-  transform: translateY(-100%);
-}
-

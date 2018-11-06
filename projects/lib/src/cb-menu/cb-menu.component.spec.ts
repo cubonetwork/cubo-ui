@@ -44,6 +44,14 @@ describe('CbMenuComponent', () => {
     expect(element.getAttribute('class')).toContain('menu--top-left');
   });
 
+  it('has top-center class when position is "top center', () => {
+    comp.position = 'top center';
+    fixture.detectChanges();
+    element = fixture.debugElement.nativeElement;
+
+    expect(element.getAttribute('class')).toContain('menu--top-center');
+  });
+
   it('has top-right class when position is "top right', () => {
     comp.position = 'top right';
     fixture.detectChanges();
@@ -58,6 +66,14 @@ describe('CbMenuComponent', () => {
     element = fixture.debugElement.nativeElement;
 
     expect(element.getAttribute('class')).toContain('menu--bottom-left');
+  });
+
+  it('has bottom-center class when position is "bottom center', () => {
+    comp.position = 'bottom center';
+    fixture.detectChanges();
+    element = fixture.debugElement.nativeElement;
+
+    expect(element.getAttribute('class')).toContain('menu--bottom-center');
   });
 
   it('has bottom-right class when position is "bottom right', () => {

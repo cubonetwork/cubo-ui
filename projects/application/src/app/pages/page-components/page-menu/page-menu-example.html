@@ -17,7 +17,30 @@
 
   <h3>Opening to bottom right</h3>
   <div style="height: 250px;">
-    <cb-menu role="navigation" [position]="'bottom right'">
+    <cb-menu role="navigation" position="bottom right">
+      <cb-menu-button>
+        <button mat-fab color="primary">Menu</button>
+      </cb-menu-button>
+      <cb-menu-content>
+        <cb-menu-item>
+          <cb-menu-chip style="background: darkorange">DARK ORANGE</cb-menu-chip>
+        </cb-menu-item>
+        <cb-menu-item>
+          <cb-menu-chip style="background: cornflowerblue; color: white">CORN FLOWER BLUE</cb-menu-chip>
+        </cb-menu-item>
+        <cb-menu-item>
+          <cb-menu-chip style="background: darkorange">DARK ORANGE</cb-menu-chip>
+        </cb-menu-item>
+        <cb-menu-item>
+          <cb-menu-chip style="background: mediumspringgreen">MEDIUM SPRING GREEN</cb-menu-chip>
+        </cb-menu-item>
+      </cb-menu-content>
+    </cb-menu>
+  </div>
+
+  <h3>Opening to bottom center</h3>
+  <div style="height: 250px; display: flex; justify-content: center; align-items: flex-start;">
+    <cb-menu role="navigation" position="bottom center">
       <cb-menu-button>
         <button mat-fab color="primary">Menu</button>
       </cb-menu-button>
@@ -40,7 +63,7 @@
 
   <h3>Opening to bottom left</h3>
   <div style="height: 250px; display: flex; justify-content: flex-end; align-items: flex-start;">
-    <cb-menu role="navigation" [position]="'bottom left'">
+    <cb-menu role="navigation" position="bottom left">
       <cb-menu-button>
         <button mat-fab color="primary">Menu</button>
       </cb-menu-button>
@@ -63,7 +86,30 @@
 
   <h3>Opening to top right</h3>
   <div style="height: 250px; display: flex; justify-content: flex-start; align-items: flex-end;">
-    <cb-menu role="navigation" [position]="'top right'">
+    <cb-menu role="navigation" position="top right">
+      <cb-menu-button>
+        <button mat-fab color="primary">Menu</button>
+      </cb-menu-button>
+      <cb-menu-content>
+        <cb-menu-item>
+          <cb-menu-chip style="background: darkorange">DARK ORANGE</cb-menu-chip>
+        </cb-menu-item>
+        <cb-menu-item>
+          <cb-menu-chip style="background: cornflowerblue; color: white">CORN FLOWER BLUE</cb-menu-chip>
+        </cb-menu-item>
+        <cb-menu-item>
+          <cb-menu-chip style="background: darkorange">DARK ORANGE</cb-menu-chip>
+        </cb-menu-item>
+        <cb-menu-item>
+          <cb-menu-chip style="background: mediumspringgreen">MEDIUM SPRING GREEN</cb-menu-chip>
+        </cb-menu-item>
+      </cb-menu-content>
+    </cb-menu>
+  </div>
+
+  <h3>Opening to top center</h3>
+  <div style="height: 250px; display: flex; justify-content: center; align-items: flex-end;">
+    <cb-menu role="navigation" position="top center">
       <cb-menu-button>
         <button mat-fab color="primary">Menu</button>
       </cb-menu-button>
@@ -86,7 +132,7 @@
 
   <h3>Opening to top left</h3>
   <div style="height: 250px; display: flex; justify-content: flex-end; align-items: flex-end;">
-    <cb-menu role="navigation" [position]="'top left'">
+    <cb-menu role="navigation" position="top left">
       <cb-menu-button>
         <button mat-fab color="primary">Menu</button>
       </cb-menu-button>
@@ -109,7 +155,7 @@
 
   <h3>Use with other component without backdrop</h3>
   <div style="height: 250px;">
-    <cb-menu role="navigation" [position]="'bottom right'" [backdrop]="false">
+    <cb-menu role="navigation" position="bottom right'" [backdrop]="false">
       <cb-menu-button>
         <button mat-fab color="primary">Menu</button>
       </cb-menu-button>
