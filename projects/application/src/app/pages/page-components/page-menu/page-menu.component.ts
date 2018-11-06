@@ -14,7 +14,7 @@ export class PageMenuComponent {}
 })
 export class PageMenuExampleComponent {
   codeHtml = hljs.highlightAuto(`
-  <cb-menu role="navigation" [position]="'bottom right'" [backdrop]="false">
+  <cb-menu role="navigation" position="bottom right" backdrop="false">
     <cb-menu-button>
       <button mat-fab color="primary">Menu</button>
     </cb-menu-button>
