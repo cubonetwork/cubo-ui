@@ -9,6 +9,7 @@
   position: absolute;
   transition: visibility .15s;
   visibility: hidden;
+  white-space: nowrap;
 }
 
 :host-context(.menu--active) {
@@ -16,22 +17,25 @@
   z-index: $zindex-menu;
 }
 
-:host-context(.menu--bottom-left) {
-  right: 0;
+:host-context([class*="bottom"]) {
   top: 100%;
 }
 
-:host-context(.menu--bottom-right) {
-  left: 0;
-  top: 100%;
+:host-context([class*="top"]) {
+  bottom: 100%;
 }
 
-:host-context(.menu--top-left) {
-  bottom: 100%;
+:host-context([class*="left"]) {
   right: 0;
 }
 
-:host-context(.menu--top-right) {
-  bottom: 100%;
+:host-context([class*="right"]) {
   left: 0;
+}
+
+:host-context([class*="center"]) {
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
 }
