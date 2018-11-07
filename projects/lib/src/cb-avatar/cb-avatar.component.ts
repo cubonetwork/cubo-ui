@@ -29,8 +29,8 @@ export class CbAvatarComponent {
   @Input() image: string;
   @Input() size = 'large';
   defaultImage = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
-  nameSplit: Array<String>;
-  letters: String;
+  nameSplit: Array<string>;
+  letters: string;
 
   @Input() set name(name: string) {
     this.nameSplit = name.split(' ');
