@@ -33,9 +33,11 @@ export class CbAvatarComponent {
   letters: string;
 
   @Input() set name(name: string) {
-    this.nameSplit = name.split(' ');
-    this.nameSplit[1]
-      ? this.letters = this.nameSplit[0].charAt(0).toUpperCase() + this.nameSplit[1].charAt(0).toUpperCase()
-      : this.letters = this.nameSplit[0].charAt(0).toUpperCase();
+    if (name) {
+      this.nameSplit = name.split(' ');
+      this.nameSplit[1]
+        ? this.letters = this.nameSplit[0].charAt(0).toUpperCase() + this.nameSplit[1].charAt(0).toUpperCase()
+        : this.letters = this.nameSplit[0].charAt(0).toUpperCase();
+    }
   }
 }
