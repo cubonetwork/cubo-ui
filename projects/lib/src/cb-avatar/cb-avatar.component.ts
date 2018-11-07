@@ -1,10 +1,4 @@
-import {
-  Component,
-  ViewEncapsulation,
-  ChangeDetectionStrategy,
-  Input,
-  OnInit,
-} from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@angular/core';
 
 /**
 * Component `<cb-avatar>` to create a avatar
@@ -16,7 +10,7 @@ import {
   selector: 'cb-avatar',
   template: `
   <img class="avatar" lazyimage [defaultImage]="defaultImage" [lazyLoad]="image" [offset]="50" alt="{{name}}" *ngIf="image">
-  <span class="initials" *ngIf="!image">{{letters}}</span>
+  <span class="initials" *ngIf="!image">{{ letters }}</span>
   <ng-content></ng-content>
   `,
   styleUrls: ['./cb-avatar.component.scss'],
@@ -31,20 +25,17 @@ import {
     '[class.avatar--extra-large]': 'size ===  "xlarge"'
   }
 })
-export class CbAvatarComponent implements OnInit {
+export class CbAvatarComponent {
   @Input() image: string;
-  @Input() name: string;
   @Input() size = 'large';
   defaultImage = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
   nameSplit: Array<String>;
   letters: String;
 
-  ngOnInit() {
-    if (this.name) {
-      this.nameSplit = this.name.split(' ');
-      this.nameSplit[1]
-        ? this.letters = this.nameSplit[0].charAt(0).toUpperCase() + this.nameSplit[1].charAt(0).toUpperCase()
-        : this.letters = this.nameSplit[0].charAt(0).toUpperCase();
-    }
+  @Input() set name(name: string) {
+    this.nameSplit = name.split(' ');
+    this.nameSplit[1]
+      ? this.letters = this.nameSplit[0].charAt(0).toUpperCase() + this.nameSplit[1].charAt(0).toUpperCase()
+      : this.letters = this.nameSplit[0].charAt(0).toUpperCase();
   }
 }
