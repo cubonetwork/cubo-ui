@@ -27,6 +27,7 @@ import {
     'class': 'cb-chip',
     '[class.chip--bg]': 'bg',
     '[class.chip--icon]': 'icon',
+    '[class.chip--color-red]': 'color === "red"',
     '[class.chip--color-blue]': 'color === "blue"',
     '[class.chip--color-green]': 'color === "green"',
     '[class.chip--color-gray-light]': 'color === "gray-light"',

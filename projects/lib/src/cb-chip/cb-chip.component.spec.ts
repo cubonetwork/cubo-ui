@@ -97,6 +97,14 @@ describe('CbChipComponent', () => {
       expect(element.getAttribute('class')).toContain('chip--color-blue');
     });
 
+    it('red, should have the red class', () => {
+      comp.color = 'red';
+      fixture.detectChanges();
+      element = fixture.debugElement.nativeElement;
+
+      expect(element.getAttribute('class')).toContain('chip--color-red');
+    });
+
     it('orange, should have the orange class', () => {
       comp.color = 'orange';
       fixture.detectChanges();

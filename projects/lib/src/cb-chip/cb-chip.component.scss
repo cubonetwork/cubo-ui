@@ -107,6 +107,15 @@
   }
 }
 
+:host(.chip--color-red):not(.chip--bg) {
+  $color: map-get($pallet-red, 500);
+  border-color: $color;
+
+  &, & > * {
+    color: $color;
+  }
+}
+
 :host(.chip--color-green):not(.chip--bg) {
   $color: map-get($pallet-green, 500);
   border-color: $color;
@@ -199,6 +208,16 @@
 
   &, & > * {
     color: map-get(map-get($pallet-blue, contrast), 500);
+  }
+}
+
+:host(.chip--color-red.chip--bg) {
+  $color: map-get($pallet-red, 500);
+  background-color: $color;
+  border: none;
+
+  &, & > * {
+    color: map-get(map-get($pallet-red, contrast), 500);
   }
 }
 
