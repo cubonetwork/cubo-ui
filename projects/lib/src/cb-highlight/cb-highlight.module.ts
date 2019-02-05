@@ -1,27 +1,25 @@
-import { MatIconModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import {
   CbHighlightComponent,
-  CbHighlithHeaderComponent,
-  CbHighlithContentComponent
+  CbHighlihtHeaderComponent,
+  CbHighlihtContentComponent
 } from './cb-highlight.component';
 
 @NgModule({
   exports: [
     CbHighlightComponent,
-    CbHighlithHeaderComponent,
-    CbHighlithContentComponent,
+    CbHighlihtHeaderComponent,
+    CbHighlihtContentComponent,
   ],
   declarations: [
     CbHighlightComponent,
-    CbHighlithHeaderComponent,
-    CbHighlithContentComponent,
+    CbHighlihtHeaderComponent,
+    CbHighlihtContentComponent,
   ],
   imports: [
-    CommonModule,
-    MatIconModule
+    CommonModule
   ]
 })
 export class CbHighlightModule { }

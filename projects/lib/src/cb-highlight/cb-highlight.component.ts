@@ -30,11 +30,14 @@ import {
     'class': 'cb-highlight',
     '(document:click)': 'onHidden($event)',
     '[class.highlight--active]': 'active === true',
+    '[class.highlight--left]': 'position === "left"',
+    '[class.highlight--right]': 'position === "right"'
   }
 })
 export class CbHighlightComponent {
   @Input() active = false;
   @Input() ariaLabel = 'View highlight';
+  @Input() position: 'left' | 'right' = 'right';
 
   onToggle(event: any) {
     event.stopPropagation();
@@ -62,7 +65,7 @@ export class CbHighlightComponent {
     'class': 'cb-highlight-header'
   }
 })
-export class CbHighlithHeaderComponent { }
+export class CbHighlihtHeaderComponent { }
 
 /**
 * Component `<cb-highlight-content>` to create a content to highlight
@@ -79,4 +82,4 @@ export class CbHighlithHeaderComponent { }
     'class': 'cb-highlight-content'
   }
 })
-export class CbHighlithContentComponent {}
+export class CbHighlihtContentComponent {}
