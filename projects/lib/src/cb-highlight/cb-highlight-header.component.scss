@@ -5,7 +5,8 @@
 @import '../../../application/src/styles/core';
 
 :host {
-  @include mat-typography-level-to-styles($typography, subheading-2);
+  @include mat-typography-level-to-styles($typography, body-1);
   display: block;
-  margin-bottom: $space-xs;
+  font-weight: 300;
+  margin-bottom: $space-xxs;
 }

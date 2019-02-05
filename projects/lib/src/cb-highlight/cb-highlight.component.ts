@@ -11,10 +11,10 @@ import {
 @Component({
   selector: 'cb-highlight',
   template: `
-    <button class="button" role="button" [attr.aria-label]="ariaLabel"></button>
+    <button class="button" role="button" [attr.aria-label]="ariaLabel" (click)="onToggle($event)"></button>
 
     <aside class="dialog" role="dialog">
-      <button class="dialog-close" role="button">✕</button>
+      <button class="dialog-close" role="button" (click)="onHidden($event)">✕</button>
       <header class="dialog-header">
         <ng-content select="cb-highlight-header"></ng-content>
       </header>
@@ -27,11 +27,24 @@ import {
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'cb-highlight'
+    'class': 'cb-highlight',
+    '(document:click)': 'onHidden($event)',
+    '[class.highlight--active]': 'active === true',
   }
 })
 export class CbHighlightComponent {
+  @Input() active = false;
   @Input() ariaLabel = 'View highlight';
+
+  onToggle(event: any) {
+    event.stopPropagation();
+    this.active = !this.active;
+  }
+
+  onHidden(event: any) {
+    event.stopPropagation();
+    this.active = false;
+  }
 }
 
 /**
@@ -66,4 +79,4 @@ export class CbHighlithHeaderComponent { }
     'class': 'cb-highlight-content'
   }
 })
-export class CbHighlithContentComponent { }
+export class CbHighlithContentComponent {}
