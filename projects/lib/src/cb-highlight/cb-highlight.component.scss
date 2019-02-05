@@ -24,19 +24,6 @@ $dialog-side: $space;
   text-align: left;
   vertical-align: middle;
   width: $size;
-
-  &:before {
-    background: rgba(map-get($dark-theme, bg), .9);
-    bottom: 0;
-    content: '';
-    height: 100vh;
-    left: 0;
-    opacity: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    visibility: hidden;
-  }
 }
 
 // -------------------------------------------------
@@ -99,25 +86,45 @@ $dialog-side: $space;
 // -------------------------------------------------
 
 .dialog {
-  background-color: map-get($pallet-yellow, 400);
-  margin-top: $dialog-top;
-  min-height: $space-xlg;
-  min-width: $screen-xs;
   opacity: 0;
-  padding: $space-sm;
-  padding-right: $space-md;
   position: absolute;
   transition-duration: .3s;
   transition-property: opacity, visibility;
   visibility: hidden;
   z-index: $zindex-highlight;
 
+  &.dialog--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
   &:before {
+    background: rgba(map-get($dark-theme, bg), .9);
+    bottom: 0;
+    content: '';
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: $zindex-highlight - 1;
+  }
+
+  &:after {
     border-left: dotted 2px map-get($pallet-yellow, 500);
     bottom: 100%;
     content: '';
     height: $dialog-top - $space-sm;
     position: absolute;
+  }
+
+  &-content {
+    background-color: map-get($pallet-yellow, 400);
+    margin-top: $dialog-top;
+    min-height: $space-xlg;
+    min-width: $screen-xs;
+    padding: $space-sm;
+    padding-right: $space-md;
   }
 
   &-close {
@@ -170,12 +177,6 @@ $dialog-side: $space;
 // -------------------------------------------------
 
 :host(.highlight--active) {
-  &:before {
-    opacity: 1;
-    visibility: visible;
-    z-index: $zindex-highlight - 1;
-  }
-
   .button {
     @include effectButton();
   }

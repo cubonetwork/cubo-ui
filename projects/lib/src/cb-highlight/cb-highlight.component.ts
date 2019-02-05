@@ -2,8 +2,13 @@ import {
   Component,
   ViewEncapsulation,
   ChangeDetectionStrategy,
-  Input
+  Input,
+  Renderer2,
+  ViewChild,
+  Inject,
+  ElementRef
 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 /**
 * Component `<cb-highlight>` to provide a highlight to features in your app.
@@ -11,17 +16,25 @@ import {
 @Component({
   selector: 'cb-highlight',
   template: `
-    <button class="button" role="button" [attr.aria-label]="ariaLabel" (click)="onToggle($event)"></button>
+    <ng-container *ngTemplateOutlet="button"></ng-container>
 
-    <aside class="dialog" role="dialog">
-      <button class="dialog-close" role="button" (click)="onHidden($event)">✕</button>
-      <header class="dialog-header">
-        <ng-content select="cb-highlight-header"></ng-content>
-      </header>
-      <section class="dialog-content">
-        <ng-content select="cb-highlight-content"></ng-content>
-      </section>
-    </aside>
+    <div class="dialog" [ngClass]="{ 'dialog--active': active }" role="dialog" #dialog>
+      <ng-container *ngTemplateOutlet="button"></ng-container>
+
+      <div class="dialog-content">
+        <button class="dialog-close" role="button" (click)="onHidden($event)">✕</button>
+        <header class="dialog-header">
+          <ng-content select="cb-highlight-header"></ng-content>
+        </header>
+        <section class="dialog-content">
+          <ng-content select="cb-highlight-content"></ng-content>
+        </section>
+      </div>
+    </div>
+
+    <ng-template #button>
+      <button class="button" role="button" [attr.aria-label]="ariaLabel" (click)="onToggle($event)"></button>
+    </ng-template>
   `,
   styleUrls: ['./cb-highlight.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
@@ -39,14 +52,26 @@ export class CbHighlightComponent {
   @Input() ariaLabel = 'View highlight';
   @Input() position: 'left' | 'right' = 'right';
 
+  @ViewChild('dialog') dialog: ElementRef;
+
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private ref: ElementRef,
+    private renderer: Renderer2
+  ) {}
+
   onToggle(event: any) {
     event.stopPropagation();
     this.active = !this.active;
+    this.renderer.appendChild(this.document.body, this.dialog.nativeElement);
+
+    if (!this.active) this.onHidden(event);
   }
 
   onHidden(event: any) {
     event.stopPropagation();
     this.active = false;
+    this.renderer.appendChild(this.ref.nativeElement, this.dialog.nativeElement);
   }
 }
 
