@@ -3,15 +3,21 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import {
-  CbHighlightComponent
+  CbHighlightComponent,
+  CbHighlithHeaderComponent,
+  CbHighlithContentComponent
 } from './cb-highlight.component';
 
 @NgModule({
   exports: [
-    CbHighlightComponent
+    CbHighlightComponent,
+    CbHighlithHeaderComponent,
+    CbHighlithContentComponent,
   ],
   declarations: [
-    CbHighlightComponent
+    CbHighlightComponent,
+    CbHighlithHeaderComponent,
+    CbHighlithContentComponent,
   ],
   imports: [
     CommonModule,
