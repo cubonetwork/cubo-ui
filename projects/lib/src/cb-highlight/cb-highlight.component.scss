@@ -4,4 +4,91 @@
 
 @import '../../../application/src/styles/core';
 
-:host { }
+$zindex: 1;
+
+:host {
+  display: inline-block;
+  position: relative;
+}
+
+.button {
+  $color: map-get($pallet-yellow, 600);
+  $size: $space-xs;
+  animation: scale .5s linear alternate infinite both;
+  background-color: $color;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: $size;
+  position: relative;
+  width: $size;
+  z-index: $zindex + 1;
+
+  @mixin effect($opacity, $size) {
+    background-color: rgba($color, $opacity);
+    border-radius: 50%;
+    bottom: -$size;
+    content: '';
+    left: -$size;
+    position: absolute;
+    right: -$size;
+    top: -$size;
+  }
+
+  &:before {
+    @include effect(.6, $space-xxs);
+  }
+
+  &:after {
+    @include effect(.3, $space-xs);
+  }
+
+  @keyframes scale {
+    from {
+      transform: scale(.9);
+    }
+
+    to {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.dialog {
+  $space-top: $space-lg;
+  $space-side: $space;
+  background-color: map-get($pallet-yellow, 400);
+  left: -$space-side;
+  margin-top: $space-top;
+  min-height: $space-xlg;
+  min-width: $screen-xs;
+  padding: $space-sm;
+  padding-right: $space-md;
+  position: absolute;
+  z-index: $zindex;
+
+  &:before {
+    border-left: dotted 2px map-get($pallet-yellow, 500);
+    bottom: 100%;
+    content: '';
+    height: $space-top - $space-xs;
+    left: $space-side + ($space-xxs/ 2);
+    position: absolute;
+  }
+
+  &-close {
+    background-color: transparent;
+    border: none;
+    color: map-get($pallet-gray, 900);
+    cursor: pointer;
+    font-size: 1.2em;
+    position: absolute;
+    right: $space-xs;
+    top: $space-xs;
+    transition: color .15s;
+
+    &:hover {
+      color: map-get($pallet-gray, 700);
+    }
+  }
+}

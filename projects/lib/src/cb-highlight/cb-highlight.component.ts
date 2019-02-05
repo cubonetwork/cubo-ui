@@ -1,7 +1,8 @@
 import {
   Component,
   ViewEncapsulation,
-  ChangeDetectionStrategy
+  ChangeDetectionStrategy,
+  Input
 } from '@angular/core';
 
 /**
@@ -10,7 +11,12 @@ import {
 @Component({
   selector: 'cb-highlight',
   template: `
-    cb-highligth
+    <button class="button" role="button" [attr.aria-label]="ariaLabel"></button>
+
+    <aside class="dialog" role="dialog">
+      <button class="dialog-close" role="button">✕</button>
+      <ng-content></ng-content>
+    </aside>
   `,
   styleUrls: ['./cb-highlight.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
@@ -20,4 +26,5 @@ import {
   }
 })
 export class CbHighlightComponent {
+  @Input() ariaLabel = 'View highligth';
 }
