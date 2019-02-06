@@ -1,6 +1,5 @@
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { DebugElement } from '@angular/core';
 
 import { CbAvatarComponent } from './cb-avatar.component';
 

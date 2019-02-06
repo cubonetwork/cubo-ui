@@ -1,6 +1,5 @@
 import { MatIconModule } from '@angular/material';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { DebugElement } from '@angular/core';
 
 import { CbChipComponent, CbChipListComponent } from './cb-chip.component';
 
