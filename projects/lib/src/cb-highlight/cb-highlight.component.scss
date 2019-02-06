@@ -90,8 +90,47 @@ $dialog-side: $space-xlg;
   position: absolute;
   z-index: $zindex-highlight;
 
+  &:before {
+    background: rgba(map-get($dark-theme, bg), .9);
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: $zindex-highlight - 1;
+  }
+
+  &:after {
+    animation: scaleIn .15s 0s ease-in-out both;
+    border-left: dotted 2px map-get($pallet-yellow, 500);
+    content: '';
+    height: $dialog-top - $space-sm;
+    left: calc(50% + 5px);
+    margin-top: $space-sm;
+    position: absolute;
+    top: 100%;
+    transform-origin: center top;
+    z-index: $zindex-highlight;
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scaleY(0);
+    }
+
+    to {
+      transform: scaleY(1);
+    }
+  }
+
   &.dialog--active {
     display: block;
+
+    &:after {
+      height: $dialog-top - $space-sm;
+    }
 
     .button {
       @include effectButton();
@@ -102,36 +141,18 @@ $dialog-side: $space-xlg;
     }
   }
 
-  &.dialog--right {
-    .dialog-main {
-      left: -$space-sm;
-
-      &:after {
-        left: 2.1rem;
+  @include above(sm) {
+    &.dialog--right {
+      .dialog-main {
+        left: -$space-sm;
       }
     }
-  }
 
-  &.dialog--left {
-    .dialog-main {
-      right: -$space-md;
-
-      &:after {
-        right: 2.5rem;
+    &.dialog--left {
+      .dialog-main {
+        right: -$space;
       }
     }
-  }
-
-  &:before {
-    background: rgba(map-get($dark-theme, bg), .9);
-    bottom: 0;
-    content: '';
-    height: 100vh;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: $zindex-highlight - 1;
   }
 
   &-main {
@@ -144,12 +165,10 @@ $dialog-side: $space-xlg;
     position: absolute;
     z-index: $zindex-highlight + 1;
 
-    &:after {
-      border-left: dotted 2px map-get($pallet-yellow, 500);
-      bottom: 100%;
-      content: '';
-      height: $dialog-top - $space-sm;
-      position: absolute;
+    @include below(xs) {
+      margin-left: $space-sm;
+      margin-right: $space-sm;
+      min-width: calc(100vw - #{$space-sm * 2});
     }
   }
 
@@ -170,11 +189,11 @@ $dialog-side: $space-xlg;
   }
 
   @keyframes fadeIn {
-    0% {
+    from {
       opacity: 0;
     }
 
-    100% {
+    to {
       opacity: 1;
     }
   }

@@ -9,6 +9,7 @@ import {
   ElementRef
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { MediaObserver } from '@angular/flex-layout';
 
 /**
 * Component `<cb-highlight>` to provide a highlight to features in your app.
@@ -54,6 +55,7 @@ export class CbHighlightComponent {
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
+    private mediaObserver: MediaObserver,
     private ref: ElementRef,
     private renderer: Renderer2
   ) {}
@@ -81,8 +83,13 @@ export class CbHighlightComponent {
   }
 
   getPos(pos: any) {
-    this.renderer.setStyle(this.dialog.nativeElement, 'top', `${pos.top}px`);
+    this.renderer.setStyle(this.dialog.nativeElement, 'top', `${pos.top + window.scrollY}px`);
     this.renderer.setStyle(this.dialog.nativeElement, 'left', `${pos.left}px`);
+
+    this.mediaObserver.media$.subscribe(screen => {
+      const dialogMain = this.dialog.nativeElement.querySelector('.dialog-main');
+      if (screen.mqAlias === 'xs') this.renderer.setStyle(dialogMain, 'left', `-${pos.left}px`);
+    });
   }
 }
 
