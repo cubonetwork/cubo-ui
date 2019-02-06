@@ -13,7 +13,7 @@ import { MediaObserver } from '@angular/flex-layout';
   template: `
     <ng-container *ngTemplateOutlet="button"></ng-container>
 
-    <div class="dialog dialog--{{ position }}" [ngClass]="{ 'dialog--active': active }" role="dialog" #dialog>
+    <div class="dialog dialog--{{ position }}" [ngClass]="{ 'dialog--active': _active }" role="dialog" #dialog>
       <ng-container *ngTemplateOutlet="button"></ng-container>
 
       <div class="dialog-main">
@@ -33,7 +33,7 @@ import { MediaObserver } from '@angular/flex-layout';
   `,
   styleUrls: ['./cb-highlight.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Default,
   host: {
     'class': 'cb-highlight',
     '(document:click)': 'onHidden($event)',
@@ -41,11 +41,19 @@ import { MediaObserver } from '@angular/flex-layout';
   }
 })
 export class CbHighlightComponent {
-  @Input() active = false;
+  _active = false;
+
   @Input() ariaLabel = 'View highlight';
   @Input() position: 'left' | 'right' = 'right';
 
   @ViewChild('dialog') dialog: ElementRef;
+
+  @Input() set active(active: boolean) {
+    setTimeout(() => {
+      this._active = active;
+      if (active) this.onActive();
+    }, 600);
+  }
 
   constructor(
     @Inject(DOCUMENT) private document: any,
@@ -54,20 +62,24 @@ export class CbHighlightComponent {
     private renderer: Renderer2
   ) {}
 
-  onToggle(event: any) {
-    event.stopPropagation();
+  onActive() {
     const pos = this.ref.nativeElement.getBoundingClientRect();
-
-    this.active = !this.active;
     this.renderer.appendChild(this.document.body, this.dialog.nativeElement);
     this.getPos(pos);
+  }
 
-    if (!this.active) this.onHidden(event);
+  onToggle(event: any) {
+    event.stopPropagation();
+    event.preventDefault();
+    this.onActive();
+
+    this._active = !this._active;
+    if (!this._active) this.onHidden(event);
   }
 
   onHidden(event: any) {
     event.stopPropagation();
-    this.active = false;
+    this._active = false;
     this.renderer.appendChild(this.ref.nativeElement, this.dialog.nativeElement);
   }
 
