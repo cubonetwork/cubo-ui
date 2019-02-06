@@ -1,13 +1,4 @@
-import {
-  Component,
-  ViewEncapsulation,
-  ChangeDetectionStrategy,
-  Input,
-  Renderer2,
-  ViewChild,
-  Inject,
-  ElementRef
-} from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, Renderer2, ViewChild, Inject, ElementRef } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { MediaObserver } from '@angular/flex-layout';
 
@@ -46,7 +37,7 @@ import { MediaObserver } from '@angular/flex-layout';
   host: {
     'class': 'cb-highlight',
     '(document:click)': 'onHidden($event)',
-    '(window:resize)': 'onResize($event)'
+    '(window:resize)': 'onResize()'
   }
 })
 export class CbHighlightComponent {
@@ -57,7 +48,7 @@ export class CbHighlightComponent {
   @ViewChild('dialog') dialog: ElementRef;
 
   constructor(
-    @Inject(DOCUMENT) private document: Document,
+    @Inject(DOCUMENT) private document: any,
     private mediaObserver: MediaObserver,
     private ref: ElementRef,
     private renderer: Renderer2

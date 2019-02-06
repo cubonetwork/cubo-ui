@@ -1,12 +1,4 @@
-import {
-  Component,
-  ViewEncapsulation,
-  ChangeDetectionStrategy,
-  Input,
-  Renderer2,
-  OnInit,
-  ElementRef
-} from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, Renderer2, OnInit, ElementRef } from '@angular/core';
 
 /**
 * Component `<cb-flag>` to create a flag

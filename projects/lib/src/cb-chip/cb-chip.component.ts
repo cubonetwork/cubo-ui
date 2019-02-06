@@ -1,11 +1,4 @@
-import {
-  Component,
-  ViewEncapsulation,
-  ChangeDetectionStrategy,
-  Input,
-  Renderer2,
-  ElementRef
-} from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, Renderer2, ElementRef } from '@angular/core';
 
 /**
 * Component `<cb-chip>` to create a chip
