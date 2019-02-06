@@ -36,7 +36,7 @@ export class CbAvatarComponent {
     }
   }
 
-  @Input() set size(size: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large') {
+  @Input() set size(size: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge') {
     this.renderer.addClass(this.ref.nativeElement, `avatar--${size}`);
   }
 
