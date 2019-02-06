@@ -1,9 +1,31 @@
 <app-content>
-  <p><code>cb-highlight</code> is made to provide a highligth to features in your app.</p>
+  <p><code>cb-highlight</code> is made to provide a highlight to features in your app.</p>
 
-  <h2>Basic</h2>
+  <h2>Examples</h2>
 
-  <cb-highlight icon="github">highlight</cb-highlight>
+  <h3>Opening to right</h3>
+
+  <div style="height: 20rem">
+    <button mat-raised-button color="primary">
+      <span>Click to view</span>
+      <cb-highlight style="margin-left: 1.6rem;">
+        <cb-highlight-header>Header of highlight</cb-highlight-header>
+        <cb-highlight-content>This is an example of content inside highlight</cb-highlight-content>
+      </cb-highlight>
+    </button>
+  </div>
+
+  <h3>Opening to left</h3>
+
+  <div style="height: 20rem; text-align: right; margin-right: 2.4rem">
+    <button mat-raised-button color="primary">
+      <span>Click to view</span>
+      <cb-highlight position="left" style="margin-left: 1.6rem;">
+        <cb-highlight-header>Header of highlight</cb-highlight-header>
+        <cb-highlight-content>This is an example of content inside highlight</cb-highlight-content>
+      </cb-highlight>
+    </button>
+  </div>
 </app-content>
 
 <mat-accordion>

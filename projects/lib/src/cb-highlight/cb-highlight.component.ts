@@ -13,6 +13,9 @@ import { MediaObserver } from '@angular/flex-layout';
 
 /**
 * Component `<cb-highlight>` to provide a highlight to features in your app.
+* @param ariaLabel Set the aria-label text
+* @param active Set if is active or not on init
+* @param position Set the position that will open (right / left)
 */
 @Component({
   selector: 'cb-highlight',

@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { MatIconRegistry, MatIcon } from '@angular/material';
-import { DomSanitizer } from '@angular/platform-browser';
 import * as hljs from 'highlight.js';
 const languages = ['html', 'typescript', 'css'];
 
@@ -16,20 +14,20 @@ export class PageHighlightComponent { }
 })
 export class PageHighlightExampleComponent {
   codeHtml = hljs.highlightAuto(`
-  // Basic
+  // Opening to right
 
-  <cb-highlight icon="github"></cb-highlight>
+  <cb-highlight position="right">
+    <cb-highlight-header>Header of highlight</cb-highlight-header>
+    <cb-highlight-content>This is an example of content inside highlight</cb-highlight-content>
+  </cb-highlight>
 
-  // Colors
+  // Opening to left
 
-  <cb-highlight color="blue" icon="github"></cb-highlight>
-  <cb-highlight color="orange" icon="github"></cb-highlight>
-  <cb-highlight color="green" icon="github"></cb-highlight>
-
-  // With position
-
-  <cb-highlight color="blue" left="20" icon="github"></cb-highlight>
-  <cb-highlight color="green" right="20" icon="github"></cb-highlight>`, languages).value;
+  <cb-highlight position="left">
+    <cb-highlight-header>Header of highlight</cb-highlight-header>
+    <cb-highlight-content>This is an example of content inside highlight</cb-highlight-content>
+  </cb-highlight>
+`, languages).value;
 
   codeTs = hljs.highlightAuto(`
   import {Component} from '@angular/core';
@@ -39,15 +37,11 @@ export class PageHighlightExampleComponent {
     templateUrl: 'highlight-overview-example.html',
     styleUrls: ['highlight-overview-example.css']
   })
-  export class highlightOverviewExample {}`, languages).value;
+  export class HighlightOverviewExample {}`, languages).value;
 
   codeCss = hljs.highlightAuto(`
   /** No CSS for this example */
   `, languages).value;
-
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer ) {
-    iconRegistry.addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg'));
-  }
 }
 
 @Component({

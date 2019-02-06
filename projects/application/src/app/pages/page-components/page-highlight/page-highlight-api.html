@@ -24,23 +24,18 @@
         <th>Description</th>
       </tr>
       <tr>
-        <td>@Input() icon: string;</td>
-        <td>Set icon to highlight.</td>
+        <td>@Input() ariaLabel: string;</td>
+        <td>Set the aria-label text.</td>
       </tr>
       <tr>
-        <td>@Input() left: number;</td>
-        <td>Add <code>position: absolute</code> and set distance to left side.</td>
+        <td>@Input() active: boolean;</td>
+        <td>Set if is active or not on init.</td>
       </tr>
       <tr>
-        <td>@Input() right: number;</td>
-        <td>Add <code>position: absolute</code> and set distance to right side.</td>
-      </tr>
-      <tr>
-        <td>@Input() color: string;</td>
-        <td>Color of the highlight:
-          <code>blue</code>,
-          <code>green</code>,
-          <code>orange</code>,
+        <td>@Input() position: string;</td>
+        <td>Set the position that will open:
+          <code>right</code>,
+          <code>left</code>
         </td>
       </tr>
     </tbody>
