@@ -8,7 +8,7 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@a
       <ng-container *ngIf="showMenu">Close</ng-container>
     </button>
 
-    <nav class="navbar" [ngClass.sm]="{'-in': showMenu}">
+    <nav class="navbar" [ngClass.xs]="{'-in': showMenu}">
       <mat-nav-list class="nav-list">
         <ng-container *ngFor="let item of menu">
           <a mat-list-item routerLink="/components/{{item.path}}" [routerLinkActive]="['-item-active']" [routerLinkActiveOptions]="{exact: true}">{{item.name}}</a>
