@@ -5,8 +5,8 @@
 @import '../../../application/src/styles/core';
 
 $size: 1.2rem;
-$dialog-top: $space-lg;
-$dialog-side: $space;
+$dialog-top: $space-xlg;
+$dialog-side: $space-xlg;
 
 @mixin effectButton() {
   animation: scale .5s linear alternate infinite both;
@@ -86,16 +86,40 @@ $dialog-side: $space;
 // -------------------------------------------------
 
 .dialog {
-  opacity: 0;
+  display: none;
   position: absolute;
-  transition-duration: .3s;
-  transition-property: opacity, visibility;
-  visibility: hidden;
   z-index: $zindex-highlight;
 
   &.dialog--active {
-    opacity: 1;
-    visibility: visible;
+    display: block;
+
+    .button {
+      @include effectButton();
+    }
+
+    .dialog-main {
+      animation: fadeIn .3s .15s ease-in-out both;
+    }
+  }
+
+  &.dialog--right {
+    .dialog-main {
+      left: -$space-sm;
+
+      &:after {
+        left: 2.1rem;
+      }
+    }
+  }
+
+  &.dialog--left {
+    .dialog-main {
+      right: -$space-md;
+
+      &:after {
+        right: 2.5rem;
+      }
+    }
   }
 
   &:before {
@@ -110,21 +134,23 @@ $dialog-side: $space;
     z-index: $zindex-highlight - 1;
   }
 
-  &:after {
-    border-left: dotted 2px map-get($pallet-yellow, 500);
-    bottom: 100%;
-    content: '';
-    height: $dialog-top - $space-sm;
-    position: absolute;
-  }
-
-  &-content {
+  &-main {
     background-color: map-get($pallet-yellow, 400);
     margin-top: $dialog-top;
     min-height: $space-xlg;
     min-width: $screen-xs;
     padding: $space-sm;
     padding-right: $space-md;
+    position: absolute;
+    z-index: $zindex-highlight + 1;
+
+    &:after {
+      border-left: dotted 2px map-get($pallet-yellow, 500);
+      bottom: 100%;
+      content: '';
+      height: $dialog-top - $space-sm;
+      position: absolute;
+    }
   }
 
   &-close {
@@ -142,42 +168,14 @@ $dialog-side: $space;
       color: map-get($pallet-gray, 700);
     }
   }
-}
 
-// -------------------------------------------------
-// Is to right
-// -------------------------------------------------
-
-:host(.highlight--right) {
-  .dialog {
-    left: -$dialog-side;
-
-    &:before {
-      left: $dialog-side + ($space-xs / 1.5);
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
     }
-  }
-}
 
-// -------------------------------------------------
-// Is to left
-// -------------------------------------------------
-
-:host(.highlight--left) {
-  .dialog {
-    right: -$dialog-side;
-
-    &:before {
-      right: $dialog-side + ($space-xs / 1.5);
+    100% {
+      opacity: 1;
     }
-  }
-}
-
-// -------------------------------------------------
-// Is active
-// -------------------------------------------------
-
-:host(.highlight--active) {
-  .button {
-    @include effectButton();
   }
 }

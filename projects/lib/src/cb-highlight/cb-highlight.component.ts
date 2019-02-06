@@ -18,10 +18,10 @@ import { DOCUMENT } from '@angular/common';
   template: `
     <ng-container *ngTemplateOutlet="button"></ng-container>
 
-    <div class="dialog" [ngClass]="{ 'dialog--active': active }" role="dialog" #dialog>
+    <div class="dialog dialog--{{ position }}" [ngClass]="{ 'dialog--active': active }" role="dialog" #dialog>
       <ng-container *ngTemplateOutlet="button"></ng-container>
 
-      <div class="dialog-content">
+      <div class="dialog-main">
         <button class="dialog-close" role="button" (click)="onHidden($event)">✕</button>
         <header class="dialog-header">
           <ng-content select="cb-highlight-header"></ng-content>
@@ -41,10 +41,7 @@ import { DOCUMENT } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'class': 'cb-highlight',
-    '(document:click)': 'onHidden($event)',
-    '[class.highlight--active]': 'active === true',
-    '[class.highlight--left]': 'position === "left"',
-    '[class.highlight--right]': 'position === "right"'
+    '(document:click)': 'onHidden($event)'
   }
 })
 export class CbHighlightComponent {
@@ -62,8 +59,12 @@ export class CbHighlightComponent {
 
   onToggle(event: any) {
     event.stopPropagation();
+    const pos = this.ref.nativeElement.getBoundingClientRect();
+
     this.active = !this.active;
     this.renderer.appendChild(this.document.body, this.dialog.nativeElement);
+    this.renderer.setStyle(this.dialog.nativeElement, 'top', `${pos.top}px`);
+    this.renderer.setStyle(this.dialog.nativeElement, 'left', `${pos.left}px`);
 
     if (!this.active) this.onHidden(event);
   }
