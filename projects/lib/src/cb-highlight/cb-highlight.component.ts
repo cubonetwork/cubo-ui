@@ -41,7 +41,8 @@ import { DOCUMENT } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'class': 'cb-highlight',
-    '(document:click)': 'onHidden($event)'
+    '(document:click)': 'onHidden($event)',
+    '(window:resize)': 'onResize($event)'
   }
 })
 export class CbHighlightComponent {
@@ -63,8 +64,7 @@ export class CbHighlightComponent {
 
     this.active = !this.active;
     this.renderer.appendChild(this.document.body, this.dialog.nativeElement);
-    this.renderer.setStyle(this.dialog.nativeElement, 'top', `${pos.top}px`);
-    this.renderer.setStyle(this.dialog.nativeElement, 'left', `${pos.left}px`);
+    this.getPos(pos);
 
     if (!this.active) this.onHidden(event);
   }
@@ -73,6 +73,16 @@ export class CbHighlightComponent {
     event.stopPropagation();
     this.active = false;
     this.renderer.appendChild(this.ref.nativeElement, this.dialog.nativeElement);
+  }
+
+  onResize() {
+    const pos = this.ref.nativeElement.getBoundingClientRect();
+    this.getPos(pos);
+  }
+
+  getPos(pos: any) {
+    this.renderer.setStyle(this.dialog.nativeElement, 'top', `${pos.top}px`);
+    this.renderer.setStyle(this.dialog.nativeElement, 'left', `${pos.left}px`);
   }
 }
 
