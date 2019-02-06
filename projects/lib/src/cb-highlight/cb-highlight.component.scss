@@ -102,7 +102,7 @@ $dialog-top: $space-xlg;
   }
 
   &:after {
-    animation: scaleIn .15s 0s ease-in-out both;
+    animation: scaleIn .15s ease-in-out both;
     border-left: dotted 2px map-get($pallet-yellow, 500);
     content: '';
     height: $dialog-top - $space-sm;
