@@ -40,16 +40,4 @@ describe('CbHighlightComponent', () => {
       expect(element.getAttribute('class')).toContain('dialog--right');
     });
   });
-
-  describe('when dialog is active', () => {
-    beforeEach(() => {
-      comp.active = true;
-      fixture.detectChanges();
-    });
-
-    it('should have the active class', () => {
-      element = fixture.debugElement.nativeElement.querySelector('.dialog');
-      expect(element.getAttribute('class')).toContain('dialog--active');
-    });
-  });
 });
