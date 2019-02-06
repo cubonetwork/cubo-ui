@@ -1,6 +1,5 @@
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { DebugElement } from '@angular/core';
 
 import { CbAvatarComponent } from './cb-avatar.component';
 
@@ -48,12 +47,12 @@ describe('CbAvatarComponent', () => {
 
   });
 
-  it('has extra-small class when size is extra-small', () => {
+  it('has xsmall class when size is xsmall', () => {
     comp.size = 'xsmall';
     fixture.detectChanges();
     element = fixture.debugElement.nativeElement;
 
-    expect(element.getAttribute('class')).toContain('avatar--extra-small');
+    expect(element.getAttribute('class')).toContain('avatar--xsmall');
   });
 
   it('has small class when size is small', () => {
@@ -80,11 +79,11 @@ describe('CbAvatarComponent', () => {
     expect(element.getAttribute('class')).toContain('avatar--large');
   });
 
-  it('has extra-large class when size is extra-large', () => {
+  it('has xlarge class when size is xlarge', () => {
     comp.size = 'xlarge';
     fixture.detectChanges();
     element = fixture.debugElement.nativeElement;
 
-    expect(element.getAttribute('class')).toContain('avatar--extra-large');
+    expect(element.getAttribute('class')).toContain('avatar--xlarge');
   });
 });

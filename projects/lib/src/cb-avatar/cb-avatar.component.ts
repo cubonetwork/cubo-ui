@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, ElementRef, Renderer2 } from '@angular/core';
 
 /**
 * Component `<cb-avatar>` to create a avatar
@@ -17,20 +17,15 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@a
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'cb-avatar',
-    '[class.avatar--extra-small]': 'size ===  "xsmall"',
-    '[class.avatar--small]': 'size ===  "small"',
-    '[class.avatar--medium]': 'size ===  "medium"',
-    '[class.avatar--large]': 'size ===  "large"',
-    '[class.avatar--extra-large]': 'size ===  "xlarge"'
+    'class': 'cb-avatar'
   }
 })
 export class CbAvatarComponent {
-  @Input() image: string;
-  @Input() size = 'large';
   defaultImage = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
   nameSplit: Array<string>;
   letters: string;
+
+  @Input() image: string;
 
   @Input() set name(name: string) {
     if (name) {
@@ -40,4 +35,12 @@ export class CbAvatarComponent {
         : this.letters = this.nameSplit[0].charAt(0).toUpperCase();
     }
   }
+
+  @Input() set size(size: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge') {
+    this.renderer.addClass(this.ref.nativeElement, `avatar--${size}`);
+  }
+
+  constructor(
+    private ref: ElementRef,
+    private renderer: Renderer2) {}
 }

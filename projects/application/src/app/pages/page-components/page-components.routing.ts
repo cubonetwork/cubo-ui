@@ -58,6 +58,13 @@ export const PageComponentsRoutes: Routes = [
             }
           },
           {
+            path: 'highlight',
+            loadChildren: '@app/pages/page-components/page-highlight/page-highlight.module#PageHighlightModule',
+            data: {
+              meta: { title: 'Highlight' }
+            }
+          },
+          {
             path: 'menu',
             loadChildren: '@app/pages/page-components/page-menu/page-menu.module#PageMenuModule',
             data: {

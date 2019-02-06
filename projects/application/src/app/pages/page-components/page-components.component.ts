@@ -18,6 +18,10 @@ export class PageComponentsComponent {
       'name': 'Avatar'
     },
     {
+      'path': 'carousel',
+      'name': 'Carousel'
+    },
+    {
       'path': 'card',
       'name': 'Card'
     },
@@ -30,8 +34,8 @@ export class PageComponentsComponent {
       'name': 'Flag'
     },
     {
-      'path': 'carousel',
-      'name': 'Carousel'
+      'path': 'highlight',
+      'name': 'Highlight'
     },
     {
       'path': 'menu',

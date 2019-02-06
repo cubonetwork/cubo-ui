@@ -1,0 +1,43 @@
+<app-content>
+  <h1>API reference</h1>
+
+  <div>
+    <pre><code [innerHtml]="import_content"></code></pre>
+  </div>
+
+  <h2>Directives</h2>
+
+  <p>
+    <span>Selector: </span>
+    <code>cb-highlight</code>
+  </p>
+
+  <p>
+    <span>Exported as: </span>
+    <code>CbHighlight</code>
+  </p>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>@Input() ariaLabel: string;</td>
+        <td>Set the aria-label text.</td>
+      </tr>
+      <tr>
+        <td>@Input() active: boolean;</td>
+        <td>Set if is active or not on init.</td>
+      </tr>
+      <tr>
+        <td>@Input() position: string;</td>
+        <td>Set the position that will open:
+          <code>right</code>,
+          <code>left</code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</app-content>

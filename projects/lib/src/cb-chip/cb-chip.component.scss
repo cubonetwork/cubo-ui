@@ -5,12 +5,18 @@
 @import '../../../application/src/styles/core';
 
 :host {
+  $font-size: 1rem;
   border: map-get($pallet-gray, 800) solid 1px;
   border-radius: $space-lg;
   color: map-get($pallet-gray, 800);
   display: inline-block;
   font-family: "Open Sans", sans-serif;
+  font-size: $font-size;
   font-weight: 600;
+  height: $space;
+  line-height: $font-size;
+  padding-left: $space-xs;
+  padding-right: $space-xs;
   text-transform: uppercase;
 }
 
@@ -28,15 +34,6 @@
   $font-size: .8rem;
   font-size: $font-size;
   height: 1.8rem;
-  line-height: $font-size;
-  padding-left: $space-xs;
-  padding-right: $space-xs;
-}
-
-:host(.chip--size-medium) {
-  $font-size: 1rem;
-  font-size: $font-size;
-  height: $space;
   line-height: $font-size;
   padding-left: $space-xs;
   padding-right: $space-xs;

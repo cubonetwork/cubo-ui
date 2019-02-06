@@ -1,9 +1,4 @@
-import {
-  Component,
-  ViewEncapsulation,
-  ChangeDetectionStrategy,
-  Input
-} from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, Renderer2, ElementRef } from '@angular/core';
 
 /**
 * Component `<cb-chip>` to create a chip
@@ -26,28 +21,24 @@ import {
   host: {
     'class': 'cb-chip',
     '[class.chip--bg]': 'bg',
-    '[class.chip--icon]': 'icon',
-    '[class.chip--color-red]': 'color === "red"',
-    '[class.chip--color-blue]': 'color === "blue"',
-    '[class.chip--color-green]': 'color === "green"',
-    '[class.chip--color-gray-light]': 'color === "gray-light"',
-    '[class.chip--color-gray-lighter]': 'color === "gray-lighter"',
-    '[class.chip--color-orange]': 'color === "orange"',
-    '[class.chip--color-purple]': 'color === "purple"',
-    '[class.chip--color-platinum]': 'color === "platinum"',
-    '[class.chip--color-gold]': 'color === "gold"',
-    '[class.chip--color-silver]': 'color === "silver"',
-    '[class.chip--color-bronze]': 'color === "bronze"',
-    '[class.chip--size-small]': 'size === "small"',
-    '[class.chip--size-medium]': 'size === "medium"',
-    '[class.chip--size-large]': 'size === "large"'
+    '[class.chip--icon]': 'icon'
   }
 })
 export class CbChipComponent {
   @Input() bg = false;
-  @Input() color: string;
   @Input() icon: string;
-  @Input() size = 'medium';
+
+  @Input() set size(size: 'small' | 'medium' | 'large') {
+    this.renderer.addClass(this.ref.nativeElement, `chip--size-${size}`);
+  }
+
+  @Input() set color(color: 'red' | 'blue' | 'green' | 'gray-light' | 'gray-lighter' | 'orange' | 'purple' | 'platinum' | 'gold' | 'silver' | 'bronze') {
+    this.renderer.addClass(this.ref.nativeElement, `chip--color-${color}`);
+  }
+
+  constructor(
+    private ref: ElementRef,
+    private renderer: Renderer2) {}
 }
 
 /**

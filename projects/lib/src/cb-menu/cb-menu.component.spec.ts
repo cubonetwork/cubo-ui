@@ -1,9 +1,7 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { DebugElement } from '@angular/core';
 
 import {
-  CbMenuComponent,
-  CbMenuButtonComponent
+  CbMenuComponent
 } from './cb-menu.component';
 
 describe('CbMenuComponent', () => {

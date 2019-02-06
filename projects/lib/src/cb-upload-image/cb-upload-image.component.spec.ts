@@ -1,5 +1,4 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { DebugElement } from '@angular/core';
 
 import { CbUploadImageComponent } from './cb-upload-image.component';
 

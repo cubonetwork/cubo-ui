@@ -1,0 +1,54 @@
+<app-content>
+  <p><code>cb-highlight</code> is made to provide a highlight to features in your app.</p>
+
+  <h2>Examples</h2>
+
+  <h3>Opening to right</h3>
+
+  <div style="height: 20rem">
+    <button mat-raised-button color="primary">
+      <span>Click to view</span>
+      <cb-highlight style="margin-left: 1.6rem;">
+        <cb-highlight-header>Header of highlight</cb-highlight-header>
+        <cb-highlight-content>This is an example of content inside highlight</cb-highlight-content>
+      </cb-highlight>
+    </button>
+  </div>
+
+  <h3>Opening to left</h3>
+
+  <div style="height: 20rem; text-align: right; margin-right: 2.4rem">
+    <button mat-raised-button color="primary">
+      <span>Click to view</span>
+      <cb-highlight position="left" style="margin-left: 1.6rem;">
+        <cb-highlight-header>Header of highlight</cb-highlight-header>
+        <cb-highlight-content>This is an example of content inside highlight</cb-highlight-content>
+      </cb-highlight>
+    </button>
+  </div>
+</app-content>
+
+<mat-accordion>
+  <mat-expansion-panel class="panel">
+    <mat-expansion-panel-header class="panel__header">
+      View Code
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre class="panel__code">
+          <code [innerHtml]='codeHtml'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="TS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeTs'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="CSS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeCss'></code>
+        </pre>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</mat-accordion>

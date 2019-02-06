@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, ContentChildren, Directive, ElementRef, Input, OnInit, QueryList, TemplateRef, ViewChild, ViewChildren } from '@angular/core';
-import { animate, AnimationBuilder, AnimationFactory, AnimationPlayer, style } from '@angular/animations';
+import { AfterViewInit, Component, ContentChildren, Directive, ElementRef, Input, QueryList, TemplateRef, ViewChild } from '@angular/core';
+import { animate, AnimationBuilder, AnimationFactory, style } from '@angular/animations';
 
 @Directive({ selector: '[cbCarouselItem]' })
 export class CbCarouselItemDirective {
@@ -24,14 +24,14 @@ export class CbCarouselItemDirective {
   `,
   styleUrls: ['./cb-carousel.component.scss']
 })
-export class CbCarouselComponent implements AfterViewInit { 
+export class CbCarouselComponent implements AfterViewInit {
   @ContentChildren(CbCarouselItemDirective) slides: QueryList<CbCarouselItemDirective>;
   @ViewChild('carousel') private carousel: ElementRef;
   @ViewChild('indicators') private indicators: ElementRef;
 
   @Input() showIndicators = true;
   currentSlide = 0;
-  
+
   constructor(private animationBuilder: AnimationBuilder) { }
 
   ngAfterViewInit() { }
@@ -46,7 +46,7 @@ export class CbCarouselComponent implements AfterViewInit {
 
   goToSlide(index) {
     this.currentSlide = index;
-    this.startSlideTransition(); 
+    this.startSlideTransition();
   }
 
   updateIndicator() {

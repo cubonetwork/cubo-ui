@@ -1,0 +1,200 @@
+// ==================================================
+// Highlight
+// ==================================================
+
+@import '../../../application/src/styles/core';
+
+$size: 1.2rem;
+$dialog-top: $space-xlg;
+$dialog-side: $space-xlg;
+
+@mixin effectButton() {
+  animation: scale .5s linear alternate infinite both;
+
+  &:after,
+  &:before {
+    opacity: 1;
+  }
+}
+
+:host {
+  display: inline-block;
+  height: $size;
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  width: $size;
+}
+
+// -------------------------------------------------
+// Button
+// -------------------------------------------------
+
+.button {
+  $color: map-get($pallet-yellow, 600);
+  background-color: $color;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: $size;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: center center;
+  width: $size;
+  z-index: $zindex-highlight + 1;
+
+  &:hover {
+    @include effectButton();
+  }
+
+  @mixin effect($opacity, $size) {
+    background-color: rgba($color, $opacity);
+    border-radius: 50%;
+    bottom: -$size;
+    content: '';
+    left: -$size;
+    opacity: 0;
+    position: absolute;
+    right: -$size;
+    top: -$size;
+    transition: opacity .3s;
+  }
+
+  &:before {
+    @include effect(.6, $space-xxs);
+  }
+
+  &:after {
+    @include effect(.3, $space-xs);
+  }
+
+  @keyframes scale {
+    from {
+      transform: scale(1.2);
+    }
+
+    to {
+      transform: scale(.8);
+    }
+  }
+}
+
+// -------------------------------------------------
+// Dialog
+// -------------------------------------------------
+
+.dialog {
+  display: none;
+  position: absolute;
+  z-index: $zindex-highlight;
+
+  &:before {
+    background: rgba(map-get($dark-theme, bg), .9);
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: $zindex-highlight - 1;
+  }
+
+  &:after {
+    animation: scaleIn .15s 0s ease-in-out both;
+    border-left: dotted 2px map-get($pallet-yellow, 500);
+    content: '';
+    height: $dialog-top - $space-sm;
+    left: calc(50% + 5px);
+    margin-top: $space-sm;
+    position: absolute;
+    top: 100%;
+    transform-origin: center top;
+    z-index: $zindex-highlight;
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scaleY(0);
+    }
+
+    to {
+      transform: scaleY(1);
+    }
+  }
+
+  &.dialog--active {
+    display: block;
+
+    &:after {
+      height: $dialog-top - $space-sm;
+    }
+
+    .button {
+      @include effectButton();
+    }
+
+    .dialog-main {
+      animation: fadeIn .3s .15s ease-in-out both;
+    }
+  }
+
+  @include above(sm) {
+    &.dialog--right {
+      .dialog-main {
+        left: -$space-sm;
+      }
+    }
+
+    &.dialog--left {
+      .dialog-main {
+        right: -$space;
+      }
+    }
+  }
+
+  &-main {
+    background-color: map-get($pallet-yellow, 400);
+    margin-top: $dialog-top;
+    min-height: $space-xlg;
+    min-width: $screen-xs;
+    padding: $space-sm;
+    padding-right: $space-md;
+    position: absolute;
+    z-index: $zindex-highlight + 1;
+
+    @include below(xs) {
+      margin-left: $space-sm;
+      margin-right: $space-sm;
+      min-width: calc(100vw - #{$space-sm * 2});
+    }
+  }
+
+  &-close {
+    background-color: transparent;
+    border: none;
+    color: map-get($pallet-gray, 900);
+    cursor: pointer;
+    font-size: 1.2em;
+    position: absolute;
+    right: $space-xs;
+    top: $space-xxs;
+    transition: color .15s;
+
+    &:hover {
+      color: map-get($pallet-gray, 700);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}

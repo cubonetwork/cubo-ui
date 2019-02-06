@@ -14,7 +14,7 @@
   @include above(md) {
     display: grid;
     grid-column-gap: $space;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 30rem 3fr;
     grid-template-rows: auto;
   }
 }
