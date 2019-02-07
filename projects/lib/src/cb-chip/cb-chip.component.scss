@@ -53,15 +53,18 @@
 // -------------------------------------------------
 
 :host(.chip--icon) {
+  padding-left: $space + $space-xxs;
   position: relative;
+
+  .icon {
+    left: 0;
+    top: -1px;
+    transform: scale(.7);
+  }
 }
 
 :host(.chip--size-small.chip--icon) {
   padding-left: $space-sm + $space-xxs;
-}
-
-:host(.chip--size-medium.chip--icon) {
-  padding-left: $space + $space-xxs;
 }
 
 :host(.chip--size-large.chip--icon) {
@@ -74,15 +77,10 @@
   transform: scale(.5);
 }
 
-:host(.chip--size-medium) .icon {
-  left: 0;
-  top: -1px;
-  transform: scale(.7);
-}
-
 :host(.chip--size-large) .icon {
   left: 3px;
   top: 3px;
+  transform: scale(1);
 }
 
 .icon {
