@@ -77,7 +77,7 @@ export class PageCardExampleComponent {
     <cb-card-description>Character @ Stranger Things</cb-card-description>
     <cb-card-badges>
       <cb-chip-list>
-        <cb-chip color="green" bg="true">Superpower</cb-chip>
+        <cb-chip color="green" [bg]="true">Superpower</cb-chip>
       </cb-chip-list>
     </cb-card-badges>
     <cb-card-footer>
@@ -121,7 +121,7 @@ export class PageCardExampleComponent {
   codeOrientationRowHtml = hljs.highlightAuto(`
   <cb-card [orientation]="'row'">
     <cb-card-header>
-      <cb-chip color="green" bg="true">Hero</cb-chip>
+      <cb-chip color="green" [bg]="true">Hero</cb-chip>
     </cb-card-header>
     <cb-card-image>
       <cb-avatar [image]="'https://bit.ly/2vvFXCO'"></cb-avatar>
@@ -130,7 +130,7 @@ export class PageCardExampleComponent {
     <cb-card-description>Character @ Stranger Things</cb-card-description>
     <cb-card-badges>
       <cb-chip-list>
-        <cb-chip color="green" bg="true">Superpower</cb-chip>
+        <cb-chip color="green" [bg]="true">Superpower</cb-chip>
       </cb-chip-list>
     </cb-card-badges>
     <cb-card-footer>

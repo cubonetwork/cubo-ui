@@ -41,27 +41,27 @@ export class PageChipExampleComponent {
 
     // Colors with background
 
-    <cb-chip color="blue" bg="true">Blue chip</cb-chip>
-    <cb-chip color="green" bg="true">Green chip</cb-chip>
-    <cb-chip color="orange" bg="true">Orange chip</cb-chip>
-    <cb-chip color="gray-light" bg="true">Gray light chip</cb-chip>
+    <cb-chip color="blue" [bg]="true">Blue chip</cb-chip>
+    <cb-chip color="green" [bg]="true">Green chip</cb-chip>
+    <cb-chip color="orange" [bg]="true">Orange chip</cb-chip>
+    <cb-chip color="gray-light" [bg]="true">Gray light chip</cb-chip>
 
     // Chip List - Direction: Vertical
 
     <cb-chip-list direction="vertical">
-      <cb-chip color="blue" bg="true">Blue chip</cb-chip>
-      <cb-chip color="green" bg="true">Green chip</cb-chip>
-      <cb-chip color="orange" bg="true">Orange chip</cb-chip>
-      <cb-chip color="gray-light" bg="true">Gray light chip</cb-chip>
+      <cb-chip color="blue" [bg]="true">Blue chip</cb-chip>
+      <cb-chip color="green" [bg]="true">Green chip</cb-chip>
+      <cb-chip color="orange" [bg]="true">Orange chip</cb-chip>
+      <cb-chip color="gray-light" [bg]="true">Gray light chip</cb-chip>
     </cb-chip-list>
 
     // Chip List - Direction: Horizontal
 
     <cb-chip-list direction="horizontal">
-      <cb-chip color="blue" bg="true">Blue chip</cb-chip>
-      <cb-chip color="green" bg="true">Green chip</cb-chip>
-      <cb-chip color="orange" bg="true">Orange chip</cb-chip>
-      <cb-chip color="gray-light" bg="true">Gray light chip</cb-chip>
+      <cb-chip color="blue" [bg]="true">Blue chip</cb-chip>
+      <cb-chip color="green" [bg]="true">Green chip</cb-chip>
+      <cb-chip color="orange" [bg]="true">Orange chip</cb-chip>
+      <cb-chip color="gray-light" [bg]="true">Gray light chip</cb-chip>
     </cb-chip-list>`, languages).value;
 
   codeTs = hljs.highlightAuto(`
