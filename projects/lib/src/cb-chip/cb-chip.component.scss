@@ -6,9 +6,9 @@
 
 :host {
   $font-size: 1rem;
-  border: map-get($pallet-gray, 800) solid 1px;
+  border: map-get($pallet-gray, 900) solid 1px;
   border-radius: $space-lg;
-  color: map-get($pallet-gray, 800);
+  color: map-get($pallet-gray, 900);
   display: inline-block;
   font-family: "Open Sans", sans-serif;
   font-size: $font-size;
