@@ -33,19 +33,20 @@
 :host(.chip--size-small) {
   $font-size: .8rem;
   font-size: $font-size;
-  height: 1.8rem;
+  height: $space - $space-xxs;
   line-height: $font-size;
-  padding-left: $space-xs;
-  padding-right: $space-xs;
 }
 
 :host(.chip--size-large) {
   $font-size: 1rem;
   font-size: $font-size;
-  height: $space-md;
+  height: $space + $space-xxs;
+  letter-spacing: .08rem;
   line-height: $font-size;
+  min-width: $space-lg;
   padding-left: $space-sm;
   padding-right: $space-sm;
+  text-align: center;
 }
 
 // -------------------------------------------------
@@ -64,23 +65,23 @@
 }
 
 :host(.chip--size-small.chip--icon) {
-  padding-left: $space-sm + $space-xxs;
+  padding-left: $space;
 }
 
 :host(.chip--size-large.chip--icon) {
-  padding-left: $space-md + $space-xxs;
+  padding-left: $space-md;
 }
 
 :host(.chip--size-small) .icon {
-  left: -4px;
-  top: -4px;
-  transform: scale(.5);
+  left: -2px;
+  top: -3px;
+  transform: scale(.6);
 }
 
 :host(.chip--size-large) .icon {
   left: 3px;
-  top: 3px;
-  transform: scale(1);
+  top: 1px;
+  transform: scale(.8);
 }
 
 .icon {
