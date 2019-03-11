@@ -42,7 +42,6 @@ $dialog-top: $space-xlg;
   top: 0;
   transform-origin: center center;
   width: $size;
-  z-index: $zindex-highlight + 1;
 
   &:hover {
     @include effectButton();
@@ -133,6 +132,7 @@ $dialog-top: $space-xlg;
 
     .button {
       @include effectButton();
+      z-index: $zindex-highlight + 1;
     }
 
     .dialog-main {
