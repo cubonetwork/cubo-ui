@@ -23,6 +23,13 @@ export const PageComponentsRoutes: Routes = [
         component: LibTemplateComponent,
         children: [
           {
+            path: 'accordion',
+            loadChildren: '@app/pages/page-components/page-accordion/page-accordion.module#PageAccordionModule',
+            data: {
+              meta: { title: 'Accordion' }
+            }
+          },
+          {
             path: 'avatar',
             loadChildren: '@app/pages/page-components/page-avatar/page-avatar.module#PageAvatarModule',
             data: {

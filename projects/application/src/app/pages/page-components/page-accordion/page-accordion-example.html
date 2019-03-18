@@ -1,0 +1,40 @@
+<app-content>
+  <p>cb-accordion is made for creating a simple accordion to use in projects. This accordion doesn't have much visual load and is ideal for a more discreet use to omit certain information.</p>
+
+  <h2>Default simple accordion</h2>
+
+  <div style="margin-bottom: 2.4rem">
+    <cb-accordion title="Title of accordion">This is an example without opened accordion.</cb-accordion>
+  </div>
+
+  <h2>Simple accordion opened</h2>
+
+  <div>
+    <cb-accordion title="Title of openened accordion" [isOpened]="true">This is an example with opened accordion.</cb-accordion>
+  </div>
+</app-content>
+
+<mat-accordion>
+  <mat-expansion-panel class="panel">
+    <mat-expansion-panel-header class="panel__header">
+      View Code
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre class="panel__code">
+          <code [innerHtml]='codeHtml'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="TS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeTs'></code>
+        </pre>
+      </mat-tab>
+      <mat-tab label="CSS">
+        <pre class="panel__code">
+          <code [innerHtml]='codeCss'></code>
+        </pre>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</mat-accordion>

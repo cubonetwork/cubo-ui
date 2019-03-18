@@ -1,0 +1,44 @@
+<app-content>
+  <h1>API reference</h1>
+
+  <div>
+    <pre><code [innerHtml]="import_content"></code></pre>
+  </div>
+
+  <h2>Directives</h2>
+
+  <h3>CbAccordion</h3>
+
+  <p>A simple accordion component</p>
+
+  <p>
+    <span>Selector: </span>
+    <code>cb-accordion</code>
+  </p>
+
+  <p>
+    <span>Exported as: </span>
+    <code>CbAccordion</code>
+  </p>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>@Input() title: string;</td>
+        <td>Set title to accordion</td>
+      </tr>
+      <tr>
+        <td>@Input() isOpened: boolean;</td>
+        <td>Set title to accordion</td>
+      </tr>
+      <tr>
+        <td>@Output() opened;</td>
+        <td>Output when accordion opened or nor</td>
+      </tr>
+    </tbody>
+  </table>
+</app-content>

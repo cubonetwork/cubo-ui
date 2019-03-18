@@ -42,6 +42,10 @@ export class PageComponentsComponent {
       'name': 'Menu'
     },
     {
+      'path': 'accordion',
+      'name': 'Simple accordion'
+    },
+    {
       'path': 'social',
       'name': 'Social'
     },
