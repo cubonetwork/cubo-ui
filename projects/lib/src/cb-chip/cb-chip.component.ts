@@ -4,8 +4,9 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, Renderer2
 * Component `<cb-chip>` to create a chip
 * @param bg Set if bg is true or false
 * @param icon Set icon to chip
-* @param color Select color of chip (blue, orange, green, gray-light)
-* @param size Select size of chip (small or large)
+* @param bgColor Select background color to chip
+* @param textColor Select text-color color to chip
+* @param size Select size to chip (small or large)
 */
 @Component({
   selector: 'cb-chip',
@@ -20,20 +21,23 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, Renderer2
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'class': 'cb-chip',
-    '[class.chip--bg]': 'bg',
     '[class.chip--icon]': 'icon'
   }
 })
 export class CbChipComponent {
-  @Input() bg = false;
   @Input() icon: string;
 
   @Input() set size(size: 'small' | 'medium' | 'large') {
     this.renderer.addClass(this.ref.nativeElement, `chip--size-${size}`);
   }
 
-  @Input() set color(color: 'red' | 'blue' | 'green' | 'gray-light' | 'gray-lighter' | 'orange' | 'purple' | 'platinum' | 'gold' | 'silver' | 'bronze') {
-    this.renderer.addClass(this.ref.nativeElement, `chip--color-${color}`);
+  @Input() set textColor(color: string) {
+    this.renderer.setStyle(this.ref.nativeElement, 'color', color);
+  }
+
+  @Input() set bgColor(color: string) {
+    this.renderer.addClass(this.ref.nativeElement, 'chip--bg');
+    this.renderer.setStyle(this.ref.nativeElement, 'background', color);
   }
 
   constructor(
