@@ -19,7 +19,7 @@ describe('CbChipComponent', () => {
 
   describe('when bg is...', () => {
     it('true, should have the bg class', () => {
-      comp.bg = true;
+      comp.bgColor = '#000';
       fixture.detectChanges();
       element = fixture.debugElement.nativeElement;
 
@@ -27,7 +27,6 @@ describe('CbChipComponent', () => {
     });
 
     it('false, should not have the bg class', () => {
-      comp.bg = false;
       fixture.detectChanges();
       element = fixture.debugElement.nativeElement;
 
@@ -84,96 +83,6 @@ describe('CbChipComponent', () => {
       element = fixture.debugElement.nativeElement;
 
       expect(element.getAttribute('class')).toContain('chip--size-large');
-    });
-  });
-
-  describe('when color is...', () => {
-    it('blue, should have the blue class', () => {
-      comp.color = 'blue';
-      fixture.detectChanges();
-      element = fixture.debugElement.nativeElement;
-
-      expect(element.getAttribute('class')).toContain('chip--color-blue');
-    });
-
-    it('red, should have the red class', () => {
-      comp.color = 'red';
-      fixture.detectChanges();
-      element = fixture.debugElement.nativeElement;
-
-      expect(element.getAttribute('class')).toContain('chip--color-red');
-    });
-
-    it('orange, should have the orange class', () => {
-      comp.color = 'orange';
-      fixture.detectChanges();
-      element = fixture.debugElement.nativeElement;
-
-      expect(element.getAttribute('class')).toContain('chip--color-orange');
-    });
-
-    it('green, should have the green class', () => {
-      comp.color = 'green';
-      fixture.detectChanges();
-      element = fixture.debugElement.nativeElement;
-
-      expect(element.getAttribute('class')).toContain('chip--color-green');
-    });
-
-    it('gray-light, should have the gray-light class', () => {
-      comp.color = 'gray-light';
-      fixture.detectChanges();
-      element = fixture.debugElement.nativeElement;
-
-      expect(element.getAttribute('class')).toContain('chip--color-gray-light');
-    });
-
-    it('gray-lighter, should have the gray-lighter class', () => {
-      comp.color = 'gray-lighter';
-      fixture.detectChanges();
-      element = fixture.debugElement.nativeElement;
-
-      expect(element.getAttribute('class')).toContain('chip--color-gray-lighter');
-    });
-
-    it('purple, should have the purple class', () => {
-      comp.color = 'purple';
-      fixture.detectChanges();
-      element = fixture.debugElement.nativeElement;
-
-      expect(element.getAttribute('class')).toContain('chip--color-purple');
-    });
-
-    it('platinum, should have the platinum class', () => {
-      comp.color = 'platinum';
-      fixture.detectChanges();
-      element = fixture.debugElement.nativeElement;
-
-      expect(element.getAttribute('class')).toContain('chip--color-platinum');
-    });
-
-    it('gold, should have the gold class', () => {
-      comp.color = 'gold';
-      fixture.detectChanges();
-      element = fixture.debugElement.nativeElement;
-
-      expect(element.getAttribute('class')).toContain('chip--color-gold');
-    });
-
-    it('silver, should have the silver class', () => {
-      comp.color = 'silver';
-      fixture.detectChanges();
-      element = fixture.debugElement.nativeElement;
-
-      expect(element.getAttribute('class')).toContain('chip--color-silver');
-    });
-
-    it('bronze, should have the bronze class', () => {
-      comp.color = 'bronze';
-      fixture.detectChanges();
-      element = fixture.debugElement.nativeElement;
-
-      expect(element.getAttribute('class')).toContain('chip--color-bronze');
     });
   });
 });
