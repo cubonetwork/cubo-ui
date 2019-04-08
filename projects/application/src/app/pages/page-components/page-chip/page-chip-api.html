@@ -26,8 +26,12 @@
         <th>Description</th>
       </tr>
       <tr>
-        <td>@Input() bg: boolean;</td>
-        <td>Set if bg is true or false.</td>
+        <td>@Input() bgColor: string;</td>
+        <td>Set background to chip.</td>
+      </tr>
+      <tr>
+        <td>@Input() textColor: string;</td>
+        <td>Set text-color to chip.</td>
       </tr>
       <tr>
         <td>@Input() icon: string;</td>
@@ -39,21 +43,6 @@
           <code>small</code>,
           <code>medium (default)</code>,
           <code>large</code>
-        </td>
-      </tr>
-      <tr>
-        <td>@Input() color: string;</td>
-        <td>Color of the chip:
-          <code>blue</code>,
-          <code>green</code>,
-          <code>orange</code>,
-          <code>gray-light</code>
-          <code>gray-lighter</code>
-          <code>purple</code>
-          <code>platinum</code>
-          <code>gold</code>
-          <code>silver</code>
-          <code>bronze</code>
         </td>
       </tr>
     </tbody>
