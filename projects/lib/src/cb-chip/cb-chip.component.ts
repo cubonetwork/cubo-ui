@@ -11,7 +11,7 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, Renderer2
 @Component({
   selector: 'cb-chip',
   template: `
-    <mat-icon class="icon" svgIcon="{{icon}}" *ngIf="icon"></mat-icon>
+    <mat-icon class="icon" svgIcon="{{icon}}" *ngIf="icon" [style.color]="textColor"></mat-icon>
     <div class="content">
       <ng-content></ng-content>
     </div>

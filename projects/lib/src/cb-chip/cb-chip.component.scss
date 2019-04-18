@@ -97,7 +97,7 @@
 :host:not(.chip--bg) {
   border-color: currentColor;
 
-  &, & > * {
+  & > * {
     color: currentColor;
   }
 }
@@ -109,4 +109,8 @@
 :host(.chip--bg) {
   border: none;
   color: $white;
+
+  & > * {
+    color: currentColor;
+  }
 }
