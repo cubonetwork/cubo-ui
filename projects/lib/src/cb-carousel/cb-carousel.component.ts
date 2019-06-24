@@ -26,8 +26,8 @@ export class CbCarouselItemDirective {
 })
 export class CbCarouselComponent implements AfterViewInit {
   @ContentChildren(CbCarouselItemDirective) slides: QueryList<CbCarouselItemDirective>;
-  @ViewChild('carousel') private carousel: ElementRef;
-  @ViewChild('indicators') private indicators: ElementRef;
+  @ViewChild('carousel', { static: false }) carousel: ElementRef;
+  @ViewChild('indicators', { static: false }) indicators: ElementRef;
 
   @Input() showIndicators = true;
   currentSlide = 0;

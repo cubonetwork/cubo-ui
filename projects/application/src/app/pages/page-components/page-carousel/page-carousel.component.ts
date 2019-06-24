@@ -45,7 +45,7 @@ export class PageCarouselComponent { }
   `
 })
 export class CarouselDialogExampleComponent {
-  @ViewChild('carousel') private carousel: CbCarouselComponent;
+  @ViewChild('carousel', { static: false }) private carousel: CbCarouselComponent;
 
   constructor(
     public dialogRef: MatDialogRef<CarouselDialogExampleComponent>,
@@ -65,8 +65,8 @@ export class CarouselDialogExampleComponent {
   templateUrl: 'page-carousel-example.html'
 })
 export class PageCarouselExampleComponent {
-  @ViewChild('simpleCarousel') private simpleCarousel: CbCarouselComponent;
-  @ViewChild('imageCarousel') private imageCarousel: CbCarouselComponent;
+  @ViewChild('simpleCarousel', { static: false }) private simpleCarousel: CbCarouselComponent;
+  @ViewChild('imageCarousel', { static: false }) private imageCarousel: CbCarouselComponent;
 
   constructor(public dialog: MatDialog) {}
 

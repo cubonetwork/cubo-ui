@@ -46,7 +46,7 @@ export class CbHighlightComponent {
   @Input() ariaLabel = 'View highlight';
   @Input() position: 'left' | 'right' = 'right';
 
-  @ViewChild('dialog') dialog: ElementRef;
+  @ViewChild('dialog', { static: false }) dialog: ElementRef;
 
   @Input() set active(active: boolean) {
     setTimeout(() => {
