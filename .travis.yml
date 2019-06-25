@@ -1,8 +1,8 @@
 language: node_js
 node_js:
-  - "8"
+  - "10"
 install:
-  - npm i -g @angular/cli angular-cli-ghpages
+  - npm i -g angular-cli-ghpages
   - npm i
 script:
   - npm run deploy
