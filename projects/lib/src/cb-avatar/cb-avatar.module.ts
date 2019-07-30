@@ -1,5 +1,4 @@
 import { CommonModule } from '@angular/common';
-import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { NgModule } from '@angular/core';
 
 import {
@@ -14,8 +13,7 @@ import {
     CbAvatarComponent
   ],
   imports: [
-    CommonModule,
-    LazyLoadImageModule
+    CommonModule
   ]
 })
 export class CbAvatarModule { }

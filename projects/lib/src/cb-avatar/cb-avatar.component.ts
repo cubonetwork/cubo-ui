@@ -9,8 +9,10 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, ElementRe
 @Component({
   selector: 'cb-avatar',
   template: `
-  <img class="avatar" lazyimage [defaultImage]="defaultImage" [lazyLoad]="image" [offset]="50" alt="{{name}}" *ngIf="image">
-  <span class="initials" *ngIf="!image">{{ letters }}</span>
+  <img class="avatar" [src]="image" [alt]="name" *ngIf="image; else noImage">
+  <ng-template #noImage>
+    <span class="initials">{{ letters }}</span>
+  </ng-template>
   <ng-content></ng-content>
   `,
   styleUrls: ['./cb-avatar.component.scss'],
@@ -21,7 +23,6 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input, ElementRe
   }
 })
 export class CbAvatarComponent {
-  defaultImage = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
   nameSplit: Array<string>;
   letters: string;
 

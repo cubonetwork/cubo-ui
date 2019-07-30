@@ -1,4 +1,3 @@
-import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 
 import { CbAvatarComponent } from './cb-avatar.component';
@@ -13,7 +12,6 @@ describe('CbAvatarComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [LazyLoadImageModule],
       declarations: [ CbAvatarComponent ],
     });
     fixture = TestBed.createComponent(CbAvatarComponent);
