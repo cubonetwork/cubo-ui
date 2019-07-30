@@ -23,7 +23,7 @@ describe('CbAvatarComponent', () => {
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('img');
 
-    expect(element.getAttribute('ng-reflect-lazy-image')).toContain(image);
+    expect(element.getAttribute('src')).toContain(image);
   });
 
   describe('when there is no image', () => {
