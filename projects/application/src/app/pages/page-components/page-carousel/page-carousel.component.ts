@@ -1,8 +1,8 @@
 import { Component, ViewEncapsulation, ChangeDetectionStrategy, ViewChild, Inject } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { CbCarouselComponent } from '@lib';
 import * as hljs from 'highlight.js';
 import { DomSanitizer } from '@angular/platform-browser';
+import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 const languages = ['html', 'typescript', 'css'];
 
 @Component({

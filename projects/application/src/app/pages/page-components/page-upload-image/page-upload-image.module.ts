@@ -2,7 +2,7 @@ import { ContentModule } from '@app/components/content/content.module';
 import { CbUploadImageModule } from '@lib';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
-import { MatIconModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
 
 import { PageUploadImageRouting } from './page-upload-image.routing';
 import {
