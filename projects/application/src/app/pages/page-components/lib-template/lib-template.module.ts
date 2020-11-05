@@ -1,5 +1,5 @@
 import { SharedModule } from '@app/shared/shared.module';
-import { MatTabsModule } from '@angular/material';
+import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 
 import { LibTemplateComponent } from './lib-template.component';

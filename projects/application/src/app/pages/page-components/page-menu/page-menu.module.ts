@@ -1,6 +1,7 @@
 import { SharedModule } from '@app/shared/shared.module';
 import { ContentModule } from '@app/components/content/content.module';
-import { MatButtonModule, MatChipsModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
 import { CbMenuModule } from '@lib';
 import { NgModule } from '@angular/core';
 

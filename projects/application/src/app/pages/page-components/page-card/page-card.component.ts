@@ -1,4 +1,5 @@
-import { MatChipsModule, MatIconRegistry } from '@angular/material';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatIconRegistry } from '@angular/material/icon';
 import { Component } from '@angular/core';
 import * as hljs from 'highlight.js';
 import { DomSanitizer } from '@angular/platform-browser';

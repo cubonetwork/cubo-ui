@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatIconRegistry, MatIcon } from '@angular/material';
+import { MatIconRegistry, MatIcon } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import * as hljs from 'highlight.js';
 const languages = ['html', 'typescript', 'css'];
