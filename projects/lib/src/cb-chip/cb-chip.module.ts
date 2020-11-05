@@ -1,4 +1,4 @@
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 

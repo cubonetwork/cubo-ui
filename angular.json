@@ -1,5 +1,6 @@
 {
-  "$schema": "./node_modules/@angular-devkit/core/src/workspace/workspace-schema.json",
+  "$schema":
+    "./node_modules/@angular-devkit/core/src/workspace/workspace-schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -33,9 +34,7 @@
               "projects/application/src/themes/themes.scss"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "projects/application/src/styles"
-              ]
+              "includePaths": ["projects/application/src/styles"]
             },
             "scripts": []
           },
@@ -44,7 +43,8 @@
               "fileReplacements": [
                 {
                   "replace": "projects/application/src/environments/environment.ts",
-                  "with": "projects/application/src/environments/environment.prod.ts"
+                  "with":
+                    "projects/application/src/environments/environment.prod.ts"
                 }
               ],
               "budgets": [
@@ -119,9 +119,7 @@
               "projects/application/src/themes/themes.scss"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "projects/application/src/styles"
-              ]
+              "includePaths": ["projects/application/src/styles"]
             },
             "scripts": [],
             "assets": [
@@ -145,9 +143,7 @@
               "projects/application/tsconfig.app.json",
               "projects/application/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -183,9 +179,7 @@
               "projects/lib/tsconfig.lint.json",
               "projects/lib/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -198,8 +192,5 @@
     "cubo-schematics:page": {
       "styleext": "scss"
     }
-  },
-  "cli": {
-    "analytics": "ebfef390-7797-4a54-ad53-20acd30374ab"
   }
 }
