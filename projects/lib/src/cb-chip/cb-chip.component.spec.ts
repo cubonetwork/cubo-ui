@@ -1,4 +1,4 @@
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 
 import { CbChipComponent, CbChipListComponent } from './cb-chip.component';

@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 import { CbCarouselModule } from '@lib';
 import { SharedModule } from '@app/shared/shared.module';
 import { PageCarouselRouting } from './page-carousel.routing';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule, MatDialogModule } from '@angular/material';
 import { PageCarouselComponent, PageCarouselExampleComponent, PageCarouselApiComponent, CarouselDialogExampleComponent } from './page-carousel.component';
 
 @NgModule({

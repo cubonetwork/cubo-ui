@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatListModule } from '@angular/material/list';
+import { MatListModule } from '@angular/material';
 import { SharedModule } from '@app/shared/shared.module';
 
 import { NavbarComponent } from './navbar.component';
